@@ -1,22 +1,112 @@
-<h1>UI Events KeyboardEvent code Values</h1>
+<link href="./override.css" rel="stylesheet" />
+<script defer src="./custom-script.js"></script>
 
 <pre class="metadata">
-Shortname: uievents-code
-Level:
+Title: 用户界面事件键盘事件 code 属性值(UI Events KeyboardEvent code Values)
+Shortname: uievents-code-cn
+Level: none
 Group: webapps
-Status: WD
-TR: http://www.w3.org/TR/uievents-code/
-ED: https://w3c.github.io/uievents-code/
-Repository: w3c/uievents-code
-Previous Version:
-	http://www.w3.org/TR/2015/WD-uievents-code-20151215/
-Editor: Gary Kacmarcik, Google, garykac@google.com
-Editor: Travis Leithead, Invited Expert, travisleithead@hotmail.com
+Status: UD
+ED: 
+Repository: mangwu/uievents-code-cn
+Boilerplate: repository-issue-tracking off, copyright off, property-index off
+No Editor: true
+Text Macro: DATE 2023年5月6日
+Text Macro: LONGSTATUS 翻译草案
+!本版本: <a href="https://mangwu.github.io/uievents-code-cn/">https://mangwu.github.io/uievents-code-cn/</a>
+!最新提案: <a href="https://w3c.github.io/uievents-code/">https://w3c.github.io/uievents-code/</a>
+!上个版本: <a href="http://www.w3.org/TR/2015/WD-uievents-code-20151215/">http://www.w3.org/TR/2015/WD-uievents-code-20151215/</a>
+!历史记录: <a href="https://www.w3.org/standards/history/uievents-code">https://www.w3.org/standards/history/uievents-code</a>
+!规范反馈: <a href="https://github.com/w3c/uievents-code/issues/">GitHub-w3c-uievents-code-issues</a>
+!翻译反馈: <a href="https://github.com/mangwu/uievents-code-cn/issues/">GitHub-mangwu-uievents-code-cn-issues</a>
+!编辑者: 
+	<a class="p-name fn u-email email" href="mailto:garykac@google.com">Gary Kacmarcik</a>(Google)
+	<a class="p-name fn u-email email" href="mailto:travil@microsoft.com">Travis Leithead</a>(Microsoft)
+!翻译者: 
+	<a class="p-name fn u-email email" href="mailto:1185956753@qq.com">mangwu</a>
 Abstract:
-	This specification defines the values for the KeyboardEvent.code attribute,
-	which is defined as part of the UI Events Specification [[!UIEvents]].
-	The code value contains information about the key event that can be used to
-	identify the physical key being pressed by the user.
+	<h2 class="no-num no-toc no-ref heading settled" id="abstract-cn">
+	<span class="content">摘要</span>
+	</h2>
+		<p>
+		本规范定义了 KeyboardEvent.code 属性的值，并且是用户界面事件规范的一部分 
+		[[UIEvents]] 。 <code>code</code> 值包含有关按键事件的信息，
+		可用于识别用户按下的物理按键。
+		</p>
+
+	<h2 class="no-num no-toc no-ref heading settled" id="sotd-cn">
+	<span class="content">文档状态</span>
+	</h2>
+	<div data-fill-with="status-cn">
+		<p><em>
+		本节介绍了本文件发布时的状态。
+		当前 <abbr title="World Wide Web Consortium">W3C</abbr> 
+		出版物列表和本技术报告的最新修订版可在
+		<a href="https://www.w3.org/TR/">
+		<abbr title="World Wide Web Consortium">W3C</abbr> 技术报告索引
+		</a>
+		中找到，网址为 https://www.w3.org/TR/ 。
+		</em></p>
+
+		<p> 本文件由
+		<a href="https://www.w3.org/groups/wg/webapps">网络应用程序工作组</a>
+		作为 <strong>编辑草稿</strong> (Editors Draft)发布。 
+		<span class="del-content">本文档旨在成为W3C推荐标准</span> 。
+		</p>
+
+		<p></p>
+
+		<p> 本文件由
+		<a href="https://www.w3.org/groups/wg/webapps">网络应用程序工作组</a>
+		作为 <strong>工作草案</strong> (Working Draft)发布。
+		欢迎对本规范提出反馈和意见。请使用
+		<a href="https://github.com/w3c/uievents-code/issues">GitHub issues</a>
+		对源文档进行问题讨论; 请使用
+		<a href="https://github.com/mangwu/uievents-code-cn/issues">GitHub issues</a>
+		对翻译文档进行问题讨论; 
+		官方的问题存档地址为
+		<a href="https://lists.w3.org/Archives/Public/public-webapps/">
+		public-webapps@w3.org archives
+		</a> 。
+		</p>
+
+		<p>
+		作为编辑草案出版并不意味着
+		<abbr title="World Wide Web Consortium">W3C</abbr>
+		及其成员的认可。 
+		这是一份草案文档，可以随时被其他文档更新、替换或作废。
+		本文档不适合被其它正在编写的规范作为引用。
+		</p>
+
+		<p> 本文档由一个根据
+		<a href="https://www.w3.org/Consortium/Patent-Policy-20200915/">
+		<abbr title="World Wide Web Consortium">W3C</abbr> 专利政策</a>
+		运作的小组编写。
+		<abbr title="World Wide Web Consortium">W3C</abbr>
+		保留了一份与该小组可交付成果相关的
+		<a href="https://www.w3.org/2004/01/pp-impl/114929/status" rel="disclosure">
+		所有可披露专利的公开列表
+		</a> ; 该页面还包括公开一份专利的说明。
+		对认为包含
+		<a 
+		href=
+		"https://www.w3.org/Consortium/Patent-Policy-20200915/#def-essential">
+		基本权利要求
+		</a>
+		（Essential Claim(s)）的专利有实际了解的个人必须根据
+		<a
+		href=
+		"https://www.w3.org/Consortium/Patent-Policy-20200915/#sec-Disclosure">
+		<abbr title="World Wide Web Consortium">W3C</abbr>专利政策第6节
+		</a> 
+		公开信息。
+		</p>
+
+		<p>本文件受
+		<a href="https://www.w3.org/2021/Process-20211102/" id="w3c_process_revision-cn">
+		2021 11月2日 W3C处理文档</a> 规范管理。
+		</p>
+  </div>
 </pre>
 
 <pre class="biblio">
@@ -58,25 +148,21 @@ path: stylesheet-extra.include
 
 <h2 id="introduction">Introduction</h2>
 
-	This document provides an overview of the various keyboard layouts and
-	specifies the {{KeyboardEvent/code}} values that should be
-	used for each of the keys. Unlike the {{KeyboardEvent/key}} values described
-	in [[UIEvents-key]], the {{KeyboardEvent/code}} values are based only on the
-	key's physical location on the keyboard and do not vary based on the user's
-	current locale.
+	本文档概述了各种键盘布局，并指定了每个键应使用的 {{KeyboardEvent/code}} 值。
+	与 [[UIEvents key]] 中描述的 {{KeyboardEvent/key}} 值不同， 
+	{{KeyboardEvent/code}} 值仅基于键在键盘上的物理位置，
+	不会因用户的当前区域设置而变化。
 
-	This specification was formerly titled <em>DOM Level 3 KeyboardEvent
-	{{KeyboardEvent/code}} Values</em>.
+	此规范以前的规范标题为 <em>DOM Level 3 {{KeyboardEvent/code}} Values</em> 。
 
-	<h3 id="style-conventions">Stylistic Conventions</h3>
+	<h3 id="style-conventions">格式规约</h3>
 
-		This specification uses the following conventions:
+		本规范遵循以下规约: 
 
-		* The <em>[=key cap=]</em></a> or label printed on a key is shown as
-			KEYCAP{&darr;}, KEYCAP{=} or KEYCAP{Q}. This is used to refer to a
-			key from the user's perspective without regard for the
-			{{KeyboardEvent/key}} and {{KeyboardEvent/code}} values in the
-			generated {{KeyboardEvent}}.
+		* 打印在 <a href="https://mangwu.github.io/uievents-cn/#key-legends">
+			<em>键帽</em></a> 上的键显示为 KEYCAP{&darr;}， KEYCAP{=} 或 KEYCAP{Q} 。
+			这用于从用户的角度引用键，而不考虑生成的 {{KeyboardEvent}} 事件中的 
+			{{KeyboardEvent/key}} (键) 和 {{KeyboardEvent/code}} (键码)。
 
 		* Glyphs representing character are shown as: GLYPH{&#x239C2;}.
 

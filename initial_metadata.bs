@@ -1,0 +1,19 @@
+<!-- 从index-source.txt截取的原始位于<pre class="metadata"></pre>之间的原始文档数据 -->
+<pre class="metadata">
+Shortname: uievents-code
+Level:
+Group: webapps
+Status: WD
+TR: http://www.w3.org/TR/uievents-code/
+ED: https://w3c.github.io/uievents-code/
+Repository: w3c/uievents-code
+Previous Version:
+	http://www.w3.org/TR/2015/WD-uievents-code-20151215/
+Editor: Gary Kacmarcik, Google, garykac@google.com
+Editor: Travis Leithead, Invited Expert, travisleithead@hotmail.com
+Abstract:
+	This specification defines the values for the KeyboardEvent.code attribute,
+	which is defined as part of the UI Events Specification [[!UIEvents]].
+	The code value contains information about the key event that can be used to
+	identify the physical key being pressed by the user.
+</pre>
