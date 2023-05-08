@@ -2,7 +2,7 @@
 <script defer src="./custom-script.js"></script>
 
 <pre class="metadata">
-Title: 用户界面时间键盘事件 code 属性值(UI Events KeyboardEvent code Values)
+Title: 用户界面事件键盘事件 code 属性值(UI Events KeyboardEvent code Values)
 Shortname: uievents-code-cn
 Level: none
 Group: webapps
@@ -263,7 +263,7 @@ path: stylesheet-extra.include
 			<figure id="figure-keyboard-101-us">
 				<img src="images/keyboard-101-us.svg" width="684" height="225" 
 				alt="标准 '101' 键盘布局" />
-				<figcaption>标准 "101" 键盘布局，展示未修改过的美国按键值</figcaption>
+				<figcaption>标准 "101" 键盘布局，展示未修改过的美式按键值</figcaption>
 			</figure>
 
 			现代标准的 "101" 布局键盘实际上包含 104 个键: 字母数字区域( 
@@ -277,71 +277,99 @@ path: stylesheet-extra.include
 			<p class="note custom-note">
 			左边的 KEYCAP{Meta} 按键的键帽标签通常有两种，一种是微软的 Windows 
 			操作系统的 KEYCAP{⊞} ( KEYCAP{Windows} )，一种是苹果操作系统的 
-			KEYCAP{⌘} ( KEYCAP{Command} )。
+			KEYCAP{⌘} ( KEYCAP{Command} )。现代键盘上的 KEYCAP{Menu} 
+			键的键帽标签通常为 KEYCAP{≣} 。
 			</p>
 
-		<h4 id="keyboard-101alt">Alternate "101" Keyboard Layout</h4>
+		<h4 id="keyboard-101alt">备用 "101" 键盘布局</h4>
 
-			The alternate "101" keyboard has a large KEYCAP{Enter} key and
-			shrinks the KEYCAP{Backspace} key to make room for the CODE{IntlYen}
-			key (which replaces the CODE{Backslash} key found in the standard
-			101 layout). The CODE{IntlYen} name comes from the Japanese layout
-			where this is the KEYCAP{¥} (PHONETIC{yen}) key — in the Russian
-			layout shown below this key maps to a KEYCAP{\/}.
+			备用 "101" 键盘有一个大的 KEYCAP{Enter} 键，并缩小了 KEYCAP{Backspace} 
+			键，为 CODE{IntlYen} 键腾出空间(它取代了标准 101 键盘布局中的 
+			CODE{Backslash} 键)。 CODE{IntlYen} 名称来自日式键盘布局，表示 
+			KEYCAP{¥} (也就是日元 PHONETIC{yen} 的符号)键——同样，
+			俄式键盘布局和日式键盘布局类似，只不过这个 KEYCAP{¥} 键，映射了 
+			KEYCAP{\/} 键，如下图像所示: 
 
 			<figure id="figure-keyboard-101-russian">
-				<img src="images/keyboard-101-russian.svg" width="684" height="225" alt="Alternate '101' keyboard layout" />
-				<figcaption>Alternate "101" keyboard layout showing unmodified Russian key values</figcaption>
+				<img src="images/keyboard-101-russian.svg" width="684" height="225" 
+				alt="备用 '101' 键盘布局" />
+				<figcaption>
+				备用 "101" 键盘布局，展示未修改过的俄式按键值
+				</figcaption>
 			</figure>
 
-			Modern alternate "101"-layout keyboards contain 104 keys: 61 keys in
-			the [=alphanumeric section=] and 43 keys in the [=numpad=],
-			[=control pad=], [=arrow pad=] and [=function sections=].
+			现代的备用 "101" 布局的键盘包含104个键: 字母数字区域( 
+			[=alphanumeric section=] )有61个按键，小键盘( [=numpad=] ) 、控制板
+			( [=control pad=] )和箭头板( [=arrow pad=]) 和功能区域( 
+			[=function section=] )有 43 个键。
+			
+			<p class="note custom-note">
+			<a href=
+			"https://zh.wikipedia.org/wiki/%E9%94%AE%E7%9B%98%E5%B8%83%E5%B1%80">
+			维基百科</a> 上有关于日文假名键盘和韩文键盘的字母数字区域( 
+			[=alphanumeric section=] )的图示，但是它们不属于备用 "101" 
+			键盘布局，因为除了和俄式键盘一样多了一个 CODE{IntlYen} 键之外，
+			修饰符按键还有区别，继续阅读下面的章节了解更多。
+			</p>
 
-		<h4 id="keyboard-102">Standard "102" Keyboard Layout</h4>
+		<h4 id="keyboard-102">标准 "102" 键盘布局</h4>
 
-			The standard "102" keyboard is common throughout Europe and adds a
-			key that doesn't exist on the "101" layouts: The CODE{IntlBackslash}
-			key (labelled KEYCAP{\|} on a UK keyboard) next to the left shift
-			key.
+			标准的 "102" 键盘在整个欧洲都很常见，它在 "101" 
+			键盘布局中添加了一个不存在的键: 在左移键( KEYCAP{Shift} )旁边添加了 
+			CODE{IntlBackslash} 键(在英式键盘键帽上标记为 KEYCAP{\|} )。
 
-			A second key is also added (labelled KEYCAP{#~} on a UK
-			keyboard) which is partially tucked under the KEYCAP{Enter} key.
-			This key is encoded as CODE{Backslash}, using the same code as the
-			KEYCAP{\|} key found on the "101" keyboard layout.
-			According to [[USB-HID]], the US KEYCAP{\|} and UK KEYCAP{#~} are
-			actually two separate keys (named "Keyboard \ and |" and "Keyboard
-			Non-US # and ~"), but since these two keys never co-occur on the
-			same keyboard most platforms use the same scancode for both keys,
-			making them difficult to distinguish. It is for this reason that the
-			code CODE{Backslash} is used for both of these keys.
+			还添加了第二个键(在英式键盘键帽上标记为 KEYCAP{#~} )，该键部分藏在 
+			KEYCAP{Enter} 键下。该键被编码为 CODE{Backslash} ，使用与 "101" 
+			键盘布局中的 KEYCAP{\|} 键相同的编码。根据 [[USB-HID]] 规范，美式的 
+			KEYCAP{\|} 和英式的  KEYCAP{#~} 实际上是两个独立的键(分别命名为"键盘 
+			\ 和 |"以及"键盘非美式的 # 和 ~”），
+			但由于这两个键从未同时出现在同一键盘上，大多数平台对两个键使用相同的扫描码
+			(scancode)，因此很难区分。正是由于这个原因，这两个键都使用了码值 
+			CODE{Backslash} 。
 
 			<figure id="figure-keyboard-102-uk">
-				<img src="images/keyboard-102-uk.svg" width="684" height="225" alt="Standard '102' keyboard layout" />
-				<figcaption>Standard "102" keyboard layout showing unmodified UK key values</figcaption>
+				<img src="images/keyboard-102-uk.svg" width="684" height="225" 
+				alt="标准 '102' 键盘布局" />
+				<figcaption>标准 "102" 键盘布局，展示未修改过的英式按键值</figcaption>
 			</figure>
 
-			Modern "102"-layout keyboards contain 105 keys: 62 keys in the
-			[=alphanumeric section=] and 43 keys in the [=numpad=],
-			[=control pad=], [=arrow pad=] and [=function sections=].
+			现代 "102"布局的键盘包含105个键：字母数字区域( 
+			[=alphanumeric section=] )有62个按键，小键盘( [=numpad=] ) 、控制板
+			( [=control pad=] )和箭头板( [=arrow pad=]) 和功能区域( 
+			[=function section=] )有 43 个键。
 
-		<h4 id="keyboard-103">Korean "103" Keyboard Layout</h4>
+			<p class="note custom-note">
+			按照 <code>code</code> 属性值进行区分，美式 "101" 键盘布局在占用单行 
+			KEYCAP{Enter} 上方的 KEYCAP{\|} 键，和 英式 "102" 键盘布局在占用双行的 
+			KEYCAP{Eenter} 下方的 KEYCAP{#~} 键实际上指代同一个 <code>code</code> 值，
+			即 CODE{Backslash}。英式 "102" 多出来的那个位于 KEYCAP{ShiftLeft} 和 
+			KEYCAP{Z} 之间的按键，虽然键帽是 KEYCAP{\|} (和美式的占用单行 
+			KEYCAP{Enter} 上方的 KEYCAP{\|} 键键帽相同)，但是 <code>code</code> 
+			属性值却是 CODE{IntlBackslash} 。
+			</p>
 
-			The Korean "103" keyboard is based on the alternate 101 layout and
-			adds two additional keys (one on each side of the spacebar) to
-			handle Korean-specific input modes. These keys are
-				CODE{Lang2} ("Hanja", labelled KEYCAP{한자} PHONETIC{hanja})
-			and
-				CODE{Lang1} ("HangulMode", labelled KEYCAP{한/영} PHONETIC{han/yeong}).
+		<h4 id="keyboard-103">韩式 "103" 键盘布局</h4>
+
+			韩语 "103" 键盘基于备用 "101" 键盘布局，并添加了两个额外的键
+			(空格键两侧各一个)来处理韩语特定的输入模式。这两个按键是 CODE{Lang2} 
+			("Hanja"，键帽为 KEYCAP{한자} ，发音为 PHONETIC{hanja})和CODE{Lang2}
+			("HangulMode"，键帽为 KEYCAP{한/영} ，发音为 PHONETIC{han/yeong}) 。
+
+			<p class="note custom-note">
+			实际上 KEYCAP{한자} (Hanja) 也就是汉字的意思，这里表示朝鲜汉字，而
+			KEYCAP{한/영} (HangulMode) 也就是朝鲜文字模式，这里表示彦文。
+			</p>
 
 			<figure id="figure-keyboard-103-korean">
-				<img src="images/keyboard-103-korean.svg" width="684" height="225" alt="Korean '103' keyboard layout" />
-				<figcaption>Korean "103" keyboard layout showing unmodified Korean key values</figcaption>
+				<img src="images/keyboard-103-korean.svg" width="684" height="225" 
+				alt="韩式 '103' 键盘布局" />
+				<figcaption>韩式 "103" 键盘布局，展示未修改过的韩式按键值</figcaption>
 			</figure>
 
-			Modern "103"-layout keyboards contain 106 keys: 63 keys in the
-			[=alphanumeric section=] and 43 keys in the [=numpad=],
-			[=control pad=], [=arrow pad=] and [=function sections=].
+			现代 "103" 布局的键盘包含106个键：字母数字区域( 
+			[=alphanumeric section=] )有66个按键，小键盘( [=numpad=] ) 、控制板
+			( [=control pad=] )和箭头板( [=arrow pad=]) 和功能区域( 
+			[=function section=] )有 43 个键。
 
 		<h4 id="keyboard-104">Brazilian "104" Keyboard Layout</h4>
 

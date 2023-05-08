@@ -2,12 +2,12 @@
  <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-  <title>用户界面时间键盘事件 code 属性值(UI Events KeyboardEvent code Values)</title>
+  <title>用户界面事件键盘事件 code 属性值(UI Events KeyboardEvent code Values)</title>
   <meta content="UD" name="w3c-status">
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-UD" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
   <meta content="Bikeshed version d9bd89757, updated Thu Mar 23 10:06:53 2023 -0700" name="generator">
-  <meta content="323464b33554b1539fade16954cf5beb10fe06a3" name="document-revision">
+  <meta content="03a749eb035530e0d14852d0e36a890f7638f2eb" name="document-revision">
   <link href="./override.css" rel="stylesheet">
 <style>
 
@@ -585,8 +585,8 @@ dfn > a.self-link::before      { content: "#"; }
  <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72"> </a> </p>
-   <h1 class="p-name no-ref" id="title">用户界面时间键盘事件 code 属性值(UI Events KeyboardEvent code Values)</h1>
-   <p id="w3c-state"><a href="https://www.w3.org/standards/types#UD">翻译草案</a>, <time class="dt-updated" datetime="2023-05-08">2023年5月6日</time></p>
+   <h1 class="p-name no-ref" id="title">用户界面事件键盘事件 code 属性值(UI Events KeyboardEvent code Values)</h1>
+   <p id="w3c-state"><a href="https://www.w3.org/standards/types#UD">翻译草案</a>, <time class="dt-updated" datetime="2023-05-09">2023年5月6日</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -659,9 +659,9 @@ dfn > a.self-link::before      { content: "#"; }
        <ol class="toc">
         <li><a href="#keyboard-sections"><span class="secno">2.1.1</span> <span class="content">键盘分区</span></a>
         <li><a href="#keyboard-101"><span class="secno">2.1.2</span> <span class="content">标准 "101" 键盘布局</span></a>
-        <li><a href="#keyboard-101alt"><span class="secno">2.1.3</span> <span class="content">Alternate "101" Keyboard Layout</span></a>
-        <li><a href="#keyboard-102"><span class="secno">2.1.4</span> <span class="content">Standard "102" Keyboard Layout</span></a>
-        <li><a href="#keyboard-103"><span class="secno">2.1.5</span> <span class="content">Korean "103" Keyboard Layout</span></a>
+        <li><a href="#keyboard-101alt"><span class="secno">2.1.3</span> <span class="content">备用 "101" 键盘布局</span></a>
+        <li><a href="#keyboard-102"><span class="secno">2.1.4</span> <span class="content">标准 "102" 键盘布局</span></a>
+        <li><a href="#keyboard-103"><span class="secno">2.1.5</span> <span class="content">韩式 "103" 键盘布局</span></a>
         <li><a href="#keyboard-104"><span class="secno">2.1.6</span> <span class="content">Brazilian "104" Keyboard Layout</span></a>
         <li><a href="#keyboard-106"><span class="secno">2.1.7</span> <span class="content">Japanese "106" Keyboard Layout</span></a>
         <li><a href="#keyboard-mac"><span class="secno">2.1.8</span> <span class="content">Apple Keyboard Layout</span></a>
@@ -792,54 +792,52 @@ dfn > a.self-link::before      { content: "#"; }
    <p>标准的 "101" 键盘(通常称为"US 布局")是唯一一种在单行 <code class="keycap">Enter</code> (字面数字区域上的 <code class="keycap">Enter</code> )键上方有 <code class="code">"<a href="#code-Backslash">Backslash</a>"</code> 键(标记为 <code class="keycap">\|</code>)的布局。所有其他布局都省略了此键，并展开 <code class="keycap">Enter</code> 键以占据两行。</p>
    <figure id="figure-keyboard-101-us">
      <img alt="标准 &apos;101&apos; 键盘布局" height="225" src="images/keyboard-101-us.svg" width="684"> 
-    <figcaption>标准 "101" 键盘布局，展示未修改过的美国按键值</figcaption>
+    <figcaption>标准 "101" 键盘布局，展示未修改过的美式按键值</figcaption>
    </figure>
    <p>现代标准的 "101" 布局键盘实际上包含 104 个键: 字母数字区域( <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section①">alphanumeric section</a> )有 61 个按键，小键盘( <a data-link-type="dfn" href="#numpad" id="ref-for-numpad①">numpad</a> ) 、控制板
 			( <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad①">control pad</a> )和箭头板( <a data-link-type="dfn" href="#arrow-pad" id="ref-for-arrow-pad①">arrow pad</a>) 和功能区域( <a data-link-type="dfn" href="#function-section" id="ref-for-function-section②">function section</a> )有 43 个键。这个键盘布局的 "101" 
 			名称可以追溯到这个标准键盘实际上包含 101 个键的时候。两个 <code class="keycap">Meta</code> 按键(通常被赋予为特定于操作系统的标签)和 <code class="keycap">Menu</code> 键是后来被添加，
 			使按键总数达到了 104 个。</p>
    <p class="note custom-note" role="note"> 左边的 <code class="keycap">Meta</code> 按键的键帽标签通常有两种，一种是微软的 Windows 
-			操作系统的 <code class="keycap">⊞</code> ( <code class="keycap">Windows</code> )，一种是苹果操作系统的 <code class="keycap">⌘</code> ( <code class="keycap">Command</code> )。 </p>
-   <h4 class="heading settled" data-level="2.1.3" id="keyboard-101alt"><span class="secno">2.1.3. </span><span class="content">Alternate "101" Keyboard Layout</span><a class="self-link" href="#keyboard-101alt"></a></h4>
-   <p>The alternate "101" keyboard has a large <code class="keycap">Enter</code> key and
-			shrinks the <code class="keycap">Backspace</code> key to make room for the <code class="code">"<a href="#code-IntlYen">IntlYen</a>"</code> key (which replaces the <code class="code">"<a href="#code-Backslash">Backslash</a>"</code> key found in the standard
-			101 layout). The <code class="code">"<a href="#code-IntlYen">IntlYen</a>"</code> name comes from the Japanese layout
-			where this is the <code class="keycap">¥</code> (<span class="unicode">yen</span>) key — in the Russian
-			layout shown below this key maps to a <code class="keycap">\/</code>.</p>
+			操作系统的 <code class="keycap">⊞</code> ( <code class="keycap">Windows</code> )，一种是苹果操作系统的 <code class="keycap">⌘</code> ( <code class="keycap">Command</code> )。现代键盘上的 <code class="keycap">Menu</code> 键的键帽标签通常为 <code class="keycap">≣</code> 。 </p>
+   <h4 class="heading settled" data-level="2.1.3" id="keyboard-101alt"><span class="secno">2.1.3. </span><span class="content">备用 "101" 键盘布局</span><a class="self-link" href="#keyboard-101alt"></a></h4>
+   <p>备用 "101" 键盘有一个大的 <code class="keycap">Enter</code> 键，并缩小了 <code class="keycap">Backspace</code> 键，为 <code class="code">"<a href="#code-IntlYen">IntlYen</a>"</code> 键腾出空间(它取代了标准 101 键盘布局中的 <code class="code">"<a href="#code-Backslash">Backslash</a>"</code> 键)。 <code class="code">"<a href="#code-IntlYen">IntlYen</a>"</code> 名称来自日式键盘布局，表示 <code class="keycap">¥</code> (也就是日元 <span class="unicode">yen</span> 的符号)键——同样，
+			俄式键盘布局和日式键盘布局类似，只不过这个 <code class="keycap">¥</code> 键，映射了 <code class="keycap">\/</code> 键，如下图像所示:</p>
    <figure id="figure-keyboard-101-russian">
-     <img alt="Alternate &apos;101&apos; keyboard layout" height="225" src="images/keyboard-101-russian.svg" width="684"> 
-    <figcaption>Alternate "101" keyboard layout showing unmodified Russian key values</figcaption>
+     <img alt="备用 &apos;101&apos; 键盘布局" height="225" src="images/keyboard-101-russian.svg" width="684"> 
+    <figcaption> 备用 "101" 键盘布局，展示未修改过的俄式按键值 </figcaption>
    </figure>
-   <p>Modern alternate "101"-layout keyboards contain 104 keys: 61 keys in
-			the <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section②">alphanumeric section</a> and 43 keys in the <a data-link-type="dfn" href="#numpad" id="ref-for-numpad②">numpad</a>, <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad②">control pad</a>, <a data-link-type="dfn" href="#arrow-pad" id="ref-for-arrow-pad②">arrow pad</a> and <a data-link-type="dfn" href="#function-section" id="ref-for-function-section③">function sections</a>.</p>
-   <h4 class="heading settled" data-level="2.1.4" id="keyboard-102"><span class="secno">2.1.4. </span><span class="content">Standard "102" Keyboard Layout</span><a class="self-link" href="#keyboard-102"></a></h4>
-   <p>The standard "102" keyboard is common throughout Europe and adds a
-			key that doesn’t exist on the "101" layouts: The <code class="code">"<a href="#code-IntlBackslash">IntlBackslash</a>"</code> key (labelled <code class="keycap">\|</code> on a UK keyboard) next to the left shift
-			key.</p>
-   <p>A second key is also added (labelled <code class="keycap">#~</code> on a UK
-			keyboard) which is partially tucked under the <code class="keycap">Enter</code> key.
-			This key is encoded as <code class="code">"<a href="#code-Backslash">Backslash</a>"</code>, using the same code as the <code class="keycap">\|</code> key found on the "101" keyboard layout.
-			According to <a data-link-type="biblio" href="#biblio-usb-hid" title="USB HID Usage Tables 1.12">[USB-HID]</a>, the US <code class="keycap">\|</code> and UK <code class="keycap">#~</code> are
-			actually two separate keys (named "Keyboard \ and |" and "Keyboard
-			Non-US # and ~"), but since these two keys never co-occur on the
-			same keyboard most platforms use the same scancode for both keys,
-			making them difficult to distinguish. It is for this reason that the
-			code <code class="code">"<a href="#code-Backslash">Backslash</a>"</code> is used for both of these keys.</p>
+   <p>现代的备用 "101" 布局的键盘包含104个键: 字母数字区域( <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section②">alphanumeric section</a> )有61个按键，小键盘( <a data-link-type="dfn" href="#numpad" id="ref-for-numpad②">numpad</a> ) 、控制板
+			( <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad②">control pad</a> )和箭头板( <a data-link-type="dfn" href="#arrow-pad" id="ref-for-arrow-pad②">arrow pad</a>) 和功能区域( <a data-link-type="dfn" href="#function-section" id="ref-for-function-section③">function section</a> )有 43 个键。</p>
+   <p class="note custom-note" role="note"> <a href="https://zh.wikipedia.org/wiki/%E9%94%AE%E7%9B%98%E5%B8%83%E5%B1%80"> 维基百科</a> 上有关于日文假名键盘和韩文键盘的字母数字区域( <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section③">alphanumeric section</a> )的图示，但是它们不属于备用 "101" 
+			键盘布局，因为除了和俄式键盘一样多了一个 <code class="code">"<a href="#code-IntlYen">IntlYen</a>"</code> 键之外，
+			修饰符按键还有区别，继续阅读下面的章节了解更多。 </p>
+   <h4 class="heading settled" data-level="2.1.4" id="keyboard-102"><span class="secno">2.1.4. </span><span class="content">标准 "102" 键盘布局</span><a class="self-link" href="#keyboard-102"></a></h4>
+   <p>标准的 "102" 键盘在整个欧洲都很常见，它在 "101"
+			键盘布局中添加了一个不存在的键: 在左移键( <code class="keycap">Shift</code> )旁边添加了 <code class="code">"<a href="#code-IntlBackslash">IntlBackslash</a>"</code> 键(在英式键盘键帽上标记为 <code class="keycap">\|</code> )。</p>
+   <p>还添加了第二个键(在英式键盘键帽上标记为 <code class="keycap">#~</code> )，该键部分藏在 <code class="keycap">Enter</code> 键下。该键被编码为 <code class="code">"<a href="#code-Backslash">Backslash</a>"</code> ，使用与 "101" 
+			键盘布局中的 <code class="keycap">\|</code> 键相同的编码。根据 <a data-link-type="biblio" href="#biblio-usb-hid" title="USB HID Usage Tables 1.12">[USB-HID]</a> 规范，美式的 <code class="keycap">\|</code> 和英式的 <code class="keycap">#~</code> 实际上是两个独立的键(分别命名为"键盘 
+			\ 和 |"以及"键盘非美式的 # 和 ~”），
+			但由于这两个键从未同时出现在同一键盘上，大多数平台对两个键使用相同的扫描码
+			(scancode)，因此很难区分。正是由于这个原因，这两个键都使用了码值 <code class="code">"<a href="#code-Backslash">Backslash</a>"</code> 。</p>
    <figure id="figure-keyboard-102-uk">
-     <img alt="Standard &apos;102&apos; keyboard layout" height="225" src="images/keyboard-102-uk.svg" width="684"> 
-    <figcaption>Standard "102" keyboard layout showing unmodified UK key values</figcaption>
+     <img alt="标准 &apos;102&apos; 键盘布局" height="225" src="images/keyboard-102-uk.svg" width="684"> 
+    <figcaption>标准 "102" 键盘布局，展示未修改过的英式按键值</figcaption>
    </figure>
-   <p>Modern "102"-layout keyboards contain 105 keys: 62 keys in the <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section③">alphanumeric section</a> and 43 keys in the <a data-link-type="dfn" href="#numpad" id="ref-for-numpad③">numpad</a>, <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad③">control pad</a>, <a data-link-type="dfn" href="#arrow-pad" id="ref-for-arrow-pad③">arrow pad</a> and <a data-link-type="dfn" href="#function-section" id="ref-for-function-section④">function sections</a>.</p>
-   <h4 class="heading settled" data-level="2.1.5" id="keyboard-103"><span class="secno">2.1.5. </span><span class="content">Korean "103" Keyboard Layout</span><a class="self-link" href="#keyboard-103"></a></h4>
-   <p>The Korean "103" keyboard is based on the alternate 101 layout and
-			adds two additional keys (one on each side of the spacebar) to
-			handle Korean-specific input modes. These keys are <code class="code">"<a href="#code-Lang2">Lang2</a>"</code> ("Hanja", labelled <code class="keycap">한자</code> <span class="unicode">hanja</span>)
-			and <code class="code">"<a href="#code-Lang1">Lang1</a>"</code> ("HangulMode", labelled <code class="keycap">한/영</code> <span class="unicode">han/yeong</span>).</p>
+   <p>现代 "102"布局的键盘包含105个键：字母数字区域( <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section④">alphanumeric section</a> )有62个按键，小键盘( <a data-link-type="dfn" href="#numpad" id="ref-for-numpad③">numpad</a> ) 、控制板
+			( <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad③">control pad</a> )和箭头板( <a data-link-type="dfn" href="#arrow-pad" id="ref-for-arrow-pad③">arrow pad</a>) 和功能区域( <a data-link-type="dfn" href="#function-section" id="ref-for-function-section④">function section</a> )有 43 个键。</p>
+   <p class="note custom-note" role="note"> 按照 <code>code</code> 属性值进行区分，美式 "101" 键盘布局在占用单行 <code class="keycap">Enter</code> 上方的 <code class="keycap">\|</code> 键，和 英式 "102" 键盘布局在占用双行的 <code class="keycap">Eenter</code> 下方的 <code class="keycap">#~</code> 键实际上指代同一个 <code>code</code> 值，
+			即 <code class="code">"<a href="#code-Backslash">Backslash</a>"</code>。英式 "102" 多出来的那个位于 <code class="keycap">ShiftLeft</code> 和 <code class="keycap">Z</code> 之间的按键，虽然键帽是 <code class="keycap">\|</code> (和美式的占用单行 <code class="keycap">Enter</code> 上方的 <code class="keycap">\|</code> 键键帽相同)，但是 <code>code</code> 属性值却是 <code class="code">"<a href="#code-IntlBackslash">IntlBackslash</a>"</code> 。 </p>
+   <h4 class="heading settled" data-level="2.1.5" id="keyboard-103"><span class="secno">2.1.5. </span><span class="content">韩式 "103" 键盘布局</span><a class="self-link" href="#keyboard-103"></a></h4>
+   <p>韩语 "103" 键盘基于备用 "101" 键盘布局，并添加了两个额外的键
+			(空格键两侧各一个)来处理韩语特定的输入模式。这两个按键是 <code class="code">"<a href="#code-Lang2">Lang2</a>"</code> ("Hanja"，键帽为 <code class="keycap">한자</code> ，发音为 <span class="unicode">hanja</span>)和<code class="code">"<a href="#code-Lang2">Lang2</a>"</code> ("HangulMode"，键帽为 <code class="keycap">한/영</code> ，发音为 <span class="unicode">han/yeong</span>) 。</p>
+   <p class="note custom-note" role="note"> 实际上 <code class="keycap">한자</code> (Hanja) 也就是汉字的意思，这里表示朝鲜汉字，而 <code class="keycap">한/영</code> (HangulMode) 也就是朝鲜文字模式，这里表示彦文。 </p>
    <figure id="figure-keyboard-103-korean">
-     <img alt="Korean &apos;103&apos; keyboard layout" height="225" src="images/keyboard-103-korean.svg" width="684"> 
-    <figcaption>Korean "103" keyboard layout showing unmodified Korean key values</figcaption>
+     <img alt="韩式 &apos;103&apos; 键盘布局" height="225" src="images/keyboard-103-korean.svg" width="684"> 
+    <figcaption>韩式 "103" 键盘布局，展示未修改过的韩式按键值</figcaption>
    </figure>
-   <p>Modern "103"-layout keyboards contain 106 keys: 63 keys in the <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section④">alphanumeric section</a> and 43 keys in the <a data-link-type="dfn" href="#numpad" id="ref-for-numpad④">numpad</a>, <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad④">control pad</a>, <a data-link-type="dfn" href="#arrow-pad" id="ref-for-arrow-pad④">arrow pad</a> and <a data-link-type="dfn" href="#function-section" id="ref-for-function-section⑤">function sections</a>.</p>
+   <p>现代 "103" 布局的键盘包含106个键：字母数字区域( <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section⑤">alphanumeric section</a> )有66个按键，小键盘( <a data-link-type="dfn" href="#numpad" id="ref-for-numpad④">numpad</a> ) 、控制板
+			( <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad④">control pad</a> )和箭头板( <a data-link-type="dfn" href="#arrow-pad" id="ref-for-arrow-pad④">arrow pad</a>) 和功能区域( <a data-link-type="dfn" href="#function-section" id="ref-for-function-section⑤">function section</a> )有 43 个键。</p>
    <h4 class="heading settled" data-level="2.1.6" id="keyboard-104"><span class="secno">2.1.6. </span><span class="content">Brazilian "104" Keyboard Layout</span><a class="self-link" href="#keyboard-104"></a></h4>
    <p>The "104" layout used in Brazil adds 4 new keys: two keys
 			from the "102" layout (<code class="code">"<a href="#code-Backslash">Backslash</a>"</code> and <code class="code">"<a href="#code-IntlBackslash">IntlBackslash</a>"</code>) plus
@@ -850,7 +848,7 @@ dfn > a.self-link::before      { content: "#"; }
      <img alt="Standard &apos;104&apos; keyboard layout" height="225" src="images/keyboard-104-brazilian.svg" width="684"> 
     <figcaption>Standard "104" keyboard layout showing unmodified Brazilian key values</figcaption>
    </figure>
-   <p>Modern "104"-layout keyboards contain 107 keys: 63 keys in the <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section⑤">alphanumeric section</a> and 44 keys in the <a data-link-type="dfn" href="#numpad" id="ref-for-numpad⑦">numpad</a>, <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad⑤">control pad</a>, <a data-link-type="dfn" href="#arrow-pad" id="ref-for-arrow-pad⑤">arrow pad</a> and <a data-link-type="dfn" href="#function-section" id="ref-for-function-section⑥">function sections</a>.
+   <p>Modern "104"-layout keyboards contain 107 keys: 63 keys in the <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section⑥">alphanumeric section</a> and 44 keys in the <a data-link-type="dfn" href="#numpad" id="ref-for-numpad⑦">numpad</a>, <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad⑤">control pad</a>, <a data-link-type="dfn" href="#arrow-pad" id="ref-for-arrow-pad⑤">arrow pad</a> and <a data-link-type="dfn" href="#function-section" id="ref-for-function-section⑥">function sections</a>.
 			Some Brazilian keyboards lack the extra <a data-link-type="dfn" href="#numpad" id="ref-for-numpad⑧">numpad</a> key and have
 			only 106 keys.</p>
    <h4 class="heading settled" data-level="2.1.7" id="keyboard-106"><span class="secno">2.1.7. </span><span class="content">Japanese "106" Keyboard Layout</span><a class="self-link" href="#keyboard-106"></a></h4>
@@ -862,7 +860,7 @@ dfn > a.self-link::before      { content: "#"; }
      <img alt="Standard &apos;106&apos; keyboard layout" height="225" src="images/keyboard-106-japanese.svg" width="684"> 
     <figcaption>Standard "106" keyboard layout showing unmodified Japanese key values</figcaption>
    </figure>
-   <p>Modern "106"-layout keyboards contain 109 keys: 66 keys in the <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section⑥">alphanumeric section</a> and 43 keys in the <a data-link-type="dfn" href="#numpad" id="ref-for-numpad⑨">numpad</a>, <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad⑥">control pad</a>, <a data-link-type="dfn" href="#arrow-pad" id="ref-for-arrow-pad⑥">arrow pad</a> and <a data-link-type="dfn" href="#function-section" id="ref-for-function-section⑦">function sections</a>.</p>
+   <p>Modern "106"-layout keyboards contain 109 keys: 66 keys in the <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section⑦">alphanumeric section</a> and 43 keys in the <a data-link-type="dfn" href="#numpad" id="ref-for-numpad⑨">numpad</a>, <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad⑥">control pad</a>, <a data-link-type="dfn" href="#arrow-pad" id="ref-for-arrow-pad⑥">arrow pad</a> and <a data-link-type="dfn" href="#function-section" id="ref-for-function-section⑦">function sections</a>.</p>
    <h4 class="heading settled" data-level="2.1.8" id="keyboard-mac"><span class="secno">2.1.8. </span><span class="content">Apple Keyboard Layout</span><a class="self-link" href="#keyboard-mac"></a></h4>
    <p>In general, Apple keyboards follow the same layout as PC keyboards,
 			but there are some differences as noted in the following figure.</p>
@@ -875,7 +873,7 @@ dfn > a.self-link::before      { content: "#"; }
    <h4 class="heading settled" data-level="2.1.9" id="keyboard-laptops"><span class="secno">2.1.9. </span><span class="content">Laptop Keyboard Layouts</span><a class="self-link" href="#keyboard-laptops"></a></h4>
    <p>The limited space available on laptop keyboards often means that the
 			physical key layout needs to be adjusted to fit all the required
-			keys. The <a data-link-type="dfn" href="#writing-system-keys" id="ref-for-writing-system-keys">writing system keys</a> in the <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section⑦">alphanumeric
+			keys. The <a data-link-type="dfn" href="#writing-system-keys" id="ref-for-writing-system-keys">writing system keys</a> in the <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section⑧">alphanumeric
 			section</a> tend to remain intact, but the other keyboard sections
 			are usually combined with other keys or removed altogether.</p>
    <figure id="figure-keyboard-laptop-mac">
@@ -983,7 +981,7 @@ dfn > a.self-link::before      { content: "#"; }
 			meaning (i.e., they produce different <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key④">key</a></code> values) based on the current locale and keyboard layout.</p>
    <figure id="figure-keyboard-codes-alphanum1">
      <img alt="The writing system keys" height="225" src="images/keyboard-codes-alphanum1.svg" width="653"> 
-    <figcaption>The <a data-link-type="dfn" href="#writing-system-keys" id="ref-for-writing-system-keys②">writing system keys</a> in the <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section⑧">alphanumeric section</a></figcaption>
+    <figcaption>The <a data-link-type="dfn" href="#writing-system-keys" id="ref-for-writing-system-keys②">writing system keys</a> in the <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section⑨">alphanumeric section</a></figcaption>
    </figure>
    <p>This figure shows a hypothetical keyboard that combines all the <a data-link-type="dfn" href="#writing-system-keys" id="ref-for-writing-system-keys③">writing system keys</a> (shown in blue and green) found on the
 			various keyboards. Blue keys are present on all standard
@@ -1214,13 +1212,13 @@ dfn > a.self-link::before      { content: "#"; }
       <td><code class="keycap">/?</code> on a US keyboard.
    </table>
    <h4 class="heading settled" data-level="3.1.2" id="key-alphanumeric-functional"><span class="secno">3.1.2. </span><span class="content">Functional Keys</span><a class="self-link" href="#key-alphanumeric-functional"></a></h4>
-   <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="functional-keys">functional keys</dfn> (<em>not to be confused with the <a data-link-type="dfn" href="#function-key" id="ref-for-function-key①">function keys</a> described later</em>) are those keys in the <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section⑨">alphanumeric section</a> that provide general editing
+   <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="functional-keys">functional keys</dfn> (<em>not to be confused with the <a data-link-type="dfn" href="#function-key" id="ref-for-function-key①">function keys</a> described later</em>) are those keys in the <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section①⓪">alphanumeric section</a> that provide general editing
 			functions that are common to all locales (like <code class="keycap">Shift</code>, <code class="keycap">Tab</code>, <code class="keycap">Enter</code> and <code class="keycap">Backspace</code>). With a few
 			exceptions, these keys do not change meaning based on the
 			current keyboard layout.</p>
    <figure id="figure-keyboard-codes-alphanum2">
      <img alt="The standard set of functional keys" height="225" src="images/keyboard-codes-alphanum2.svg" width="653"> 
-    <figcaption>The standard set of <a data-link-type="dfn" href="#functional-keys" id="ref-for-functional-keys①">functional keys</a> in the <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section①⓪">alphanumeric section</a></figcaption>
+    <figcaption>The standard set of <a data-link-type="dfn" href="#functional-keys" id="ref-for-functional-keys①">functional keys</a> in the <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section①①">alphanumeric section</a></figcaption>
    </figure>
    <p>The <code class="code">"<a href="#code-AltRight">AltRight</a>"</code> key (highlighted in green) is the only <a data-link-type="dfn" href="#functional-keys" id="ref-for-functional-keys②">functional key</a> that does not generate the same <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key⑤">key</a></code> value for every locale. In some locales it
 			produces <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-Alt">Alt</a>"</code> while in others it produces <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-AltGraph">AltGraph</a>"</code>.</p>
@@ -1584,7 +1582,7 @@ dfn > a.self-link::before      { content: "#"; }
 		with "Numpad" and appending an appropriate description of the key.</p>
    <h3 class="heading settled" data-level="3.5" id="key-function-section"><span class="secno">3.5. </span><span class="content">Function Section</span><a class="self-link" href="#key-function-section"></a></h3>
    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="function-section">function section</dfn> runs along the top of the keyboard (above
-		the <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section①①">alphanumeric section</a>) and
+		the <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section①②">alphanumeric section</a>) and
 		contains the <a data-link-type="dfn" href="#function-key" id="ref-for-function-key②">function keys</a> and a few additional special keys
 		(for example, <code class="keycap">Esc</code> and <code class="keycap">Print Screen</code>).</p>
    <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="function-key">function key</dfn> is any of the keys labelled <code class="keycap">F1</code> ... <code class="keycap">F12</code> that an application or operating system can associate with a custom function
@@ -2149,15 +2147,15 @@ something specific to the values defined in this document</p>
    <ul>
     <li><a href="#ref-for-alphanumeric-section">2.1.1. 键盘分区</a>
     <li><a href="#ref-for-alphanumeric-section①">2.1.2. 标准 "101" 键盘布局</a>
-    <li><a href="#ref-for-alphanumeric-section②">2.1.3. Alternate "101" Keyboard Layout</a>
-    <li><a href="#ref-for-alphanumeric-section③">2.1.4. Standard "102" Keyboard Layout</a>
-    <li><a href="#ref-for-alphanumeric-section④">2.1.5. Korean "103" Keyboard Layout</a>
-    <li><a href="#ref-for-alphanumeric-section⑤">2.1.6. Brazilian "104" Keyboard Layout</a>
-    <li><a href="#ref-for-alphanumeric-section⑥">2.1.7. Japanese "106" Keyboard Layout</a>
-    <li><a href="#ref-for-alphanumeric-section⑦">2.1.9. Laptop Keyboard Layouts</a>
-    <li><a href="#ref-for-alphanumeric-section⑧">3.1.1. Writing System Keys</a>
-    <li><a href="#ref-for-alphanumeric-section⑨">3.1.2. Functional Keys</a> <a href="#ref-for-alphanumeric-section①⓪">(2)</a>
-    <li><a href="#ref-for-alphanumeric-section①①">3.5. Function Section</a>
+    <li><a href="#ref-for-alphanumeric-section②">2.1.3. 备用 "101" 键盘布局</a> <a href="#ref-for-alphanumeric-section③">(2)</a>
+    <li><a href="#ref-for-alphanumeric-section④">2.1.4. 标准 "102" 键盘布局</a>
+    <li><a href="#ref-for-alphanumeric-section⑤">2.1.5. 韩式 "103" 键盘布局</a>
+    <li><a href="#ref-for-alphanumeric-section⑥">2.1.6. Brazilian "104" Keyboard Layout</a>
+    <li><a href="#ref-for-alphanumeric-section⑦">2.1.7. Japanese "106" Keyboard Layout</a>
+    <li><a href="#ref-for-alphanumeric-section⑧">2.1.9. Laptop Keyboard Layouts</a>
+    <li><a href="#ref-for-alphanumeric-section⑨">3.1.1. Writing System Keys</a>
+    <li><a href="#ref-for-alphanumeric-section①⓪">3.1.2. Functional Keys</a> <a href="#ref-for-alphanumeric-section①①">(2)</a>
+    <li><a href="#ref-for-alphanumeric-section①②">3.5. Function Section</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-writing-system-keys" class="dfn-panel" data-for="writing-system-keys" id="infopanel-for-writing-system-keys">
@@ -2180,9 +2178,9 @@ something specific to the values defined in this document</p>
    <ul>
     <li><a href="#ref-for-control-pad">2.1.1. 键盘分区</a>
     <li><a href="#ref-for-control-pad①">2.1.2. 标准 "101" 键盘布局</a>
-    <li><a href="#ref-for-control-pad②">2.1.3. Alternate "101" Keyboard Layout</a>
-    <li><a href="#ref-for-control-pad③">2.1.4. Standard "102" Keyboard Layout</a>
-    <li><a href="#ref-for-control-pad④">2.1.5. Korean "103" Keyboard Layout</a>
+    <li><a href="#ref-for-control-pad②">2.1.3. 备用 "101" 键盘布局</a>
+    <li><a href="#ref-for-control-pad③">2.1.4. 标准 "102" 键盘布局</a>
+    <li><a href="#ref-for-control-pad④">2.1.5. 韩式 "103" 键盘布局</a>
     <li><a href="#ref-for-control-pad⑤">2.1.6. Brazilian "104" Keyboard Layout</a>
     <li><a href="#ref-for-control-pad⑥">2.1.7. Japanese "106" Keyboard Layout</a>
     <li><a href="#ref-for-control-pad⑦">2.1.9. Laptop Keyboard Layouts</a>
@@ -2195,9 +2193,9 @@ something specific to the values defined in this document</p>
    <ul>
     <li><a href="#ref-for-arrow-pad">2.1.1. 键盘分区</a>
     <li><a href="#ref-for-arrow-pad①">2.1.2. 标准 "101" 键盘布局</a>
-    <li><a href="#ref-for-arrow-pad②">2.1.3. Alternate "101" Keyboard Layout</a>
-    <li><a href="#ref-for-arrow-pad③">2.1.4. Standard "102" Keyboard Layout</a>
-    <li><a href="#ref-for-arrow-pad④">2.1.5. Korean "103" Keyboard Layout</a>
+    <li><a href="#ref-for-arrow-pad②">2.1.3. 备用 "101" 键盘布局</a>
+    <li><a href="#ref-for-arrow-pad③">2.1.4. 标准 "102" 键盘布局</a>
+    <li><a href="#ref-for-arrow-pad④">2.1.5. 韩式 "103" 键盘布局</a>
     <li><a href="#ref-for-arrow-pad⑤">2.1.6. Brazilian "104" Keyboard Layout</a>
     <li><a href="#ref-for-arrow-pad⑥">2.1.7. Japanese "106" Keyboard Layout</a>
     <li><a href="#ref-for-arrow-pad⑦">2.1.9. Laptop Keyboard Layouts</a>
@@ -2210,9 +2208,9 @@ something specific to the values defined in this document</p>
    <ul>
     <li><a href="#ref-for-numpad">2.1.1. 键盘分区</a>
     <li><a href="#ref-for-numpad①">2.1.2. 标准 "101" 键盘布局</a>
-    <li><a href="#ref-for-numpad②">2.1.3. Alternate "101" Keyboard Layout</a>
-    <li><a href="#ref-for-numpad③">2.1.4. Standard "102" Keyboard Layout</a>
-    <li><a href="#ref-for-numpad④">2.1.5. Korean "103" Keyboard Layout</a>
+    <li><a href="#ref-for-numpad②">2.1.3. 备用 "101" 键盘布局</a>
+    <li><a href="#ref-for-numpad③">2.1.4. 标准 "102" 键盘布局</a>
+    <li><a href="#ref-for-numpad④">2.1.5. 韩式 "103" 键盘布局</a>
     <li><a href="#ref-for-numpad⑤">2.1.6. Brazilian "104" Keyboard Layout</a> <a href="#ref-for-numpad⑥">(2)</a> <a href="#ref-for-numpad⑦">(3)</a> <a href="#ref-for-numpad⑧">(4)</a>
     <li><a href="#ref-for-numpad⑨">2.1.7. Japanese "106" Keyboard Layout</a>
     <li><a href="#ref-for-numpad①⓪">3.4. Numpad Section</a> <a href="#ref-for-numpad①①">(2)</a> <a href="#ref-for-numpad①②">(3)</a> <a href="#ref-for-numpad①③">(4)</a> <a href="#ref-for-numpad①④">(5)</a> <a href="#ref-for-numpad①⑤">(6)</a> <a href="#ref-for-numpad①⑥">(7)</a> <a href="#ref-for-numpad①⑦">(8)</a>
@@ -2229,9 +2227,9 @@ something specific to the values defined in this document</p>
    <ul>
     <li><a href="#ref-for-function-section">2.1.1. 键盘分区</a> <a href="#ref-for-function-section①">(2)</a>
     <li><a href="#ref-for-function-section②">2.1.2. 标准 "101" 键盘布局</a>
-    <li><a href="#ref-for-function-section③">2.1.3. Alternate "101" Keyboard Layout</a>
-    <li><a href="#ref-for-function-section④">2.1.4. Standard "102" Keyboard Layout</a>
-    <li><a href="#ref-for-function-section⑤">2.1.5. Korean "103" Keyboard Layout</a>
+    <li><a href="#ref-for-function-section③">2.1.3. 备用 "101" 键盘布局</a>
+    <li><a href="#ref-for-function-section④">2.1.4. 标准 "102" 键盘布局</a>
+    <li><a href="#ref-for-function-section⑤">2.1.5. 韩式 "103" 键盘布局</a>
     <li><a href="#ref-for-function-section⑥">2.1.6. Brazilian "104" Keyboard Layout</a>
     <li><a href="#ref-for-function-section⑦">2.1.7. Japanese "106" Keyboard Layout</a>
     <li><a href="#ref-for-function-section⑧">3.2. Control Pad Section</a>
