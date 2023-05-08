@@ -2,7 +2,7 @@
 <script defer src="./custom-script.js"></script>
 
 <pre class="metadata">
-Title: 用户界面事件键盘事件 code 属性值(UI Events KeyboardEvent code Values)
+Title: 用户界面键盘事件 code 属性值(UI Events KeyboardEvent code Values)
 Shortname: uievents-code-cn
 Level: none
 Group: webapps
