@@ -2,7 +2,7 @@
 <script defer src="./custom-script.js"></script>
 
 <pre class="metadata">
-Title: 用户界面键盘事件 code 属性值(UI Events KeyboardEvent code Values)
+Title: 用户界面时间键盘事件 code 属性值(UI Events KeyboardEvent code Values)
 Shortname: uievents-code-cn
 Level: none
 Group: webapps
@@ -146,7 +146,7 @@ url: https://www.w3.org/TR/uievents-key/#key-value-tables; type: dfn; spec: uiev
 path: stylesheet-extra.include
 </pre>
 
-<h2 id="introduction">Introduction</h2>
+<h2 id="introduction">简介</h2>
 
 	本文档概述了各种键盘布局，并指定了每个键应使用的 {{KeyboardEvent/code}} 值。
 	与 [[UIEvents key]] 中描述的 {{KeyboardEvent/key}} 值不同， 
@@ -164,86 +164,121 @@ path: stylesheet-extra.include
 			这用于从用户的角度引用键，而不考虑生成的 {{KeyboardEvent}} 事件中的 
 			{{KeyboardEvent/key}} (键) 和 {{KeyboardEvent/code}} (键码)。
 
-		* Glyphs representing character are shown as: GLYPH{&#x239C2;}.
+		* 代表字符的字形(Glyphs)显示为: GLYPH{&#x239C2;}。
 
-		* Unicode [=code points=] are shown as: UNI{U+003D}.
+		* Unicode 代码点( [=code points=] ) 显示为: UNI{U+003D}.
 
-		* Valid [=key attribute values=] (i.e., the value of
-			a {{KeyboardEvent/key}} attribute) are shown as:
-			KEY{ArrowDown}, KEY_NOLINK{=}, KEY_NOLINK{q} or KEY_NOLINK{Q}.
+		* 有效的键属性值( [=key attribute values=] )，即 {{KeyboardEvent/key}} 
+			属性值显示为: KEY{ArrowDown}, KEY_NOLINK{=}, KEY_NOLINK{q} 或 
+			KEY_NOLINK{Q}。
 
-		* Valid [=key code attribute values=] (i.e., the
-			value of a {{KeyboardEvent/code}} attribute) are shown as:
-			CODE{ArrowDown}, CODE{Equal} or CODE{KeyQ}.
+		* 有效的键值属性值( [=key code attribute values=] )，即 
+			{{KeyboardEvent/code}} 属性值显示为: CODE{ArrowDown}, CODE{Equal} 或 
+			CODE{KeyQ}。
+		
+		<p class="note custom-note">
+		在 <a href="https://mangwu.github.io/uievents-cn/#style-conventions">
+		UIEvents</a> 规范本体的格式规约中，也对键帽，字符，代码点和键，
+		键值的属性值进行了说明，但是渲染显示不一样，本规范中的渲染会更显眼。
+		</p>
 
-<h2 id="keyboard-layout">Keyboard Layout</h2>
+<h2 id="keyboard-layout">键盘布局</h2>
 
-	<em>This section is non-normative.</em>
+	<em>本节不是规范的。</em>
 
-	Alphanumeric keyboards are the most common way for users to generate
-	keyboard events. This section provides an overview of standard keyboards and
-	their physical layouts.
+	字母数字键盘是用户生成键盘事件的最常见方式。本节概述了标准键盘及其物理布局。
 
-	<h3 id="keyboard-common-layouts">Standard Keyboard Layouts</h3>
+	<p class="note custom-note">
+	<q>键盘布局(keyboard layout)是指以按键、或键上图例来表示任何特定之机械、
+	视觉或功能的键盘布局方式; 或则是在计算机、
+	打字机或其它字体排版键盘等之类似设备、
+	以其键之关系含义结构在键盘上表现的布局方式</q> —— 
+	<a href="https://zh.wikipedia.org/wiki/%E9%94%AE%E7%9B%98%E5%B8%83%E5%B1%80">
+	zh.wikipedia.org
+	</a> 
+	</p>
 
-		This section describes the physical layouts found on commonly available
-		keyboards.
+	<h3 id="keyboard-common-layouts">标准键盘布局</h3>
 
-		<h4 id="keyboard-sections">Keyboard Sections</h4>
+		本节介绍了常见键盘上的物理布局。
 
-			When discussing keyboard layouts, it is convenient to divide the
-			standard keyboard into distinct sections and to label each row.
+		<h4 id="keyboard-sections">键盘分区</h4>
 
-			<figure id="figure-keyboard-sections">
-				<img src="images/keyboard-sections.svg" width="684" height="225"
-					alt="The five general sections of a standard keyboard" />
-				<figcaption>The five general sections of a standard keyboard</figcaption>
+			在讨论键盘布局时，将标准键盘划分为不同的区域并标记每一行会更方便讨论布局。
+
+			<div class="figure-change"  data-content="images/keyboard-sections">
+			<div class="custom-tabs-nav-wrap">
+					<div class="custom-tabs-nav-list">
+							<div data-node-key="1" class="custom-tabs-tab custom-tabs-tab-active">
+									<div class="custom-tabs-tab-btn" tabindex="0">汉化图</div>
+							</div>
+							<div data-node-key="2" class="custom-tabs-tab">
+									<div class="custom-tabs-tab-btn" tabindex="0">原图</div>
+							</div>
+					</div>
+			</div>
+			<figure id="figure-keyboard-sections-zh">
+				<img src="images/keyboard-sections-zh.svg" width="684" height="225"
+					alt="标准键盘的五个通用区域" />
+				<figcaption>标准键盘的五个通用区域</figcaption>
 			</figure>
+			<figure id="figure-keyboard-sections" class="figure-hidden">
+				<img src="images/keyboard-sections.svg" width="684" height="225"
+					alt="标准键盘的五个通用区域" />
+				<figcaption>标准键盘的五个通用区域</figcaption>
+			</figure>
+			</div>
 
-			These keyboard sections are:
+			<p class="note custom-note">
+			注意，如果包括功能相同的按键(如 KEYCAP{ControlLeft} 和 
+			KEYCAP{ControlRight} )，上图共有 <code>104</code> 个物理按键。
+			</p>
 
-			*	The [=alphanumeric section=] is the main part of the
-				keyboard and is where most of the keyboard variation occurs.
-				When a user selects a keyboard layout, it is the keys in this
-				sections that are most affected.
-			*	The [=control pad=] and [=arrow pad=]
-				sections contain the arrow keys and other editing keys.
-			*	The [=numpad=] (also known as the "numeric [=keypad=]"
-				or "number pad") contains number and math keys to make it easier
-				to enter numeric data.
-			*	And finally, the [=function section=] contains
-				miscellaneous [=function keys=] and special keys like KEYCAP{Escape}.
+			这些键盘区域包括:
 
-			To make it easier to identify keys, the rows on the keyboard are
-			named starting with "A" for the bottom row up to "E" for the top
-			row. The row of keys in the [=function section=] are considered to be in
-			row "K". These row names are consistent with those given in
-			[[ISO9995-1]].
+			*	字母数字区域( [=alphanumeric section=] )是键盘的主要部分，
+				也是大多数键盘变化发生的地方。当用户选择一种键盘布局时，
+				受影响最大的是此区域中的物理按键。
+			*	控制板( [=control pad=] )区域和箭头板( [=arrow pad=] 
+				)区域包含箭头按键和其他编辑按键。
+			*	小键盘( [=numpad=] ，也称为"数字小键盘( [=keypad=] )"或"数字键盘")区域
+				包含数字和数学按键键，使输入数字数据更容易。
+			*	最后，功能区域( [=function section=] )包含各种功能按键( 
+				[=function keys=] )和特殊按键，如 KEYCAP{Escape} 。
 
-			Note that many keyboards (both modern and legacy) have extra keys
-			that do not fit neatly into the above sections. Some of these keys
-			are covered in [[#key-media]].
+			为了更容易识别按键，键盘上的行的名称从最下面一行的 "A" 开始，
+			到最上面一排的 "E" 。功能区域( [=function section=] )中的键行被认为在 
+			"K" 行中。这些行名称与 [[ISO9995-1]] 规范中给出的行名称一致。
 
-		<h4 id="keyboard-101">Standard "101" Keyboard Layout</h4>
+			请注意，许多键盘(包括现代键盘和传统键盘)都有多余的键，
+			这些键没有整齐地放入上面的区域。其中一些键包含在[[#key-media]]。
 
-			The standard "101" keyboard (commonly referred to as the "US
-			layout") is the only layout that has a CODE{Backslash} key (labeled
-			KEYCAP{\|}) above a single-row KEYCAP{Enter} key. All the other
-			layouts omit this key and expand the KEYCAP{Enter} key to
-			occupy two-rows.
+		<h4 id="keyboard-101">标准 "101" 键盘布局</h4>
+
+			标准的 "101" 键盘(通常称为"US 布局")是唯一一种在单行 KEYCAP{Enter} 
+			(字面数字区域上的 KEYCAP{Enter} )键上方有 CODE{Backslash} 键(标记为 
+			KEYCAP{\|})的布局。所有其他布局都省略了此键，并展开 KEYCAP{Enter} 
+			键以占据两行。
 
 			<figure id="figure-keyboard-101-us">
-				<img src="images/keyboard-101-us.svg" width="684" height="225" alt="Standard '101' keyboard layout" />
-				<figcaption>Standard "101" keyboard layout showing unmodified US key values</figcaption>
+				<img src="images/keyboard-101-us.svg" width="684" height="225" 
+				alt="标准 '101' 键盘布局" />
+				<figcaption>标准 "101" 键盘布局，展示未修改过的美国按键值</figcaption>
 			</figure>
 
-			Modern standard "101"-layout keyboards actually contain 104 keys: 61
-			keys in the [=alphanumeric section=] and 43 keys in the
-			[=numpad=], [=control pad=], [=arrow pad=] and [=function sections=].
-			The "101" name for this keyboard layout dates to the
-			time when this standard keyboard did in fact contain 101 keys. The
-			two KEYCAP{Meta} keys (commonly given an OS-specific label), and the
-			KEYCAP{Menu} key were added later to bring the total to 104 keys.
+			现代标准的 "101" 布局键盘实际上包含 104 个键: 字母数字区域( 
+			[=alphanumeric section=] )有 61 个按键，小键盘( [=numpad=] ) 、控制板
+			( [=control pad=] )和箭头板( [=arrow pad=]) 和功能区域( 
+			[=function section=] )有 43 个键。这个键盘布局的 "101" 
+			名称可以追溯到这个标准键盘实际上包含 101 个键的时候。两个 KEYCAP{Meta} 
+			按键(通常被赋予为特定于操作系统的标签)和 KEYCAP{Menu} 键是后来被添加，
+			使按键总数达到了 104 个。
+
+			<p class="note custom-note">
+			左边的 KEYCAP{Meta} 按键的键帽标签通常有两种，一种是微软的 Windows 
+			操作系统的 KEYCAP{⊞} ( KEYCAP{Windows} )，一种是苹果操作系统的 
+			KEYCAP{⌘} ( KEYCAP{Command} )。
+			</p>
 
 		<h4 id="keyboard-101alt">Alternate "101" Keyboard Layout</h4>
 

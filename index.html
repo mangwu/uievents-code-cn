@@ -2,12 +2,12 @@
  <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-  <title>用户界面事件键盘事件 code 属性值(UI Events KeyboardEvent code Values)</title>
+  <title>用户界面时间键盘事件 code 属性值(UI Events KeyboardEvent code Values)</title>
   <meta content="UD" name="w3c-status">
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-UD" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
   <meta content="Bikeshed version d9bd89757, updated Thu Mar 23 10:06:53 2023 -0700" name="generator">
-  <meta content="6504073b793bd2498084d503a45972ad6a055202" name="document-revision">
+  <meta content="323464b33554b1539fade16954cf5beb10fe06a3" name="document-revision">
   <link href="./override.css" rel="stylesheet">
 <style>
 
@@ -585,7 +585,7 @@ dfn > a.self-link::before      { content: "#"; }
  <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72"> </a> </p>
-   <h1 class="p-name no-ref" id="title">用户界面事件键盘事件 code 属性值(UI Events KeyboardEvent code Values)</h1>
+   <h1 class="p-name no-ref" id="title">用户界面时间键盘事件 code 属性值(UI Events KeyboardEvent code Values)</h1>
    <p id="w3c-state"><a href="https://www.w3.org/standards/types#UD">翻译草案</a>, <time class="dt-updated" datetime="2023-05-08">2023年5月6日</time></p>
    <details open>
     <summary>More details about this document</summary>
@@ -647,18 +647,18 @@ dfn > a.self-link::before      { content: "#"; }
    <h2 class="no-num no-toc no-ref" id="contents">Table of Contents</h2>
    <ol class="toc" role="directory">
     <li>
-     <a href="#introduction"><span class="secno">1</span> <span class="content">Introduction</span></a>
+     <a href="#introduction"><span class="secno">1</span> <span class="content">简介</span></a>
      <ol class="toc">
       <li><a href="#style-conventions"><span class="secno">1.1</span> <span class="content">格式规约</span></a>
      </ol>
     <li>
-     <a href="#keyboard-layout"><span class="secno">2</span> <span class="content">Keyboard Layout</span></a>
+     <a href="#keyboard-layout"><span class="secno">2</span> <span class="content">键盘布局</span></a>
      <ol class="toc">
       <li>
-       <a href="#keyboard-common-layouts"><span class="secno">2.1</span> <span class="content">Standard Keyboard Layouts</span></a>
+       <a href="#keyboard-common-layouts"><span class="secno">2.1</span> <span class="content">标准键盘布局</span></a>
        <ol class="toc">
-        <li><a href="#keyboard-sections"><span class="secno">2.1.1</span> <span class="content">Keyboard Sections</span></a>
-        <li><a href="#keyboard-101"><span class="secno">2.1.2</span> <span class="content">Standard "101" Keyboard Layout</span></a>
+        <li><a href="#keyboard-sections"><span class="secno">2.1.1</span> <span class="content">键盘分区</span></a>
+        <li><a href="#keyboard-101"><span class="secno">2.1.2</span> <span class="content">标准 "101" 键盘布局</span></a>
         <li><a href="#keyboard-101alt"><span class="secno">2.1.3</span> <span class="content">Alternate "101" Keyboard Layout</span></a>
         <li><a href="#keyboard-102"><span class="secno">2.1.4</span> <span class="content">Standard "102" Keyboard Layout</span></a>
         <li><a href="#keyboard-103"><span class="secno">2.1.5</span> <span class="content">Korean "103" Keyboard Layout</span></a>
@@ -715,7 +715,7 @@ dfn > a.self-link::before      { content: "#"; }
   </nav>
   <main>
 <script defer src="./custom-script.js"></script>
-   <h2 class="heading settled" data-level="1" id="introduction"><span class="secno">1. </span><span class="content">Introduction</span><a class="self-link" href="#introduction"></a></h2>
+   <h2 class="heading settled" data-level="1" id="introduction"><span class="secno">1. </span><span class="content">简介</span><a class="self-link" href="#introduction"></a></h2>
    <p>本文档概述了各种键盘布局，并指定了每个键应使用的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code">code</a></code> 值。
 	与 [[UIEvents key]] 中描述的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key">key</a></code> 值不同， <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①">code</a></code> 值仅基于键在键盘上的物理位置，
 	不会因用户的当前区域设置而变化。</p>
@@ -727,69 +727,79 @@ dfn > a.self-link::before      { content: "#"; }
      <p>打印在 <a href="https://mangwu.github.io/uievents-cn/#key-legends"> <em>键帽</em></a> 上的键显示为 <code class="keycap">↓</code>， <code class="keycap">=</code> 或 <code class="keycap">Q</code> 。
 这用于从用户的角度引用键，而不考虑生成的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent">KeyboardEvent</a></code> 事件中的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key①">key</a></code> (键) 和 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code③">code</a></code> (键码)。</p>
     <li data-md>
-     <p>Glyphs representing character are shown as: <code class="glyph">"𣧂"</code>.</p>
+     <p>代表字符的字形(Glyphs)显示为: <code class="glyph">"𣧂"</code>。</p>
     <li data-md>
-     <p>Unicode <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#code-point" id="ref-for-code-point">code points</a> are shown as: <code class="unicode">U+003D</code>.</p>
+     <p>Unicode 代码点( <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#code-point" id="ref-for-code-point">code points</a> ) 显示为: <code class="unicode">U+003D</code>.</p>
     <li data-md>
-     <p>Valid <a data-link-type="dfn" href="https://www.w3.org/TR/uievents-key/#key-value-tables" id="ref-for-key-value-tables">key attribute values</a> (i.e., the value of
-a <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key②">key</a></code> attribute) are shown as: <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-ArrowDown">ArrowDown</a>"</code>, <code class="key">"="</code>, <code class="key">"q"</code> or <code class="key">"Q"</code>.</p>
+     <p>有效的键属性值( <a data-link-type="dfn" href="https://www.w3.org/TR/uievents-key/#key-value-tables" id="ref-for-key-value-tables">key attribute values</a> )，即 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key②">key</a></code> 属性值显示为: <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-ArrowDown">ArrowDown</a>"</code>, <code class="key">"="</code>, <code class="key">"q"</code> 或 <code class="key">"Q"</code>。</p>
     <li data-md>
-     <p>Valid <a data-link-type="dfn" href="#key-code-attribute-value" id="ref-for-key-code-attribute-value">key code attribute values</a> (i.e., the
-value of a <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code④">code</a></code> attribute) are shown as: <code class="code">"<a href="#code-ArrowDown">ArrowDown</a>"</code>, <code class="code">"<a href="#code-Equal">Equal</a>"</code> or <code class="code">"<a href="#code-KeyQ">KeyQ</a>"</code>.</p>
+     <p>有效的键值属性值( <a data-link-type="dfn" href="#key-code-attribute-value" id="ref-for-key-code-attribute-value">key code attribute values</a> )，即 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code④">code</a></code> 属性值显示为: <code class="code">"<a href="#code-ArrowDown">ArrowDown</a>"</code>, <code class="code">"<a href="#code-Equal">Equal</a>"</code> 或 <code class="code">"<a href="#code-KeyQ">KeyQ</a>"</code>。</p>
    </ul>
-   <h2 class="heading settled" data-level="2" id="keyboard-layout"><span class="secno">2. </span><span class="content">Keyboard Layout</span><a class="self-link" href="#keyboard-layout"></a></h2>
-   <p><em>This section is non-normative.</em></p>
-   <p>Alphanumeric keyboards are the most common way for users to generate
-	keyboard events. This section provides an overview of standard keyboards and
-	their physical layouts.</p>
-   <h3 class="heading settled" data-level="2.1" id="keyboard-common-layouts"><span class="secno">2.1. </span><span class="content">Standard Keyboard Layouts</span><a class="self-link" href="#keyboard-common-layouts"></a></h3>
-   <p>This section describes the physical layouts found on commonly available
-		keyboards.</p>
-   <h4 class="heading settled" data-level="2.1.1" id="keyboard-sections"><span class="secno">2.1.1. </span><span class="content">Keyboard Sections</span><a class="self-link" href="#keyboard-sections"></a></h4>
-   <p>When discussing keyboard layouts, it is convenient to divide the
-			standard keyboard into distinct sections and to label each row.</p>
-   <figure id="figure-keyboard-sections">
-     <img alt="The five general sections of a standard keyboard" height="225" src="images/keyboard-sections.svg" width="684"> 
-    <figcaption>The five general sections of a standard keyboard</figcaption>
-   </figure>
-   <p>These keyboard sections are:</p>
+   <p class="note custom-note" role="note"> 在 <a href="https://mangwu.github.io/uievents-cn/#style-conventions"> UIEvents</a> 规范本体的格式规约中，也对键帽，字符，代码点和键，
+		键值的属性值进行了说明，但是渲染显示不一样，本规范中的渲染会更显眼。 </p>
+   <h2 class="heading settled" data-level="2" id="keyboard-layout"><span class="secno">2. </span><span class="content">键盘布局</span><a class="self-link" href="#keyboard-layout"></a></h2>
+   <p><em>本节不是规范的。</em></p>
+   <p>字母数字键盘是用户生成键盘事件的最常见方式。本节概述了标准键盘及其物理布局。</p>
+   <p class="note custom-note" role="note"> <q>键盘布局(keyboard layout)是指以按键、或键上图例来表示任何特定之机械、
+	视觉或功能的键盘布局方式; 或则是在计算机、
+	打字机或其它字体排版键盘等之类似设备、
+	以其键之关系含义结构在键盘上表现的布局方式</q> —— <a href="https://zh.wikipedia.org/wiki/%E9%94%AE%E7%9B%98%E5%B8%83%E5%B1%80"> zh.wikipedia.org </a> </p>
+   <h3 class="heading settled" data-level="2.1" id="keyboard-common-layouts"><span class="secno">2.1. </span><span class="content">标准键盘布局</span><a class="self-link" href="#keyboard-common-layouts"></a></h3>
+   <p>本节介绍了常见键盘上的物理布局。</p>
+   <h4 class="heading settled" data-level="2.1.1" id="keyboard-sections"><span class="secno">2.1.1. </span><span class="content">键盘分区</span><a class="self-link" href="#keyboard-sections"></a></h4>
+   <p>在讨论键盘布局时，将标准键盘划分为不同的区域并标记每一行会更方便讨论布局。</p>
+   <div class="figure-change" data-content="images/keyboard-sections">
+    <div class="custom-tabs-nav-wrap">
+     <div class="custom-tabs-nav-list">
+      <div class="custom-tabs-tab custom-tabs-tab-active" data-node-key="1">
+       <div class="custom-tabs-tab-btn" tabindex="0">汉化图</div>
+      </div>
+      <div class="custom-tabs-tab" data-node-key="2">
+       <div class="custom-tabs-tab-btn" tabindex="0">原图</div>
+      </div>
+     </div>
+    </div>
+    <figure id="figure-keyboard-sections-zh">
+      <img alt="标准键盘的五个通用区域" height="225" src="images/keyboard-sections-zh.svg" width="684"> 
+     <figcaption>标准键盘的五个通用区域</figcaption>
+    </figure>
+    <figure class="figure-hidden" id="figure-keyboard-sections">
+      <img alt="标准键盘的五个通用区域" height="225" src="images/keyboard-sections.svg" width="684"> 
+     <figcaption>标准键盘的五个通用区域</figcaption>
+    </figure>
+   </div>
+   <p class="note custom-note" role="note"> 注意，如果包括功能相同的按键(如 <code class="keycap">ControlLeft</code> 和 <code class="keycap">ControlRight</code> )，上图共有 <code>104</code> 个物理按键。 </p>
+   <p>这些键盘区域包括:</p>
    <ul>
     <li data-md>
-     <p>The <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section">alphanumeric section</a> is the main part of the
-keyboard and is where most of the keyboard variation occurs.
-When a user selects a keyboard layout, it is the keys in this
-sections that are most affected.</p>
+     <p>字母数字区域( <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section">alphanumeric section</a> )是键盘的主要部分，
+也是大多数键盘变化发生的地方。当用户选择一种键盘布局时，
+受影响最大的是此区域中的物理按键。</p>
     <li data-md>
-     <p>The <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad">control pad</a> and <a data-link-type="dfn" href="#arrow-pad" id="ref-for-arrow-pad">arrow pad</a> sections contain the arrow keys and other editing keys.</p>
+     <p>控制板( <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad">control pad</a> )区域和箭头板( <a data-link-type="dfn" href="#arrow-pad" id="ref-for-arrow-pad">arrow pad</a> )区域包含箭头按键和其他编辑按键。</p>
     <li data-md>
-     <p>The <a data-link-type="dfn" href="#numpad" id="ref-for-numpad">numpad</a> (also known as the "numeric <a data-link-type="dfn" href="#keypad" id="ref-for-keypad">keypad</a>"
-or "number pad") contains number and math keys to make it easier
-to enter numeric data.</p>
+     <p>小键盘( <a data-link-type="dfn" href="#numpad" id="ref-for-numpad">numpad</a> ，也称为"数字小键盘( <a data-link-type="dfn" href="#keypad" id="ref-for-keypad">keypad</a> )"或"数字键盘")区域
+包含数字和数学按键键，使输入数字数据更容易。</p>
     <li data-md>
-     <p>And finally, the <a data-link-type="dfn" href="#function-section" id="ref-for-function-section">function section</a> contains
-miscellaneous <a data-link-type="dfn" href="#function-key" id="ref-for-function-key">function keys</a> and special keys like <code class="keycap">Escape</code>.</p>
+     <p>最后，功能区域( <a data-link-type="dfn" href="#function-section" id="ref-for-function-section">function section</a> )包含各种功能按键( <a data-link-type="dfn" href="#function-key" id="ref-for-function-key">function keys</a> )和特殊按键，如 <code class="keycap">Escape</code> 。</p>
    </ul>
-   <p>To make it easier to identify keys, the rows on the keyboard are
-			named starting with "A" for the bottom row up to "E" for the top
-			row. The row of keys in the <a data-link-type="dfn" href="#function-section" id="ref-for-function-section①">function section</a> are considered to be in
-			row "K". These row names are consistent with those given in <a data-link-type="biblio" href="#biblio-iso9995-1" title="ISO/IEC 9995-1:2009 Information technology -- Keyboard layouts for text and office systems -- Part 1: General principles governing keyboard layouts">[ISO9995-1]</a>.</p>
-   <p>Note that many keyboards (both modern and legacy) have extra keys
-			that do not fit neatly into the above sections. Some of these keys
-			are covered in <a href="#key-media">§ 3.6 Media Keys</a>.</p>
-   <h4 class="heading settled" data-level="2.1.2" id="keyboard-101"><span class="secno">2.1.2. </span><span class="content">Standard "101" Keyboard Layout</span><a class="self-link" href="#keyboard-101"></a></h4>
-   <p>The standard "101" keyboard (commonly referred to as the "US
-			layout") is the only layout that has a <code class="code">"<a href="#code-Backslash">Backslash</a>"</code> key (labeled <code class="keycap">\|</code>) above a single-row <code class="keycap">Enter</code> key. All the other
-			layouts omit this key and expand the <code class="keycap">Enter</code> key to
-			occupy two-rows.</p>
+   <p>为了更容易识别按键，键盘上的行的名称从最下面一行的 "A" 开始，
+			到最上面一排的 "E" 。功能区域( <a data-link-type="dfn" href="#function-section" id="ref-for-function-section①">function section</a> )中的键行被认为在 
+			"K" 行中。这些行名称与 <a data-link-type="biblio" href="#biblio-iso9995-1" title="ISO/IEC 9995-1:2009 Information technology -- Keyboard layouts for text and office systems -- Part 1: General principles governing keyboard layouts">[ISO9995-1]</a> 规范中给出的行名称一致。</p>
+   <p>请注意，许多键盘(包括现代键盘和传统键盘)都有多余的键，
+			这些键没有整齐地放入上面的区域。其中一些键包含在<a href="#key-media">§ 3.6 Media Keys</a>。</p>
+   <h4 class="heading settled" data-level="2.1.2" id="keyboard-101"><span class="secno">2.1.2. </span><span class="content">标准 "101" 键盘布局</span><a class="self-link" href="#keyboard-101"></a></h4>
+   <p>标准的 "101" 键盘(通常称为"US 布局")是唯一一种在单行 <code class="keycap">Enter</code> (字面数字区域上的 <code class="keycap">Enter</code> )键上方有 <code class="code">"<a href="#code-Backslash">Backslash</a>"</code> 键(标记为 <code class="keycap">\|</code>)的布局。所有其他布局都省略了此键，并展开 <code class="keycap">Enter</code> 键以占据两行。</p>
    <figure id="figure-keyboard-101-us">
-     <img alt="Standard &apos;101&apos; keyboard layout" height="225" src="images/keyboard-101-us.svg" width="684"> 
-    <figcaption>Standard "101" keyboard layout showing unmodified US key values</figcaption>
+     <img alt="标准 &apos;101&apos; 键盘布局" height="225" src="images/keyboard-101-us.svg" width="684"> 
+    <figcaption>标准 "101" 键盘布局，展示未修改过的美国按键值</figcaption>
    </figure>
-   <p>Modern standard "101"-layout keyboards actually contain 104 keys: 61
-			keys in the <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section①">alphanumeric section</a> and 43 keys in the <a data-link-type="dfn" href="#numpad" id="ref-for-numpad①">numpad</a>, <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad①">control pad</a>, <a data-link-type="dfn" href="#arrow-pad" id="ref-for-arrow-pad①">arrow pad</a> and <a data-link-type="dfn" href="#function-section" id="ref-for-function-section②">function sections</a>.
-			The "101" name for this keyboard layout dates to the
-			time when this standard keyboard did in fact contain 101 keys. The
-			two <code class="keycap">Meta</code> keys (commonly given an OS-specific label), and the <code class="keycap">Menu</code> key were added later to bring the total to 104 keys.</p>
+   <p>现代标准的 "101" 布局键盘实际上包含 104 个键: 字母数字区域( <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section①">alphanumeric section</a> )有 61 个按键，小键盘( <a data-link-type="dfn" href="#numpad" id="ref-for-numpad①">numpad</a> ) 、控制板
+			( <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad①">control pad</a> )和箭头板( <a data-link-type="dfn" href="#arrow-pad" id="ref-for-arrow-pad①">arrow pad</a>) 和功能区域( <a data-link-type="dfn" href="#function-section" id="ref-for-function-section②">function section</a> )有 43 个键。这个键盘布局的 "101" 
+			名称可以追溯到这个标准键盘实际上包含 101 个键的时候。两个 <code class="keycap">Meta</code> 按键(通常被赋予为特定于操作系统的标签)和 <code class="keycap">Menu</code> 键是后来被添加，
+			使按键总数达到了 104 个。</p>
+   <p class="note custom-note" role="note"> 左边的 <code class="keycap">Meta</code> 按键的键帽标签通常有两种，一种是微软的 Windows 
+			操作系统的 <code class="keycap">⊞</code> ( <code class="keycap">Windows</code> )，一种是苹果操作系统的 <code class="keycap">⌘</code> ( <code class="keycap">Command</code> )。 </p>
    <h4 class="heading settled" data-level="2.1.3" id="keyboard-101alt"><span class="secno">2.1.3. </span><span class="content">Alternate "101" Keyboard Layout</span><a class="self-link" href="#keyboard-101alt"></a></h4>
    <p>The alternate "101" keyboard has a large <code class="keycap">Enter</code> key and
 			shrinks the <code class="keycap">Backspace</code> key to make room for the <code class="code">"<a href="#code-IntlYen">IntlYen</a>"</code> key (which replaces the <code class="code">"<a href="#code-Backslash">Backslash</a>"</code> key found in the standard
@@ -2053,7 +2063,7 @@ something specific to the values defined in this document</p>
   <aside aria-labelledby="infopaneltitle-for-e604a5849fdf8059e0f5a8fb9b7ba547" class="dfn-panel" data-for="e604a5849fdf8059e0f5a8fb9b7ba547" id="infopanel-for-e604a5849fdf8059e0f5a8fb9b7ba547">
    <span id="infopaneltitle-for-e604a5849fdf8059e0f5a8fb9b7ba547" style="display:none">Info about the 'code' external reference.</span><a href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code">https://www.w3.org/TR/uievents/#dom-keyboardevent-code</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-keyboardevent-code">1. Introduction</a> <a href="#ref-for-dom-keyboardevent-code①">(2)</a> <a href="#ref-for-dom-keyboardevent-code②">(3)</a>
+    <li><a href="#ref-for-dom-keyboardevent-code">1. 简介</a> <a href="#ref-for-dom-keyboardevent-code①">(2)</a> <a href="#ref-for-dom-keyboardevent-code②">(3)</a>
     <li><a href="#ref-for-dom-keyboardevent-code③">1.1. 格式规约</a> <a href="#ref-for-dom-keyboardevent-code④">(2)</a>
     <li><a href="#ref-for-dom-keyboardevent-code⑤">3. Keyboard Event code Value Tables</a> <a href="#ref-for-dom-keyboardevent-code⑥">(2)</a>
     <li><a href="#ref-for-dom-keyboardevent-code⑦">3.1.1. Writing System Keys</a> <a href="#ref-for-dom-keyboardevent-code⑧">(2)</a> <a href="#ref-for-dom-keyboardevent-code⑨">(3)</a>
@@ -2072,7 +2082,7 @@ something specific to the values defined in this document</p>
   <aside aria-labelledby="infopaneltitle-for-0e3150549665e2be6e0eb7354b4500e8" class="dfn-panel" data-for="0e3150549665e2be6e0eb7354b4500e8" id="infopanel-for-0e3150549665e2be6e0eb7354b4500e8">
    <span id="infopaneltitle-for-0e3150549665e2be6e0eb7354b4500e8" style="display:none">Info about the 'key' external reference.</span><a href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key">https://www.w3.org/TR/uievents/#dom-keyboardevent-key</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-keyboardevent-key">1. Introduction</a>
+    <li><a href="#ref-for-dom-keyboardevent-key">1. 简介</a>
     <li><a href="#ref-for-dom-keyboardevent-key①">1.1. 格式规约</a> <a href="#ref-for-dom-keyboardevent-key②">(2)</a>
     <li><a href="#ref-for-dom-keyboardevent-key③">2.4. Virtual Keyboards and Chording Keyboards</a>
     <li><a href="#ref-for-dom-keyboardevent-key④">3.1.1. Writing System Keys</a>
@@ -2137,8 +2147,8 @@ something specific to the values defined in this document</p>
   <aside aria-labelledby="infopaneltitle-for-alphanumeric-section" class="dfn-panel" data-for="alphanumeric-section" id="infopanel-for-alphanumeric-section">
    <span id="infopaneltitle-for-alphanumeric-section" style="display:none">Info about the 'alphanumeric section' definition.</span><b><a href="#alphanumeric-section">#alphanumeric-section</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-alphanumeric-section">2.1.1. Keyboard Sections</a>
-    <li><a href="#ref-for-alphanumeric-section①">2.1.2. Standard "101" Keyboard Layout</a>
+    <li><a href="#ref-for-alphanumeric-section">2.1.1. 键盘分区</a>
+    <li><a href="#ref-for-alphanumeric-section①">2.1.2. 标准 "101" 键盘布局</a>
     <li><a href="#ref-for-alphanumeric-section②">2.1.3. Alternate "101" Keyboard Layout</a>
     <li><a href="#ref-for-alphanumeric-section③">2.1.4. Standard "102" Keyboard Layout</a>
     <li><a href="#ref-for-alphanumeric-section④">2.1.5. Korean "103" Keyboard Layout</a>
@@ -2168,8 +2178,8 @@ something specific to the values defined in this document</p>
   <aside aria-labelledby="infopaneltitle-for-control-pad" class="dfn-panel" data-for="control-pad" id="infopanel-for-control-pad">
    <span id="infopaneltitle-for-control-pad" style="display:none">Info about the 'control pad' definition.</span><b><a href="#control-pad">#control-pad</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-control-pad">2.1.1. Keyboard Sections</a>
-    <li><a href="#ref-for-control-pad①">2.1.2. Standard "101" Keyboard Layout</a>
+    <li><a href="#ref-for-control-pad">2.1.1. 键盘分区</a>
+    <li><a href="#ref-for-control-pad①">2.1.2. 标准 "101" 键盘布局</a>
     <li><a href="#ref-for-control-pad②">2.1.3. Alternate "101" Keyboard Layout</a>
     <li><a href="#ref-for-control-pad③">2.1.4. Standard "102" Keyboard Layout</a>
     <li><a href="#ref-for-control-pad④">2.1.5. Korean "103" Keyboard Layout</a>
@@ -2183,8 +2193,8 @@ something specific to the values defined in this document</p>
   <aside aria-labelledby="infopaneltitle-for-arrow-pad" class="dfn-panel" data-for="arrow-pad" id="infopanel-for-arrow-pad">
    <span id="infopaneltitle-for-arrow-pad" style="display:none">Info about the 'arrow pad' definition.</span><b><a href="#arrow-pad">#arrow-pad</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-arrow-pad">2.1.1. Keyboard Sections</a>
-    <li><a href="#ref-for-arrow-pad①">2.1.2. Standard "101" Keyboard Layout</a>
+    <li><a href="#ref-for-arrow-pad">2.1.1. 键盘分区</a>
+    <li><a href="#ref-for-arrow-pad①">2.1.2. 标准 "101" 键盘布局</a>
     <li><a href="#ref-for-arrow-pad②">2.1.3. Alternate "101" Keyboard Layout</a>
     <li><a href="#ref-for-arrow-pad③">2.1.4. Standard "102" Keyboard Layout</a>
     <li><a href="#ref-for-arrow-pad④">2.1.5. Korean "103" Keyboard Layout</a>
@@ -2198,8 +2208,8 @@ something specific to the values defined in this document</p>
   <aside aria-labelledby="infopaneltitle-for-numpad" class="dfn-panel" data-for="numpad" id="infopanel-for-numpad">
    <span id="infopaneltitle-for-numpad" style="display:none">Info about the 'numpad' definition.</span><b><a href="#numpad">#numpad</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-numpad">2.1.1. Keyboard Sections</a>
-    <li><a href="#ref-for-numpad①">2.1.2. Standard "101" Keyboard Layout</a>
+    <li><a href="#ref-for-numpad">2.1.1. 键盘分区</a>
+    <li><a href="#ref-for-numpad①">2.1.2. 标准 "101" 键盘布局</a>
     <li><a href="#ref-for-numpad②">2.1.3. Alternate "101" Keyboard Layout</a>
     <li><a href="#ref-for-numpad③">2.1.4. Standard "102" Keyboard Layout</a>
     <li><a href="#ref-for-numpad④">2.1.5. Korean "103" Keyboard Layout</a>
@@ -2211,14 +2221,14 @@ something specific to the values defined in this document</p>
   <aside aria-labelledby="infopaneltitle-for-keypad" class="dfn-panel" data-for="keypad" id="infopanel-for-keypad">
    <span id="infopaneltitle-for-keypad" style="display:none">Info about the 'keypad' definition.</span><b><a href="#keypad">#keypad</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-keypad">2.1.1. Keyboard Sections</a>
+    <li><a href="#ref-for-keypad">2.1.1. 键盘分区</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-function-section" class="dfn-panel" data-for="function-section" id="infopanel-for-function-section">
    <span id="infopaneltitle-for-function-section" style="display:none">Info about the 'function section' definition.</span><b><a href="#function-section">#function-section</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-function-section">2.1.1. Keyboard Sections</a> <a href="#ref-for-function-section①">(2)</a>
-    <li><a href="#ref-for-function-section②">2.1.2. Standard "101" Keyboard Layout</a>
+    <li><a href="#ref-for-function-section">2.1.1. 键盘分区</a> <a href="#ref-for-function-section①">(2)</a>
+    <li><a href="#ref-for-function-section②">2.1.2. 标准 "101" 键盘布局</a>
     <li><a href="#ref-for-function-section③">2.1.3. Alternate "101" Keyboard Layout</a>
     <li><a href="#ref-for-function-section④">2.1.4. Standard "102" Keyboard Layout</a>
     <li><a href="#ref-for-function-section⑤">2.1.5. Korean "103" Keyboard Layout</a>
@@ -2232,7 +2242,7 @@ something specific to the values defined in this document</p>
   <aside aria-labelledby="infopaneltitle-for-function-key" class="dfn-panel" data-for="function-key" id="infopanel-for-function-key">
    <span id="infopaneltitle-for-function-key" style="display:none">Info about the 'function key' definition.</span><b><a href="#function-key">#function-key</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-function-key">2.1.1. Keyboard Sections</a>
+    <li><a href="#ref-for-function-key">2.1.1. 键盘分区</a>
     <li><a href="#ref-for-function-key①">3.1.2. Functional Keys</a>
     <li><a href="#ref-for-function-key②">3.5. Function Section</a> <a href="#ref-for-function-key③">(2)</a> <a href="#ref-for-function-key④">(3)</a> <a href="#ref-for-function-key⑤">(4)</a> <a href="#ref-for-function-key⑥">(5)</a>
     <li><a href="#ref-for-function-key⑦">3.6. Media Keys</a> <a href="#ref-for-function-key⑧">(2)</a> <a href="#ref-for-function-key⑨">(3)</a> <a href="#ref-for-function-key①⓪">(4)</a>
