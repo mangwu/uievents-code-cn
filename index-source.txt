@@ -544,29 +544,17 @@ path: stylesheet-extra.include
 			键盘进行对比的 <strong>非规范表格</strong>:
 			</p>
 
-		++---------------------------------+----------------------------------------------+
-		=| {{KeyboardEvent}} .             | Valid {{KeyboardEvent/location}} values      |
-		 | {{KeyboardEvent/key}}           |                                              |
-		 +---------------------------------+----------------------------------------------+
-		+| KEY{Shift}, KEY{Control},       | {{KeyboardEvent/DOM_KEY_LOCATION_LEFT}},     |
-		 | KEY{Alt}, KEY{Meta}             | {{KeyboardEvent/DOM_KEY_LOCATION_RIGHT}}     |
-		 +---------------------------------+----------------------------------------------+
-		+| KEY{ArrowDown}, KEY{ArrowLeft}, | {{KeyboardEvent/DOM_KEY_LOCATION_STANDARD}}, |
-		 | KEY{ArrowRight}, KEY{ArrowUp}   | {{KeyboardEvent/DOM_KEY_LOCATION_NUMPAD}}    |
-		 +---------------------------------+----------------------------------------------+
-		+| KEY{End}, KEY{Home},            | {{KeyboardEvent/DOM_KEY_LOCATION_STANDARD}}, |
-		 | KEY{PageDown}, KEY{PageUp}      | {{KeyboardEvent/DOM_KEY_LOCATION_NUMPAD}}    |
-		 +---------------------------------+----------------------------------------------+
-		+| KEY_NOLINK{0}, KEY_NOLINK{1},   | {{KeyboardEvent/DOM_KEY_LOCATION_STANDARD}}, |
-		 | KEY_NOLINK{2}, KEY_NOLINK{2},   | {{KeyboardEvent/DOM_KEY_LOCATION_NUMPAD}}    |
-		 | KEY_NOLINK{4}, KEY_NOLINK{5},   |                                              |
-		 | KEY_NOLINK{6}, KEY_NOLINK{7},   |                                              |
-		 | KEY_NOLINK{8}, KEY_NOLINK{9},   |                                              |
-		 | KEY_NOLINK{.}, KEY{Enter},      |                                              |
-		 | KEY_NOLINK{+}, KEY_NOLINK{-},   |                                              |
-		 | KEY_NOLINK{*}, KEY_NOLINK{/}    |                                              |
-		++---------------------------------+----------------------------------------------+
-
+			++------------+-------------+-----------------+
+			=| 特殊符号   | 功能键      | PC 键盘         |
+			 +------------+-------------+-----------------+
+			+| KEYCAP{⌘}  | command     | Windows键       |
+			+| KEYCAP{⌃}  | control     | CODE{Ctrl}      |
+			+| KEYCAP{⌥}  | option      | CODE{Alt}       |
+			+| KEYCAP{⇧}  | shift       | CODE{Shift}     |
+			+| KEYCAP{⇪}  | caps lock   | Caps Lock       |
+			+| KEYCAP{⎋}  | esc         | Esc             |
+			+| KEYCAP{⌫}  | delete      | Backspace       |
+			+++-----------+-------------+-----------------+
 
 		<h4 id="keyboard-laptops">Laptop Keyboard Layouts</h4>
 

@@ -7,7 +7,7 @@
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-UD" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
   <meta content="Bikeshed version d9bd89757, updated Thu Mar 23 10:06:53 2023 -0700" name="generator">
-  <meta content="2e45f0f68ec148fbc721cd880e2a27657833c441" name="document-revision">
+  <meta content="eecd899ec2811aca4a3c2c077b1f3a326e347312" name="document-revision">
   <link href="./override.css" rel="stylesheet">
 <style>
 
@@ -936,28 +936,42 @@ dfn > a.self-link::before      { content: "#"; }
    <p>在此图中，绿色键表示已移动到新位置的键，而蓝色键表示已添加的键。</p>
    <p class="note custom-note" role="note"> 本节没有讨论很多关于苹果标准键盘的内容，可以参考维基百科- <a href="https://en.wikipedia.org/wiki/Apple_keyboards"> Apple_keyboards</a> 查阅更多内容。下面是一些键帽显示为特殊符合并与 PC 
 			键盘进行对比的 <strong>非规范表格</strong>: </p>
-   <p>++---------------------------------+----------------------------------------------+
-		=| <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent①">KeyboardEvent</a></code> .             | Valid <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-location" id="ref-for-dom-keyboardevent-location">location</a></code> values      |
-		 | <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key③">key</a></code> |                                              |
-		 +---------------------------------+----------------------------------------------+
-		+| <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-Shift">Shift</a>"</code>, <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-Control">Control</a>"</code>,       | <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-dom_key_location_left" id="ref-for-dom-keyboardevent-dom_key_location_left">DOM_KEY_LOCATION_LEFT</a></code>,     |
-		 | <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-Alt">Alt</a>"</code>, <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-Meta">Meta</a>"</code> | <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-dom_key_location_right" id="ref-for-dom-keyboardevent-dom_key_location_right">DOM_KEY_LOCATION_RIGHT</a></code> |
-		 +---------------------------------+----------------------------------------------+
-		+| <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-ArrowDown">ArrowDown</a>"</code>, <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-ArrowLeft">ArrowLeft</a>"</code>, | <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-dom_key_location_standard" id="ref-for-dom-keyboardevent-dom_key_location_standard">DOM_KEY_LOCATION_STANDARD</a></code>, |
-		 | <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-ArrowRight">ArrowRight</a>"</code>, <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-ArrowUp">ArrowUp</a>"</code> | <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-dom_key_location_numpad" id="ref-for-dom-keyboardevent-dom_key_location_numpad">DOM_KEY_LOCATION_NUMPAD</a></code> |
-		 +---------------------------------+----------------------------------------------+
-		+| <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-End">End</a>"</code>, <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-Home">Home</a>"</code>,            | <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-dom_key_location_standard" id="ref-for-dom-keyboardevent-dom_key_location_standard①">DOM_KEY_LOCATION_STANDARD</a></code>, |
-		 | <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-PageDown">PageDown</a>"</code>, <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-PageUp">PageUp</a>"</code> | <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-dom_key_location_numpad" id="ref-for-dom-keyboardevent-dom_key_location_numpad①">DOM_KEY_LOCATION_NUMPAD</a></code> |
-		 +---------------------------------+----------------------------------------------+
-		+| <code class="key">"0"</code>, <code class="key">"1"</code>,   | <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-dom_key_location_standard" id="ref-for-dom-keyboardevent-dom_key_location_standard②">DOM_KEY_LOCATION_STANDARD</a></code>, |
-		 | <code class="key">"2"</code>, <code class="key">"2"</code>,   | <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-dom_key_location_numpad" id="ref-for-dom-keyboardevent-dom_key_location_numpad②">DOM_KEY_LOCATION_NUMPAD</a></code> |
-		 | <code class="key">"4"</code>, <code class="key">"5"</code>,   |                                              |
-		 | <code class="key">"6"</code>, <code class="key">"7"</code>,   |                                              |
-		 | <code class="key">"8"</code>, <code class="key">"9"</code>,   |                                              |
-		 | <code class="key">"."</code>, <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-Enter">Enter</a>"</code>,      |                                              |
-		 | <code class="key">"+"</code>, <code class="key">"-"</code>,   |                                              |
-		 | <code class="key">"*"</code>, <code class="key">"/"</code> |                                              |
-		++---------------------------------+----------------------------------------------+</p>
+   <table class="event-sequence-table">
+    <thead>
+     <tr>
+      <th>特殊符号
+      <th>功能键
+      <th>PC 键盘
+    <tbody>
+     <tr>
+      <td><code class="keycap">⌘</code>
+      <td>command
+      <td>Windows键
+     <tr>
+      <td><code class="keycap">⌃</code>
+      <td>control
+      <td><code class="code">"<a href="http://www.w3.org/TR/uievents-code/#code-Ctrl">Ctrl</a>"</code>
+     <tr>
+      <td><code class="keycap">⌥</code>
+      <td>option
+      <td><code class="code">"<a href="http://www.w3.org/TR/uievents-code/#code-Alt">Alt</a>"</code>
+     <tr>
+      <td><code class="keycap">⇧</code>
+      <td>shift
+      <td><code class="code">"<a href="http://www.w3.org/TR/uievents-code/#code-Shift">Shift</a>"</code>
+     <tr>
+      <td><code class="keycap">⇪</code>
+      <td>caps lock
+      <td>Caps Lock
+     <tr>
+      <td><code class="keycap">⎋</code>
+      <td>esc
+      <td>Esc
+     <tr>
+      <td><code class="keycap">⌫</code>
+      <td>delete
+      <td>Backspace
+   </table>
    <h4 class="heading settled" data-level="2.1.9" id="keyboard-laptops"><span class="secno">2.1.9. </span><span class="content">Laptop Keyboard Layouts</span><a class="self-link" href="#keyboard-laptops"></a></h4>
    <p>The limited space available on laptop keyboards often means that the
 			physical key layout needs to be adjusted to fit all the required
@@ -1037,7 +1051,7 @@ dfn > a.self-link::before      { content: "#"; }
 		values, and the number and type of keys pressed to produce a key value
 		will vary, but the final key values produced by such keyboards SHOULD
 		match the range of key values described in this specification.</p>
-   <p>For these and other alternative modal keyboards, the <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key④">key</a></code> values <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-Alphanumeric">Alphanumeric</a>"</code>, <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-CapsLock">CapsLock</a>"</code>, <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-NumLock">NumLock</a>"</code>,
+   <p>For these and other alternative modal keyboards, the <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key③">key</a></code> values <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-Alphanumeric">Alphanumeric</a>"</code>, <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-CapsLock">CapsLock</a>"</code>, <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-NumLock">NumLock</a>"</code>,
 		and <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-SymbolLock">SymbolLock</a>"</code> are RECOMMENDED for the keys which switch between different modes.</p>
    <h2 class="heading settled" data-level="3" id="code-value-tables"><span class="secno">3. </span><span class="content">Keyboard Event <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑤">code</a></code> Value Tables</span><a class="self-link" href="#code-value-tables"></a></h2>
    <p>This section defines a list of values which are appropriate for use as <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑥">code</a></code> values.</p>
@@ -1052,7 +1066,7 @@ dfn > a.self-link::before      { content: "#"; }
 	all platforms or devices. For example, Mac keyboards do not have an <code class="keycap">Insert</code> key
 	whereas standard PC keyboards do not have a <code class="keycap">Help</code> key. </p>
    <p>For every key listed as "Required" in this specification, a conforming implementation
-	of the <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent②">KeyboardEvent</a></code> interface MUST return the correct value as long as that key
+	of the <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent①">KeyboardEvent</a></code> interface MUST return the correct value as long as that key
 	is available on that platform.</p>
    <p class="note" role="note"> Note: While every attempt has been made to make this list of values as complete as possible,
 	new values will periodically need to be defined as new input devices are introduced.
@@ -1066,7 +1080,7 @@ dfn > a.self-link::before      { content: "#"; }
 		layouts.</p>
    <h4 class="heading settled" data-level="3.1.1" id="key-alphanumeric-writing-system"><span class="secno">3.1.1. </span><span class="content">Writing System Keys</span><a class="self-link" href="#key-alphanumeric-writing-system"></a></h4>
    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="writing-system-keys">writing system keys</dfn> are those that change
-			meaning (i.e., they produce different <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key⑤">key</a></code> values) based on the current locale and keyboard layout.</p>
+			meaning (i.e., they produce different <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key④">key</a></code> values) based on the current locale and keyboard layout.</p>
    <figure id="figure-keyboard-codes-alphanum1">
      <img alt="The writing system keys" height="225" src="images/keyboard-codes-alphanum1.svg" width="653"> 
     <figcaption>The <a data-link-type="dfn" href="#writing-system-keys" id="ref-for-writing-system-keys②">writing system keys</a> in the <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section①⓪">alphanumeric section</a></figcaption>
@@ -1090,7 +1104,7 @@ dfn > a.self-link::before      { content: "#"; }
     <caption>List of code values for writing system keys in the Alphanumeric section.</caption>
     <thead>
      <tr>
-      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent③">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑨">code</a></code>
+      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent②">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑨">code</a></code>
       <th style="width:10%">Required
       <th style="width:70%">Notes (Non-normative)
     <tbody>
@@ -1308,13 +1322,13 @@ dfn > a.self-link::before      { content: "#"; }
      <img alt="The standard set of functional keys" height="225" src="images/keyboard-codes-alphanum2.svg" width="653"> 
     <figcaption>The standard set of <a data-link-type="dfn" href="#functional-keys" id="ref-for-functional-keys①">functional keys</a> in the <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section①②">alphanumeric section</a></figcaption>
    </figure>
-   <p>The <code class="code">"<a href="#code-AltRight">AltRight</a>"</code> key (highlighted in green) is the only <a data-link-type="dfn" href="#functional-keys" id="ref-for-functional-keys②">functional key</a> that does not generate the same <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key⑥">key</a></code> value for every locale. In some locales it
+   <p>The <code class="code">"<a href="#code-AltRight">AltRight</a>"</code> key (highlighted in green) is the only <a data-link-type="dfn" href="#functional-keys" id="ref-for-functional-keys②">functional key</a> that does not generate the same <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key⑤">key</a></code> value for every locale. In some locales it
 			produces <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-Alt">Alt</a>"</code> while in others it produces <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-AltGraph">AltGraph</a>"</code>.</p>
    <table class="data-table full-width" id="table-key-code-alphanumeric-functional-1">
     <caption>List of code values for functional keys in the Alphanumeric section.</caption>
     <thead>
      <tr>
-      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent④">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⓪">code</a></code>
+      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent③">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⓪">code</a></code>
       <th style="width:10%">Required
       <th style="width:70%">Notes (Non-normative)
     <tbody>
@@ -1389,7 +1403,7 @@ dfn > a.self-link::before      { content: "#"; }
     <caption>List of code values for functional keys found on Japanese and Korean keyboards.</caption>
     <thead>
      <tr>
-      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent⑤">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①②">code</a></code>
+      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent④">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①②">code</a></code>
       <th style="width:10%">Required
       <th style="width:70%">Notes (Non-normative)
     <tbody>
@@ -1439,7 +1453,7 @@ dfn > a.self-link::before      { content: "#"; }
     <caption>List of code values for keys in the ControlPad section.</caption>
     <thead>
      <tr>
-      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent⑥">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①③">code</a></code>
+      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent⑤">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①③">code</a></code>
       <th style="width:10%">Required
       <th style="width:70%">Notes (Non-normative)
     <tbody>
@@ -1486,7 +1500,7 @@ dfn > a.self-link::before      { content: "#"; }
     <caption>List of code values for keys in the ArrowPad section.</caption>
     <thead>
      <tr>
-      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent⑦">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⑤">code</a></code>
+      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent⑥">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⑤">code</a></code>
       <th style="width:10%">Required
       <th style="width:70%">Notes (Non-normative)
     <tbody>
@@ -1534,7 +1548,7 @@ dfn > a.self-link::before      { content: "#"; }
     <caption>List of code values for keys in the Numpad section.</caption>
     <thead>
      <tr>
-      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent⑧">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⑦">code</a></code>
+      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent⑦">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⑦">code</a></code>
       <th style="width:10%">Required
       <th style="width:70%">Notes (Non-normative)
     <tbody>
@@ -1686,7 +1700,7 @@ dfn > a.self-link::before      { content: "#"; }
     <caption>List of code values for keys in the Function section.</caption>
     <thead>
      <tr>
-      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent⑨">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②⓪">code</a></code>
+      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent⑧">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②⓪">code</a></code>
       <th style="width:10%">Required
       <th style="width:70%">Notes (Non-normative)
     <tbody>
@@ -1785,7 +1799,7 @@ dfn > a.self-link::before      { content: "#"; }
     <caption>List of code values for media keys.</caption>
     <thead>
      <tr>
-      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent①⓪">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②⑤">code</a></code>
+      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent⑨">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②⑤">code</a></code>
       <th style="width:10%">Required
       <th style="width:70%">Notes (Non-normative)
     <tbody>
@@ -1885,7 +1899,7 @@ dfn > a.self-link::before      { content: "#"; }
     <caption>List of code values for legacy modifier keys.</caption>
     <thead>
      <tr>
-      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent①①">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②⑥">code</a></code>
+      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent①⓪">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②⑥">code</a></code>
       <th style="width:10%">Required
       <th style="width:70%">Notes (Non-normative)
     <tbody>
@@ -1907,7 +1921,7 @@ dfn > a.self-link::before      { content: "#"; }
     <caption>List of code values for legacy process control keys.</caption>
     <thead>
      <tr>
-      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent①②">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②⑦">code</a></code>
+      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent①①">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②⑦">code</a></code>
       <th style="width:10%">Required
       <th style="width:70%">Notes (Non-normative)
     <tbody>
@@ -1929,7 +1943,7 @@ dfn > a.self-link::before      { content: "#"; }
     <caption>List of code values for legacy editing keys.</caption>
     <thead>
      <tr>
-      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent①③">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②⑧">code</a></code>
+      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent①②">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②⑧">code</a></code>
       <th style="width:10%">Required
       <th style="width:70%">Notes (Non-normative)
     <tbody>
@@ -1975,7 +1989,7 @@ dfn > a.self-link::before      { content: "#"; }
     <caption>List of code values for keys found on international keyboards.</caption>
     <thead>
      <tr>
-      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent①④">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②⑨">code</a></code>
+      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent①③">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②⑨">code</a></code>
       <th style="width:10%">Required
       <th style="width:70%">Notes (Non-normative)
     <tbody>
@@ -1997,7 +2011,7 @@ dfn > a.self-link::before      { content: "#"; }
     <caption>List of special code values.</caption>
     <thead>
      <tr>
-      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent①⑤">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code③②">code</a></code>
+      <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent①④">KeyboardEvent</a></code> <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code③②">code</a></code>
       <th style="width:10%">Required
       <th style="width:70%">Notes (Non-normative)
     <tbody>
@@ -2057,7 +2071,7 @@ the information to be exposed.</p>
 A site could capture all keypresses and build a map of the values generated by the keyboard. If the
 user types enough values (and doesn’t change keyboard), then the site could try to match those values
 against a database of known keyboard layouts to guess the user’s current keyboard layout. However,
-that’s a concern for the <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key⑦">key</a></code> attribute itself (defined in the <a data-link-type="biblio" href="#biblio-uievents" title="UI Events">[UIEvents]</a> specification) rather than
+that’s a concern for the <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key⑥">key</a></code> attribute itself (defined in the <a data-link-type="biblio" href="#biblio-uievents" title="UI Events">[UIEvents]</a> specification) rather than
 something specific to the values defined in this document</p>
    </ul>
    <p>Privacy concerns associated with the <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code③⑧">code</a></code> attribute are addressed in the <a data-link-type="biblio" href="#biblio-uievents" title="UI Events">[UIEvents]</a> specification.</p>
@@ -2131,44 +2145,19 @@ something specific to the values defined in this document</p>
     <li><a href="#ref-for-code-point">1.1. 格式规约</a>
    </ul>
   </aside>
-  <aside aria-labelledby="infopaneltitle-for-52a90c9fc675b44ce8125c90472d629f" class="dfn-panel" data-for="52a90c9fc675b44ce8125c90472d629f" id="infopanel-for-52a90c9fc675b44ce8125c90472d629f">
-   <span id="infopaneltitle-for-52a90c9fc675b44ce8125c90472d629f" style="display:none">Info about the 'DOM_KEY_LOCATION_LEFT' external reference.</span><a href="https://w3c.github.io/uievents/#dom-keyboardevent-dom_key_location_left">https://w3c.github.io/uievents/#dom-keyboardevent-dom_key_location_left</a><b>Referenced in:</b>
-   <ul>
-    <li><a href="#ref-for-dom-keyboardevent-dom_key_location_left">2.1.8. 苹果键盘布局</a>
-   </ul>
-  </aside>
-  <aside aria-labelledby="infopaneltitle-for-fa9a74d3636477eadaee4463ee45caf4" class="dfn-panel" data-for="fa9a74d3636477eadaee4463ee45caf4" id="infopanel-for-fa9a74d3636477eadaee4463ee45caf4">
-   <span id="infopaneltitle-for-fa9a74d3636477eadaee4463ee45caf4" style="display:none">Info about the 'DOM_KEY_LOCATION_NUMPAD' external reference.</span><a href="https://w3c.github.io/uievents/#dom-keyboardevent-dom_key_location_numpad">https://w3c.github.io/uievents/#dom-keyboardevent-dom_key_location_numpad</a><b>Referenced in:</b>
-   <ul>
-    <li><a href="#ref-for-dom-keyboardevent-dom_key_location_numpad">2.1.8. 苹果键盘布局</a> <a href="#ref-for-dom-keyboardevent-dom_key_location_numpad①">(2)</a> <a href="#ref-for-dom-keyboardevent-dom_key_location_numpad②">(3)</a>
-   </ul>
-  </aside>
-  <aside aria-labelledby="infopaneltitle-for-e32a4e00d2c846179f8dce3bae1c69f5" class="dfn-panel" data-for="e32a4e00d2c846179f8dce3bae1c69f5" id="infopanel-for-e32a4e00d2c846179f8dce3bae1c69f5">
-   <span id="infopaneltitle-for-e32a4e00d2c846179f8dce3bae1c69f5" style="display:none">Info about the 'DOM_KEY_LOCATION_RIGHT' external reference.</span><a href="https://w3c.github.io/uievents/#dom-keyboardevent-dom_key_location_right">https://w3c.github.io/uievents/#dom-keyboardevent-dom_key_location_right</a><b>Referenced in:</b>
-   <ul>
-    <li><a href="#ref-for-dom-keyboardevent-dom_key_location_right">2.1.8. 苹果键盘布局</a>
-   </ul>
-  </aside>
-  <aside aria-labelledby="infopaneltitle-for-b5917d2ffcf5aa67024b58d0b1244128" class="dfn-panel" data-for="b5917d2ffcf5aa67024b58d0b1244128" id="infopanel-for-b5917d2ffcf5aa67024b58d0b1244128">
-   <span id="infopaneltitle-for-b5917d2ffcf5aa67024b58d0b1244128" style="display:none">Info about the 'DOM_KEY_LOCATION_STANDARD' external reference.</span><a href="https://w3c.github.io/uievents/#dom-keyboardevent-dom_key_location_standard">https://w3c.github.io/uievents/#dom-keyboardevent-dom_key_location_standard</a><b>Referenced in:</b>
-   <ul>
-    <li><a href="#ref-for-dom-keyboardevent-dom_key_location_standard">2.1.8. 苹果键盘布局</a> <a href="#ref-for-dom-keyboardevent-dom_key_location_standard①">(2)</a> <a href="#ref-for-dom-keyboardevent-dom_key_location_standard②">(3)</a>
-   </ul>
-  </aside>
   <aside aria-labelledby="infopaneltitle-for-16015a3adb23f6b5bcd1da9550190b1a" class="dfn-panel" data-for="16015a3adb23f6b5bcd1da9550190b1a" id="infopanel-for-16015a3adb23f6b5bcd1da9550190b1a">
    <span id="infopaneltitle-for-16015a3adb23f6b5bcd1da9550190b1a" style="display:none">Info about the 'KeyboardEvent' external reference.</span><a href="https://www.w3.org/TR/uievents/#interface-keyboardevent">https://www.w3.org/TR/uievents/#interface-keyboardevent</a><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-interface-keyboardevent">1.1. 格式规约</a>
-    <li><a href="#ref-for-interface-keyboardevent①">2.1.8. 苹果键盘布局</a>
-    <li><a href="#ref-for-interface-keyboardevent②">3. Keyboard Event code Value Tables</a>
-    <li><a href="#ref-for-interface-keyboardevent③">3.1.1. Writing System Keys</a>
-    <li><a href="#ref-for-interface-keyboardevent④">3.1.2. Functional Keys</a> <a href="#ref-for-interface-keyboardevent⑤">(2)</a>
-    <li><a href="#ref-for-interface-keyboardevent⑥">3.2. Control Pad Section</a>
-    <li><a href="#ref-for-interface-keyboardevent⑦">3.3. Arrow Pad Section</a>
-    <li><a href="#ref-for-interface-keyboardevent⑧">3.4. Numpad Section</a>
-    <li><a href="#ref-for-interface-keyboardevent⑨">3.5. Function Section</a>
-    <li><a href="#ref-for-interface-keyboardevent①⓪">3.6. Media Keys</a>
-    <li><a href="#ref-for-interface-keyboardevent①①">3.7. Legacy, Non-Standard and Special Keys</a> <a href="#ref-for-interface-keyboardevent①②">(2)</a> <a href="#ref-for-interface-keyboardevent①③">(3)</a> <a href="#ref-for-interface-keyboardevent①④">(4)</a> <a href="#ref-for-interface-keyboardevent①⑤">(5)</a>
+    <li><a href="#ref-for-interface-keyboardevent①">3. Keyboard Event code Value Tables</a>
+    <li><a href="#ref-for-interface-keyboardevent②">3.1.1. Writing System Keys</a>
+    <li><a href="#ref-for-interface-keyboardevent③">3.1.2. Functional Keys</a> <a href="#ref-for-interface-keyboardevent④">(2)</a>
+    <li><a href="#ref-for-interface-keyboardevent⑤">3.2. Control Pad Section</a>
+    <li><a href="#ref-for-interface-keyboardevent⑥">3.3. Arrow Pad Section</a>
+    <li><a href="#ref-for-interface-keyboardevent⑦">3.4. Numpad Section</a>
+    <li><a href="#ref-for-interface-keyboardevent⑧">3.5. Function Section</a>
+    <li><a href="#ref-for-interface-keyboardevent⑨">3.6. Media Keys</a>
+    <li><a href="#ref-for-interface-keyboardevent①⓪">3.7. Legacy, Non-Standard and Special Keys</a> <a href="#ref-for-interface-keyboardevent①①">(2)</a> <a href="#ref-for-interface-keyboardevent①②">(3)</a> <a href="#ref-for-interface-keyboardevent①③">(4)</a> <a href="#ref-for-interface-keyboardevent①④">(5)</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-e604a5849fdf8059e0f5a8fb9b7ba547" class="dfn-panel" data-for="e604a5849fdf8059e0f5a8fb9b7ba547" id="infopanel-for-e604a5849fdf8059e0f5a8fb9b7ba547">
@@ -2195,17 +2184,10 @@ something specific to the values defined in this document</p>
    <ul>
     <li><a href="#ref-for-dom-keyboardevent-key">1. 简介</a>
     <li><a href="#ref-for-dom-keyboardevent-key①">1.1. 格式规约</a> <a href="#ref-for-dom-keyboardevent-key②">(2)</a>
-    <li><a href="#ref-for-dom-keyboardevent-key③">2.1.8. 苹果键盘布局</a>
-    <li><a href="#ref-for-dom-keyboardevent-key④">2.4. Virtual Keyboards and Chording Keyboards</a>
-    <li><a href="#ref-for-dom-keyboardevent-key⑤">3.1.1. Writing System Keys</a>
-    <li><a href="#ref-for-dom-keyboardevent-key⑥">3.1.2. Functional Keys</a>
-    <li><a href="#ref-for-dom-keyboardevent-key⑦">7. Privacy Considerations</a>
-   </ul>
-  </aside>
-  <aside aria-labelledby="infopaneltitle-for-d08e0e52957ad14d670e893b74ee15b0" class="dfn-panel" data-for="d08e0e52957ad14d670e893b74ee15b0" id="infopanel-for-d08e0e52957ad14d670e893b74ee15b0">
-   <span id="infopaneltitle-for-d08e0e52957ad14d670e893b74ee15b0" style="display:none">Info about the 'location' external reference.</span><a href="https://www.w3.org/TR/uievents/#dom-keyboardevent-location">https://www.w3.org/TR/uievents/#dom-keyboardevent-location</a><b>Referenced in:</b>
-   <ul>
-    <li><a href="#ref-for-dom-keyboardevent-location">2.1.8. 苹果键盘布局</a>
+    <li><a href="#ref-for-dom-keyboardevent-key③">2.4. Virtual Keyboards and Chording Keyboards</a>
+    <li><a href="#ref-for-dom-keyboardevent-key④">3.1.1. Writing System Keys</a>
+    <li><a href="#ref-for-dom-keyboardevent-key⑤">3.1.2. Functional Keys</a>
+    <li><a href="#ref-for-dom-keyboardevent-key⑥">7. Privacy Considerations</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-9488999faf064558c7e4b3eadc67f3c4" class="dfn-panel" data-for="9488999faf064558c7e4b3eadc67f3c4" id="infopanel-for-9488999faf064558c7e4b3eadc67f3c4">
@@ -2224,14 +2206,9 @@ something specific to the values defined in this document</p>
    <li>
     <a data-link-type="biblio">[UIEvents]</a> defines the following terms:
     <ul>
-     <li><span class="dfn-paneled" id="52a90c9fc675b44ce8125c90472d629f">DOM_KEY_LOCATION_LEFT</span>
-     <li><span class="dfn-paneled" id="fa9a74d3636477eadaee4463ee45caf4">DOM_KEY_LOCATION_NUMPAD</span>
-     <li><span class="dfn-paneled" id="e32a4e00d2c846179f8dce3bae1c69f5">DOM_KEY_LOCATION_RIGHT</span>
-     <li><span class="dfn-paneled" id="b5917d2ffcf5aa67024b58d0b1244128">DOM_KEY_LOCATION_STANDARD</span>
      <li><span class="dfn-paneled" id="16015a3adb23f6b5bcd1da9550190b1a">KeyboardEvent</span>
      <li><span class="dfn-paneled" id="e604a5849fdf8059e0f5a8fb9b7ba547">code</span>
      <li><span class="dfn-paneled" id="0e3150549665e2be6e0eb7354b4500e8">key</span>
-     <li><span class="dfn-paneled" id="d08e0e52957ad14d670e893b74ee15b0">location</span>
     </ul>
    <li>
     <a data-link-type="biblio">[UIEVENTS-KEY]</a> defines the following terms:
