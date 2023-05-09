@@ -256,7 +256,7 @@ path: stylesheet-extra.include
 		<h4 id="keyboard-101">标准 "101" 键盘布局</h4>
 
 			标准的 "101" 键盘(通常称为"US 布局")是唯一一种在单行 KEYCAP{Enter} 
-			(字面数字区域上的 KEYCAP{Enter} )键上方有 CODE{Backslash} 键(标记为 
+			(字面数字区域上的 KEYCAP{Enter} )键上方有 CODE{Backslash} 键(键帽标签为 
 			KEYCAP{\|})的布局。所有其他布局都省略了此键，并展开 KEYCAP{Enter} 
 			键以占据两行。
 
@@ -316,9 +316,9 @@ path: stylesheet-extra.include
 
 			标准的 "102" 键盘在整个欧洲都很常见，它在 "101" 
 			键盘布局中添加了一个不存在的键: 在左移键( KEYCAP{Shift} )旁边添加了 
-			CODE{IntlBackslash} 键(在英式键盘键帽上标记为 KEYCAP{\|} )。
+			CODE{IntlBackslash} 键(在英式键盘上键帽标签为 KEYCAP{\|} )。
 
-			还添加了第二个键(在英式键盘键帽上标记为 KEYCAP{#~} )，该键部分藏在 
+			还添加了第二个键(在英式键盘上键帽标签为 KEYCAP{#~} )，该键部分藏在 
 			KEYCAP{Enter} 键下。该键被编码为 CODE{Backslash} ，使用与 "101" 
 			键盘布局中的 KEYCAP{\|} 键相同的编码。根据 [[USB-HID]] 规范，美式的 
 			KEYCAP{\|} 和英式的  KEYCAP{#~} 实际上是两个独立的键(分别命名为"键盘 
@@ -341,12 +341,23 @@ path: stylesheet-extra.include
 			<p class="note custom-note">
 			按照 <code>code</code> 属性值进行区分，美式 "101" 键盘布局在占用单行 
 			KEYCAP{Enter} 上方的 KEYCAP{\|} 键，和 英式 "102" 键盘布局在占用双行的 
-			KEYCAP{Eenter} 下方的 KEYCAP{#~} 键实际上指代同一个 <code>code</code> 值，
+			KEYCAP{Enter} 下方的 KEYCAP{#~} 键实际上指代同一个 <code>code</code> 值，
 			即 CODE{Backslash}。英式 "102" 多出来的那个位于 KEYCAP{ShiftLeft} 和 
 			KEYCAP{Z} 之间的按键，虽然键帽是 KEYCAP{\|} (和美式的占用单行 
 			KEYCAP{Enter} 上方的 KEYCAP{\|} 键键帽相同)，但是 <code>code</code> 
-			属性值却是 CODE{IntlBackslash} 。
+			属性值却是 CODE{IntlBackslash} 。<br/>
+			上述图示中的 KEYCAP{#~} 按键和 KEYCAP{\|} 按键没有显示完整键帽
+			(实际上其它按键也没有，主要显示了 <code>code</code> 值)，
+			下面是源于维基百科的一个英式 "102" 字母数字区域( [=alphanumeric section=] 
+			)键盘布局图示:
 			</p>
+
+			<figure id="figure-keyboard-alphanumeric-uk">
+				<img src="images/keyboard-alphanumeric-uk.svg" width="684" height="225" 
+				alt="标准 '102' 字母数字区域键盘布局" />
+				<div class="custom-figcaption">英式标准 "102" 字母数字区域键盘布局，
+				展示未修改过的英式键帽值</div>
+			</figure>
 
 		<h4 id="keyboard-103">韩式 "103" 键盘布局</h4>
 
@@ -357,7 +368,8 @@ path: stylesheet-extra.include
 
 			<p class="note custom-note">
 			实际上 KEYCAP{한자} (Hanja) 也就是汉字的意思，这里表示朝鲜汉字，而
-			KEYCAP{한/영} (HangulMode) 也就是朝鲜文字模式，这里表示彦文。
+			KEYCAP{한/영} (HangulMode) 也就是韩/英，
+			这里表示韩文模式和英文模式切换使用。
 			</p>
 
 			<figure id="figure-keyboard-103-korean">
@@ -371,61 +383,190 @@ path: stylesheet-extra.include
 			( [=control pad=] )和箭头板( [=arrow pad=]) 和功能区域( 
 			[=function section=] )有 43 个键。
 
-		<h4 id="keyboard-104">Brazilian "104" Keyboard Layout</h4>
-
-			The "104" layout used in Brazil adds 4 new keys: two keys
-			from the "102" layout (CODE{Backslash} and CODE{IntlBackslash}) plus
-			the CODE{IntlRo} key (next to the right shift key) and an extra key
-			on the [=numpad=]. This new [=numpad=] key is called
-			CODE{NumpadComma} because it represents the thousands separator. On
-			the Brazilian key layout, this key is labelled KEYCAP{.} and the
-			CODE{NumpadDecimal} key is labelled KEYCAP{,}.
+		<h4 id="keyboard-104">巴西 "104" 键盘布局</h4>
+			巴西使用的 "104" 布局增加了4个新键: "102" 布局中的两个键( CODE{Backslash} 
+			和 CODE{IntlBackslash} )加上 CODE{IntlRo} 键(右移键 CODE{ShiftRight} 
+			旁边)和小键盘( [=numpad=] )上的一个额外键。这个新的小键盘( [=numpad=] 
+			)按键被称为 CODE{NumpadComma} (数字键盘逗号)，因为它代表千位分隔符。
+			在巴西键布局上，这个按键键帽标签为 KEYCAP{.} ，并且 CODE{NumpadDecimal} 
+			键被键帽标签为 KEYCAP{,} 。
 
 			<figure id="figure-keyboard-104-brazilian">
-				<img src="images/keyboard-104-brazilian.svg" width="684" height="225" alt="Standard '104' keyboard layout" />
-				<figcaption>Standard "104" keyboard layout showing unmodified Brazilian key values</figcaption>
+				<img src="images/keyboard-104-brazilian.svg" width="684" height="225" 
+				alt="标准 '104' 键盘布局" />
+				<figcaption>标准 "104" 键盘布局，展示未修改过的巴西按键值</figcaption>
 			</figure>
 
-			Modern "104"-layout keyboards contain 107 keys: 63 keys in the
-			[=alphanumeric section=] and 44 keys in the [=numpad=],
-			[=control pad=], [=arrow pad=] and [=function sections=].
-			Some Brazilian keyboards lack the extra [=numpad=] key and have
-			only 106 keys.
+			现代 "104" 布局的键盘包含107个键：字母数字区域( 
+			[=alphanumeric section=] )有63个按键，小键盘( [=numpad=] ) 、控制板
+			( [=control pad=] )和箭头板( [=arrow pad=]) 和功能区域( 
+			[=function section=] )有 44 个键。一些巴西键盘没有额外的小键盘( 
+			[=numpad=] )按键，只有106个键。
 
-		<h4 id="keyboard-106">Japanese "106" Keyboard Layout</h4>
+			<p class="note custom-note">
+			巴西的键盘以 "102" 键盘布局为基础，从 <code>code</code> 值上看，和 "102"
+			键盘布局相同 <code>code</code> 值的两个按键(位于大 KEYCAP{Enter} 下方的
+			CODE{Backslash} 和在 KEYCAP{ShiftLeft} 和 KEYCAP{Z} 之间的 
+			CODE{IntlBackslash} )具有异同的键帽标签，前者( CODE{Backslash} 
+			)的键帽在巴西键盘和英式 "102" 键盘分别是 KEYCAP{]&#125;} 和 KEYCAP{#~}，
+			后者( CODE{IntlBackslash} )的键帽在巴西键盘和英式 "102" 键盘 
+			<strong>都是</strong> KEYCAP{\|} 。除此之外，<code>code</code> 值为
+			CODE{IntlRo} 的额外按键的键帽标签为 KEYCAP{/?} ，
+			下面的日式键盘中也包含这个键。<br/> 最后，在小键盘( [=numpad=] 
+			)上可能多的一个额外按键表示千位分隔符，它的 <code>code</code> 值为 
+			CODE{NumpadComma} ，要理解这个额外按键的意义，需要理解的背景是: 
+			不同国家的数字写法不同，常见的就是小数点使用 KEYCAP{.} ，千位分隔符使用 
+			KEYCAP{,} ，但是国际化标准组织表示小数点是可以使用实心点或者逗号，
+			所以有些地区小数点使用 KEYCAP{,} ，而千位分隔符使用 KEYCAP{.} 
+			(正好颠倒了)。以葡萄牙和葡萄牙语地区为例，
+			中文数字四千五百六十七点八九使用阿拉伯数字和分隔符号表示为 4.567,89 或 
+			4 567,89 (手写可能是 4·567,89 )，而美国地区为 4,567.89 或旧写法 4,567·89 。
+			所以在巴西键盘(葡萄牙语地区)的 CODE{NumpadComma} 按键的键帽标签为 
+			KEYCAP{.} ，而原本作为小数点分隔符号的 CODE{NumpadDecimal} 
+			按键的键帽标签也从 KEYCAP{. Del} 变成了 KEYCAP{,} ，
+			并且在巴西键盘实际输入当地语言的时候，
+			按下这两个按键生成的字符和键帽是对应的。<br/>
+			规范给出的巴西 "104" 键盘未显示完整的键帽(上图主要显示 <code>code</code> 
+			值)，下面是来自维基百科的巴西葡萄牙字母数字键盘的图示:
+			</p>
 
-			The Japanese "106" keyboard layout adds 3 new keys:
-				CODE{IntlYen} (labelled KEYCAP{¥_}),
-				CODE{Backslash} (labelled KEYCAP{]む})
-			and
-				CODE{IntlRo} (labelled KEYCAP{\ろ}).
-			It also shrinks the spacebar to make room for 3 input mode keys:
-				CODE{NonConvert} (labelled KEYCAP{無変換} PHONETIC{muhenkan}),
-				CODE{Convert} (labelled KEYCAP{変換} PHONETIC{henkan})
-			and
-				CODE{KanaMode} (labelled KEYCAP{カタカナ/ひらがな/ローマ字} PHONETIC{katakana/hiragana/romaji}).
+			<figure id="figure-keyboard-alphanumeric-brazil">
+				<img src="images/keyboard-alphanumeric-brazil.svg" width="684" height="225" 
+				alt="巴西 '104' 字母数字区域键盘布局" />
+				<div class="custom-figcaption">巴西 "104" 字母数字区域键盘布局，
+				展示未修改过的巴西键帽值</div>
+			</figure>
+
+		<h4 id="keyboard-106">日式 "106" 键盘布局</h4>
+			
+			日语 "106" 键盘布局在标准 "101" 键盘布局的基础上修改了一个按键: 
+
+			*	如标准 "102" 键盘布局描述的那样，占用一行的 KEYCAP{Enter} 键上方的 
+				<code>code</code> 值为 CODE{Backslash} 的按键被移动到了占用两行的 
+				KEYCAP{Enter} 键下方的 KEYCAP{]む} ;
+			
+			增加了5个新键: 
+
+			*	如备用 "101" 键盘布局的描述那样，<code>code</code> 值为 CODE{Backspace} 
+				的按键缩小，为 CODE{IntlYen} (键帽标签为 KEYCAP{¥_} ) 腾出空间; 
+			
+			*	如巴西 "104" 键盘布局的描述那样，<code>code</code> 值为 CODE{ShiftRight}
+				的按键缩小，为 CODE{IntlRo} (键帽标签为 KEYCAP{\ろ} ) 腾出空间; 
+			
+			*	如韩式 "103" 键盘布局的描述那样，空格键(键帽标签为 KEYCAP{&nbsp;}，
+				<code>code</code> 值为 CODE{Space} )被缩小，为三个输入模式(input mode)
+				按键腾出空间: 
+
+				*	KEYCAP{&nbsp;} (空格键)左边是 <code>code</code> 值为 CODE{NonConvert} ，
+					键帽标签为 KEYCAP{無変換}，发音为 PHONETIC{muhenkan} 的按键。
+
+					<p class="note custom-note">
+					GLYPH{無変換} 的意思就是无变换，无变换键的功能是转换假名。
+					在光标闪烁的状态下按无变换键可以把输入模式(默认上屏的假名类型)
+					从全角平假名切换到全角片假名，再按则切换到半角片假名
+					(全角かな→全角カナ→半角カナ)。除了切换模式以外，
+					也可以实现输入中的内容的假名转换。关于日语的假名及其输入，请自行查阅
+					<a href="https://zh.wikipedia.org/wiki/%E5%81%87%E5%90%8D_(%E6%96%87%E5%AD%97)">
+					维基百科</a> 。
+					</p>
+				
+				*	KEYCAP{&nbsp;} (空格键)右边是 <code>code</code> 值为 CODE{Convert} ，
+					键帽标签为 KEYCAP{変換} ，发音为 PHONETIC{henkan} 的按键。
+
+					<p class="note custom-note">
+					GLYPH{変換} 的意思就是变换，变换键的功能是把输入的假名转汉字。
+					这一点和空格键的功能是一样的(因此平常都习惯按空格)。
+					所不同的是变换键还有重新转换( GLYPH{再変換} )的功能。
+					写文章的时候如果你发现有打错同音字词( GLYPH{誤変換} )
+					的时候用光标选定文字，然后再按一下变换键就可以重新选词修改。
+					非日语键盘(如中国普遍采用的美式键盘)默认可以用 KEYCAP{Windows} + 
+					KEYCAP{/} ( CODE{MetaLeft} + CODE{Slash} )来代替变换键。
+					</p>
+
+				*	KEYCAP{変換} 右边是 <code>code</code> 值为 CODE{KanaMode} ，键帽标签为
+					KEYCAP{カタカナ/ひらがな/ローマ字} ，发音为 
+					PHONETIC{katakana/hiragana/romaji} 的按键。
+
+					<p class="note custom-note">
+					GLYPH{カタカナ/ひらがな/ローマ字} 的意思就是 片假名/平假名/罗马字，
+					需要配合 KEYCAP{Shift} 和 KEYCAP{Alt} 键来使用: 
+					<br/>
+					① 单独按这个键，切换回默认的平假名输入模式; <br/>
+					② KEYCAP{Shift} + KEYCAP{カタカナ/ひらがな/ローマ字} ，
+					切换回片假名输入模式; <br/>
+					③  KEYCAP{Alt} + KEYCAP{カタカナ/ひらがな/ローマ字} ，
+					切换回罗马字输入模式; <br/>
+					</p>
 
 			<figure id="figure-keyboard-106-japanese">
-				<img src="images/keyboard-106-japanese.svg" width="684" height="225" alt="Standard '106' keyboard layout" />
-				<figcaption>Standard "106" keyboard layout showing unmodified Japanese key values</figcaption>
+				<img src="images/keyboard-106-japanese.svg" width="684" height="225" 
+				alt="标准 '106' 键盘布局" />
+				<figcaption>标准 "106" 键盘布局，展示未修改的日语键值
+				</figcaption>
 			</figure>
 
-			Modern "106"-layout keyboards contain 109 keys: 66 keys in the
-			[=alphanumeric section=] and 43 keys in the [=numpad=],
-			[=control pad=], [=arrow pad=] and [=function sections=].
+			现代 "106" 布局的键盘包含109个键：字母数字区域( 
+			[=alphanumeric section=] )有66个按键，小键盘( [=numpad=] ) 、控制板
+			( [=control pad=] )和箭头板( [=arrow pad=]) 和功能区域( 
+			[=function section=] )有 43 个键。
 
-		<h4 id="keyboard-mac">Apple Keyboard Layout</h4>
+			<p class="note custom-note">
+			上面的图示虽然完整显示了按键 <code>code</code> 值，
+			但是字母数字区域没有显示每个按键的完整键帽。
+			日本国内多使用JIS标准的键盘布局，也称为日文假名键盘，
+			源自维基百科的图示如下:
+			</p>
 
-			In general, Apple keyboards follow the same layout as PC keyboards,
-			but there are some differences as noted in the following figure.
+			<figure id="figure-keyboard-alphanumeric-japanese">
+				<img src="images/keyboard-alphanumeric-japanese.svg" 
+				width="684" height="225" 
+				alt="日式 '106' 字母数字区域键盘布局" />
+				<div class="custom-figcaption">日式 "104" 字母数字区域键盘布局，
+				展示未修改过的日本键帽值</div>
+			</figure>
+
+		<h4 id="keyboard-mac">苹果键盘布局</h4>
+
+			一般来说，苹果键盘的布局与 PC 键盘相同，但如下图所示，存在一些差异。
 
 			<figure id="figure-keyboard-mac">
-				<img src="images/keyboard-mac.svg" width="684" height="225" alt="Apple extended keyboard layout" />
-				<figcaption>Apple extended keyboard layout showing unmodified English key values</figcaption>
+				<img src="images/keyboard-mac.svg" width="684" height="225" 
+				alt="苹果扩展键盘布局" />
+				<figcaption>苹果扩展键盘布局，展示未修改的英文键值</figcaption>
 			</figure>
 
-			In this figure, the green keys are those that have been moved to a
-			new location while the blue keys indicate keys that have been added.
+			在此图中，绿色键表示已移动到新位置的键，而蓝色键表示已添加的键。
+
+			<p class="note custom-note">
+			本节没有讨论很多关于苹果标准键盘的内容，可以参考维基百科-
+			<a href="https://en.wikipedia.org/wiki/Apple_keyboards">
+			Apple_keyboards</a> 查阅更多内容。下面是一些键帽显示为特殊符合并与 PC 
+			键盘进行对比的 <strong>非规范表格</strong>:
+			</p>
+
+		++---------------------------------+----------------------------------------------+
+		=| {{KeyboardEvent}} .             | Valid {{KeyboardEvent/location}} values      |
+		 | {{KeyboardEvent/key}}           |                                              |
+		 +---------------------------------+----------------------------------------------+
+		+| KEY{Shift}, KEY{Control},       | {{KeyboardEvent/DOM_KEY_LOCATION_LEFT}},     |
+		 | KEY{Alt}, KEY{Meta}             | {{KeyboardEvent/DOM_KEY_LOCATION_RIGHT}}     |
+		 +---------------------------------+----------------------------------------------+
+		+| KEY{ArrowDown}, KEY{ArrowLeft}, | {{KeyboardEvent/DOM_KEY_LOCATION_STANDARD}}, |
+		 | KEY{ArrowRight}, KEY{ArrowUp}   | {{KeyboardEvent/DOM_KEY_LOCATION_NUMPAD}}    |
+		 +---------------------------------+----------------------------------------------+
+		+| KEY{End}, KEY{Home},            | {{KeyboardEvent/DOM_KEY_LOCATION_STANDARD}}, |
+		 | KEY{PageDown}, KEY{PageUp}      | {{KeyboardEvent/DOM_KEY_LOCATION_NUMPAD}}    |
+		 +---------------------------------+----------------------------------------------+
+		+| KEY_NOLINK{0}, KEY_NOLINK{1},   | {{KeyboardEvent/DOM_KEY_LOCATION_STANDARD}}, |
+		 | KEY_NOLINK{2}, KEY_NOLINK{2},   | {{KeyboardEvent/DOM_KEY_LOCATION_NUMPAD}}    |
+		 | KEY_NOLINK{4}, KEY_NOLINK{5},   |                                              |
+		 | KEY_NOLINK{6}, KEY_NOLINK{7},   |                                              |
+		 | KEY_NOLINK{8}, KEY_NOLINK{9},   |                                              |
+		 | KEY_NOLINK{.}, KEY{Enter},      |                                              |
+		 | KEY_NOLINK{+}, KEY_NOLINK{-},   |                                              |
+		 | KEY_NOLINK{*}, KEY_NOLINK{/}    |                                              |
+		++---------------------------------+----------------------------------------------+
+
 
 		<h4 id="keyboard-laptops">Laptop Keyboard Layouts</h4>
 
