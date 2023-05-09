@@ -540,50 +540,54 @@ path: stylesheet-extra.include
 			<p class="note custom-note">
 			本节没有讨论很多关于苹果标准键盘的内容，可以参考维基百科-
 			<a href="https://en.wikipedia.org/wiki/Apple_keyboards">
-			Apple_keyboards</a> 查阅更多内容。下面是一些键帽显示为特殊符合并与 PC 
-			键盘进行对比的 <strong>非规范表格</strong>:
+			Apple_keyboards</a> 查阅更多内容。下面是在苹果标准键盘上，
+			一些键帽显示为特殊符号并与 PC 键盘进行对比的 <strong>非规范表格</strong>:
 			</p>
 
-			++------------+-------------+-----------------+
-			=| 特殊符号   | 功能键      | PC 键盘         |
-			 +------------+-------------+-----------------+
-			+| KEYCAP{⌘}  | command     | Windows键       |
-			+| KEYCAP{⌃}  | control     | CODE{Ctrl}      |
-			+| KEYCAP{⌥}  | option      | CODE{Alt}       |
-			+| KEYCAP{⇧}  | shift       | CODE{Shift}     |
-			+| KEYCAP{⇪}  | caps lock   | Caps Lock       |
-			+| KEYCAP{⎋}  | esc         | Esc             |
-			+| KEYCAP{⌫}  | delete      | Backspace       |
-			+++-----------+-------------+-----------------+
+			++----------------------------------------+---------------+------------------+-------------------+
+			=| code 值                                | Mac 特殊符号  | Mac 键帽         | PC 特殊符号或键帽 |
+			 +----------------------------------------+---------------+------------------+-------------------+
+			+| CODE{MetaLeft} / CODE{MetaRight}       | KEYCAP{⌘}     | KEYCAP{Command}  | KEYCAP{⊞}        |
+			+| CODE{ControlLeft} / CODE{ControlRight} | KEYCAP{⌃}     | KEYCAP{Control}  | KEYCAP{Ctrl}      |
+			+| CODE{AltLeft} / CODE{AltRight}         | KEYCAP{⌥}     | KEYCAP{Option}   | KEYCAP{Alt}       |
+			+| CODE{ShiftLeft} / CODE{ShiftRight}     | KEYCAP{⇧}     | KEYCAP{Shift}    | KEYCAP{Shift}     |
+			+| CODE{CapsLock}                         | KEYCAP{⇪}     | KEYCAP{CapsLock} | KEYCAP{CapsLk}    |
+			+| CODE{Escape}                           | KEYCAP{⎋}     | KEYCAP{Esc}      | KEYCAP{Esc}       |
+			+| CODE{Backspace}                        | KEYCAP{⌫}     | KEYCAP{Delete}   | KEYCAP{Backspace} |
+			+++---------------------------------------+---------------+------------------+-------------------+
 
-		<h4 id="keyboard-laptops">Laptop Keyboard Layouts</h4>
 
-			The limited space available on laptop keyboards often means that the
-			physical key layout needs to be adjusted to fit all the required
-			keys. The [=writing system keys=] in the [=alphanumeric
-			section=] tend to remain intact, but the other keyboard sections
-			are usually combined with other keys or removed altogether.
+		<h4 id="keyboard-laptops">笔记本电脑键盘布局</h4>
+
+			笔记本电脑键盘上可用的空间有限，
+			这通常意味着需要调整物理按键布局以适应所有所需的键。
+			字母数字区域( [=alphanumeric section=] )中的书写系统键( 
+			[=writing system keys=] )往往保持完整，
+			但其他键盘区域通常与其他键组合或被完全移除。
 
 			<figure id="figure-keyboard-laptop-mac">
-				<img src="images/keyboard-laptop-mac.svg" width="420" height="180" alt="Apple laptop keyboard layout" />
-				<figcaption>Apple laptop keyboard layout</figcaption>
+				<img src="images/keyboard-laptop-mac.svg" width="420" height="180" 
+				alt="苹果笔记本电脑键盘布局" />
+				<figcaption>苹果笔记本电脑键盘布局</figcaption>
 			</figure>
 
-			In this Apple laptop keyboard, the right control key has been
-			removed to make room for half-height arrow keys and a KEYCAP{Fn} key
-			is added on the left.
+			在这个苹果笔记本电脑键盘中，右侧的控制键( CODE{ControlRight} )被移除，
+			为半行高箭头键腾出了空间，左侧增加了一个 KEYCAP{Fn} 键。
+
+			<p class="note custom-note">
+			右上方增加了一个电源按键。
+			</p>
 
 			<figure id="figure-keyboard-laptop">
-				<img src="images/keyboard-laptop.svg" width="460" height="180" alt="Sample PC laptop keyboard layout" />
-				<figcaption>Sample PC laptop keyboard layout</figcaption>
+				<img src="images/keyboard-laptop.svg" width="460" height="180" 
+				alt="PC 笔记本电脑键盘布局示例" />
+				<figcaption>PC 笔记本电脑键盘布局示例</figcaption>
 			</figure>
 
-			PC laptop keyboards vary considerably, but this sample keyboard
-			demonstrates some commonly found aspects. The [=control pad=]
-			keys are added along the right-hand side with the [=arrow pad=]
-			keys tucked in along the bottom. The right KEYCAP{Shift} key is
-			often shrunk to make room for the up arrow key and the right
-			KEYCAP{Meta} key is typically removed altogether.
+			PC 笔记本电脑键盘差异很大，但这个示例键盘展示了一些常见的键盘布局。
+			控制板( [=control pad=] )区域按键沿右侧添加，箭头板( [=arrow pad=] 
+			)区域按键沿底部插入。右 KEYCAP{Shift} 键通常会收缩，为向上箭头键( 
+			KEYCAP{↑} )腾出空间，而右 KEYCAP{Meta} 键通常会被完全移除。
 
 		<h4 id="other-locales">Keyboard Layouts For Other Locales</h4>
 

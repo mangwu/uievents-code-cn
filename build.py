@@ -192,7 +192,7 @@ class Parser():
             pre = self.custom_process_text(m.group(1))
             name = m.group(2)
             post = self.custom_process_text(m.group(3))
-            desc = '%s<code class="code">"<a href="http://www.w3.org/TR/uievents-code/#code-%s">%s</a>"</code>%s' % (
+            desc = '%s<code class="code">"<a href="#code-%s">%s</a>"</code>%s' % (
                 pre, name, name, post)
 
         m = re.match(r'^(.*)KEY{(.+?)}(.*)$', desc)

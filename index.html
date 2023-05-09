@@ -7,7 +7,7 @@
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-UD" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
   <meta content="Bikeshed version d9bd89757, updated Thu Mar 23 10:06:53 2023 -0700" name="generator">
-  <meta content="eecd899ec2811aca4a3c2c077b1f3a326e347312" name="document-revision">
+  <meta content="22d05d80271e4f9f2be23a2400dc7e7e5ae7e360" name="document-revision">
   <link href="./override.css" rel="stylesheet">
 <style>
 
@@ -586,7 +586,7 @@ dfn > a.self-link::before      { content: "#"; }
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">用户界面事件键盘事件 code 属性值(UI Events KeyboardEvent code Values)</h1>
-   <p id="w3c-state"><a href="https://www.w3.org/standards/types#UD">翻译草案</a>, <time class="dt-updated" datetime="2023-05-09">2023年5月6日</time></p>
+   <p id="w3c-state"><a href="https://www.w3.org/standards/types#UD">翻译草案</a>, <time class="dt-updated" datetime="2023-05-10">2023年5月6日</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -665,7 +665,7 @@ dfn > a.self-link::before      { content: "#"; }
         <li><a href="#keyboard-104"><span class="secno">2.1.6</span> <span class="content">巴西 "104" 键盘布局</span></a>
         <li><a href="#keyboard-106"><span class="secno">2.1.7</span> <span class="content">日式 "106" 键盘布局</span></a>
         <li><a href="#keyboard-mac"><span class="secno">2.1.8</span> <span class="content">苹果键盘布局</span></a>
-        <li><a href="#keyboard-laptops"><span class="secno">2.1.9</span> <span class="content">Laptop Keyboard Layouts</span></a>
+        <li><a href="#keyboard-laptops"><span class="secno">2.1.9</span> <span class="content">笔记本电脑键盘布局</span></a>
         <li><a href="#other-locales"><span class="secno">2.1.10</span> <span class="content">Keyboard Layouts For Other Locales</span></a>
        </ol>
       <li><a href="#keyboard-mobile"><span class="secno">2.2</span> <span class="content">Mobile Keypads</span></a>
@@ -934,64 +934,70 @@ dfn > a.self-link::before      { content: "#"; }
     <figcaption>苹果扩展键盘布局，展示未修改的英文键值</figcaption>
    </figure>
    <p>在此图中，绿色键表示已移动到新位置的键，而蓝色键表示已添加的键。</p>
-   <p class="note custom-note" role="note"> 本节没有讨论很多关于苹果标准键盘的内容，可以参考维基百科- <a href="https://en.wikipedia.org/wiki/Apple_keyboards"> Apple_keyboards</a> 查阅更多内容。下面是一些键帽显示为特殊符合并与 PC 
-			键盘进行对比的 <strong>非规范表格</strong>: </p>
+   <p class="note custom-note" role="note"> 本节没有讨论很多关于苹果标准键盘的内容，可以参考维基百科- <a href="https://en.wikipedia.org/wiki/Apple_keyboards"> Apple_keyboards</a> 查阅更多内容。下面是在苹果标准键盘上，
+			一些键帽显示为特殊符号并与 PC 键盘进行对比的 <strong>非规范表格</strong>: </p>
    <table class="event-sequence-table">
     <thead>
      <tr>
-      <th>特殊符号
-      <th>功能键
-      <th>PC 键盘
+      <th>code 值
+      <th>Mac 特殊符号
+      <th>Mac 键帽
+      <th>PC 特殊符号或键帽
     <tbody>
      <tr>
+      <td><code class="code">"<a href="#code-MetaLeft">MetaLeft</a>"</code> / <code class="code">"<a href="#code-MetaRight">MetaRight</a>"</code>
       <td><code class="keycap">⌘</code>
-      <td>command
-      <td>Windows键
+      <td><code class="keycap">Command</code>
+      <td><code class="keycap">⊞</code>
      <tr>
+      <td><code class="code">"<a href="#code-ControlLeft">ControlLeft</a>"</code> / <code class="code">"<a href="#code-ControlRight">ControlRight</a>"</code>
       <td><code class="keycap">⌃</code>
-      <td>control
-      <td><code class="code">"<a href="http://www.w3.org/TR/uievents-code/#code-Ctrl">Ctrl</a>"</code>
+      <td><code class="keycap">Control</code>
+      <td><code class="keycap">Ctrl</code>
      <tr>
+      <td><code class="code">"<a href="#code-AltLeft">AltLeft</a>"</code> / <code class="code">"<a href="#code-AltRight">AltRight</a>"</code>
       <td><code class="keycap">⌥</code>
-      <td>option
-      <td><code class="code">"<a href="http://www.w3.org/TR/uievents-code/#code-Alt">Alt</a>"</code>
+      <td><code class="keycap">Option</code>
+      <td><code class="keycap">Alt</code>
      <tr>
+      <td><code class="code">"<a href="#code-ShiftLeft">ShiftLeft</a>"</code> / <code class="code">"<a href="#code-ShiftRight">ShiftRight</a>"</code>
       <td><code class="keycap">⇧</code>
-      <td>shift
-      <td><code class="code">"<a href="http://www.w3.org/TR/uievents-code/#code-Shift">Shift</a>"</code>
+      <td><code class="keycap">Shift</code>
+      <td><code class="keycap">Shift</code>
      <tr>
+      <td><code class="code">"<a href="#code-CapsLock">CapsLock</a>"</code>
       <td><code class="keycap">⇪</code>
-      <td>caps lock
-      <td>Caps Lock
+      <td><code class="keycap">CapsLock</code>
+      <td><code class="keycap">CapsLk</code>
      <tr>
+      <td><code class="code">"<a href="#code-Escape">Escape</a>"</code>
       <td><code class="keycap">⎋</code>
-      <td>esc
-      <td>Esc
+      <td><code class="keycap">Esc</code>
+      <td><code class="keycap">Esc</code>
      <tr>
+      <td><code class="code">"<a href="#code-Backspace">Backspace</a>"</code>
       <td><code class="keycap">⌫</code>
-      <td>delete
-      <td>Backspace
+      <td><code class="keycap">Delete</code>
+      <td><code class="keycap">Backspace</code>
    </table>
-   <h4 class="heading settled" data-level="2.1.9" id="keyboard-laptops"><span class="secno">2.1.9. </span><span class="content">Laptop Keyboard Layouts</span><a class="self-link" href="#keyboard-laptops"></a></h4>
-   <p>The limited space available on laptop keyboards often means that the
-			physical key layout needs to be adjusted to fit all the required
-			keys. The <a data-link-type="dfn" href="#writing-system-keys" id="ref-for-writing-system-keys">writing system keys</a> in the <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section⑨">alphanumeric
-			section</a> tend to remain intact, but the other keyboard sections
-			are usually combined with other keys or removed altogether.</p>
+   <h4 class="heading settled" data-level="2.1.9" id="keyboard-laptops"><span class="secno">2.1.9. </span><span class="content">笔记本电脑键盘布局</span><a class="self-link" href="#keyboard-laptops"></a></h4>
+   <p>笔记本电脑键盘上可用的空间有限，
+			这通常意味着需要调整物理按键布局以适应所有所需的键。
+			字母数字区域( <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section⑨">alphanumeric section</a> )中的书写系统键( <a data-link-type="dfn" href="#writing-system-keys" id="ref-for-writing-system-keys">writing system keys</a> )往往保持完整，
+			但其他键盘区域通常与其他键组合或被完全移除。</p>
    <figure id="figure-keyboard-laptop-mac">
-     <img alt="Apple laptop keyboard layout" height="180" src="images/keyboard-laptop-mac.svg" width="420"> 
-    <figcaption>Apple laptop keyboard layout</figcaption>
+     <img alt="苹果笔记本电脑键盘布局" height="180" src="images/keyboard-laptop-mac.svg" width="420"> 
+    <figcaption>苹果笔记本电脑键盘布局</figcaption>
    </figure>
-   <p>In this Apple laptop keyboard, the right control key has been
-			removed to make room for half-height arrow keys and a <code class="keycap">Fn</code> key
-			is added on the left.</p>
+   <p>在这个苹果笔记本电脑键盘中，右侧的控制键( <code class="code">"<a href="#code-ControlRight">ControlRight</a>"</code> )被移除，
+			为半行高箭头键腾出了空间，左侧增加了一个 <code class="keycap">Fn</code> 键。</p>
+   <p class="note custom-note" role="note"> 右上方增加了一个电源按键。 </p>
    <figure id="figure-keyboard-laptop">
-     <img alt="Sample PC laptop keyboard layout" height="180" src="images/keyboard-laptop.svg" width="460"> 
-    <figcaption>Sample PC laptop keyboard layout</figcaption>
+     <img alt="PC 笔记本电脑键盘布局示例" height="180" src="images/keyboard-laptop.svg" width="460"> 
+    <figcaption>PC 笔记本电脑键盘布局示例</figcaption>
    </figure>
-   <p>PC laptop keyboards vary considerably, but this sample keyboard
-			demonstrates some commonly found aspects. The <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad⑦">control pad</a> keys are added along the right-hand side with the <a data-link-type="dfn" href="#arrow-pad" id="ref-for-arrow-pad⑦">arrow pad</a> keys tucked in along the bottom. The right <code class="keycap">Shift</code> key is
-			often shrunk to make room for the up arrow key and the right <code class="keycap">Meta</code> key is typically removed altogether.</p>
+   <p>PC 笔记本电脑键盘差异很大，但这个示例键盘展示了一些常见的键盘布局。
+			控制板( <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad⑦">control pad</a> )区域按键沿右侧添加，箭头板( <a data-link-type="dfn" href="#arrow-pad" id="ref-for-arrow-pad⑦">arrow pad</a> )区域按键沿底部插入。右 <code class="keycap">Shift</code> 键通常会收缩，为向上箭头键( <code class="keycap">↑</code> )腾出空间，而右 <code class="keycap">Meta</code> 键通常会被完全移除。</p>
    <h4 class="heading settled" data-level="2.1.10" id="other-locales"><span class="secno">2.1.10. </span><span class="content">Keyboard Layouts For Other Locales</span><a class="self-link" href="#other-locales"></a></h4>
    <p>Other locales are not explicitly described in this specification because they
 			start with one of the existing layouts and adapt it by changing the keycaps
@@ -2254,7 +2260,7 @@ something specific to the values defined in this document</p>
     <li><a href="#ref-for-alphanumeric-section⑥">2.1.5. 韩式 "103" 键盘布局</a>
     <li><a href="#ref-for-alphanumeric-section⑦">2.1.6. 巴西 "104" 键盘布局</a>
     <li><a href="#ref-for-alphanumeric-section⑧">2.1.7. 日式 "106" 键盘布局</a>
-    <li><a href="#ref-for-alphanumeric-section⑨">2.1.9. Laptop Keyboard Layouts</a>
+    <li><a href="#ref-for-alphanumeric-section⑨">2.1.9. 笔记本电脑键盘布局</a>
     <li><a href="#ref-for-alphanumeric-section①⓪">3.1.1. Writing System Keys</a>
     <li><a href="#ref-for-alphanumeric-section①①">3.1.2. Functional Keys</a> <a href="#ref-for-alphanumeric-section①②">(2)</a>
     <li><a href="#ref-for-alphanumeric-section①③">3.5. Function Section</a>
@@ -2263,7 +2269,7 @@ something specific to the values defined in this document</p>
   <aside aria-labelledby="infopaneltitle-for-writing-system-keys" class="dfn-panel" data-for="writing-system-keys" id="infopanel-for-writing-system-keys">
    <span id="infopaneltitle-for-writing-system-keys" style="display:none">Info about the 'writing system keys' definition.</span><b><a href="#writing-system-keys">#writing-system-keys</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-writing-system-keys">2.1.9. Laptop Keyboard Layouts</a>
+    <li><a href="#ref-for-writing-system-keys">2.1.9. 笔记本电脑键盘布局</a>
     <li><a href="#ref-for-writing-system-keys①">3.1. Alphanumeric Section</a>
     <li><a href="#ref-for-writing-system-keys②">3.1.1. Writing System Keys</a> <a href="#ref-for-writing-system-keys③">(2)</a> <a href="#ref-for-writing-system-keys④">(3)</a>
    </ul>
@@ -2285,7 +2291,7 @@ something specific to the values defined in this document</p>
     <li><a href="#ref-for-control-pad④">2.1.5. 韩式 "103" 键盘布局</a>
     <li><a href="#ref-for-control-pad⑤">2.1.6. 巴西 "104" 键盘布局</a>
     <li><a href="#ref-for-control-pad⑥">2.1.7. 日式 "106" 键盘布局</a>
-    <li><a href="#ref-for-control-pad⑦">2.1.9. Laptop Keyboard Layouts</a>
+    <li><a href="#ref-for-control-pad⑦">2.1.9. 笔记本电脑键盘布局</a>
     <li><a href="#ref-for-control-pad⑧">3.2. Control Pad Section</a>
     <li><a href="#ref-for-control-pad⑨">3.4. Numpad Section</a>
    </ul>
@@ -2300,7 +2306,7 @@ something specific to the values defined in this document</p>
     <li><a href="#ref-for-arrow-pad④">2.1.5. 韩式 "103" 键盘布局</a>
     <li><a href="#ref-for-arrow-pad⑤">2.1.6. 巴西 "104" 键盘布局</a>
     <li><a href="#ref-for-arrow-pad⑥">2.1.7. 日式 "106" 键盘布局</a>
-    <li><a href="#ref-for-arrow-pad⑦">2.1.9. Laptop Keyboard Layouts</a>
+    <li><a href="#ref-for-arrow-pad⑦">2.1.9. 笔记本电脑键盘布局</a>
     <li><a href="#ref-for-arrow-pad⑧">3.3. Arrow Pad Section</a>
     <li><a href="#ref-for-arrow-pad⑨">3.4. Numpad Section</a>
    </ul>
