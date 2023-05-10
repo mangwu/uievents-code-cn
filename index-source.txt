@@ -737,7 +737,20 @@ path: stylesheet-extra.include
 		Chorded_keyboard</a> 。
 		</p>
 	
-	<h3 id="keyboard-other-layout">键盘布局</h3>
+	<h3 id="wiki-keyboard-sections">非标准键盘分区</h3>
+
+		<strong>本节不是规范的，并且不属于源英文原档规范。</strong>
+
+		本规范在键盘分区时，将标准键盘分为 5 个通用区域，
+		这种分类方式主要基于按键的位置。
+
+		对于一般的标准计算机的键盘(也称 PC/AT 键盘， QWEWRTY 键盘)
+		维基百科介绍了一种基于按键的用途进行分类的方式: 
+
+		*	功能键 —— KEYCAP{F1} — KEYCAP{F12}
+
+		* 字母数字键 —— KEYCAP{~`} ， KEYCAP{!1} ， KEYCAP{@2} — KEYCAP{(9} ，
+			KEYCAP{)0} ， 
 
 <h2 id="code-value-tables">键盘事件 {{KeyboardEvent/code}} 值表格</h2>
 
