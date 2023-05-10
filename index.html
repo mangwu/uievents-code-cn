@@ -7,7 +7,7 @@
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-UD" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
   <meta content="Bikeshed version d9bd89757, updated Thu Mar 23 10:06:53 2023 -0700" name="generator">
-  <meta content="22d05d80271e4f9f2be23a2400dc7e7e5ae7e360" name="document-revision">
+  <meta content="490217ac69000e3c99a1db3695a29ea1e487d648" name="document-revision">
   <link href="./override.css" rel="stylesheet">
 <style>
 
@@ -666,11 +666,12 @@ dfn > a.self-link::before      { content: "#"; }
         <li><a href="#keyboard-106"><span class="secno">2.1.7</span> <span class="content">日式 "106" 键盘布局</span></a>
         <li><a href="#keyboard-mac"><span class="secno">2.1.8</span> <span class="content">苹果键盘布局</span></a>
         <li><a href="#keyboard-laptops"><span class="secno">2.1.9</span> <span class="content">笔记本电脑键盘布局</span></a>
-        <li><a href="#other-locales"><span class="secno">2.1.10</span> <span class="content">Keyboard Layouts For Other Locales</span></a>
+        <li><a href="#other-locales"><span class="secno">2.1.10</span> <span class="content">其它地区的键盘布局</span></a>
+        <li><a href="#keyboard-chinese"><span class="secno">2.1.11</span> <span class="content">中文键盘</span></a>
        </ol>
-      <li><a href="#keyboard-mobile"><span class="secno">2.2</span> <span class="content">Mobile Keypads</span></a>
-      <li><a href="#remote-control"><span class="secno">2.3</span> <span class="content">Media Remote Controls</span></a>
-      <li><a href="#keyboard-chording-virtual"><span class="secno">2.4</span> <span class="content">Virtual Keyboards and Chording Keyboards</span></a>
+      <li><a href="#keyboard-mobile"><span class="secno">2.2</span> <span class="content">移动设备键盘</span></a>
+      <li><a href="#remote-control"><span class="secno">2.3</span> <span class="content">媒体遥控器</span></a>
+      <li><a href="#keyboard-chording-virtual"><span class="secno">2.4</span> <span class="content">虚拟键盘和和弦键盘</span></a>
      </ol>
     <li>
      <a href="#code-value-tables"><span class="secno">3</span> <span class="content">Keyboard Event <code class="idl"><span>code</span></code> Value Tables</span></a>
@@ -986,79 +987,105 @@ dfn > a.self-link::before      { content: "#"; }
 			字母数字区域( <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section⑨">alphanumeric section</a> )中的书写系统键( <a data-link-type="dfn" href="#writing-system-keys" id="ref-for-writing-system-keys">writing system keys</a> )往往保持完整，
 			但其他键盘区域通常与其他键组合或被完全移除。</p>
    <figure id="figure-keyboard-laptop-mac">
-     <img alt="苹果笔记本电脑键盘布局" height="180" src="images/keyboard-laptop-mac.svg" width="420"> 
+     <img alt="苹果笔记本电脑键盘布局" height="225" src="images/keyboard-laptop-mac.svg" width="684"> 
     <figcaption>苹果笔记本电脑键盘布局</figcaption>
    </figure>
    <p>在这个苹果笔记本电脑键盘中，右侧的控制键( <code class="code">"<a href="#code-ControlRight">ControlRight</a>"</code> )被移除，
 			为半行高箭头键腾出了空间，左侧增加了一个 <code class="keycap">Fn</code> 键。</p>
    <p class="note custom-note" role="note"> 右上方增加了一个电源按键。 </p>
    <figure id="figure-keyboard-laptop">
-     <img alt="PC 笔记本电脑键盘布局示例" height="180" src="images/keyboard-laptop.svg" width="460"> 
+     <img alt="PC 笔记本电脑键盘布局示例" height="225" src="images/keyboard-laptop.svg" width="684"> 
     <figcaption>PC 笔记本电脑键盘布局示例</figcaption>
    </figure>
    <p>PC 笔记本电脑键盘差异很大，但这个示例键盘展示了一些常见的键盘布局。
 			控制板( <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad⑦">control pad</a> )区域按键沿右侧添加，箭头板( <a data-link-type="dfn" href="#arrow-pad" id="ref-for-arrow-pad⑦">arrow pad</a> )区域按键沿底部插入。右 <code class="keycap">Shift</code> 键通常会收缩，为向上箭头键( <code class="keycap">↑</code> )腾出空间，而右 <code class="keycap">Meta</code> 键通常会被完全移除。</p>
-   <h4 class="heading settled" data-level="2.1.10" id="other-locales"><span class="secno">2.1.10. </span><span class="content">Keyboard Layouts For Other Locales</span><a class="self-link" href="#other-locales"></a></h4>
-   <p>Other locales are not explicitly described in this specification because they
-			start with one of the existing layouts and adapt it by changing the keycaps
-			and the key mappings.</p>
-   <p>Because these keyboards do not introduce new physical keys, they do not
-			require explicit documentation.</p>
-   <p>These keyboards are typically based on the "101" (standard or alternate)
-			or "102" layouts.
-			For example, the common Arabic, Cyrillic, Greek, Hindi, Khmer and Thai
-			keyboards are all based on either the "101" or "102" keyboard layouts.</p>
-   <h3 class="heading settled" data-level="2.2" id="keyboard-mobile"><span class="secno">2.2. </span><span class="content">Mobile Keypads</span><a class="self-link" href="#keyboard-mobile"></a></h3>
-   <p>In the case where a content author wishes to rely on the mechanical
-		layout of a mobile keypad, this specification suggests the keyboard
-		configuration specified in <a data-link-type="biblio" href="#biblio-iso9995-8" title="ISO/IEC 9995-8:2009 Information technology -- Keyboard layouts for text and office systems -- Part 8: Allocation of letters to the keys of a numeric keypad">[ISO9995-8]</a>, which defines a numeric keypad
-		layout and secondary assignment of Unicode characters in the range <code class="unicode">U+0061</code> ... <code class="unicode">U+007A</code> (<code class="glyph">"a"</code> - <code class="glyph">"z"</code>) to the number keys <code class="keycap">2</code> through <code class="keycap">9</code>, as a common layout appropriate to some
-		international uses.</p>
-   <p class="note" role="note"> This keypad layout, and in particular the distribution of letters is for
-		English devices, and will not match the keypads or configurations of
-		many users.	 Content authors cannot rely upon any particular
-		configuration, and are expected to create content in an
-		internationalized and localizable manner. </p>
+   <h4 class="heading settled" data-level="2.1.10" id="other-locales"><span class="secno">2.1.10. </span><span class="content">其它地区的键盘布局</span><a class="self-link" href="#other-locales"></a></h4>
+   <p>本规范中没有明确描述其它地区的键盘布局，
+			因为它们通常从一个现有键盘布局出发，并通过更改键帽和键映射对其进行调整。</p>
+   <p>因为这些键盘不引入新的物理键，所以它们不需要明确的文档进行描述。</p>
+   <p>这些键盘通常基于 "101" (标准或备用) 或 "102" 布局。例如，常见的阿拉伯语、
+			西里尔语、希腊语、印地语、高棉语和泰语键盘都基于 "101" 或 "102" 键盘布局。</p>
+   <h4 class="heading settled" data-level="2.1.11" id="keyboard-chinese"><span class="secno">2.1.11. </span><span class="content">中文键盘</span><a class="self-link" href="#keyboard-chinese"></a></h4>
+   <p><em><strong>本节不是规范的，并且不属于源英文原档规范。</strong></em></p>
+   <p><q>中国大陆由于以基于拉丁字母的汉语拼音为主要输入法，故不使用专用的中文键盘，
+		而使用美国标准键盘布局，少部分键盘会在键帽上加印五笔字根。</q> —— <a href="https://zh.wikipedia.org/wiki/键盘布局#中文「四合一」鍵盤"> 维基百科</a></p>
+   <p>而在使用注音或其它非拼音输入法的地区(台湾、香港及澳门等地)，
+		使用一种叫做中文"四合一"键盘，它同样基于美式标准 "101" 键盘，
+		只不过在字母数字区域的按键键帽上有四个表示不同意思的字符标签: <br></p>
+   <ul>
+    <li data-md>
+     <p>每个键的左上角是美式标准布局键盘键帽标签;</p>
+    <li data-md>
+     <p>每个键的右上角是注音符号;</p>
+    <li data-md>
+     <p>每个键的左下角是仓颉输入法字符;</p>
+    <li data-md>
+     <p>每个键的右下角是大易输入法字符;</p>
+   </ul>
+   <p>下图是源于维基百科的一个中文"四合一"键盘:</p>
+   <figure id="figure-keyboard-cn-taiwan">
+     <img alt="台湾地区中文’四合一’键盘字母数字区域" height="225" src="images/keyboard-101-cn-taiwan.svg" width="684"> 
+    <div class="custom-figcaption">台湾地区中文"四合一"键盘字母数字区域</div>
+   </figure>
+   <h3 class="heading settled" data-level="2.2" id="keyboard-mobile"><span class="secno">2.2. </span><span class="content">移动设备键盘</span><a class="self-link" href="#keyboard-mobile"></a></h3>
+   <p>在内容作者希望依赖一个移动设备键盘(mobile keypad)的机械布局的情况下，
+		本规范建议使用 <a data-link-type="biblio" href="#biblio-iso9995-8" title="ISO/IEC 9995-8:2009 Information technology -- Keyboard layouts for text and office systems -- Part 8: Allocation of letters to the keys of a numeric keypad">[ISO9995-8]</a> 标准中指定的键盘配置，
+		该标准定义了一种数字键盘布局(numeric keypad layout)和在 <code class="unicode">U+0061</code> ... <code class="unicode">U+007A</code>( <code class="glyph">"a"</code> - <code class="glyph">"z"</code> ) 到数字按键 <code class="keycap">2</code> - <code class="keycap">9</code> 范围内的 Unicode 字符的二次分派，(该布局)常作为一种适用于某些国际用途的布局。</p>
+   <p class="note" role="note"> 这种键盘布局，尤其是字母的分布，适用于英语设备，
+		与许多(非英语)用户的键盘或配置不匹配。
+		内容作者不能依赖任何特定的配置，并且应该以国际化和本地化的方式创建内容。 </p>
    <figure id="figure-numeric-keypad">
-     <img alt="Mobile keypad layout" height="305" src="images/mobile-keypad.svg" width="140"> 
-    <figcaption>A graphical depiction of a generic mobile keypad.</figcaption>
+     <img alt="移动设备键盘布局" height="305" src="images/mobile-keypad.svg" width="140"> 
+    <figcaption>通用移动键盘的图形描述</figcaption>
    </figure>
-   <h3 class="heading settled" data-level="2.3" id="remote-control"><span class="secno">2.3. </span><span class="content">Media Remote Controls</span><a class="self-link" href="#remote-control"></a></h3>
-   <p>Many keyboards contain special keys to control media functions.
-		Increasingly, many media devices, especially televisions, are
-		Web-enabled.  Hybrid keyboard/remote-control devices are becoming more
-		common.	 To meet the needs of these hybrid Web/media devices, this
-		specification defines keys that are common as remote control buttons, in
-		addition to traditional keyboard keys.</p>
-   <p>Because of the smaller form factor, keys (or buttons) on a remote
-		control will often be modal, with one key performing different functions
-		based on the context of the on-screen content. Additionally, many keys
-		serve as toggles, to change back and forth between two or more states
-		(see toggling keys). These remote control buttons typically do not have
-		modifier states so each button is assigned a single function (like <code class="keycap">Play</code>, <code class="keycap">Pause</code>, <code class="keycap">Up</code>, <code class="keycap">Menu</code> or <code class="keycap">Exit</code>).</p>
+   <p class="note custom-note" role="note"> 现代的移动设备多为智能手机，不再具有上图所示的物理键盘，而是使用触摸屏幕，
+		通过虚拟键盘( <a href="#keyboard-chording-virtual">§ 2.4 虚拟键盘和和弦键盘</a> )进行文本输入。下图是苹果公司发布的 IPhone 14 智能手机: </p>
+   <figure id="figure-iphone14">
+     <img alt="IPhone14 正面图" height="305" src="images/IPhone-14-vector.svg" width="140"> 
+    <div class="custom-figcaption">IPhone14 正面图，灰色区域为触摸屏，
+			不包含物理键盘，上方"刘海" 包含前置摄像头</div>
+   </figure>
+   <h3 class="heading settled" data-level="2.3" id="remote-control"><span class="secno">2.3. </span><span class="content">媒体遥控器</span><a class="self-link" href="#remote-control"></a></h3>
+   <p>许多键盘包含控制媒体功能的特殊键。越来越多的媒体设备，尤其是电视，
+		都支持网络。混合键盘/遥控设备(Hybrid keyboard/remote-control devices)
+		越来越普遍。为了满足这些混合 Web/媒体 设备的需求，
+		本规范定义了除传统键盘键外，常见的遥控器按钮(remote control buttons)。</p>
+   <p>由于尺寸较小，遥控器上的按键(或按钮)通常是模态的，
+		一个按键根据屏幕内容的上下文执行不同的功能。此外，
+		许多键用作切换键(toggles)，在两个或多个状态之间来回切换(请参见切换按键)。
+		这些遥控器按钮通常没有修饰符状态，因此每个按钮都被分配了一个功能
+		(如 <code class="keycap">Play</code> 、 <code class="keycap">Pause</code> 、 <code class="keycap">Up</code> 、 <code class="keycap">Menu</code> 或 <code class="keycap">Exit</code> )。</p>
    <figure id="figure-media-remote-control">
-     <img alt="A sample media remote control" height="422" src="images/remote-control.svg" width="102"> 
-    <figcaption>A graphical depiction of a media remote control.</figcaption>
+     <img alt="媒体遥控器示例" height="422" src="images/remote-control.svg" width="102"> 
+    <figcaption>媒体遥控器的图形描述</figcaption>
    </figure>
-   <h3 class="heading settled" data-level="2.4" id="keyboard-chording-virtual"><span class="secno">2.4. </span><span class="content">Virtual Keyboards and Chording Keyboards</span><a class="self-link" href="#keyboard-chording-virtual"></a></h3>
-   <p>Virtual keyboards are software-based sets of keys, in a variety of
-		different arrangements, commonly found on touch-screen devices. They are
-		often modal, with the ability to switch between different dynamic sets
-		of keys, such as alphabetic, numeric, or symbolic keys.	 Because of the
-		lack of physical constraints, these keyboards MAY present the widest
-		range of characters, including emoticons and other symbols. Wherever possible,
-		however, virtual keyboards SHOULD produce the normal range of keyboard events
-		and values, for ease of authoring and compatibility with existing content.</p>
-   <p>Chording keyboards, also known as chorded keysets or chord keyboards, are
-		key input devices which produce values by pressing several keys in
-		combination or sequence, normally to simulate a full range of characters
-		or commands on a reduced set of keys, often for single-handed use.	A
-		chording keyboard MAY have additional mode keys to switch between key
-		values, and the number and type of keys pressed to produce a key value
-		will vary, but the final key values produced by such keyboards SHOULD
-		match the range of key values described in this specification.</p>
-   <p>For these and other alternative modal keyboards, the <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key③">key</a></code> values <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-Alphanumeric">Alphanumeric</a>"</code>, <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-CapsLock">CapsLock</a>"</code>, <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-NumLock">NumLock</a>"</code>,
-		and <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-SymbolLock">SymbolLock</a>"</code> are RECOMMENDED for the keys which switch between different modes.</p>
+   <h3 class="heading settled" data-level="2.4" id="keyboard-chording-virtual"><span class="secno">2.4. </span><span class="content">虚拟键盘和和弦键盘</span><a class="self-link" href="#keyboard-chording-virtual"></a></h3>
+   <p>虚拟键盘(virtual keyboards)是一组基于软件的按键集合，有各种不同的排列方式，
+		通常出现在触摸屏设备上。它们通常是模态的(modal)，
+		能够在不同的动态键集之间切换，例如字母键、数字键或符号键。由于缺乏物理限制，
+		这些键盘 <span class="zh-upper">可以</span> 呈现最广泛的字符，
+		包括表情符号和其他符号。然而，在可能的情况下，虚拟键盘 <span class="zh-upper">应当</span> 生成正常范围的键盘事件和 <code>code</code> 值，以便于开发并与现有内容兼容。</p>
+   <p class="note custom-note" role="note"> 关于模态的解释，参考 AI 的回答，但不保证准确: <br> <q>如果你说键盘按键是 <strong>模态的</strong> ，
+		那么通常是指这些按键的行为和反应是由软件程序控制的，而不是物理结构本身。
+		在模态键盘中，按键的行为和反应是根据用户的输入来决定的，
+		而不是按键本身的物理结构。<br> 模态键盘通常被设计为可以响应不同类型的输入，例如按压、轻触、点击等，
+		以提供更自然、直观的输入体验。模态键盘中的按键可以根据用户的输入来变化，
+		例如在按下一个按键时，按键的状态会从“松开”变为“按下”，
+		并且可能会产生轻微的震动或声音反馈，以增强用户的操作感受。 <br> 因此，将键盘按键视为模态的，主要是基于其行为和反馈的变化，
+		而不是按键物理结构本身。</q> —— <a href="https://yiyan.baidu.com/">文心一言</a> 。 </p>
+   <p class="note custom-note" role="note"> 虚拟键盘依靠的软件也就是输入法编辑器(input method editor)，详情参见 <a data-link-type="biblio" href="#biblio-uievents" title="UI Events">[UIEvents]</a> 中的 <a href="https://mangwu.github.io/uievents-cn/#keys-IME"> 输入法编辑器</a> 。下图是一个拼音输入法编辑器软件(微软操作系统自带的): </p>
+   <figure id="figure-input-method-editor">
+     <img alt="拼音输入法编辑器" height="200" src="images/microsoft-pinyin-input-method-editor.svg" width="750"> 
+    <div class="custom-figcaption">拼音输入法编辑器</div>
+   </figure>
+   <p>和弦键盘(Chording keyboards)，也称为弦键组(chorded keysets)或和弦键盘
+		(chord keyboards)，是一种键输入设备，通过组合或顺序按下几个键来产生值，
+		通常是为了在一组缩小的键上模拟全范围的字符或命令，并且可以单手使用。
+		和弦键盘 <span class="zh-upper">可以</span> 有额外的模式键来在键值之间切换，
+		并且键按下时产生的键值的数量和类型会有所不同，
+		但这种键盘最终产生的键值 <span class="zh-upper">应当</span> 与本规范中描述的键值范围相匹配。</p>
+   <p>对于这些和其他备用模态键盘，在不同模式之间进行切换的并被 <span class="zh-upper">推荐的</span> 的按键的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key③">key</a></code> 值: <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-Alphanumeric">Alphanumeric</a>"</code> ， <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-CapsLock">CapsLock</a>"</code> ， <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-NumLock">NumLock</a>"</code> 和 <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-SymbolLock">SymbolLock</a>"</code> 。</p>
+   <p class="note custom-note" role="note"> 更多关于和弦键盘的内容，参阅英文维基百科的 <a href="https://en.wikipedia.org/wiki/Chorded_keyboard"> Chorded_keyboard</a> 。 </p>
    <h2 class="heading settled" data-level="3" id="code-value-tables"><span class="secno">3. </span><span class="content">Keyboard Event <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑤">code</a></code> Value Tables</span><a class="self-link" href="#code-value-tables"></a></h2>
    <p>This section defines a list of values which are appropriate for use as <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑥">code</a></code> values.</p>
    <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="key-code-attribute-value">key code attribute value</dfn> is any of the values given in the
@@ -2190,7 +2217,7 @@ something specific to the values defined in this document</p>
    <ul>
     <li><a href="#ref-for-dom-keyboardevent-key">1. 简介</a>
     <li><a href="#ref-for-dom-keyboardevent-key①">1.1. 格式规约</a> <a href="#ref-for-dom-keyboardevent-key②">(2)</a>
-    <li><a href="#ref-for-dom-keyboardevent-key③">2.4. Virtual Keyboards and Chording Keyboards</a>
+    <li><a href="#ref-for-dom-keyboardevent-key③">2.4. 虚拟键盘和和弦键盘</a>
     <li><a href="#ref-for-dom-keyboardevent-key④">3.1.1. Writing System Keys</a>
     <li><a href="#ref-for-dom-keyboardevent-key⑤">3.1.2. Functional Keys</a>
     <li><a href="#ref-for-dom-keyboardevent-key⑥">7. Privacy Considerations</a>
