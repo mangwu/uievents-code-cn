@@ -13,7 +13,7 @@ ED:
 Repository: mangwu/uievents-code-cn
 Boilerplate: repository-issue-tracking off, copyright off, property-index off
 No Editor: true
-Text Macro: DATE 2023年5月6日
+Text Macro: DATE 2023年5月12日
 Text Macro: LONGSTATUS 翻译草案
 !本版本: <a href="https://mangwu.github.io/uievents-code-cn/">https://mangwu.github.io/uievents-code-cn/</a>
 !最新提案: <a href="https://w3c.github.io/uievents-code/">https://w3c.github.io/uievents-code/</a>
@@ -21,9 +21,10 @@ Text Macro: LONGSTATUS 翻译草案
 !历史记录: <a href="https://www.w3.org/standards/history/uievents-code">https://www.w3.org/standards/history/uievents-code</a>
 !规范反馈: <a href="https://github.com/w3c/uievents-code/issues/">GitHub-w3c-uievents-code-issues</a>
 !翻译反馈: <a href="https://github.com/mangwu/uievents-code-cn/issues/">GitHub-mangwu-uievents-code-cn-issues</a>
+!实现报告: <a href="https://mangwu.github.io/uievents-code/impl-report.html">https://mangwu.github.io/uievents-code-cn/impl-report.html</a>
 !编辑者: 
 	<a class="p-name fn u-email email" href="mailto:garykac@google.com">Gary Kacmarcik</a>(Google)
-	<a class="p-name fn u-email email" href="mailto:travil@microsoft.com">Travis Leithead</a>(Microsoft)
+	<a class="p-name fn u-email email" href="mailto:travisleithead@hotmail.com">Travis Leithead</a>(Invited Expert)
 !翻译者: 
 	<a class="p-name fn u-email email" href="mailto:1185956753@qq.com">mangwu</a>
 Abstract:
@@ -124,7 +125,7 @@ Abstract:
 		"publisher": "ISO"
 	},
 	"USB-HID": {
-		"href": "http://www.usb.org/developers/hidpage/Hut1_12v2.pdf",
+		"href": "https://www.usb.org/sites/default/files/documents/hut1_12v2.pdf",
 		"title": "USB HID Usage Tables 1.12",
 		"publisher": "USB Implementers' Forum"
 	}
@@ -140,7 +141,7 @@ urlPrefix: https://www.w3.org/TR/uievents/#dom-keyboardevent-; type: attribute; 
 	text: location
 url: https://www.w3.org/TR/uievents/#key-legends; type: dfn; spec: uievents-key;
 	text: key cap
-url: https://www.w3.org/TR/uievents-key/#key-value-tables; type: dfn; spec: uievents-key;
+url: https://www.w3.org/TR/uievents-key/#key-attr-values; type: dfn; spec: uievents-key;
 	text: key attribute value
 </pre>
 
@@ -1028,8 +1029,9 @@ path: stylesheet-extra.include
 			assigned to that key. Wherever possible, the
 			{{KeyboardEvent/code}} names are based on the name for the US
 			key in that position (i.e., they are based on the US keyboard
-			layout). For keys that don't exist on the US keyboard, names
-			from the UK or Japanese layouts are used instead.
+			layout), which follows the naming convention found in [[USB-HID]].
+			For keys that don't exist on the US keyboard, names from the UK or Japanese
+			layouts are used instead.
 
 			Note that there are two CODE{Backslash} keys in this figure: a
 			large one at the end of Row D on the 101-key layout, and a
@@ -1191,7 +1193,7 @@ path: stylesheet-extra.include
 			CODE Delete		KEYCAP{&#8998;}. The forward delete key.
 							Note that on Apple keyboards, the key labelled KEYCAP{Delete} on the main part of
 							the keyboard should be encoded as CODE{Backspace}.
-			CODE End		KEYCAP{Page Down}, KEYCAP{End} or KEYCAP{&#8600;}
+			CODE End		KEYCAP{End} or KEYCAP{&#8600;}
 			CODE Help		KEYCAP{Help}. Not present on standard PC keyboards.
 			CODE Home		KEYCAP{Home} or KEYCAP{&#8598;}
 			CODE Insert		KEYCAP{Insert} or KEYCAP{Ins}. Not present on Apple keyboards.
