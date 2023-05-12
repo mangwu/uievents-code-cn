@@ -1,0 +1,13 @@
+/* 远程LINK URL无法获取就使用本地的 */
+/* Style for an "Unofficial Draft" */
+
+@import "base.css";
+
+body {
+  background: url(logos/UD) no-repeat fixed,
+    url(logos/UD-watermark-light.svg) repeat-y center left fixed,
+    url(logos/UD-watermark-light.svg) repeat-y center right fixed;
+  background-image: url(logos/Unoffical-Draft-zh.svg), var(--draft-watermark),
+    var(--unofficial-watermark);
+  background-color: var(--bg);
+}

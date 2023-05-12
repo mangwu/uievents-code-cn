@@ -2,7 +2,7 @@
  * @Author: mangwu                                                             *
  * @File: custom-script.js                                                     *
  * @Date: 2023-05-01 02:02:19                                                  *
- * @LastModifiedDate: 2023-05-05 14:06:10                                      *
+ * @LastModifiedDate: 2023-05-12 16:55:00                                      *
  * @ModifiedBy: mangwu                                                         *
  * -----------------------                                                     *
  * Copyright (c) 2023 mangwu                                                   *
@@ -11,6 +11,20 @@
  * Date   	            By 	    Comments                                       *
  * ---------------------	--------	----------------------------------------------- *
  */
+
+/**
+ * @description 尝试执行代码
+ * @param {Function} callback 试运行的回调函数
+ * @param {string} message 运行错误的打印消息
+ * @param  {...any} args callback的参数
+ */
+function tryCatch(callback, message, ...args) {
+  try {
+    callback(...args);
+  } catch (error) {
+    console.log(message, error.message);
+  }
+}
 
 /**
  * @description 查询元素
@@ -166,13 +180,13 @@ function translateDfnType(originDfn) {
     const copy1 = idlNameLink.cloneNode(true);
     const copy2 = replacement.cloneNode(true);
     span.replaceChildren(copy1, copy2);
-    span.previousSibling.nodeValue = "，" // 可修改英文逗号为中文逗号
+    span.previousSibling.nodeValue = "，"; // 可修改英文逗号为中文逗号
   }
 }
 
-figureAllChange();
 window.addEventListener("DOMContentLoaded", () => {
-  translatePanels();
-  tranlateToc();
-  translateDfnTypes();
+  tryCatch(figureAllChange,"figureAllChange方法执行错误:")
+  tryCatch(translatePanels,"translatePanels方法执行错误:")
+  tryCatch(tranlateToc,"tranlateToc方法执行错误:")
+  tryCatch(translateDfnTypes,"translateDfnTypes方法执行错误:")
 });

@@ -261,20 +261,7 @@ div.warning > p:first-child {
   background: none repeat scroll 0 0 #d0dafd;
   color: #333399;
 }
-/* 远程LINK URL无法获取就使用本地的 */
 
-/* Style for an "Unofficial Draft" */
-
-@import "base.css";
-
-body {
-  background: url(logos/UD) no-repeat fixed,
-    url(logos/UD-watermark-light.svg) repeat-y center left fixed,
-    url(logos/UD-watermark-light.svg) repeat-y center right fixed;
-  background-image: url(logos/UD.png), var(--draft-watermark),
-    var(--unofficial-watermark);
-  background-color: var(--bg);
-}
 /* 无法直接翻译的标题可以直接隐藏替换 */
 #abstract,
 #sotd,

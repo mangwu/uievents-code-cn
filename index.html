@@ -7,7 +7,7 @@
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-UD" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
   <meta content="Bikeshed version d9bd89757, updated Thu Mar 23 10:06:53 2023 -0700" name="generator">
-  <meta content="93432f9987e4640bdecf8fba935b4a5a9c7b21d7" name="document-revision">
+  <meta content="25dcb33671ab0ad90bd578a0649cddb16e2eabbb" name="document-revision">
   <link href="./override.css" rel="stylesheet">
 <style>
 
@@ -727,6 +727,7 @@ dfn > a.self-link::before      { content: "#"; }
   </nav>
   <main>
 <script defer src="./custom-script.js"></script>
+<script src="./backup-script.js"></script>
    <h2 class="heading settled" data-level="1" id="introduction"><span class="secno">1. </span><span class="content">简介</span><a class="self-link" href="#introduction"></a></h2>
    <p>本文档概述了各种键盘布局，并指定了每个键应使用的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code">code</a></code> 值。
 	与 [[UIEvents key]] 中描述的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key">key</a></code> 值不同， <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①">code</a></code> 值仅基于键在键盘上的物理位置，
@@ -1199,20 +1200,19 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
 (在位置区域划分上，这个锁定键肯定是属于小键盘的)。
 它的状态会影响位于主键盘右侧的 <a data-link-type="dfn" href="#num-keypad-keys" id="ref-for-num-keypad-keys">小键盘数字按键</a> 的功能，
 并且状态值由内置在键盘中的 LED 显示，按下 <code class="keycap">Num Lock</code> 就能切换锁定状态。需要知晓的是 <code class="keycap">/</code> ， <code class="keycap">*</code> ， <code class="keycap">-</code> ，<code class="keycap">-</code> 的功能不受数字锁定键的状态影响，
-受影响的主要是小键盘上的 <code class="keycap">0 End</code> ~ <code class="keycap">9 PgUp</code> 以及 <code class="keycap">. Del</code> ，后面说的数字按键指代的就是这11个按键。在未被锁定情况下
-(灯亮)，数字按键就如同 <a data-link-type="dfn" href="#num-keypad-keys" id="ref-for-num-keypad-keys①">小键盘数字按键</a> 描述的那样，可以输入数学数字
-(以及小数点)，并且能组合 <code class="keycap">Shift</code> 按键实现其它区域按键的功能; 
-在锁定的情况下(灯暗)，数字按键就无法输入数学数字(以及小数点)，
-但是单独按下会执行在未锁定状态下的 <code class="keycap">Shift</code> + <code class="keycap">Numpad</code> 功能，
-也就是说，数字锁定键的锁定状态相当于让数字按键的功能，
-锁定到是键帽下方的标签对应按键的功能。<br></p>
+受影响的主要是小键盘上的 <code class="keycap">0 End</code> ~ <code class="keycap">9 PgUp</code> 以及 <code class="keycap">. Del</code> ，后面说的数字按键指代的就是这11个按键。</p>
+     <p>在锁定情况下(灯亮)，数字按键就如同 <a data-link-type="dfn" href="#num-keypad-keys" id="ref-for-num-keypad-keys①">小键盘数字按键</a> 描述的那样，
+可以输入数学数字(以及小数点)，并且能组合 <code class="keycap">Shift</code> 按键实现其它区域按键的功能; 在未锁定的情况下(灯暗)，
+数字按键就无法输入数学数字(以及小数点)，但是单独按下会执行在锁定状态下的 <code class="keycap">Shift</code> + <code class="keycap">Numpad</code> 功能，也就是说，
+数字锁定键的未锁定状态相当于让数字按键的功能，
+默认是键帽下方的标签对应按键的功能。<br></p>
    </ul>
    <table class="custom-numpad-key-list event-sequence-table">
     <thead>
      <tr>
       <th>数字按键(键帽)
-      <th>未锁定(灯亮)
-      <th>锁定(灯暗)后的等同的功能按键
+      <th>锁定(灯亮)
+      <th>未锁定(灯暗)后的等同的功能按键
     <tbody>
      <tr>
       <td><code class="keycap">0 Ins</code>
@@ -1257,18 +1257,21 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
      <tr>
       <td><code class="keycap">. Del</code>
       <td>. 或 ,
-      <td><code class="keycap">Del</code> 删除键，<a data-link-type="dfn" href="#enter-edit-keys" id="ref-for-enter-edit-keys②">回车键和编辑键</a>
+      <td><code class="keycap">Del</code> 删除键，参阅 <a data-link-type="dfn" href="#enter-edit-keys" id="ref-for-enter-edit-keys②">回车键和编辑键</a>
    </table>
    <ul>
     <li data-md>
      <p>滚动锁定(Scroll Lock ，<code class="keycap">⤓</code> 或 <code class="keycap">⇳</code> ) 是大多数 IBM
 兼容计算机键盘上的锁定键(通常带有相关的状态指示灯)。根据操作系统的不同，
-改键具有不同的使用目的。这个按键不常使用，所以有些键盘精简了这个按键。 <br> 在 Windows 操作系统下，<code class="keycap">ScrLk</code> 是一种切换锁定按键，
+改键具有不同的使用目的。这个按键不常使用，所以有些键盘精简了这个按键。</p>
+     <p>在 Windows 操作系统下，<code class="keycap">ScrLk</code> 是一种切换锁定按键，
 旨在修改箭头按键的行为。当滚动锁定模式打开时，箭头键将滚动文本窗口内容，
 而不是移动光标; 当滚动锁定模式关闭时(默认)，箭头键将移动光标; 
 并且这种锁定模式切换只在有限的应用程序中有效果，如微软的 Excel 和 Word 
 。浏览器都不支持通过 <code class="keycap">ScrLk</code> 切换滚动锁定模式，
-但是支持光标模式(Caret browsing)的浏览器(谷歌，火狐， IE 等)都支持使用 <a data-link-type="dfn" href="#fun-keys" id="ref-for-fun-keys">功能键</a> 的 <code class="keycap">F7</code> 来切换用户的浏览模式。光标模式和</p>
+但是支持光标模式(Caret browsing)的浏览器(谷歌，火狐， IE 等)都支持使用 <a data-link-type="dfn" href="#fun-keys" id="ref-for-fun-keys">功能键</a> 的 <code class="keycap">F7</code> 来切换用户的浏览模式。
+光标模式默认设置时的窗口滚动行为和滚动模式默认设置(关闭)的行为类似，
+并且启用光标模式的滚动行为就像锁定</p>
    </ul>
    <h4 class="heading settled" data-level="2.5.7" id="wiki-nav-keys"><span class="secno">2.5.7. </span><span class="content">导航按键</span><a class="self-link" href="#wiki-nav-keys"></a></h4>
    <ul>
