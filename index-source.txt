@@ -745,136 +745,211 @@ path: stylesheet-extra.include
 		这种分类方式主要基于按键的位置。
 
 		对于一般的标准计算机的键盘(也称 PC/AT 键盘， QWEWRTY 键盘)
-		维基百科介绍了一种基于按键的用途进行分类的方式: 
+		维基百科介绍了一种基于按键的用途进行分类的方式，包括 [[#wiki-fun-keys]] 、
+		[[#wiki-alnum-keys]] 、 [[#wiki-enter-edit-keys]] 、 
+		[[#wiki-system-and-gui-keys]] 、 [[#wiki-num-keypad-keys]] 、 
+		[[#wiki-lock-keys]] 、 [[#wiki-nav-keys]] 。
 
-		*	功能键(Function keys) —— KEYCAP{F1} ~ KEYCAP{F12} 。<q>
-			功能键是计算机或终端键盘上的一种键，可以对其进行编程，
-			以使操作系统命令解释器或应用程序执行某些操作，这是软键的一种形式。
-			在一些键盘/计算机上，功能键可能具有默认操作，可在开机时访问。</q>
-			在微软操作系统中，
-			每个应用程序可以自定义决定每个功能键对应用程序本身意味着什么，
-			并且在功能键被按下时执行应用程序想要的操作，例如在一般的浏览器中，
-			KEYCAP{F5} 表示刷新浏览器的当前页面。 
+		<h4 id="wiki-fun-keys">功能键</h4>
 
-		* 字母数字键或字符键(Alphanumeric or Character keys ) —— KEYCAP{~`} 
-			， KEYCAP{1!} ， KEYCAP{2@} ~ KEYCAP{9&#40;} ， KEYCAP{0&#41;} ， 
-			KEYCAP{-_} ， KEYCAP{=+} ， KEYCAP{aA} ~ KEYCAP{zZ} ， KEYCAP{&#91;&#123;} ， 
-			KEYCAP{&#93;&#125;} ， KEYCAP{\|} ， KEYCAP{;:} ， KEYCAP{'"} ， 
-			KEYCAP{,&lt;} ，KEYCAP{.&gt;} ， KEYCAP{/?} ， KEYCAP{&nbsp;} (空格键)。
-			这些按键都用于键入字母和其它字符(typing)。
+		<dfn id="fun-keys">功能键</dfn>(Function keys) —— KEYCAP{F1} ~ KEYCAP{F12}
+		 。<q>功能键是计算机或终端键盘上的一种键，可以对其进行编程，
+		以使操作系统命令解释器或应用程序执行某些操作，这是软键的一种形式。
+		在一些键盘/计算机上，功能键可能具有默认操作，可在开机时访问。</q>
+		在微软操作系统中，
+		每个应用程序可以自定义决定每个功能键对应用程序本身意味着什么，
+		并且在功能键被按下时执行应用程序想要的操作，例如在一般的浏览器中，
+		KEYCAP{F5} 表示刷新浏览器的当前页面。 
+
+		<h4 id="wiki-alnum-keys">字母数字键或字符键</h4>
+
+		<dfn id="alnum-keys">字母数字键或字符键</dfn>(Alphanumeric or Character 
+		keys) —— KEYCAP{~`} ， KEYCAP{1!} ， KEYCAP{2@} ~ KEYCAP{9&#40;} ， 
+		KEYCAP{0&#41;} ， KEYCAP{-_} ， KEYCAP{=+} ， KEYCAP{aA} ~ KEYCAP{zZ} ， 
+		KEYCAP{&#91;&#123;} ， KEYCAP{&#93;&#125;} ， KEYCAP{\|} ， KEYCAP{;:} ， 
+		KEYCAP{'"} ， KEYCAP{,&lt;} ，KEYCAP{.&gt;} ， KEYCAP{/?} ， 
+		KEYCAP{&nbsp;} (空格键)。这些按键都用于键入字母和其它字符(typing)。
 		
-		*	回车键和编辑键(Enter and editing keys) —— KEYCAP{Enter/↵} ， 
-			CODE{NumpadEnter} ， KEYCAP{Backspace} ， KEYCAP{Delete} ，KEYCAP{Insert}
-			。在文本模式下，
-			*	"回车(Enter)"键可以终止一段文本，并将编辑光标移动到下一行的开头; 
+		<h4 id="wiki-enter-edit-keys">回车键和编辑键</h4>
 
-			*	"回退(Backspace)" 键可以将编辑光标向后移动一个位置，并删除该位置的字符; 
+		<dfn id="enter-edit-keys">回车键和编辑键</dfn>(Enter and editing keys) —— 
+		KEYCAP{Enter/↵} ， CODE{NumpadEnter} ， KEYCAP{Backspace} ， 
+		KEYCAP{Delete} ，KEYCAP{Insert} 。在文本模式下，
 
-			*	"删除(Delete)"键可以删除编辑光标前面或下面的字符，或删除当前选择的对象;
+		*	"回车(Enter)"键可以终止一段文本，并将编辑光标移动到下一行的开头; 
 
-			*	"插入(Insert)"键可以切换输入模式。在插入模式(insert mode ，默认)下，
-				光标在当前位置插入一个字符，原来的字相应后移。在覆盖模式(overtype mode)
-				下，光标位置新输入字会替代原来的字。这一按键常在计算机终端中使用，
-				微软的 word 编辑器也有效果，其它可输入框可能无效。下面是在 word 
-				编辑器中使用插入键的一个例子，
+		*	"回退(Backspace)" 键可以将编辑光标向后移动一个位置，并删除该位置的字符; 
 
-				<figure id="figure-insert-key">
-					<img src="images/insert-key.gif" 
-					width="409" height="144" 
-					alt="插入键" />
-					<div class="custom-figcaption">word 编辑器里的插入键示例，
-					在移动光标并打下"45678"后按下了插入键，切换成了覆盖模式</div>
-				</figure>
+		*	"删除(Delete)"键可以删除编辑光标前面或下面的字符，或删除当前选择的对象;
+
+		*	"插入(Insert)"键可以切换输入模式。在插入模式(insert mode ，默认)下，
+			光标在当前位置插入一个字符，原来的字相应后移。在覆盖模式(overtype mode)
+			下，光标位置新输入字会替代原来的字。这一按键常在计算机终端中使用，
+			微软的 word 编辑器也有效果，其它可输入框可能无效。下面是在 word 
+			编辑器中使用插入键的一个例子，
+
+			<figure id="figure-insert-key">
+				<img src="images/insert-key.gif" 
+				width="409" height="144" 
+				alt="插入键" />
+				<div class="custom-figcaption">word 编辑器里的插入键示例，
+				在移动光标并打下"45678"后按下了插入键，切换成了覆盖模式</div>
+			</figure>
 		
-		* 系统和 GUI 键(系统和 GUI 按键) —— 左右两个 KEYCAP{Meta} 属于系统命令键
-			(system command keys)，GUI 按键包括 KEYCAP{Esc} ， KEYCAP{PrtScr SysRq} ， 
-			KEYCAP{Pause Break} :
+		<h4 id="wiki-system-and-gui-keys">系统和 GUI 键</h4>
 
-			*	系统命令按键也就是 KEYCAP{Meta} 键，它实际上也是一种修饰符按键，
-				在不同的操作系统上有不同的键帽。 <q>Meta</q> 这个单词有变化之意，
-				在微软的 Windows 操作系统也常用于配合其它按键调用许多常见系统功能;
+		系统和 GUI 键(System and GUI keys) —— 左右两个 KEYCAP{Meta} 属于系统命令键
+		(system command keys)，GUI 按键包括 KEYCAP{Esc} ， KEYCAP{PrtScr SysRq} ， 
+		KEYCAP{Pause Break} :
 
-				<div class="note custom-note">
-				Meta 键是以前 MIT 计算机键盘上的的一个特殊键，例如 Symbolics Space-cadet 
-				keyboard 就是 MIT Lisp 计算机上的由 Tom knight 设计的键盘，
-				后来 Sun 的键盘上也包含有此键，只不过标示为 Sun 的菱形徽标。现代，
-				这个按键发展到和操作系统相关联，在 Linux 和 BSD 操作系统上，它是 
-				KEYCAP{Super} 键，在 Windows 操作系统上，它是 KEYCAP{⊞Win} 键，在 
-				MacOS 操作系统上 它是 KEYCAP{⌘Cmd} ，虽然键帽不同，但是这个按键的 
-				<code>code</code> 值都是 CODE{MetaLeft} 或 CODE{MetaRight} 。<br/>
-				查阅更多的按键信息，可以在维基百科上搜索 Meta Key ， Super Key ，
-				Command Key 或 Windows Key 。
-				</div>
-				
-			* KEYCAP{Esc} 键的 <code>code</code> 值是 CODE{Escape} ， 
-				位于标准键盘布局的左上角。<q>escape</q> 本身有逃离，摆脱的意思，
-				现代常称其为退出键，中断键，
-				在应用程序中也常使用这个按键执行程序的退出和中断功能;
+		*	系统命令按键也就是 KEYCAP{Meta} 键，它实际上也是一种修饰符按键，
+			在不同的操作系统上有不同的键帽。 <q>Meta</q> 这个单词有变化之意，
+			在微软的 Windows 操作系统也常用于配合其它按键调用许多常见系统功能;
 
-				<div class="note custom-note">
-				在 <strong>以前</strong> 的计算机键盘上，KEYCAP{Esc} 
-				键是一个用于生成转义字符( 
-				<a href="https://en.wikipedia.org/wiki/Escape_character">
-				Escape character</a> )的键。但是现在的计算机用户不再需要关心转义序列，
-				CODE{Escape} 键被应用程序程序员挪用，通常是指 <em>停止</em> ，用于 
-				<em>"否"、"退出"、"取消"</em> 或 <em>"中止"</em> 对话框中的快捷键，
-				也是许多 Web 浏览器中 <em>停止</em> 按钮的常用快捷键，
-				并用于取消拖放操作。<br/>
-				除此之外，不同操作系统对 CODE{Escape} 键也有许多不同的快捷键使用方式。
-				在 Windows 操作系统上，按住 KEYCAP{Ctrl} 和 KEYCAP{Esc} 
-				可以调出开始菜单，相当于按下了 KEYCAP{⊞Win} 键。在 MacOS 中， 
-				KEYCAP{Esc} 通常会关闭或取消对话框或工作表， KEYCAP{⌘Command} + 
-				KEYCAP{⌥ Option} + KEYCAP{Esc} 组合会打开强制退出对话框，
-				允许用户结束无响应的应用程序。</br>
-				在维基百科的 <a href="https://en.wikipedia.org/wiki/Esc_key">Esc_key</a>
-				上查阅更多 CODE{Escape} 键信息。
-				</div>
+			<div class="note custom-note">
+			Meta 键是以前 MIT 计算机键盘上的的一个特殊键，例如 Symbolics Space-cadet 
+			keyboard 就是 MIT Lisp 计算机上的由 Tom knight 设计的键盘，
+			后来 Sun 的键盘上也包含有此键，只不过标示为 Sun 的菱形徽标。现代，
+			这个按键发展到和操作系统相关联，在 Linux 和 BSD 操作系统上，它是 
+			KEYCAP{Super} 键，在 Windows 操作系统上，它是 KEYCAP{⊞Win} 键，在 
+			MacOS 操作系统上 它是 KEYCAP{⌘Cmd} ，虽然键帽不同，但是这个按键的 
+			<code>code</code> 值都是 CODE{MetaLeft} 或 CODE{MetaRight} 。<br/>
+			查阅更多的按键信息，可以在维基百科上搜索 Meta Key ， Super Key ，
+			Command Key 或 Windows Key 。
+			</div>
 			
-			*	KEYCAP{PrtScr SysRq} 按键的 <code>code</code> 值是 CODE{PrintScreen} ，
-				它的键帽也可以是 KEYCAP{Print Screen} ，除此之外还有 
-				<em>Print Scrn ，Prnt Scrn ， Prnt Scr ， Prt Scrn ， Prt Scn ， 
-				Prt Scr ， Prt Sc ， Pr Sc 或 PS</em> 缩写，它在(标准键盘布局)功能按键 
-				KEYCAP{F12} 的右边，锁定按键 KEYCAP{Scroll Lock} 的左边，表示打印屏幕，
-				通俗而言就是截图的意思。
-				
-				<div class="note custom-note">
-				在 <strong>以前</strong> 基于命令行的操作系统(如 MS-DOS )下，
-				此键会将当前文本模式屏幕内存缓冲区的内容复制到标准打印机端口。
-				现在使用图形界面的新一代操作系统倾向于将当前屏幕的位图图像或屏幕截图
-				(screenshot)保存到剪贴板(clipboard)或类似的存储区域。例如在 
-				Windows 操作系统中按下 KEYCAP{PrtScr SysRq} 按键，然后通过 
-				KEYCAP{⊞Win} + KEYCAP{V} 调出剪贴板 GUI 程序，会发现包含刚才屏幕截图，
-				如下图。除此之外，按下 KEYCAP{⊞Win} + KEYCAP{PrtScr SysRq} 组合按键，
-				会将屏幕截图保存在默认的图片文件夹中。
-				</div>
+		* KEYCAP{Esc} 键的 <code>code</code> 值是 CODE{Escape} ， 
+			位于标准键盘布局的左上角。<q>escape</q> 本身有逃离，摆脱的意思，
+			现代常称其为退出键，中断键，
+			在应用程序中也常使用这个按键执行程序的退出和中断功能;
 
-			  <figure id="figure-print-screen">
-					<img src="images/print-screen.svg" 
-					width="409" height="800" alt="按下 Print Screen 按键后的屏幕截图" />
-					<div class="custom-figcaption">
-					KEYCAP{⊞ Win} + KEYCAP{V} 调出剪贴板 GUI 程序，里面包含按下 
-					Print Screen 按键后的屏幕截图</div>
-				</figure>
+			<div class="note custom-note">
+			在 <strong>以前</strong> 的计算机键盘上，KEYCAP{Esc} 
+			键是一个用于生成转义字符( 
+			<a href="https://en.wikipedia.org/wiki/Escape_character">
+			Escape character</a> )的键。但是现在的计算机用户不再需要关心转义序列，
+			CODE{Escape} 键被应用程序程序员挪用，通常是指 <em>停止</em> ，用于 
+			<em>"否"、"退出"、"取消"</em> 或 <em>"中止"</em> 对话框中的快捷键，
+			也是许多 Web 浏览器中 <em>停止</em> 按钮的常用快捷键，
+			并用于取消拖放操作。<br/>
+			除此之外，不同操作系统对 CODE{Escape} 键也有许多不同的快捷键使用方式。
+			在 Windows 操作系统上，按住 KEYCAP{Ctrl} 和 KEYCAP{Esc} 
+			可以调出开始菜单，相当于按下了 KEYCAP{⊞Win} 键。在 MacOS 中， 
+			KEYCAP{Esc} 通常会关闭或取消对话框或工作表， KEYCAP{⌘Command} + 
+			KEYCAP{⌥ Option} + KEYCAP{Esc} 组合会打开强制退出对话框，
+			允许用户结束无响应的应用程序。</br>
+			在维基百科的 <a href="https://en.wikipedia.org/wiki/Esc_key">Esc_key</a>
+			上查阅更多 CODE{Escape} 键信息。
+			</div>
+		
+		*	KEYCAP{PrtScr SysRq} 按键的 <code>code</code> 值是 CODE{PrintScreen} ，
+			它的键帽也可以是 KEYCAP{Print Screen} ，除此之外还有 
+			<em>Print Scrn ，Prnt Scrn ， Prnt Scr ， Prt Scrn ， Prt Scn ， 
+			Prt Scr ， Prt Sc ， Pr Sc 或 PS</em> 缩写，它在(标准键盘布局)功能按键 
+			KEYCAP{F12} 的右边，锁定按键 KEYCAP{Scroll Lock} 的左边，表示打印屏幕，
+			通俗而言就是截图的意思。
 			
-			*	KEYCAP{Pause Break} 按键的 <code>code</code> 值是 CODE{Pause} ，
-				称为中断键，暂停键，它也可以使用符号 ⎉ 表示。
+			<div class="note custom-note">
+			在 <strong>以前</strong> 基于命令行的操作系统(如 MS-DOS )下，
+			此键会将当前文本模式屏幕内存缓冲区的内容复制到标准打印机端口。
+			现在使用图形界面的新一代操作系统倾向于将当前屏幕的位图图像或屏幕截图
+			(screenshot)保存到剪贴板(clipboard)或类似的存储区域。例如在 
+			Windows 操作系统中按下 KEYCAP{PrtScr SysRq} 按键，然后通过 
+			KEYCAP{⊞Win} + KEYCAP{V} 调出剪贴板 GUI 程序，会发现包含刚才屏幕截图，
+			如下图。除此之外，按下 KEYCAP{⊞Win} + KEYCAP{PrtScr SysRq} 组合按键，
+			会将屏幕截图保存在默认的图片文件夹中。
+			</div>
 
-				<div class="note custom-note">
-				KEYCAP{Pause Break} 键最大的用处在于能快速调出电脑的系统属性，
-				按下组合键 KEYCAP{⊞ Win} + EYCAP{Pause Break} ，即可看到。
-				除此之外，在开机和处于 DOS 模式的时候，按下 KEYCAP{Pause Break} 
-				来暂停进程，之后按下任意键便可继续。有些 IDE (基础开发环境)
-				在调试程序时可能也会使用 KEYCAP{Pause Break} 作为暂停程序的快捷键，
-				并且提供 KEYCAP{Ctrl} + KEYCAP{Pause Break} 组合键结束调试。
-				</div>
+			<figure id="figure-print-screen">
+				<img src="images/print-screen.svg" 
+				width="409" height="800" alt="按下 Print Screen 按键后的屏幕截图" />
+				<div class="custom-figcaption">
+				KEYCAP{⊞ Win} + KEYCAP{V} 调出剪贴板 GUI 程序，里面包含按下 
+				Print Screen 按键后的屏幕截图</div>
+			</figure>
+		
+		*	KEYCAP{Pause Break} 按键的 <code>code</code> 值是 CODE{Pause} ，
+			称为中断键，暂停键，它也可以使用符号 ⎉ 表示。
 
-		*	小键盘数字按键(Numeric keypad) —— KEYCAP{0 Ins} ，KEYCAP{1 End} ，
-			KEYCAP{3 PgDn} ， KEYCAP{4 ←} ， KEYCAP{5} ， KEYCAP{6 →} ，KEYCAP{7 Home}
-			， KEYCAP{8 ↑} ， KEYCAP{9 PgUp} ， KEYCAP{/} ， KEYCAP{*} ， KEYCAP{-} ，
-			KEYCAP{-} ， KEYCAP{. Del} 。这些数字按键便于输入数学数字和运算符号，
-			它们的 <code>code</code> 值和字符键区域的数字键不同，前者以"Numpad" 
-			为前缀，后者以"digit"为前缀，例如 CODE{Numpad0} 和 CODE{Digit0} 。
-			除此之外，小键盘数字按键组合 KEYCAP{Shift} 按键可以实现其它区域按键的功能
+			<div class="note custom-note">
+			KEYCAP{Pause Break} 键最大的用处在于能快速调出电脑的系统属性，
+			按下组合键 KEYCAP{⊞ Win} + EYCAP{Pause Break} ，即可看到。
+			除此之外，在开机和处于 DOS 模式的时候，按下 KEYCAP{Pause Break} 
+			来暂停进程，之后按下任意键便可继续。有些 IDE (基础开发环境)
+			在调试程序时可能也会使用 KEYCAP{Pause Break} 作为暂停程序的快捷键，
+			并且提供 KEYCAP{Ctrl} + KEYCAP{Pause Break} 组合键结束调试。
+			</div>
+		
+		<h4 id="wiki-num-keypad-keys">小键盘数字按键</h4>
+
+		<dfn id="num-keypad-keys">小键盘数字按键</dfn>(Numeric keypad) —— 
+		KEYCAP{0 Ins} ，KEYCAP{1 End} ，KEYCAP{2 ↓} ， KEYCAP{3 PgDn} ， 
+		KEYCAP{4 ←} ， KEYCAP{5} ， KEYCAP{6 →} ，KEYCAP{7 Home} ， KEYCAP{8 ↑} ，
+		KEYCAP{9 PgUp} ， KEYCAP{/} ， KEYCAP{*} ， KEYCAP{-} ，KEYCAP{-} ， 
+		KEYCAP{. Del} 。这些数字按键便于输入数学数字和运算符号，它们的 
+		<code>code</code> 值和 [=字母数字键或字符键=] 的数字键不同，
+		前者以"Numpad"为前缀，后者以"Digit"为前缀，例如 CODE{Numpad0} 和 
+		CODE{Digit0} 。除此之外，小键盘数字按键组合 KEYCAP{Shift} 
+		按键可以实现其它区域按键的功能，例如 KEYCAP{Shift} + KEYCAP{1 End} 
+		就相当于导航按键 KEYCAP{End}。小键盘上的数字键功能会被 [=锁定按键=] 影响。
+		
+		<h4 id="wiki-lock-keys">锁定按键</h4>
+
+		<dfn id="lock-keys">锁定按键</dfn>(Lock keys) —— KEYCAP{CapsLock} ， 
+		KEYCAP{ScrollLock} ， KEYCAP{Num Lock} 。 <strong>LOCK</strong> 
+		是一种功能，根据所选的锁定设置，将键盘的部分键锁定到不同的操作模式。
+		标准键盘上右上方会有三个指示灯指示三个锁定按键的锁是否被启用，
+		一般是两种状态，灯亮表示锁定键控制的按键未被锁定，
+		灯暗表示锁定按键控制的按键已被锁定。默认情况下，只有 Number Lock 指示灯亮，
+		表示它控制的小键盘数字按键(Numeric keypad)未被锁定。
+
+		* 数字锁定(Num Lock)或数字锁定(Numeric Lock ， KEYCAP{⇭}) 
+			是大多数计算机键盘的小键盘(Numeric keypad)上的一个键
+			(在位置区域划分上，这个锁定键肯定是属于小键盘的)。
+			它的状态会影响位于主键盘右侧的 [=小键盘数字按键=] 的功能，
+			并且状态值由内置在键盘中的 LED 显示，按下 KEYCAP{Num Lock} 
+			就能切换锁定状态。需要知晓的是 KEYCAP{/} ， 
+			KEYCAP{*} ， KEYCAP{-} ，KEYCAP{-} 的功能不受数字锁定键的状态影响，
+			受影响的主要是小键盘上的 KEYCAP{0 End} ~ KEYCAP{9 PgUp} 以及 
+			KEYCAP{. Del} ，后面说的数字按键指代的就是这11个按键。在未被锁定情况下
+			(灯亮)，数字按键就如同 [=小键盘数字按键=] 描述的那样，可以输入数学数字
+			(以及小数点)，并且能组合 KEYCAP{Shift} 按键实现其它区域按键的功能; 
+			在锁定的情况下(灯暗)，数字按键就无法输入数学数字(以及小数点)，
+			但是单独按下会执行在未锁定状态下的 KEYCAP{Shift} + KEYCAP{Numpad} 功能，
+			也就是说，数字锁定键的锁定状态相当于让数字按键的功能，
+			锁定到是键帽下方的标签对应按键的功能。<br/>
+
+			++----------------+---------------+---------------------------------------------+ custom-numpad-key-list_event-sequence-table
+			=| 数字按键(键帽) | 未锁定(灯亮)  | 锁定(灯暗)后的等同的功能按键                |
+			 +----------------+---------------+---------------------------------------------+
+			+| KEYCAP{0 Ins}  | 0             | KEYCAP{Ins} 插入键，参阅 [=回车键和编辑键=] |
+			+| KEYCAP{1 End}  | 1             | KEYCAP{End} 结束键，参阅 [=回车键和编辑键=] |
+			+| KEYCAP{2 ↓}    | 2             | KEYCAP{↓} 下箭头键，参阅 [=导航按键=]       |
+			+| KEYCAP{3 PgDn} | 3             | KEYCAP{PgDn}  向下翻页键，参阅 [=导航按键=] |
+			+| KEYCAP{4 ←}    | 4             | KEYCAP{←}  左箭头键，参阅 [=导航按键=]      |
+			+| KEYCAP{5}      | 5             | 通常什么都不做                              |
+			+| KEYCAP{6 →}    | 6             | KEYCAP{→} 右箭头键，参阅 [=导航按键=]       |
+			+| KEYCAP{7 Home} | 7             | KEYCAP{Home} 起始键，参阅 [=导航按键=]      |
+			+| KEYCAP{8 ↑}    | 8             | KEYCAP{↑} 上箭头键，参阅 [=导航按键=]       |
+			+| KEYCAP{9 PgUp} | 9             | KEYCAP{PgUp} 向上翻页键，参阅 [=导航按键=]  |
+			+| KEYCAP{. Del}  | . 或 ,        | KEYCAP{Del}  删除键，[=回车键和编辑键=]     |
+			+++---------------+---------------+---------------------------------------------+
+		
+		* 滚动锁定(Scroll Lock ，KEYCAP{⤓} 或 KEYCAP{⇳} ) 是大多数 IBM 
+			兼容计算机键盘上的锁定键(通常带有相关的状态指示灯)。根据操作系统的不同，
+			改键具有不同的使用目的。这个按键不常使用，所以有些键盘精简了这个按键。
+			<br/>
+			在 Windows 操作系统下，KEYCAP{ScrLk} 是一种切换锁定按键，
+			旨在修改箭头按键的行为。当滚动锁定模式打开时，箭头键将滚动文本窗口内容，
+			而不是移动光标; 当滚动锁定模式关闭时(默认)，箭头键将移动光标; 
+			并且这种锁定模式切换只在有限的应用程序中有效果，如微软的 Excel 和 Word 
+			。浏览器都不支持通过 KEYCAP{ScrLk} 切换滚动锁定模式，
+			但是支持光标模式(Caret browsing)的浏览器(谷歌，火狐， IE 等)都支持使用 
+			[=功能键=] 的 KEYCAP{F7} 来切换用户的浏览模式。光标模式和
+
+		<h4 id="wiki-nav-keys">导航按键</h4>
+
+		* <dfn id="nav-keys">导航按键</dfn>(Navigation keys)
 				
 
 

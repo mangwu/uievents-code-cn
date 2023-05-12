@@ -261,7 +261,20 @@ div.warning > p:first-child {
   background: none repeat scroll 0 0 #d0dafd;
   color: #333399;
 }
+/* 远程LINK URL无法获取就使用本地的 */
 
+/* Style for an "Unofficial Draft" */
+
+@import "base.css";
+
+body {
+  background: url(logos/UD) no-repeat fixed,
+    url(logos/UD-watermark-light.svg) repeat-y center left fixed,
+    url(logos/UD-watermark-light.svg) repeat-y center right fixed;
+  background-image: url(logos/UD.png), var(--draft-watermark),
+    var(--unofficial-watermark);
+  background-color: var(--bg);
+}
 /* 无法直接翻译的标题可以直接隐藏替换 */
 #abstract,
 #sotd,
@@ -435,22 +448,9 @@ details > summary {
 }
 
 /* 自定义表格的类名 */
-/* 事件类型列表 */
-.event-types-list > thead > tr > th:nth-child(2) {
-  width: 48px;
-}
-.event-types-list > thead > tr > th:nth-child(3) {
-  width: 32px;
-}
-.event-types-list > thead > tr > th:nth-child(6) {
-  width: 32px;
-}
-/* 自定义rfc2119表格 */
-.custom-rfc2119-list > thead > tr > th:nth-child(1) {
-  width: 96px;
-}
-.custom-rfc2119-list > thead > tr > th:nth-child(2) {
-  width: 176px;
+/* 自定义小键盘数字按键表格 */
+.custom-numpad-key-list {
+  margin-left: 64px;
 }
 
 /* 自定义引用列表panel样式 */

@@ -7,7 +7,7 @@
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-UD" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
   <meta content="Bikeshed version d9bd89757, updated Thu Mar 23 10:06:53 2023 -0700" name="generator">
-  <meta content="51aae72e66070d3e75b005b6d2aa3b7a6d2730f3" name="document-revision">
+  <meta content="93432f9987e4640bdecf8fba935b4a5a9c7b21d7" name="document-revision">
   <link href="./override.css" rel="stylesheet">
 <style>
 
@@ -586,7 +586,7 @@ dfn > a.self-link::before      { content: "#"; }
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">用户界面事件键盘事件 code 属性值(UI Events KeyboardEvent code Values)</h1>
-   <p id="w3c-state"><a href="https://www.w3.org/standards/types#UD">翻译草案</a>, <time class="dt-updated" datetime="2023-05-11">2023年5月6日</time></p>
+   <p id="w3c-state"><a href="https://www.w3.org/standards/types#UD">翻译草案</a>, <time class="dt-updated" datetime="2023-05-12">2023年5月6日</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -672,7 +672,17 @@ dfn > a.self-link::before      { content: "#"; }
       <li><a href="#keyboard-mobile"><span class="secno">2.2</span> <span class="content">移动设备键盘</span></a>
       <li><a href="#remote-control"><span class="secno">2.3</span> <span class="content">媒体遥控器</span></a>
       <li><a href="#keyboard-chording-virtual"><span class="secno">2.4</span> <span class="content">虚拟键盘和和弦键盘</span></a>
-      <li><a href="#wiki-keyboard-sections"><span class="secno">2.5</span> <span class="content">非标准键盘分区</span></a>
+      <li>
+       <a href="#wiki-keyboard-sections"><span class="secno">2.5</span> <span class="content">非标准键盘分区</span></a>
+       <ol class="toc">
+        <li><a href="#wiki-fun-keys"><span class="secno">2.5.1</span> <span class="content">功能键</span></a>
+        <li><a href="#wiki-alnum-keys"><span class="secno">2.5.2</span> <span class="content">字母数字键或字符键</span></a>
+        <li><a href="#wiki-enter-edit-keys"><span class="secno">2.5.3</span> <span class="content">回车键和编辑键</span></a>
+        <li><a href="#wiki-system-and-gui-keys"><span class="secno">2.5.4</span> <span class="content">系统和 GUI 键</span></a>
+        <li><a href="#wiki-num-keypad-keys"><span class="secno">2.5.5</span> <span class="content">小键盘数字按键</span></a>
+        <li><a href="#wiki-lock-keys"><span class="secno">2.5.6</span> <span class="content">锁定按键</span></a>
+        <li><a href="#wiki-nav-keys"><span class="secno">2.5.7</span> <span class="content">导航按键</span></a>
+       </ol>
      </ol>
     <li>
      <a href="#code-value-tables"><span class="secno">3</span> <span class="content">键盘事件 <code class="idl"><span>code</span></code> 值表格</span></a>
@@ -1092,95 +1102,178 @@ dfn > a.self-link::before      { content: "#"; }
    <p>本规范在键盘分区时，将标准键盘分为 5 个通用区域，
 		这种分类方式主要基于按键的位置。</p>
    <p>对于一般的标准计算机的键盘(也称 PC/AT 键盘， QWEWRTY 键盘)
-		维基百科介绍了一种基于按键的用途进行分类的方式:</p>
+		维基百科介绍了一种基于按键的用途进行分类的方式，包括 <a href="#wiki-fun-keys">§ 2.5.1 功能键</a> 、 <a href="#wiki-alnum-keys">§ 2.5.2 字母数字键或字符键</a> 、 <a href="#wiki-enter-edit-keys">§ 2.5.3 回车键和编辑键</a> 、 <a href="#wiki-system-and-gui-keys">§ 2.5.4 系统和 GUI 键</a> 、 <a href="#wiki-num-keypad-keys">§ 2.5.5 小键盘数字按键</a> 、 <a href="#wiki-lock-keys">§ 2.5.6 锁定按键</a> 、 <a href="#wiki-nav-keys">§ 2.5.7 导航按键</a> 。</p>
+   <h4 class="heading settled" data-level="2.5.1" id="wiki-fun-keys"><span class="secno">2.5.1. </span><span class="content">功能键</span><a class="self-link" href="#wiki-fun-keys"></a></h4>
+   <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="fun-keys">功能键</dfn>(Function keys) —— <code class="keycap">F1</code> ~ <code class="keycap">F12</code> 。<q>功能键是计算机或终端键盘上的一种键，可以对其进行编程，
+		以使操作系统命令解释器或应用程序执行某些操作，这是软键的一种形式。
+		在一些键盘/计算机上，功能键可能具有默认操作，可在开机时访问。</q> 在微软操作系统中，
+		每个应用程序可以自定义决定每个功能键对应用程序本身意味着什么，
+		并且在功能键被按下时执行应用程序想要的操作，例如在一般的浏览器中， <code class="keycap">F5</code> 表示刷新浏览器的当前页面。</p>
+   <h4 class="heading settled" data-level="2.5.2" id="wiki-alnum-keys"><span class="secno">2.5.2. </span><span class="content">字母数字键或字符键</span><a class="self-link" href="#wiki-alnum-keys"></a></h4>
+   <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="alnum-keys">字母数字键或字符键</dfn>(Alphanumeric or Character
+		keys) —— <code class="keycap">~`</code> ， <code class="keycap">1!</code> ， <code class="keycap">2@</code> ~ <code class="keycap">9(</code> ， <code class="keycap">0)</code> ， <code class="keycap">-_</code> ， <code class="keycap">=+</code> ， <code class="keycap">aA</code> ~ <code class="keycap">zZ</code> ， <code class="keycap">[{</code> ， <code class="keycap">]}</code> ， <code class="keycap">\|</code> ， <code class="keycap">;:</code> ， <code class="keycap">'"</code> ， <code class="keycap">,&lt;</code> ，<code class="keycap">.></code> ， <code class="keycap">/?</code> ， <code class="keycap"> </code> (空格键)。这些按键都用于键入字母和其它字符(typing)。</p>
+   <h4 class="heading settled" data-level="2.5.3" id="wiki-enter-edit-keys"><span class="secno">2.5.3. </span><span class="content">回车键和编辑键</span><a class="self-link" href="#wiki-enter-edit-keys"></a></h4>
+   <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="enter-edit-keys">回车键和编辑键</dfn>(Enter and editing keys) ——<wbr><code class="keycap">Enter/↵</code> ， <code class="code">"<a href="#code-NumpadEnter">NumpadEnter</a>"</code> ， <code class="keycap">Backspace</code> ， <code class="keycap">Delete</code> ，<code class="keycap">Insert</code> 。在文本模式下，</p>
    <ul>
     <li data-md>
-     <p>功能键(Function keys) —— <code class="keycap">F1</code> ~ <code class="keycap">F12</code> 。<q> 功能键是计算机或终端键盘上的一种键，可以对其进行编程，
-以使操作系统命令解释器或应用程序执行某些操作，这是软键的一种形式。
-在一些键盘/计算机上，功能键可能具有默认操作，可在开机时访问。</q> 在微软操作系统中，
-每个应用程序可以自定义决定每个功能键对应用程序本身意味着什么，
-并且在功能键被按下时执行应用程序想要的操作，例如在一般的浏览器中， <code class="keycap">F5</code> 表示刷新浏览器的当前页面。</p>
+     <p>"回车(Enter)"键可以终止一段文本，并将编辑光标移动到下一行的开头;</p>
     <li data-md>
-     <p>字母数字键或字符键(Alphanumeric or Character keys ) —— <code class="keycap">~`</code> ， <code class="keycap">1!</code> ， <code class="keycap">2@</code> ~ <code class="keycap">9(</code> ， <code class="keycap">0)</code> ， <code class="keycap">-_</code> ， <code class="keycap">=+</code> ， <code class="keycap">aA</code> ~ <code class="keycap">zZ</code> ， <code class="keycap">[{</code> ， <code class="keycap">]}</code> ， <code class="keycap">\|</code> ， <code class="keycap">;:</code> ， <code class="keycap">'"</code> ， <code class="keycap">,&lt;</code> ，<code class="keycap">.></code> ， <code class="keycap">/?</code> ， <code class="keycap"> </code> (空格键)。
-这些按键都用于键入字母和其它字符(typing)。</p>
+     <p>"回退(Backspace)" 键可以将编辑光标向后移动一个位置，并删除该位置的字符;</p>
     <li data-md>
-     <p>回车键和编辑键(Enter and editing keys) —— <code class="keycap">Enter/↵</code> ， <code class="code">"<a href="#code-NumpadEnter">NumpadEnter</a>"</code> ， <code class="keycap">Backspace</code> ， <code class="keycap">Delete</code> ，<code class="keycap">Insert</code> 。在文本模式下，</p>
-     <ul>
-      <li data-md>
-       <p>"回车(Enter)"键可以终止一段文本，并将编辑光标移动到下一行的开头;</p>
-      <li data-md>
-       <p>"回退(Backspace)" 键可以将编辑光标向后移动一个位置，并删除该位置的字符;</p>
-      <li data-md>
-       <p>"删除(Delete)"键可以删除编辑光标前面或下面的字符，或删除当前选择的对象;</p>
-      <li data-md>
-       <p>"插入(Insert)"键可以切换输入模式。在插入模式(insert mode ，默认)下，
+     <p>"删除(Delete)"键可以删除编辑光标前面或下面的字符，或删除当前选择的对象;</p>
+    <li data-md>
+     <p>"插入(Insert)"键可以切换输入模式。在插入模式(insert mode ，默认)下，
 光标在当前位置插入一个字符，原来的字相应后移。在覆盖模式(overtype mode)
 下，光标位置新输入字会替代原来的字。这一按键常在计算机终端中使用，
 微软的 word 编辑器也有效果，其它可输入框可能无效。下面是在 word 
 编辑器中使用插入键的一个例子，</p>
-       <figure id="figure-insert-key">
-         <img alt="插入键" height="144" src="images/insert-key.gif" width="409"> 
-        <div class="custom-figcaption">word 编辑器里的插入键示例，
+     <figure id="figure-insert-key">
+       <img alt="插入键" height="144" src="images/insert-key.gif" width="409"> 
+      <div class="custom-figcaption">word 编辑器里的插入键示例，
 	在移动光标并打下"45678"后按下了插入键，切换成了覆盖模式</div>
-       </figure>
-     </ul>
+     </figure>
+   </ul>
+   <h4 class="heading settled" data-level="2.5.4" id="wiki-system-and-gui-keys"><span class="secno">2.5.4. </span><span class="content">系统和 GUI 键</span><a class="self-link" href="#wiki-system-and-gui-keys"></a></h4>
+   <p>系统和 GUI 键(System and GUI keys) —— 左右两个 <code class="keycap">Meta</code> 属于系统命令键
+		(system command keys)，GUI 按键包括 <code class="keycap">Esc</code> ， <code class="keycap">PrtScr SysRq</code> ， <code class="keycap">Pause Break</code> :</p>
+   <ul>
     <li data-md>
-     <p>系统和 GUI 键(系统和 GUI 按键) —— 左右两个 <code class="keycap">Meta</code> 属于系统命令键
-(system command keys)，GUI 按键包括 <code class="keycap">Esc</code> ， <code class="keycap">PrtScr SysRq</code> ， <code class="keycap">Pause Break</code> :</p>
-     <ul>
-      <li data-md>
-       <p>系统命令按键也就是 <code class="keycap">Meta</code> 键，它实际上也是一种修饰符按键，
+     <p>系统命令按键也就是 <code class="keycap">Meta</code> 键，它实际上也是一种修饰符按键，
 在不同的操作系统上有不同的键帽。 <q>Meta</q> 这个单词有变化之意，
 在微软的 Windows 操作系统也常用于配合其它按键调用许多常见系统功能;</p>
-       <div class="note custom-note" role="note"> Meta 键是以前 MIT 计算机键盘上的的一个特殊键，例如 Symbolics Space-cadet 
+     <div class="note custom-note" role="note"> Meta 键是以前 MIT 计算机键盘上的的一个特殊键，例如 Symbolics Space-cadet 
 keyboard 就是 MIT Lisp 计算机上的由 Tom knight 设计的键盘，
 后来 Sun 的键盘上也包含有此键，只不过标示为 Sun 的菱形徽标。现代，
 这个按键发展到和操作系统相关联，在 Linux 和 BSD 操作系统上，它是 <code class="keycap">Super</code> 键，在 Windows 操作系统上，它是 <code class="keycap">⊞Win</code> 键，在 
 MacOS 操作系统上 它是 <code class="keycap">⌘Cmd</code> ，虽然键帽不同，但是这个按键的 <code>code</code> 值都是 <code class="code">"<a href="#code-MetaLeft">MetaLeft</a>"</code> 或 <code class="code">"<a href="#code-MetaRight">MetaRight</a>"</code> 。<br> 查阅更多的按键信息，可以在维基百科上搜索 Meta Key ， Super Key ，
 Command Key 或 Windows Key 。 </div>
-      <li data-md>
-       <p><code class="keycap">Esc</code> 键的 <code>code</code> 值是 <code class="code">"<a href="#code-Escape">Escape</a>"</code> ，
+    <li data-md>
+     <p><code class="keycap">Esc</code> 键的 <code>code</code> 值是 <code class="code">"<a href="#code-Escape">Escape</a>"</code> ，
 位于标准键盘布局的左上角。<q>escape</q> 本身有逃离，摆脱的意思，
 现代常称其为退出键，中断键，
 在应用程序中也常使用这个按键执行程序的退出和中断功能;</p>
-       <div class="note custom-note" role="note"> 在 <strong>以前</strong> 的计算机键盘上，<code class="keycap">Esc</code> 键是一个用于生成转义字符( <a href="https://en.wikipedia.org/wiki/Escape_character"> Escape character</a> )的键。但是现在的计算机用户不再需要关心转义序列， <code class="code">"<a href="#code-Escape">Escape</a>"</code> 键被应用程序程序员挪用，通常是指 <em>停止</em> ，用于 <em>"否"、"退出"、"取消"</em> 或 <em>"中止"</em> 对话框中的快捷键，
+     <div class="note custom-note" role="note"> 在 <strong>以前</strong> 的计算机键盘上，<code class="keycap">Esc</code> 键是一个用于生成转义字符( <a href="https://en.wikipedia.org/wiki/Escape_character"> Escape character</a> )的键。但是现在的计算机用户不再需要关心转义序列， <code class="code">"<a href="#code-Escape">Escape</a>"</code> 键被应用程序程序员挪用，通常是指 <em>停止</em> ，用于 <em>"否"、"退出"、"取消"</em> 或 <em>"中止"</em> 对话框中的快捷键，
 也是许多 Web 浏览器中 <em>停止</em> 按钮的常用快捷键，
 并用于取消拖放操作。<br> 除此之外，不同操作系统对 <code class="code">"<a href="#code-Escape">Escape</a>"</code> 键也有许多不同的快捷键使用方式。
 在 Windows 操作系统上，按住 <code class="keycap">Ctrl</code> 和 <code class="keycap">Esc</code> 可以调出开始菜单，相当于按下了 <code class="keycap">⊞Win</code> 键。在 MacOS 中， <code class="keycap">Esc</code> 通常会关闭或取消对话框或工作表， <code class="keycap">⌘Command</code> + <code class="keycap">⌥ Option</code> + <code class="keycap">Esc</code> 组合会打开强制退出对话框，
 允许用户结束无响应的应用程序。<br> 在维基百科的 <a href="https://en.wikipedia.org/wiki/Esc_key">Esc_key</a> 上查阅更多 <code class="code">"<a href="#code-Escape">Escape</a>"</code> 键信息。 </div>
-      <li data-md>
-       <p><code class="keycap">PrtScr SysRq</code> 按键的 <code>code</code> 值是 <code class="code">"<a href="#code-PrintScreen">PrintScreen</a>"</code> ，
+    <li data-md>
+     <p><code class="keycap">PrtScr SysRq</code> 按键的 <code>code</code> 值是 <code class="code">"<a href="#code-PrintScreen">PrintScreen</a>"</code> ，
 它的键帽也可以是 <code class="keycap">Print Screen</code> ，除此之外还有 <em>Print Scrn ，Prnt Scrn ， Prnt Scr ， Prt Scrn ， Prt Scn ， 
 Prt Scr ， Prt Sc ， Pr Sc 或 PS</em> 缩写，它在(标准键盘布局)功能按键 <code class="keycap">F12</code> 的右边，锁定按键 <code class="keycap">Scroll Lock</code> 的左边，表示打印屏幕，
 通俗而言就是截图的意思。</p>
-       <div class="note custom-note" role="note"> 在 <strong>以前</strong> 基于命令行的操作系统(如 MS-DOS )下，
+     <div class="note custom-note" role="note"> 在 <strong>以前</strong> 基于命令行的操作系统(如 MS-DOS )下，
 此键会将当前文本模式屏幕内存缓冲区的内容复制到标准打印机端口。
 现在使用图形界面的新一代操作系统倾向于将当前屏幕的位图图像或屏幕截图
 (screenshot)保存到剪贴板(clipboard)或类似的存储区域。例如在 
 Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，然后通过 <code class="keycap">⊞Win</code> + <code class="keycap">V</code> 调出剪贴板 GUI 程序，会发现包含刚才屏幕截图，
 如下图。除此之外，按下 <code class="keycap">⊞Win</code> + <code class="keycap">PrtScr SysRq</code> 组合按键，
 会将屏幕截图保存在默认的图片文件夹中。 </div>
-     </ul>
      <figure id="figure-print-screen">
        <img alt="按下 Print Screen 按键后的屏幕截图" height="800" src="images/print-screen.svg" width="409"> 
       <div class="custom-figcaption"> <code class="keycap">⊞ Win</code> + <code class="keycap">V</code> 调出剪贴板 GUI 程序，里面包含按下 
-		Print Screen 按键后的屏幕截图</div>
+	Print Screen 按键后的屏幕截图</div>
      </figure>
-     <ul>
-      <li data-md>
-       <p><code class="keycap">Pause Break</code> 按键的 <code>code</code> 值是 <code class="code">"<a href="#code-Pause">Pause</a>"</code> ，
+    <li data-md>
+     <p><code class="keycap">Pause Break</code> 按键的 <code>code</code> 值是 <code class="code">"<a href="#code-Pause">Pause</a>"</code> ，
 称为中断键，暂停键，它也可以使用符号 ⎉ 表示。</p>
-       <div class="note custom-note" role="note"> <code class="keycap">Pause Break</code> 键最大的用处在于能快速调出电脑的系统属性，
+     <div class="note custom-note" role="note"> <code class="keycap">Pause Break</code> 键最大的用处在于能快速调出电脑的系统属性，
 按下组合键 <code class="keycap">⊞ Win</code> + EYCAP{Pause Break} ，即可看到。
 除此之外，在开机和处于 DOS 模式的时候，按下 <code class="keycap">Pause Break</code> 来暂停进程，之后按下任意键便可继续。有些 IDE (基础开发环境)
 在调试程序时可能也会使用 <code class="keycap">Pause Break</code> 作为暂停程序的快捷键，
 并且提供 <code class="keycap">Ctrl</code> + <code class="keycap">Pause Break</code> 组合键结束调试。 </div>
-     </ul>
+   </ul>
+   <h4 class="heading settled" data-level="2.5.5" id="wiki-num-keypad-keys"><span class="secno">2.5.5. </span><span class="content">小键盘数字按键</span><a class="self-link" href="#wiki-num-keypad-keys"></a></h4>
+   <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="num-keypad-keys">小键盘数字按键</dfn>(Numeric keypad) ——<wbr><code class="keycap">0 Ins</code> ，<code class="keycap">1 End</code> ，<code class="keycap">2 ↓</code> ， <code class="keycap">3 PgDn</code> ， <code class="keycap">4 ←</code> ， <code class="keycap">5</code> ， <code class="keycap">6 →</code> ，<code class="keycap">7 Home</code> ， <code class="keycap">8 ↑</code> ， <code class="keycap">9 PgUp</code> ， <code class="keycap">/</code> ， <code class="keycap">*</code> ， <code class="keycap">-</code> ，<code class="keycap">-</code> ， <code class="keycap">. Del</code> 。这些数字按键便于输入数学数字和运算符号，它们的 <code>code</code> 值和 <a data-link-type="dfn" href="#alnum-keys" id="ref-for-alnum-keys">字母数字键或字符键</a> 的数字键不同，
+		前者以"Numpad"为前缀，后者以"Digit"为前缀，例如 <code class="code">"<a href="#code-Numpad0">Numpad0</a>"</code> 和 <code class="code">"<a href="#code-Digit0">Digit0</a>"</code> 。除此之外，小键盘数字按键组合 <code class="keycap">Shift</code> 按键可以实现其它区域按键的功能，例如 <code class="keycap">Shift</code> + <code class="keycap">1 End</code> 就相当于导航按键 <code class="keycap">End</code>。小键盘上的数字键功能会被 <a data-link-type="dfn" href="#lock-keys" id="ref-for-lock-keys">锁定按键</a> 影响。</p>
+   <h4 class="heading settled" data-level="2.5.6" id="wiki-lock-keys"><span class="secno">2.5.6. </span><span class="content">锁定按键</span><a class="self-link" href="#wiki-lock-keys"></a></h4>
+   <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="lock-keys">锁定按键</dfn>(Lock keys) —— <code class="keycap">CapsLock</code> ， <code class="keycap">ScrollLock</code> ， <code class="keycap">Num Lock</code> 。 <strong>LOCK</strong> 是一种功能，根据所选的锁定设置，将键盘的部分键锁定到不同的操作模式。
+		标准键盘上右上方会有三个指示灯指示三个锁定按键的锁是否被启用，
+		一般是两种状态，灯亮表示锁定键控制的按键未被锁定，
+		灯暗表示锁定按键控制的按键已被锁定。默认情况下，只有 Number Lock 指示灯亮，
+		表示它控制的小键盘数字按键(Numeric keypad)未被锁定。</p>
+   <ul>
     <li data-md>
-     <p>小键盘数字按键(Numeric keypad) —— <code class="keycap">0 Ins</code> ，<code class="keycap">1 End</code> ， <code class="keycap">3 PgDn</code> ， <code class="keycap">4 ←</code> ， <code class="keycap">5</code> ， <code class="keycap">6 →</code> ，<code class="keycap">7 Home</code> ， <code class="keycap">8 ↑</code> ， <code class="keycap">9 PgUp</code> ， <code class="keycap">/</code> ， <code class="keycap">*</code> ， <code class="keycap">-</code> ， <code class="keycap">-</code> ， <code class="keycap">. Del</code> 。这些数字按键便于输入数学数字和运算符号，
-它们的 <code>code</code> 值和字符键区域的数字键不同，前者以"Numpad" 
-为前缀，后者以"digit"为前缀，例如 <code class="code">"<a href="#code-Numpad0">Numpad0</a>"</code> 和 <code class="code">"<a href="#code-Digit0">Digit0</a>"</code> 。
-除此之外，小键盘数字按键组合 <code class="keycap">Shift</code> 按键可以实现其它区域按键的功能</p>
+     <p>数字锁定(Num Lock)或数字锁定(Numeric Lock ， <code class="keycap">⇭</code>)
+是大多数计算机键盘的小键盘(Numeric keypad)上的一个键
+(在位置区域划分上，这个锁定键肯定是属于小键盘的)。
+它的状态会影响位于主键盘右侧的 <a data-link-type="dfn" href="#num-keypad-keys" id="ref-for-num-keypad-keys">小键盘数字按键</a> 的功能，
+并且状态值由内置在键盘中的 LED 显示，按下 <code class="keycap">Num Lock</code> 就能切换锁定状态。需要知晓的是 <code class="keycap">/</code> ， <code class="keycap">*</code> ， <code class="keycap">-</code> ，<code class="keycap">-</code> 的功能不受数字锁定键的状态影响，
+受影响的主要是小键盘上的 <code class="keycap">0 End</code> ~ <code class="keycap">9 PgUp</code> 以及 <code class="keycap">. Del</code> ，后面说的数字按键指代的就是这11个按键。在未被锁定情况下
+(灯亮)，数字按键就如同 <a data-link-type="dfn" href="#num-keypad-keys" id="ref-for-num-keypad-keys①">小键盘数字按键</a> 描述的那样，可以输入数学数字
+(以及小数点)，并且能组合 <code class="keycap">Shift</code> 按键实现其它区域按键的功能; 
+在锁定的情况下(灯暗)，数字按键就无法输入数学数字(以及小数点)，
+但是单独按下会执行在未锁定状态下的 <code class="keycap">Shift</code> + <code class="keycap">Numpad</code> 功能，
+也就是说，数字锁定键的锁定状态相当于让数字按键的功能，
+锁定到是键帽下方的标签对应按键的功能。<br></p>
+   </ul>
+   <table class="custom-numpad-key-list event-sequence-table">
+    <thead>
+     <tr>
+      <th>数字按键(键帽)
+      <th>未锁定(灯亮)
+      <th>锁定(灯暗)后的等同的功能按键
+    <tbody>
+     <tr>
+      <td><code class="keycap">0 Ins</code>
+      <td>0
+      <td><code class="keycap">Ins</code> 插入键，参阅 <a data-link-type="dfn" href="#enter-edit-keys" id="ref-for-enter-edit-keys">回车键和编辑键</a>
+     <tr>
+      <td><code class="keycap">1 End</code>
+      <td>1
+      <td><code class="keycap">End</code> 结束键，参阅 <a data-link-type="dfn" href="#enter-edit-keys" id="ref-for-enter-edit-keys①">回车键和编辑键</a>
+     <tr>
+      <td><code class="keycap">2 ↓</code>
+      <td>2
+      <td><code class="keycap">↓</code> 下箭头键，参阅 <a data-link-type="dfn" href="#nav-keys" id="ref-for-nav-keys">导航按键</a>
+     <tr>
+      <td><code class="keycap">3 PgDn</code>
+      <td>3
+      <td><code class="keycap">PgDn</code> 向下翻页键，参阅 <a data-link-type="dfn" href="#nav-keys" id="ref-for-nav-keys①">导航按键</a>
+     <tr>
+      <td><code class="keycap">4 ←</code>
+      <td>4
+      <td><code class="keycap">←</code> 左箭头键，参阅 <a data-link-type="dfn" href="#nav-keys" id="ref-for-nav-keys②">导航按键</a>
+     <tr>
+      <td><code class="keycap">5</code>
+      <td>5
+      <td>通常什么都不做
+     <tr>
+      <td><code class="keycap">6 →</code>
+      <td>6
+      <td><code class="keycap">→</code> 右箭头键，参阅 <a data-link-type="dfn" href="#nav-keys" id="ref-for-nav-keys③">导航按键</a>
+     <tr>
+      <td><code class="keycap">7 Home</code>
+      <td>7
+      <td><code class="keycap">Home</code> 起始键，参阅 <a data-link-type="dfn" href="#nav-keys" id="ref-for-nav-keys④">导航按键</a>
+     <tr>
+      <td><code class="keycap">8 ↑</code>
+      <td>8
+      <td><code class="keycap">↑</code> 上箭头键，参阅 <a data-link-type="dfn" href="#nav-keys" id="ref-for-nav-keys⑤">导航按键</a>
+     <tr>
+      <td><code class="keycap">9 PgUp</code>
+      <td>9
+      <td><code class="keycap">PgUp</code> 向上翻页键，参阅 <a data-link-type="dfn" href="#nav-keys" id="ref-for-nav-keys⑥">导航按键</a>
+     <tr>
+      <td><code class="keycap">. Del</code>
+      <td>. 或 ,
+      <td><code class="keycap">Del</code> 删除键，<a data-link-type="dfn" href="#enter-edit-keys" id="ref-for-enter-edit-keys②">回车键和编辑键</a>
+   </table>
+   <ul>
+    <li data-md>
+     <p>滚动锁定(Scroll Lock ，<code class="keycap">⤓</code> 或 <code class="keycap">⇳</code> ) 是大多数 IBM
+兼容计算机键盘上的锁定键(通常带有相关的状态指示灯)。根据操作系统的不同，
+改键具有不同的使用目的。这个按键不常使用，所以有些键盘精简了这个按键。 <br> 在 Windows 操作系统下，<code class="keycap">ScrLk</code> 是一种切换锁定按键，
+旨在修改箭头按键的行为。当滚动锁定模式打开时，箭头键将滚动文本窗口内容，
+而不是移动光标; 当滚动锁定模式关闭时(默认)，箭头键将移动光标; 
+并且这种锁定模式切换只在有限的应用程序中有效果，如微软的 Excel 和 Word 
+。浏览器都不支持通过 <code class="keycap">ScrLk</code> 切换滚动锁定模式，
+但是支持光标模式(Caret browsing)的浏览器(谷歌，火狐， IE 等)都支持使用 <a data-link-type="dfn" href="#fun-keys" id="ref-for-fun-keys">功能键</a> 的 <code class="keycap">F7</code> 来切换用户的浏览模式。光标模式和</p>
+   </ul>
+   <h4 class="heading settled" data-level="2.5.7" id="wiki-nav-keys"><span class="secno">2.5.7. </span><span class="content">导航按键</span><a class="self-link" href="#wiki-nav-keys"></a></h4>
+   <ul>
+    <li data-md>
+     <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="nav-keys">导航按键</dfn>(Navigation keys)</p>
    </ul>
    <h2 class="heading settled" data-level="3" id="code-value-tables"><span class="secno">3. </span><span class="content">键盘事件 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑤">code</a></code> 值表格</span><a class="self-link" href="#code-value-tables"></a></h2>
    <p>This section defines a list of values which are appropriate for use as <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑥">code</a></code> values.</p>
@@ -2256,6 +2349,12 @@ something specific to the values defined in this document</p>
   <h2 class="no-num no-ref heading settled" id="index"><span class="content">Index</span><a class="self-link" href="#index"></a></h2>
   <h3 class="no-num no-ref heading settled" id="index-defined-here"><span class="content">Terms defined by this specification</span><a class="self-link" href="#index-defined-here"></a></h3>
   <ul class="index">
+   <li><a href="#fun-keys">功能键</a><span>, in § 2.5.1</span>
+   <li><a href="#enter-edit-keys">回车键和编辑键</a><span>, in § 2.5.3</span>
+   <li><a href="#alnum-keys">字母数字键或字符键</a><span>, in § 2.5.2</span>
+   <li><a href="#nav-keys">导航按键</a><span>, in § 2.5.7</span>
+   <li><a href="#num-keypad-keys">小键盘数字按键</a><span>, in § 2.5.5</span>
+   <li><a href="#lock-keys">锁定按键</a><span>, in § 2.5.6</span>
    <li><a href="#alphanumeric-section">alphanumeric section</a><span>, in § 3.1</span>
    <li><a href="#arrow-pad">arrow pad</a><span>, in § 3.3</span>
    <li><a href="#control-pad">control pad</a><span>, in § 3.2</span>
@@ -2366,6 +2465,42 @@ something specific to the values defined in this document</p>
    <dt id="biblio-usb-hid">[USB-HID]
    <dd><a href="http://www.usb.org/developers/hidpage/Hut1_12v2.pdf"><cite>USB HID Usage Tables 1.12</cite></a>. URL: <a href="http://www.usb.org/developers/hidpage/Hut1_12v2.pdf">http://www.usb.org/developers/hidpage/Hut1_12v2.pdf</a>
   </dl>
+  <aside aria-labelledby="infopaneltitle-for-fun-keys" class="dfn-panel" data-for="fun-keys" id="infopanel-for-fun-keys">
+   <span id="infopaneltitle-for-fun-keys" style="display:none">Info about the '功能键' definition.</span><b><a href="#fun-keys">#fun-keys</a></b><b>Referenced in:</b>
+   <ul>
+    <li><a href="#ref-for-fun-keys">2.5.6. 锁定按键</a>
+   </ul>
+  </aside>
+  <aside aria-labelledby="infopaneltitle-for-alnum-keys" class="dfn-panel" data-for="alnum-keys" id="infopanel-for-alnum-keys">
+   <span id="infopaneltitle-for-alnum-keys" style="display:none">Info about the '字母数字键或字符键' definition.</span><b><a href="#alnum-keys">#alnum-keys</a></b><b>Referenced in:</b>
+   <ul>
+    <li><a href="#ref-for-alnum-keys">2.5.5. 小键盘数字按键</a>
+   </ul>
+  </aside>
+  <aside aria-labelledby="infopaneltitle-for-enter-edit-keys" class="dfn-panel" data-for="enter-edit-keys" id="infopanel-for-enter-edit-keys">
+   <span id="infopaneltitle-for-enter-edit-keys" style="display:none">Info about the '回车键和编辑键' definition.</span><b><a href="#enter-edit-keys">#enter-edit-keys</a></b><b>Referenced in:</b>
+   <ul>
+    <li><a href="#ref-for-enter-edit-keys">2.5.6. 锁定按键</a> <a href="#ref-for-enter-edit-keys①">(2)</a> <a href="#ref-for-enter-edit-keys②">(3)</a>
+   </ul>
+  </aside>
+  <aside aria-labelledby="infopaneltitle-for-num-keypad-keys" class="dfn-panel" data-for="num-keypad-keys" id="infopanel-for-num-keypad-keys">
+   <span id="infopaneltitle-for-num-keypad-keys" style="display:none">Info about the '小键盘数字按键' definition.</span><b><a href="#num-keypad-keys">#num-keypad-keys</a></b><b>Referenced in:</b>
+   <ul>
+    <li><a href="#ref-for-num-keypad-keys">2.5.6. 锁定按键</a> <a href="#ref-for-num-keypad-keys①">(2)</a>
+   </ul>
+  </aside>
+  <aside aria-labelledby="infopaneltitle-for-lock-keys" class="dfn-panel" data-for="lock-keys" id="infopanel-for-lock-keys">
+   <span id="infopaneltitle-for-lock-keys" style="display:none">Info about the '锁定按键' definition.</span><b><a href="#lock-keys">#lock-keys</a></b><b>Referenced in:</b>
+   <ul>
+    <li><a href="#ref-for-lock-keys">2.5.5. 小键盘数字按键</a>
+   </ul>
+  </aside>
+  <aside aria-labelledby="infopaneltitle-for-nav-keys" class="dfn-panel" data-for="nav-keys" id="infopanel-for-nav-keys">
+   <span id="infopaneltitle-for-nav-keys" style="display:none">Info about the '导航按键' definition.</span><b><a href="#nav-keys">#nav-keys</a></b><b>Referenced in:</b>
+   <ul>
+    <li><a href="#ref-for-nav-keys">2.5.6. 锁定按键</a> <a href="#ref-for-nav-keys①">(2)</a> <a href="#ref-for-nav-keys②">(3)</a> <a href="#ref-for-nav-keys③">(4)</a> <a href="#ref-for-nav-keys④">(5)</a> <a href="#ref-for-nav-keys⑤">(6)</a> <a href="#ref-for-nav-keys⑥">(7)</a>
+   </ul>
+  </aside>
   <aside aria-labelledby="infopaneltitle-for-key-code-attribute-value" class="dfn-panel" data-for="key-code-attribute-value" id="infopanel-for-key-code-attribute-value">
    <span id="infopaneltitle-for-key-code-attribute-value" style="display:none">Info about the 'key code attribute value' definition.</span><b><a href="#key-code-attribute-value">#key-code-attribute-value</a></b><b>Referenced in:</b>
    <ul>
