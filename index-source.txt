@@ -737,7 +737,7 @@ path: stylesheet-extra.include
 		<p class="note custom-note">
 		更多关于和弦键盘的内容，参阅英文维基百科的 
 		<a href="https://en.wikipedia.org/wiki/Chorded_keyboard">
-		Chorded_keyboard</a> 。
+		Chorded keyboard</a> 。
 		</p>
 	
 	<h3 id="wiki-keyboard-sections">非标准键盘分区</h3>
@@ -751,7 +751,33 @@ path: stylesheet-extra.include
 		维基百科介绍了一种基于按键的用途进行分类的方式，包括 [[#wiki-fun-keys]] 、
 		[[#wiki-alnum-keys]] 、 [[#wiki-enter-edit-keys]] 、 
 		[[#wiki-system-and-gui-keys]] 、 [[#wiki-num-keypad-keys]] 、 
-		[[#wiki-lock-keys]] 、 [[#wiki-nav-keys]] 。
+		[[#wiki-lock-keys]] 、 [[#wiki-nav-keys]] 。如下美式标准 "101" 
+		键盘布局按功能分区的图示:
+
+		<div class="figure-change"  data-content="images/wiki-keyboard-sections">
+			<div class="custom-tabs-nav-wrap">
+					<div class="custom-tabs-nav-list">
+							<div data-node-key="1" class="custom-tabs-tab custom-tabs-tab-active">
+									<div class="custom-tabs-tab-btn" tabindex="0">中文</div>
+							</div>
+							<div data-node-key="2" class="custom-tabs-tab">
+									<div class="custom-tabs-tab-btn" tabindex="0">英文</div>
+							</div>
+					</div>
+			</div>
+			<figure id="figure-wiki-keyboard-sections-zh">
+				<img src="images/keyboard-sections-101-us-zh.svg" 
+					width="100%" height="400"
+					alt="标准键盘的九种功能按键" />
+				<figcaption>标准键盘的五个通用区域</figcaption>
+			</figure>
+			<figure id="figure-wiki-keyboard-sections" class="figure-hidden">
+				<img src="images/keyboard-sections-101-us.svg" 
+					width="100%" height="400"
+					alt="标准键盘的九种功能按键" />
+				<figcaption>标准键盘的九种功能按键</figcaption>
+			</figure>
+			</div>
 
 		<h4 id="wiki-fun-keys">功能键</h4>
 
@@ -801,9 +827,9 @@ path: stylesheet-extra.include
 		
 		<h4 id="wiki-system-and-gui-keys">系统和 GUI 键</h4>
 
-		系统和 GUI 键(System and GUI keys) —— 左右两个 KEYCAP{Meta} 属于系统命令键
-		(system command keys)，GUI 按键包括 KEYCAP{Esc} ， KEYCAP{PrtScr SysRq} ， 
-		KEYCAP{Pause Break} :
+		<dfn id="system-and-gui-keys">系统和 GUI 键</dfn>(System and GUI keys) —— 
+		左右两个 KEYCAP{Meta} 属于系统命令键(system command keys)，GUI 按键包括 
+		KEYCAP{Esc} ， KEYCAP{PrtScr SysRq} ， KEYCAP{Pause Break} :
 
 		*	系统命令按键也就是 KEYCAP{Meta} 键，它实际上也是一种修饰符按键，
 			在不同的操作系统上有不同的键帽。 <q>Meta</q> 这个单词有变化之意，
@@ -841,14 +867,14 @@ path: stylesheet-extra.include
 			KEYCAP{Esc} 通常会关闭或取消对话框或工作表， KEYCAP{⌘Command} + 
 			KEYCAP{⌥ Option} + KEYCAP{Esc} 组合会打开强制退出对话框，
 			允许用户结束无响应的应用程序。</br>
-			在维基百科的 <a href="https://en.wikipedia.org/wiki/Esc_key">Esc_key</a>
+			在维基百科的 <a href="https://en.wikipedia.org/wiki/Esc_key">Esc key</a>
 			上查阅更多 CODE{Escape} 键信息。
 			</div>
 		
 		*	KEYCAP{PrtScr SysRq} 按键的 <code>code</code> 值是 CODE{PrintScreen} ，
 			它的键帽也可以是 KEYCAP{Print Screen} ，除此之外还有 
 			<em>Print Scrn ，Prnt Scrn ， Prnt Scr ， Prt Scrn ， Prt Scn ， 
-			Prt Scr ， Prt Sc ， Pr Sc 或 PS</em> 缩写，它在(标准键盘布局)功能按键 
+			Prt Scr ， Prt Sc ， Pr Sc 或 PS</em> 缩写，它在(标准键盘布局) [=功能键=] 
 			KEYCAP{F12} 的右边，锁定按键 KEYCAP{Scroll Lock} 的左边，表示打印屏幕，
 			通俗而言就是截图的意思。
 			
@@ -901,10 +927,10 @@ path: stylesheet-extra.include
 		<dfn id="lock-keys">锁定按键</dfn>(Lock keys) —— KEYCAP{CapsLock} ， 
 		KEYCAP{ScrollLock} ， KEYCAP{Num Lock} 。 <strong>LOCK</strong> 
 		是一种功能，根据所选的锁定设置，将键盘的部分键锁定到不同的操作模式。
-		标准键盘上右上方会有三个指示灯指示三个锁定按键的锁是否被启用，
-		一般是两种状态，灯亮表示锁定键控制的按键未被锁定，
-		灯暗表示锁定按键控制的按键已被锁定。默认情况下，只有 Number Lock 指示灯亮，
-		表示它控制的小键盘数字按键(Numeric keypad)未被锁定。
+		标准键盘上右上方会有三个指示灯指示三个锁定按键的锁定模式是否被启用，
+		一般是两种状态，灯亮表示锁定键控制的按键的锁定模式启用，
+		灯暗表示锁定按键控制的按键的锁定模式没有启用。默认情况下，只有 Number Lock 
+		指示灯亮，表示它控制的小键盘数字按键(Numeric keypad)处于锁定模式下。
 
 		* 数字锁定(Num Lock)或数字锁定(Numeric Lock ， KEYCAP{⇭}) 
 			是大多数计算机键盘的小键盘(Numeric keypad)上的一个键
@@ -945,19 +971,126 @@ path: stylesheet-extra.include
 			改键具有不同的使用目的。这个按键不常使用，所以有些键盘精简了这个按键。
 
 			在 Windows 操作系统下，KEYCAP{ScrLk} 是一种切换锁定按键，
-			旨在修改箭头按键的行为。当滚动锁定模式打开时，箭头键将滚动文本窗口内容，
-			而不是移动光标; 当滚动锁定模式关闭时(默认)，箭头键将移动光标; 
-			并且这种锁定模式切换只在有限的应用程序中有效果，如微软的 Excel 和 Word 
-			。浏览器都不支持通过 KEYCAP{ScrLk} 切换滚动锁定模式，
+			旨在修改箭头按键的行为。当滚动锁定模式打开时(灯亮)，
+			箭头键将滚动文本窗口内容，而不是移动光标; 当滚动锁定模式关闭时(默认，
+			灯灭)，箭头键将移动光标; 并且这种锁定模式切换只在有限的应用程序中有效果，
+			如微软的 Excel ，下图是展示滚动锁定按键功能的动图:
+
+			<figure id="figure-scroll-lock">
+				<img src="images/scrolllock.gif" 
+				width="800" height="400" alt="滚动锁定按键功能" />
+				<div class="custom-figcaption">
+				默认关闭滚动锁定，按箭头按键会移动聚焦单元格(相当于移动光标)，之后按下了
+				KEYCAP{ScrLk} 按键，按箭头按键会滚动文本窗口内容</div>
+			</figure>
+			
+			浏览器都不支持通过 KEYCAP{ScrLk} 切换滚动锁定模式，
 			但是支持光标模式(Caret browsing)的浏览器(谷歌，火狐， IE 等)都支持使用 
-			[=功能键=] 的 KEYCAP{F7} 来切换用户的浏览模式。
-			光标模式默认设置时的窗口滚动行为和滚动模式默认设置(关闭)的行为类似，
-			并且启用光标模式的滚动行为就像锁定
+			[=功能键=] 的 KEYCAP{F7} 来切换用户的浏览模式。默认情况下，
+			浏览器禁用了光标导航，箭头键将滚动文本窗口内容，这和滚动锁定模式打开时类似
+			。在启用了关闭模式后(按下 KEYCAP{F7})，浏览器会在文档内容区域移动光标，
+			和滚动锁定模式关闭时类似。
+
+			大多数 GUI 环境都忽略了 KEYCAP{ScrLk} 按键的功能，
+			而有些则是使用其他组合按键实现了内容滚动和光标移动之间的切换。例如
+			一些文本编辑器(如Notepad++、Microsoft Visual Studio)，
+			默认情况下按箭头按键会移动文本编辑区域的光标(相当于滚动锁定模式开启)，
+			但是当按下 KEYCAP{Ctrl} 键，组合箭头按键一起使用时，
+			就能滚动文本编辑器窗口内容了。
+
+			* 大写锁定键(Caps Lock ，KEYCAP{Caps Lock} ， KEYCAP{⇪} 或 
+				KEYCAP{CapsLk})，位于 C 行左边第一个，它能控制字母的输入模式，
+				旨在能输入大写字母。
 
 		<h4 id="wiki-nav-keys">导航按键</h4>
+		
+		<dfn id="nav-keys">导航按键</dfn>(Navigation keys) —— KEYCAP{↑} ，
+		KEYCAP{↓} ，KEYCAP{←} ，KEYCAP{→} ，KEYCAP{Home} / KEYCAP{↖} ， KEYCAP{End}
+		 / KEYCAP{↘} ， KEYCAP{PgDn} / KEYCAP{⇟} ， KEYCAP{PgUp} / KEYCAP{⇞} 。
+		导航按键主要用于在屏幕上移动文本光标，特别是在文本编辑器中，
+		箭头按键能很好的将光标进行上下左右的移动。除此之外，导航按键结合不同的
+		[=修饰符按键=] 也能实现很多快捷操作，例如在 [=锁定按键=] 中提到的 
+		KEYCAP{Ctrl} + KEYCAP{Arrow} 组合键能模拟滚动锁定模式开启的状态，
+		实现滚动窗口内容的效果。
 
-		* <dfn id="nav-keys">导航按键</dfn>(Navigation keys)
-				
+		*	起始键(Home Keys)，其标准符号为 KEYCAP{⇱} ，在现代 Microsoft Windows 
+			文本编辑应用程序中，起始键主要用于将光标返回到移动所在行的开头。
+			当文本不可编辑时，起始键键用于返回到文档的开头; 如果 KEYCAP{Ctrl} + 
+			KEYCAP{Home} 一起按下，也可以在可编辑文本中将光标返回到文档开头; 如果
+			KEYCAP{⇧ Shfit} + KEYCAP{Home} 一起按下，
+			可以选择光标所在行中光标之前的所有字符。
+
+			<div class="note custom-note">
+			在 MacOS 和 Linux 操作系统中起始键会有类似的作用，以及在非 GUI 
+			操作系统中会有不同的效果，在维基百科 
+			<a href="https://en.wikipedia.org/wiki/Home_key">Home key</a>   
+			中查阅更多信息。
+			</div>
+		
+		*	终点键(End Keys)，其标准符号为 KEYCAP{⇲} ，该键的效果与 KEYCAP{Home} 
+			按键相反，在现代 Microsoft Windows 文本编辑应用程序中，KYECAP{End} 
+			键主要用于将光标移动到光标所在行的末尾。当文本不可编辑时，KYECAP{End} 
+			键用于将光标滚动到文档的末尾; 如果 KEYCAP{Ctrl} + KEYCAP{End} 一起按下，
+			也可以在可编辑文本中将光标移动到文档末尾; 如果 KEYCAP{⇧ Shfit} + 
+			KEYCAP{Home} 一起按下，可以选择光标所在行中光标之后的所有字符。
+
+			<div class="note custom-note">
+			在 MacOS 和 Linux 操作系统中 KEYCAP{End} 键会有类似的作用，以及在非 GUI 
+			操作系统中会有不同的效果，在维基百科 
+			<a href="https://en.wikipedia.org/wiki/End_key">End key</a>   
+			中查阅更多信息。
+			</div>
+		
+		* 箭头键(Arrow keys)，又称为光标移动键(cursor movement keys)，
+			设计它的目的是沿着指定方向移动光标。术语"光标移动键"与"箭头键"的区别在于，
+			前者可以指计算机键盘上指定用于光标移动的各种键中的任何一个，
+			而"箭头键"通常指四个特定键中的一个，通常用箭头标记。除了移动光标的功能外，
+			箭头键还有滚动网页内容，在文件资源管理器中更改当前选定文件/文件夹，
+			在图形软件中移动选定对象的位置，在 Windows 操作系统中与 KEYCAP{⊞} 
+			(详见 [=系统和 GUI 键=] 中的 KEYCAP{Meta} )
+			按键组合能将当前应用程序按照箭头方向进行分区。
+
+			<div class="note custom-note">
+			不同的应用程序中，箭头键会有不同的作用，
+			并且会有完全不同的备用按键 <span class="zh-upper">可以</span> 
+			有箭头按键的相同功能(如 [=锁定按键=] 中的 KEYCAP{Num Lock} 未锁定后， 
+			[=小键盘数字按键=] 里的 KEYCAP{2} ， KEYCAP{4} ， KEYCAP{6} ， KEYCAP{8} 
+			能作为光标移动键)。在维基百科 
+			<a href="https://en.wikipedia.org/wiki/Arrow_keys">Arrow keys</a>   
+			中查阅更多信息。
+			</div>
+		
+		* 向上翻页和向下翻页键(Page Up and Page Down keys)，
+			这两个键主要用于在文档中向上或向下滚动，但不同应用程序之间的滚动距离不同。
+			例如，在文本编辑器中，它们可以通过模拟实际的翻页进行跳转，
+			也可以通过屏幕视图进行跳转，在文档短于显示区域时， KEYCAP{PgUp} 和 
+			KEYCAP{PgDn} 通常看不到效果。
+
+			<div class="note custom-note">
+			在维基百科 
+			<a href="https://en.wikipedia.org/wiki/Page_Up_and_Page_Down_keys">
+			Page Up and Page Down keys</a>   
+			中查阅更多信息。
+			</div>
+		
+		<h4 id="wiki-modifier-keys">修饰符按键</h4>
+
+		<dfn id="modifier-keys">修饰符按键</dfn>(Modifier keys) —— CODE{ShiftLeft} ，
+		CODE{ShiftRight} ， CODE{ControlLeft} ， CODE{ControlRight} ， CODE{AltLeft}
+		， CODE{AltRight} 。还有 [=统和 GUI 键=] 中的 KEYCAP{Meta} 也是修饰符键，
+		只不过它与操作系统有关，是比较特殊的修饰符键。在计算中，
+		修饰符按键是计算机键盘上的一种特殊键(或组合键)，当按下时，
+		它会临时修改另一个键的正常功能。修饰符键本身通常不起任何作用; 也就是说，
+		单独按下 KEYCAP{⇧ Shift} 、 KEYCAP{Alt} 或 KEYCAP{Ctrl} 键 (通常) 
+		不会触发计算机的任何操作。查阅维基百科 
+		<a href="https://en.wikipedia.org/wiki/Modifier_key">
+		Modifier key</a> 获取更多信息。
+
+		*	KEYCAP{Shift} 按键可以使用 KEYCAP{⇧}，用于键入大写字母和其他备用的"大写
+			(upper)"字符。通常有两个移位键，分别位于 B 行的左侧和右侧。
+			当大写锁定键接合时，shift键可以在许多操作系统上用于键入小写字母，但在macOS上则不然。
+
+		
 
 
 

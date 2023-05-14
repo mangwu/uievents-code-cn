@@ -437,7 +437,7 @@ details > summary {
 /* 自定义表格的类名 */
 /* 自定义小键盘数字按键表格 */
 .custom-numpad-key-list {
-  margin-left: 64px;
+  margin: 16px 0 16px 32px;
 }
 
 /* 自定义引用列表panel样式 */
