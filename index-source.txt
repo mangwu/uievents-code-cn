@@ -281,7 +281,7 @@ path: stylesheet-extra.include
 			左边的 KEYCAP{Meta} 按键的键帽标签通常有两种，一种是微软的 Windows 
 			操作系统的 KEYCAP{⊞} ( KEYCAP{Windows} )，一种是苹果操作系统的 
 			KEYCAP{⌘} ( KEYCAP{Command} )。现代键盘上的 KEYCAP{Menu} 
-			键的键帽标签通常为 KEYCAP{≣} 。
+			键的键帽标签通常为 KEYCAP{≣} (见 [=应用程序键=] )。
 			</p>
 
 		<h4 id="keyboard-101alt">备用 "101" 键盘布局</h4>
@@ -751,8 +751,8 @@ path: stylesheet-extra.include
 		维基百科介绍了一种基于按键的用途进行分类的方式，包括 [[#wiki-fun-keys]] 、
 		[[#wiki-alnum-keys]] 、 [[#wiki-enter-edit-keys]] 、 
 		[[#wiki-system-and-gui-keys]] 、 [[#wiki-num-keypad-keys]] 、 
-		[[#wiki-lock-keys]] 、 [[#wiki-nav-keys]] 。如下美式标准 "101" 
-		键盘布局按功能分区的图示:
+		[[#wiki-lock-keys]] 、 [[#wiki-nav-keys]] 、 [[#wiki-modifier-keys]] 。
+		如下美式标准 "101" 键盘布局按功能分区的图示:
 
 		<div class="figure-change"  data-content="images/wiki-keyboard-sections">
 			<div class="custom-tabs-nav-wrap">
@@ -998,9 +998,15 @@ path: stylesheet-extra.include
 			但是当按下 KEYCAP{Ctrl} 键，组合箭头按键一起使用时，
 			就能滚动文本编辑器窗口内容了。
 
-			* 大写锁定键(Caps Lock ，KEYCAP{Caps Lock} ， KEYCAP{⇪} 或 
-				KEYCAP{CapsLk})，位于 C 行左边第一个，它能控制字母的输入模式，
-				旨在能输入大写字母。
+		* 大写锁定键(Caps Lock ，KEYCAP{Caps Lock} ， KEYCAP{⇪} 或 
+			KEYCAP{CapsLk})，位于 C 行左边第一个，它能控制字母的输入模式，
+			按下它就会在打字的时候转换到大写模式，打出来的英文字母都默认为大写。
+			这种状态会一直保持下去直至你再按一次大写锁定键，标准 "101" 
+			键盘上右上角包含对应的大写锁定的 LED 灯以显示大写锁定键的启用状态。
+			在一些电脑上， KEYCAP{Shift} + KEYCAP{Alpha} 组合键 
+			<span class="zh-upper">可以</span>  键入当前输入字母对应的 
+			<strong>相反</strong> 的大写或小写字母，也就是说，在大写锁定键启用(灯亮)时
+			，使用改组合键会键入小写字母。
 
 		<h4 id="wiki-nav-keys">导航按键</h4>
 		
@@ -1077,7 +1083,7 @@ path: stylesheet-extra.include
 
 		<dfn id="modifier-keys">修饰符按键</dfn>(Modifier keys) —— CODE{ShiftLeft} ，
 		CODE{ShiftRight} ， CODE{ControlLeft} ， CODE{ControlRight} ， CODE{AltLeft}
-		， CODE{AltRight} 。还有 [=统和 GUI 键=] 中的 KEYCAP{Meta} 也是修饰符键，
+		， CODE{AltRight} 。还有 [=系统和 GUI 键=] 中的 KEYCAP{Meta} 也是修饰符键，
 		只不过它与操作系统有关，是比较特殊的修饰符键。在计算中，
 		修饰符按键是计算机键盘上的一种特殊键(或组合键)，当按下时，
 		它会临时修改另一个键的正常功能。修饰符键本身通常不起任何作用; 也就是说，
@@ -1086,9 +1092,67 @@ path: stylesheet-extra.include
 		<a href="https://en.wikipedia.org/wiki/Modifier_key">
 		Modifier key</a> 获取更多信息。
 
-		*	KEYCAP{Shift} 按键可以使用 KEYCAP{⇧}，用于键入大写字母和其他备用的"大写
-			(upper)"字符。通常有两个移位键，分别位于 B 行的左侧和右侧。
-			当大写锁定键接合时，shift键可以在许多操作系统上用于键入小写字母，但在macOS上则不然。
+		*	KEYCAP{Shift} 键，也可以使用 KEYCAP{⇧} 符号表示，
+			用于键入大写字母和其他备用的"大写(upper)"字符，中文称为"换档键"或"上档键"。
+			这里的备用"大写"字符将大写含义扩大到了其它字符，
+			大多数符号键和数字键都有两个符号，键帽上会具体显示，
+			其中在下面的键帽标签可以直接键入，在上面的键帽标签要先按住 KEYCAP{Shift} 
+			键不放后才能按下键入。通常有两个换档键，分别位于 B 行的左侧和右侧。
+			除了键入同一按键表示的不同字符外，这个修饰符也有其它功能，详情见维基百科 
+			<a href="https://zh.wikipedia.org/wiki/换档键">换档键</a> 。
+		
+		*	KEYCAP{Ctrl} 键，全称 KEYCAP{Control}，中文名称为"控制键"，
+			它作为修饰符键与其它按键组合会执行特殊操作，与 KEYCAP{Shift} 类似，
+			单独按下 KEYCAP{Ctrl} 很少执行功能。控制键最常见的两个组合按键就是复制( 
+			KEYCAP{Ctrl} + KEYCAP{C} )和粘贴( KEYCAP{Ctrl} + KEYCAP{V} )。
+			不同的应用程序也会利用 KEYCAP{Ctrl} 修饰符键组合自己的功能，
+			更多的快捷组合按键查阅维基百科 
+			<a href="https://en.wikipedia.org/wiki/Control_key">Control key</a> 。
+		
+		*	KEYCAP{Alt} 键，全称 KEYCAP{Alternate}，中文名称为"转换键"，
+			它通常与其他键组合发挥作用。它与其他按键组合工作时，通常用于切换窗口、
+			关闭当前应用程序、选择菜单、命令和选项等功能。例如 KEYCAP{Alt} + 
+			KEYCAP{Tab ↹} 组合键能在大多数窗口系统上，在当前打开的窗口之间切换，
+			这些窗口被认为是 alt选项卡(alt-tabbing)。
+
+			需要注意的是，有些计算机键盘的 CODE{AltRight} 的键帽标签为 KEYCAP{AltGr} 
+			(AltGraph)，这个时候这个按键就具有了不同的功能，用于键入不常见的字符，
+			如货币符号、预组字元等，并且与 KEYCAP{Shift} 按键功能类似，例如: 
+			KEYCAP{AltGr} + KEYCAP{C} 会键入字符 GLYPH{©} 。
+
+	<div class="note custom-note">
+	除了上述的通用按键外，还有一个死键(dead key)属于修饰符按键，
+	<q>它是电脑键盘或打字机上一种特殊的快捷键。
+	它们通常用来对原始的拉丁字母加上附加符号。死键并不会输出一个完整的字母，
+	而是改变下一个按下的键的输出结果。
+	因此不需要为每一个字母与每一个标音的组合都对应一个单独的键; 
+	只要为每一个标音对应一个死键便足够。举例来说，若键盘上有一个重音符( KEYCAP{`}
+	)的死键，要输出法文字母 à 只需要先按下 KEYCAP{`} ，再按下 KEYCAP{A} 。如果是 
+	è 则是先按下 KEYCAP{`} 再按下E.而通常来说，通过键入 KEYCAP{`} 与 CODE{Space} 
+	可以产生一个单独的标音符号。</q> —— 维基百科 
+	<a href="https://zh.wikipedia.org/wiki/死键">死键</a> 。<br/>
+	基本上，美式标准键盘没有任何死键，
+	所以沿用这种键盘的中国大陆地区使用的键盘也没有死键，
+	但是世界上大多数地区销售的键盘都有一个 KEYCAP{AltGr} (Alternative graphic)键，
+	它可以直接修改一些字母，并将其他字母变成死键(取决于键盘设置)。
+	<q>旧的计算机系统，如 MSX ，通常有一个标记为死键的特殊键，它与 KEYCAP{Ctrl} 
+	键和 KEYCAP{Shift} 键相结合，可以用来将西欧语言中常见的一些变音符号(
+	<code>´</code> 、 <code>`</code> 、 <code>ˆ</code> 和 <code>¨</code> 
+	)添加到随后键入的元音中。</q> —— 维基百科 
+	<a href="https://en.wikipedia.org/wiki/Dead_key">Dead key</a>
+	</div>
+	
+		
+		<h4 id="wiki-application-keys">应用程序键</h4>
+
+		<dfn id="application-keys">应用程序键</dfn>(Menu key 或 Application key) 
+		—— CODE{ContextMenu} ，或称"菜单键"，是微软 Windows 
+		操作系统计算机键盘上的一个按键。这个按键一般位于键盘右侧，在 
+		CODE{ControlRight} 和 KEYCAP{Meta} 键(或位于 CODE{ControlRight} 和 
+		CODE{AltRight})之间，主要功能为通过键盘，而不是鼠标右键，弹出相关菜单。
+		菜单键和 KEYCAP{⊞} (Windows)键是同时发明的，
+		它的标志是一个鼠标光标悬停在其上方的菜单，用符号 KEYCAP{≣} 表示。
+
 
 		
 

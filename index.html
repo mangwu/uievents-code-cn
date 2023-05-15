@@ -7,7 +7,7 @@
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-UD" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
   <meta content="Bikeshed version d9bd89757, updated Thu Mar 23 10:06:53 2023 -0700" name="generator">
-  <meta content="e77f5205d1cfa28e11fa36d668e28d980766abcb" name="document-revision">
+  <meta content="bedbf34ba80bb74ee1f68a76e96d3b2c3c6ee1fe" name="document-revision">
   <link href="./override.css" rel="stylesheet">
 <style>
 
@@ -586,7 +586,7 @@ dfn > a.self-link::before      { content: "#"; }
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">用户界面事件键盘事件 code 属性值(UI Events KeyboardEvent code Values)</h1>
-   <p id="w3c-state"><a href="https://www.w3.org/standards/types#UD">翻译草案</a>, <time class="dt-updated" datetime="2023-05-14">2023年5月12日</time></p>
+   <p id="w3c-state"><a href="https://www.w3.org/standards/types#UD">翻译草案</a>, <time class="dt-updated" datetime="2023-05-15">2023年5月12日</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -685,6 +685,7 @@ dfn > a.self-link::before      { content: "#"; }
         <li><a href="#wiki-lock-keys"><span class="secno">2.5.6</span> <span class="content">锁定按键</span></a>
         <li><a href="#wiki-nav-keys"><span class="secno">2.5.7</span> <span class="content">导航按键</span></a>
         <li><a href="#wiki-modifier-keys"><span class="secno">2.5.8</span> <span class="content">修饰符按键</span></a>
+        <li><a href="#wiki-application-keys"><span class="secno">2.5.9</span> <span class="content">应用程序键</span></a>
        </ol>
      </ol>
     <li>
@@ -815,7 +816,7 @@ dfn > a.self-link::before      { content: "#"; }
 			名称可以追溯到这个标准键盘实际上包含 101 个键的时候。两个 <code class="keycap">Meta</code> 按键(通常被赋予为特定于操作系统的标签)和 <code class="keycap">Menu</code> 键是后来被添加，
 			使按键总数达到了 104 个。</p>
    <p class="note custom-note" role="note"> 左边的 <code class="keycap">Meta</code> 按键的键帽标签通常有两种，一种是微软的 Windows 
-			操作系统的 <code class="keycap">⊞</code> ( <code class="keycap">Windows</code> )，一种是苹果操作系统的 <code class="keycap">⌘</code> ( <code class="keycap">Command</code> )。现代键盘上的 <code class="keycap">Menu</code> 键的键帽标签通常为 <code class="keycap">≣</code> 。 </p>
+			操作系统的 <code class="keycap">⊞</code> ( <code class="keycap">Windows</code> )，一种是苹果操作系统的 <code class="keycap">⌘</code> ( <code class="keycap">Command</code> )。现代键盘上的 <code class="keycap">Menu</code> 键的键帽标签通常为 <code class="keycap">≣</code> (见 <a data-link-type="dfn" href="#application-keys" id="ref-for-application-keys">应用程序键</a> )。 </p>
    <h4 class="heading settled" data-level="2.1.3" id="keyboard-101alt"><span class="secno">2.1.3. </span><span class="content">备用 "101" 键盘布局</span><a class="self-link" href="#keyboard-101alt"></a></h4>
    <p>备用 "101" 键盘有一个大的 <code class="keycap">Enter</code> 键，并缩小了 <code class="keycap">Backspace</code> 键，为 <code class="code">"<a href="#code-IntlYen">IntlYen</a>"</code> 键腾出空间(它取代了标准 101 键盘布局中的 <code class="code">"<a href="#code-Backslash">Backslash</a>"</code> 键)。 <code class="code">"<a href="#code-IntlYen">IntlYen</a>"</code> 名称来自日式键盘布局，表示 <code class="keycap">¥</code> (也就是日元 <span class="unicode">yen</span> 的符号)键——同样，
 			俄式键盘布局和日式键盘布局类似，只不过这个 <code class="keycap">¥</code> 键，映射了 <code class="keycap">\/</code> 键，如下图像所示:</p>
@@ -1106,8 +1107,8 @@ dfn > a.self-link::before      { content: "#"; }
    <p>本规范在键盘分区时，将标准键盘分为 5 个通用区域，
 		这种分类方式主要基于按键的位置。</p>
    <p>对于一般的标准计算机的键盘(也称 PC/AT 键盘， QWEWRTY 键盘)
-		维基百科介绍了一种基于按键的用途进行分类的方式，包括 <a href="#wiki-fun-keys">§ 2.5.1 功能键</a> 、 <a href="#wiki-alnum-keys">§ 2.5.2 字母数字键或字符键</a> 、 <a href="#wiki-enter-edit-keys">§ 2.5.3 回车键和编辑键</a> 、 <a href="#wiki-system-and-gui-keys">§ 2.5.4 系统和 GUI 键</a> 、 <a href="#wiki-num-keypad-keys">§ 2.5.5 小键盘数字按键</a> 、 <a href="#wiki-lock-keys">§ 2.5.6 锁定按键</a> 、 <a href="#wiki-nav-keys">§ 2.5.7 导航按键</a> 。如下美式标准 "101" 
-		键盘布局按功能分区的图示:</p>
+		维基百科介绍了一种基于按键的用途进行分类的方式，包括 <a href="#wiki-fun-keys">§ 2.5.1 功能键</a> 、 <a href="#wiki-alnum-keys">§ 2.5.2 字母数字键或字符键</a> 、 <a href="#wiki-enter-edit-keys">§ 2.5.3 回车键和编辑键</a> 、 <a href="#wiki-system-and-gui-keys">§ 2.5.4 系统和 GUI 键</a> 、 <a href="#wiki-num-keypad-keys">§ 2.5.5 小键盘数字按键</a> 、 <a href="#wiki-lock-keys">§ 2.5.6 锁定按键</a> 、 <a href="#wiki-nav-keys">§ 2.5.7 导航按键</a> 、 <a href="#wiki-modifier-keys">§ 2.5.8 修饰符按键</a> 。
+		如下美式标准 "101" 键盘布局按功能分区的图示:</p>
    <div class="figure-change" data-content="images/wiki-keyboard-sections">
     <div class="custom-tabs-nav-wrap">
      <div class="custom-tabs-nav-list">
@@ -1307,6 +1308,13 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
 默认情况下按箭头按键会移动文本编辑区域的光标(相当于滚动锁定模式开启)，
 但是当按下 <code class="keycap">Ctrl</code> 键，组合箭头按键一起使用时，
 就能滚动文本编辑器窗口内容了。</p>
+    <li data-md>
+     <p>大写锁定键(Caps Lock ，<code class="keycap">Caps Lock</code> ， <code class="keycap">⇪</code> 或 <code class="keycap">CapsLk</code>)，位于 C 行左边第一个，它能控制字母的输入模式，
+按下它就会在打字的时候转换到大写模式，打出来的英文字母都默认为大写。
+这种状态会一直保持下去直至你再按一次大写锁定键，标准 "101" 
+键盘上右上角包含对应的大写锁定的 LED 灯以显示大写锁定键的启用状态。
+在一些电脑上， <code class="keycap">Shift</code> + <code class="keycap">Alpha</code> 组合键 <span class="zh-upper">可以</span> 键入当前输入字母对应的 <strong>相反</strong> 的大写或小写字母，也就是说，在大写锁定键启用(灯亮)时
+，使用改组合键会键入小写字母。</p>
    </ul>
    <h4 class="heading settled" data-level="2.5.7" id="wiki-nav-keys"><span class="secno">2.5.7. </span><span class="content">导航按键</span><a class="self-link" href="#wiki-nav-keys"></a></h4>
    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="nav-keys">导航按键</dfn>(Navigation keys) —— <code class="keycap">↑</code> ， <code class="keycap">↓</code> ，<code class="keycap">←</code> ，<code class="keycap">→</code> ，<code class="keycap">Home</code> / <code class="keycap">↖</code> ， <code class="keycap">End</code> / <code class="keycap">↘</code> ， <code class="keycap">PgDn</code> / <code class="keycap">⇟</code> ， <code class="keycap">PgUp</code> / <code class="keycap">⇞</code> 。
@@ -1346,7 +1354,49 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
      <div class="note custom-note" role="note"> 在维基百科 <a href="https://en.wikipedia.org/wiki/Page_Up_and_Page_Down_keys"> Page Up and Page Down keys</a> 中查阅更多信息。 </div>
    </ul>
    <h4 class="heading settled" data-level="2.5.8" id="wiki-modifier-keys"><span class="secno">2.5.8. </span><span class="content">修饰符按键</span><a class="self-link" href="#wiki-modifier-keys"></a></h4>
-   <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="modifier-keys">修饰符按键</dfn>(Modifier keys) ——</p>
+   <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="modifier-keys">修饰符按键</dfn>(Modifier keys) —— <code class="code">"<a href="#code-ShiftLeft">ShiftLeft</a>"</code> ， <code class="code">"<a href="#code-ShiftRight">ShiftRight</a>"</code> ， <code class="code">"<a href="#code-ControlLeft">ControlLeft</a>"</code> ， <code class="code">"<a href="#code-ControlRight">ControlRight</a>"</code> ， <code class="code">"<a href="#code-AltLeft">AltLeft</a>"</code> ， <code class="code">"<a href="#code-AltRight">AltRight</a>"</code> 。还有 <a data-link-type="dfn" href="#system-and-gui-keys" id="ref-for-system-and-gui-keys①">系统和 GUI 键</a> 中的 <code class="keycap">Meta</code> 也是修饰符键，
+		只不过它与操作系统有关，是比较特殊的修饰符键。在计算中，
+		修饰符按键是计算机键盘上的一种特殊键(或组合键)，当按下时，
+		它会临时修改另一个键的正常功能。修饰符键本身通常不起任何作用; 也就是说，
+		单独按下 <code class="keycap">⇧ Shift</code> 、 <code class="keycap">Alt</code> 或 <code class="keycap">Ctrl</code> 键 (通常) 
+		不会触发计算机的任何操作。查阅维基百科 <a href="https://en.wikipedia.org/wiki/Modifier_key"> Modifier key</a> 获取更多信息。</p>
+   <ul>
+    <li data-md>
+     <p><code class="keycap">Shift</code> 键，也可以使用 <code class="keycap">⇧</code> 符号表示，
+用于键入大写字母和其他备用的"大写(upper)"字符，中文称为"换档键"或"上档键"。
+这里的备用"大写"字符将大写含义扩大到了其它字符，
+大多数符号键和数字键都有两个符号，键帽上会具体显示，
+其中在下面的键帽标签可以直接键入，在上面的键帽标签要先按住 <code class="keycap">Shift</code> 键不放后才能按下键入。通常有两个换档键，分别位于 B 行的左侧和右侧。
+除了键入同一按键表示的不同字符外，这个修饰符也有其它功能，详情见维基百科 <a href="https://zh.wikipedia.org/wiki/换档键">换档键</a> 。</p>
+    <li data-md>
+     <p><code class="keycap">Ctrl</code> 键，全称 <code class="keycap">Control</code>，中文名称为"控制键"，
+它作为修饰符键与其它按键组合会执行特殊操作，与 <code class="keycap">Shift</code> 类似，
+单独按下 <code class="keycap">Ctrl</code> 很少执行功能。控制键最常见的两个组合按键就是复制( <code class="keycap">Ctrl</code> + <code class="keycap">C</code> )和粘贴( <code class="keycap">Ctrl</code> + <code class="keycap">V</code> )。
+不同的应用程序也会利用 <code class="keycap">Ctrl</code> 修饰符键组合自己的功能，
+更多的快捷组合按键查阅维基百科 <a href="https://en.wikipedia.org/wiki/Control_key">Control key</a> 。</p>
+    <li data-md>
+     <p><code class="keycap">Alt</code> 键，全称 <code class="keycap">Alternate</code>，中文名称为"转换键"，
+它通常与其他键组合发挥作用。它与其他按键组合工作时，通常用于切换窗口、
+关闭当前应用程序、选择菜单、命令和选项等功能。例如 <code class="keycap">Alt</code> + <code class="keycap">Tab ↹</code> 组合键能在大多数窗口系统上，在当前打开的窗口之间切换，
+这些窗口被认为是 alt选项卡(alt-tabbing)。</p>
+     <p>需要注意的是，有些计算机键盘的 <code class="code">"<a href="#code-AltRight">AltRight</a>"</code> 的键帽标签为 <code class="keycap">AltGr</code> (AltGraph)，这个时候这个按键就具有了不同的功能，用于键入不常见的字符，
+如货币符号、预组字元等，并且与 <code class="keycap">Shift</code> 按键功能类似，例如: <code class="keycap">AltGr</code> + <code class="keycap">C</code> 会键入字符 <code class="glyph">"©"</code> 。</p>
+   </ul>
+   <div class="note custom-note" role="note"> 除了上述的通用按键外，还有一个死键(dead key)属于修饰符按键， <q>它是电脑键盘或打字机上一种特殊的快捷键。
+	它们通常用来对原始的拉丁字母加上附加符号。死键并不会输出一个完整的字母，
+	而是改变下一个按下的键的输出结果。
+	因此不需要为每一个字母与每一个标音的组合都对应一个单独的键; 
+	只要为每一个标音对应一个死键便足够。举例来说，若键盘上有一个重音符( <code class="keycap">`</code> )的死键，要输出法文字母 à 只需要先按下 <code class="keycap">`</code> ，再按下 <code class="keycap">A</code> 。如果是 
+	è 则是先按下 <code class="keycap">`</code> 再按下E.而通常来说，通过键入 <code class="keycap">`</code> 与 <code class="code">"<a href="#code-Space">Space</a>"</code> 可以产生一个单独的标音符号。</q> —— 维基百科 <a href="https://zh.wikipedia.org/wiki/死键">死键</a> 。<br> 基本上，美式标准键盘没有任何死键，
+	所以沿用这种键盘的中国大陆地区使用的键盘也没有死键，
+	但是世界上大多数地区销售的键盘都有一个 <code class="keycap">AltGr</code> (Alternative graphic)键，
+	它可以直接修改一些字母，并将其他字母变成死键(取决于键盘设置)。 <q>旧的计算机系统，如 MSX ，通常有一个标记为死键的特殊键，它与 <code class="keycap">Ctrl</code> 键和 <code class="keycap">Shift</code> 键相结合，可以用来将西欧语言中常见的一些变音符号( <code>´</code> 、 <code>`</code> 、 <code>ˆ</code> 和 <code>¨</code> )添加到随后键入的元音中。</q> —— 维基百科 <a href="https://en.wikipedia.org/wiki/Dead_key">Dead key</a> </div>
+   <h4 class="heading settled" data-level="2.5.9" id="wiki-application-keys"><span class="secno">2.5.9. </span><span class="content">应用程序键</span><a class="self-link" href="#wiki-application-keys"></a></h4>
+   <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="application-keys">应用程序键</dfn>(Menu key 或 Application key)
+		—— <code class="code">"<a href="#code-ContextMenu">ContextMenu</a>"</code> ，或称"菜单键"，是微软 Windows 
+		操作系统计算机键盘上的一个按键。这个按键一般位于键盘右侧，在 <code class="code">"<a href="#code-ControlRight">ControlRight</a>"</code> 和 <code class="keycap">Meta</code> 键(或位于 <code class="code">"<a href="#code-ControlRight">ControlRight</a>"</code> 和 <code class="code">"<a href="#code-AltRight">AltRight</a>"</code>)之间，主要功能为通过键盘，而不是鼠标右键，弹出相关菜单。
+		菜单键和 <code class="keycap">⊞</code> (Windows)键是同时发明的，
+		它的标志是一个鼠标光标悬停在其上方的菜单，用符号 <code class="keycap">≣</code> 表示。</p>
    <h2 class="heading settled" data-level="3" id="code-value-tables"><span class="secno">3. </span><span class="content">键盘事件 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑤">code</a></code> 值表格</span><a class="self-link" href="#code-value-tables"></a></h2>
    <p>This section defines a list of values which are appropriate for use as <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑥">code</a></code> values.</p>
    <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="key-code-attribute-value">key code attribute value</dfn> is any of the values given in the
@@ -2428,6 +2478,7 @@ something specific to the values defined in this document</p>
    <li><a href="#alnum-keys">字母数字键或字符键</a><span>, in § 2.5.2</span>
    <li><a href="#nav-keys">导航按键</a><span>, in § 2.5.7</span>
    <li><a href="#num-keypad-keys">小键盘数字按键</a><span>, in § 2.5.5</span>
+   <li><a href="#application-keys">应用程序键</a><span>, in § 2.5.9</span>
    <li><a href="#lock-keys">锁定按键</a><span>, in § 2.5.6</span>
    <li><a href="#alphanumeric-section">alphanumeric section</a><span>, in § 3.1</span>
    <li><a href="#arrow-pad">arrow pad</a><span>, in § 3.3</span>
@@ -2563,6 +2614,7 @@ something specific to the values defined in this document</p>
    <span id="infopaneltitle-for-system-and-gui-keys" style="display:none">Info about the '系统和 GUI 键' definition.</span><b><a href="#system-and-gui-keys">#system-and-gui-keys</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-system-and-gui-keys">2.5.7. 导航按键</a>
+    <li><a href="#ref-for-system-and-gui-keys①">2.5.8. 修饰符按键</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-num-keypad-keys" class="dfn-panel" data-for="num-keypad-keys" id="infopanel-for-num-keypad-keys">
@@ -2589,6 +2641,12 @@ something specific to the values defined in this document</p>
    <span id="infopaneltitle-for-modifier-keys" style="display:none">Info about the '修饰符按键' definition.</span><b><a href="#modifier-keys">#modifier-keys</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-modifier-keys">2.5.7. 导航按键</a>
+   </ul>
+  </aside>
+  <aside aria-labelledby="infopaneltitle-for-application-keys" class="dfn-panel" data-for="application-keys" id="infopanel-for-application-keys">
+   <span id="infopaneltitle-for-application-keys" style="display:none">Info about the '应用程序键' definition.</span><b><a href="#application-keys">#application-keys</a></b><b>Referenced in:</b>
+   <ul>
+    <li><a href="#ref-for-application-keys">2.1.2. 标准 "101" 键盘布局</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-key-code-attribute-value" class="dfn-panel" data-for="key-code-attribute-value" id="infopanel-for-key-code-attribute-value">
