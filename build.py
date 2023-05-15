@@ -51,9 +51,9 @@ class Parser():
         if self.code == None:
             return ''
 
-        req = "Yes"
+        req = "是"
         if self.opt:
-            req = "No"
+            req = "否"
         return (
             '<tr>'
             '<td class="code-table-code"><code class="code" id="code-%s">"%s"</code></td>\n'
@@ -391,9 +391,9 @@ class Parser():
                 '<table id="table-key-code-%s" class="data-table full-width">\n'
                 '<caption>%s</caption>\n'
                 '<thead><tr>'
-                '<th style="width:20%%">{{KeyboardEvent}} {{KeyboardEvent/code}}</th>'
-                '<th style="width:10%%">Required</th>'
-                '<th style="width:70%%">Notes (Non-normative)</th>'
+                '<th style="width:20%%">{{KeyboardEvent}}.{{KeyboardEvent/code}}</th>'
+                '<th style="text-align:center;width:15%%">必需的</th>'
+                '<th style="width:65%%">备注 (非规范性的)</th>'
                 '</tr></thead>\n'
                 '<tbody>\n') % (name, caption)
 

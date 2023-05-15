@@ -1203,40 +1203,36 @@ path: stylesheet-extra.include
 
 		<h4 id="key-alphanumeric-writing-system">书写系统键</h4>
 
-			<dfn id="writing-system-keys">书写系统键</dfn> 是那些根据当前语言环境和键盘布局改变含义
-			(即，它们产生不同的{{KeyboardEvent/key}})的键。
+			<dfn id="writing-system-keys">书写系统键</dfn> 
+			是那些根据当前语言环境和键盘布局改变含义(即，它们产生不同的
+			{{KeyboardEvent/key}} )的键。
 
 			<figure id="figure-keyboard-codes-alphanum1">
 				<img src="images/keyboard-codes-alphanum1.svg" width="653" height="225" alt="The 书写系统键" />
-				<figcaption>The [=书写系统键=] in the [=alphanumeric section=]</figcaption>
+				<figcaption>在字母数字区域( [=alphanumeric section=] )的 [=书写系统键=] </figcaption>
 			</figure>
 
-			This figure shows a hypothetical keyboard that combines all the
-			[=书写系统键=] (shown in blue and green) found on the
-			various keyboards. Blue keys are present on all standard
-			keyboards while green keys are only available on some keyboards.
+			此图显示了一个虚构的键盘，它将可以在各种键盘上找到的所有 [=书写系统键=] 
+			(以蓝色和绿色显示)合并在起义。所有标准键盘上都有蓝色的键，
+			而绿色键仅在某些键盘上存在。
 
 			<div class="example">
-				The CODE{Digit2} and CODE{KeyQ} keys are [=书写系统键=] that
-				generate KEY_NOLINK{2} and KEY_NOLINK{q} when the US locale is
-				active and KEY_NOLINK{é} and KEY_NOLINK{a} when the French locale is active.
+				CODE{Digit2} 和 CODE{KeyQ} 键为 [=书写系统键=] ，当前语言环境为美国时，
+				按下会生成 KEY_NOLINK{2} 和 KEY_NOLINK{q} ，而当语言环境为法国时，
+				则生成 KEY_NOLINK{é} 和 KEY_NOLINK{a} 。
 			</div>
 
-			The name shown on each key is the {{KeyboardEvent/code}}
-			assigned to that key. Wherever possible, the
-			{{KeyboardEvent/code}} names are based on the name for the US
-			key in that position (i.e., they are based on the US keyboard
-			layout), which follows the naming convention found in [[USB-HID]].
-			For keys that don't exist on the US keyboard, names from the UK or Japanese
-			layouts are used instead.
+			每个按键上显示的名称是分配给该按键的 {{KeyboardEvent/code}} 。
+			在可能的情况下， {{KeyboardEvent/code}} 名称基于该位置的美国键的名称(即，
+			它们基于美式 "101" 标准键盘布局)，这遵循 [[USB-HID]] 中的命名约定。
+			对于美式键盘上不存在的键，则使用英式或日式键盘布局的名称。
 
-			Note that there are two CODE{Backslash} keys in this figure: a
-			large one at the end of Row D on the 101-key layout, and a
-			smaller one between CODE{Quote} and CODE{Enter} on Row C of the
-			102-, 104- and 106-key layouts. Only one CODE{Backslash} key
-			may be present on a keyboard layout.
+			请注意，此图中有两个 CODE{Backslash} 键: 大的那一个键位于标准 "101" 
+			键盘布局的 D 行末尾，另一个小的位于 "102" 、 "104" 和 "106" 键盘布局的 
+			C 行的 CODE{Quote}  和 CODE{Enter} 之间。键盘布局上只能有一个 
+			CODE{Backslash} 键。
 
-			BEGIN_CODE_TABLE alphanumeric-writing-system "List of code values for 书写系统键 in the Alphanumeric section."
+			BEGIN_CODE_TABLE alphanumeric-writing-system "在字母数字区域的书写系统键的 code 值表。"
 				CODE Backquote		KEYCAP{`~} on a US keyboard. This is the KEYCAP{半角/全角/漢字}
 									(PHONETIC{hankaku/zenkaku/kanji}) key on Japanese keyboards
 				CODE Backslash		Used for both the US KEYCAP{\|} (on the 101-key layout) and also for the key
