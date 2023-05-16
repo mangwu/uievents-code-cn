@@ -80,7 +80,7 @@ class Parser():
             return ''
 
         result = '<tr><td>'
-        result += '<a href="https://w3c.github.io/uievents-code/#code-%s">' % self.code
+        result += '<a href="https://mangwu.github.io/uievents-code-cn/#code-%s">' % self.code
         result += '<code class="code">"%s"</code>' % self.code
         result += '</a>'
         result += '</td>\n'
@@ -391,7 +391,12 @@ class Parser():
                 '<table id="table-key-code-%s" class="data-table full-width">\n'
                 '<caption>%s</caption>\n'
                 '<thead><tr>'
-                '<th style="width:20%%">{{KeyboardEvent}}.{{KeyboardEvent/code}}</th>'
+                '<th style="width:20%%">'
+                '<code class="idl">'
+                '<a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#interface-keyboardevent" id="ref-for-interface-keyboardevent②">KeyboardEvent</a>'
+                '</code>.<code class="idl">'
+                '<a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑨">code</a>'
+                '</code></th>'
                 '<th style="text-align:center;width:15%%">必需的</th>'
                 '<th style="width:65%%">备注 (非规范性的)</th>'
                 '</tr></thead>\n'
