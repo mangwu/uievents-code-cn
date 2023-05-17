@@ -7,7 +7,7 @@
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-UD" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
   <meta content="Bikeshed version d9bd89757, updated Thu Mar 23 10:06:53 2023 -0700" name="generator">
-  <meta content="d4d517bc4cc2f4ff9edf3de244757d748677a2f9" name="document-revision">
+  <meta content="23e5f6d80756ebf58d42d98a5f604c0f62d6a93d" name="document-revision">
   <link href="./override.css" rel="stylesheet">
 <style>
 
@@ -586,7 +586,7 @@ dfn > a.self-link::before      { content: "#"; }
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">用户界面事件键盘事件 code 属性值(UI Events KeyboardEvent code Values)</h1>
-   <p id="w3c-state"><a href="https://www.w3.org/standards/types#UD">翻译草案</a>, <time class="dt-updated" datetime="2023-05-16">2023年5月12日</time></p>
+   <p id="w3c-state"><a href="https://www.w3.org/standards/types#UD">翻译草案</a>, <time class="dt-updated" datetime="2023-05-17">2023年5月12日</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -604,7 +604,7 @@ dfn > a.self-link::before      { content: "#"; }
       <dt>翻译反馈:
       <dd><a href="https://github.com/mangwu/uievents-code-cn/issues/">GitHub-mangwu-uievents-code-cn-issues</a>
       <dt>实现报告:
-      <dd><a href="https://mangwu.github.io/uievents-code/impl-report.html">https://mangwu.github.io/uievents-code-cn/impl-report.html</a>
+      <dd><a href="https://mangwu.github.io/uievents-code-cn/impl-report.html">https://mangwu.github.io/uievents-code-cn/impl-report.html</a>
       <dt>编辑者:
       <dd>
       <dd><a class="p-name fn u-email email" href="mailto:garykac@google.com">Gary Kacmarcik</a>(Google)
@@ -698,9 +698,9 @@ dfn > a.self-link::before      { content: "#"; }
         <li><a href="#key-alphanumeric-writing-system"><span class="secno">3.1.1</span> <span class="content">书写系统键</span></a>
         <li><a href="#key-alphanumeric-functional"><span class="secno">3.1.2</span> <span class="content">功能键</span></a>
        </ol>
-      <li><a href="#key-controlpad-section"><span class="secno">3.2</span> <span class="content">Control Pad Section</span></a>
-      <li><a href="#key-arrowpad-section"><span class="secno">3.3</span> <span class="content">Arrow Pad Section</span></a>
-      <li><a href="#key-numpad-section"><span class="secno">3.4</span> <span class="content">Numpad Section</span></a>
+      <li><a href="#key-controlpad-section"><span class="secno">3.2</span> <span class="content">控制板区域</span></a>
+      <li><a href="#key-arrowpad-section"><span class="secno">3.3</span> <span class="content">箭头板区域</span></a>
+      <li><a href="#key-numpad-section"><span class="secno">3.4</span> <span class="content">数字板区域</span></a>
       <li><a href="#key-function-section"><span class="secno">3.5</span> <span class="content">Function Section</span></a>
       <li><a href="#key-media"><span class="secno">3.6</span> <span class="content">Media Keys</span></a>
       <li><a href="#key-legacy"><span class="secno">3.7</span> <span class="content">Legacy，Non-Standard and Special Keys</span></a>
@@ -853,7 +853,7 @@ dfn > a.self-link::before      { content: "#"; }
    </figure>
    <h4 class="heading settled" data-level="2.1.5" id="keyboard-103"><span class="secno">2.1.5. </span><span class="content">韩式 "103" 键盘布局</span><a class="self-link" href="#keyboard-103"></a></h4>
    <p>韩语 "103" 键盘基于备用 "101" 键盘布局，并添加了两个额外的键
-			(空格键两侧各一个)来处理韩语特定的输入模式。这两个按键是 <code class="code">"<a href="#code-Lang2">Lang2</a>"</code> ("Hanja"，键帽为 <code class="keycap">한자</code> ，发音为 <span class="unicode">hanja</span>)和<code class="code">"<a href="#code-Lang2">Lang2</a>"</code> ("HangulMode"，键帽为 <code class="keycap">한/영</code> ，发音为 <span class="unicode">han/yeong</span>) 。</p>
+			(空格键两侧各一个)来处理韩语特定的输入模式。这两个按键是 <code class="code">"<a href="#code-Lang2">Lang2</a>"</code> ("Hanja"，键帽为 <code class="keycap">한자</code> ，发音为 <span class="unicode">hanja</span> )和 <code class="code">"<a href="#code-Lang1">Lang1</a>"</code> ("HangulMode"，键帽为 <code class="keycap">한/영</code> ，发音为 <span class="unicode">han/yeong</span> ) 。</p>
    <p class="note custom-note" role="note"> 实际上 <code class="keycap">한자</code> (Hanja) 也就是汉字的意思，这里表示朝鲜汉字，而 <code class="keycap">한/영</code> (HangulMode) 也就是韩/英，
 			这里表示韩文模式和英文模式切换使用。 </p>
    <figure id="figure-keyboard-103-korean">
@@ -870,7 +870,7 @@ dfn > a.self-link::before      { content: "#"; }
    </figure>
    <p>现代 "104" 布局的键盘包含107个键: <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section⑦">字母数字区域</a> 有63个按键， <a data-link-type="dfn" href="#numpad" id="ref-for-numpad⑦">数字板</a> 、 <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad⑤">控制板</a> 、 <a data-link-type="dfn" href="#arrow-pad" id="ref-for-arrow-pad⑤">箭头板</a> 和 <a data-link-type="dfn" href="#function-section" id="ref-for-function-section⑥">功能区域</a> 有 44 个键。
 			一些巴西键盘的 <a data-link-type="dfn" href="#keypad" id="ref-for-keypad①">小键盘</a> 上( <a data-link-type="dfn" href="#numpad" id="ref-for-numpad⑧">数字板</a> )没有额外的按键，只有106个键。</p>
-   <p class="note custom-note" role="note"> 巴西的键盘以 "102" 键盘布局为基础，从 <code>code</code> 值上看，和 "102"
+   <p class="note custom-note" id="keyboard-104-note" role="note"><a class="self-link" href="#keyboard-104-note"></a> 巴西的键盘以 "102" 键盘布局为基础，从 <code>code</code> 值上看，和 "102"
 			键盘布局相同 <code>code</code> 值的两个按键(位于大 <code class="keycap">Enter</code> 下方的 <code class="code">"<a href="#code-Backslash">Backslash</a>"</code> 和在 <code class="keycap">ShiftLeft</code> 和 <code class="keycap">Z</code> 之间的 <code class="code">"<a href="#code-IntlBackslash">IntlBackslash</a>"</code> )具有异同的键帽标签，前者( <code class="code">"<a href="#code-Backslash">Backslash</a>"</code> )的键帽在巴西键盘和英式 "102" 键盘分别是 <code class="keycap">]}</code> 和 <code class="keycap">#~</code>，
 			后者( <code class="code">"<a href="#code-IntlBackslash">IntlBackslash</a>"</code> )的键帽在巴西键盘和英式 "102" 键盘 <strong>都是</strong> <code class="keycap">\|</code> 。除此之外，<code>code</code> 值为 <code class="code">"<a href="#code-IntlRo">IntlRo</a>"</code> 的额外按键的键帽标签为 <code class="keycap">/?</code> ，
 			下面的日式键盘中也包含这个键。<br> 最后，在 <a data-link-type="dfn" href="#numpad" id="ref-for-numpad⑨">数字板</a> 上可能多的一个额外按键表示千位分隔符，它的 <code>code</code> 值为 <code class="code">"<a href="#code-NumpadComma">NumpadComma</a>"</code> ，要理解这个额外按键的意义，需要理解的背景是: 
@@ -1734,18 +1734,31 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
       <td class="code-table-required">是
       <td><code class="keycap">Tab</code> 或 <code class="keycap">⇥</code>
    </table>
-   <p>On some keyboards (notably Japanese and Korean) the spacebar is
-			reduced in size to make room for extra keys on the bottom row (Row A).
-			These keys typically allow the users to change the current input
-			mode. Note that even though some of these Japanese and Korean
-			keys occupy the same physical location on the keyboard，they use
-			different <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⓪">code</a></code> values.</p>
-   <figure id="figure-function-row-a">
-     <img alt="Comparison of the lower row of 功能键" height="160" src="images/functional-row-a.svg" width="700"> 
-    <figcaption>Comparison of the lower row of <a data-link-type="dfn" href="#fun-keys" id="ref-for-fun-keys③">功能键</a> on different keyboards</figcaption>
-   </figure>
+   <p>在一些键盘(尤其是日语和韩语)上，空格键的尺寸减小了，以便为底部一行( A
+			行)的额外按键腾出空间。这些键通常允许用户改变当前的输入模式。请注意，
+			尽管这些日语和韩语键中的一些键在键盘上占据相同的物理位置，但它们使用不同的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⓪">code</a></code> 值。</p>
+   <div class="figure-change" data-content="images/figure-function-row-a">
+    <div class="custom-tabs-nav-wrap">
+     <div class="custom-tabs-nav-list">
+      <div class="custom-tabs-tab custom-tabs-tab-active" data-node-key="1">
+       <div class="custom-tabs-tab-btn" tabindex="0">汉化图</div>
+      </div>
+      <div class="custom-tabs-tab" data-node-key="2">
+       <div class="custom-tabs-tab-btn" tabindex="0">原图</div>
+      </div>
+     </div>
+    </div>
+    <figure id="figure-function-row-a-zh">
+      <img alt="在不同的键盘上底部一行的 [=功能键②=] 对比" height="160" src="images/functional-row-a-zh.svg" width="700"> 
+     <figcaption>在不同的键盘上底部一行的 <a data-link-type="dfn" href="#functional-keys" id="ref-for-functional-keys③">功能键②</a> 对比</figcaption>
+    </figure>
+    <figure class="figure-hidden" id="figure-function-row-a">
+      <img alt="在不同的键盘上底部一行的 [=功能键②=] 对比" height="160" src="images/functional-row-a.svg" width="700"> 
+     <figcaption>在不同的键盘上底部一行的 <a data-link-type="dfn" href="#functional-keys" id="ref-for-functional-keys④">功能键②</a> 对比</figcaption>
+    </figure>
+   </div>
    <table class="data-table full-width" id="table-key-code-alphanumeric-functional-2">
-    <caption>List of code values for 功能键 found on Japanese and Korean keyboards.</caption>
+    <caption>在日式和韩式键盘的额外功能键的 code 值表。</caption>
     <thead>
      <tr>
       <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#interface-keyboardevent" id="ref-for-interface-keyboardevent②②">KeyboardEvent</a></code>.<code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑨②">code</a></code>
@@ -1753,49 +1766,66 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
       <th style="width:65%">备注 (非规范性的)
     <tbody>
      <tr>
+      <td class="code-table-code"><code class="code" id="code-NonConvert">"NonConvert"</code>
+      <td class="code-table-required">是
+      <td>日语: <code class="keycap">無変換</code> ( <span class="unicode">muhenkan</span> )
+     <tr>
       <td class="code-table-code"><code class="code" id="code-Convert">"Convert"</code>
       <td class="code-table-required">是
-      <td>Japanese: <code class="keycap">変換</code> (<span class="unicode">henkan</span>)
+      <td>日语: <code class="keycap">変換</code> ( <span class="unicode">henkan</span> )
      <tr>
       <td class="code-table-code"><code class="code" id="code-KanaMode">"KanaMode"</code>
       <td class="code-table-required">是
-      <td>Japanese: <code class="keycap">カタカナ/ひらがな/ローマ字</code> (<span class="unicode">katakana/hiragana/romaji</span>)
+      <td>日语: <code class="keycap">カタカナ/ひらがな/ローマ字</code> ( <span class="unicode">katakana/hiragana/romaji</span> ) 
      <tr>
       <td class="code-table-code"><code class="code" id="code-Lang1">"Lang1"</code>
       <td class="code-table-required">否
-      <td>Korean: HangulMode <code class="keycap">한/영</code> (<span class="unicode">han/yeong</span>)<br>Japanese (Mac keyboard): <code class="keycap">かな</code> (<span class="unicode">kana</span>) 
+      <td>韩语: HangulMode <code class="keycap">한/영</code> ( <span class="unicode">han/yeong</span> ) <br>日语 (Mac 键盘): <code class="keycap">かな</code> ( <span class="unicode">kana</span> ) 
      <tr>
       <td class="code-table-code"><code class="code" id="code-Lang2">"Lang2"</code>
       <td class="code-table-required">否
-      <td>Korean: Hanja <code class="keycap">한자</code> (<span class="unicode">hanja</span>)<br>Japanese (Mac keyboard): <code class="keycap">英数</code> (<span class="unicode">eisu</span>) 
+      <td>韩语: Hanja <code class="keycap">한자</code> ( <span class="unicode">hanja</span> )<br> 日语(Mac keyboard): <code class="keycap">英数</code> ( <span class="unicode">eisu</span> ) 
      <tr>
       <td class="code-table-code"><code class="code" id="code-Lang3">"Lang3"</code>
       <td class="code-table-required">否
-      <td>Japanese (word-processing keyboard): Katakana
+      <td>日语(文字处理器键盘): Katakana
      <tr>
       <td class="code-table-code"><code class="code" id="code-Lang4">"Lang4"</code>
       <td class="code-table-required">否
-      <td>Japanese (word-processing keyboard): Hiragana
+      <td>日语(文字处理器键盘): Hiragana
      <tr>
       <td class="code-table-code"><code class="code" id="code-Lang5">"Lang5"</code>
       <td class="code-table-required">否
-      <td>Japanese (word-processing keyboard): Zenkaku/Hankaku
-     <tr>
-      <td class="code-table-code"><code class="code" id="code-NonConvert">"NonConvert"</code>
-      <td class="code-table-required">是
-      <td>Japanese: <code class="keycap">無変換</code> (<span class="unicode">muhenkan</span>)
+      <td>日语(文字处理器键盘): Zenkaku/Hankaku
    </table>
-   <p>On Apple keyboards，some keys on the bottom row are omitted and
-			others are arranged in a different order.</p>
-   <h3 class="heading settled" data-level="3.2" id="key-controlpad-section"><span class="secno">3.2. </span><span class="content">Control Pad Section</span><a class="self-link" href="#key-controlpad-section"></a></h3>
-   <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="control-pad">控制板</dfn> (control pad) section of the keyboard is the set of (usually 6) keys
-		that perform navigating and editing operations，for example，<code class="keycap">Home</code>, <code class="keycap">PageUp</code> and <code class="keycap">Insert</code> 。</p>
-   <figure id="figure-control-pad">
-     <img alt="Standard Control Pad layouts" height="135" src="images/control-pad.svg" width="495"> 
-    <figcaption>Standard <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad⑧">控制板</a> layouts</figcaption>
-   </figure>
+   <p>在苹果键盘上，底部一行的一些键被省略，
+			未被省略的键则按(和上图)不同的顺序排列。</p>
+   <div class="note custom-note" role="note"> 这些按键主要用于切换输入模式，查阅 <a href="#keyboard-106">§ 2.1.7 日式 "106" 键盘布局</a> 获取更多信息。其中， <code class="code">"<a href="#code-Lang3">Lang3</a>"</code> ~ <code class="code">"<a href="#code-Lang5">Lang5</a>"</code> 属于文字处理器的键盘上的按键，<code class="code">"<a href="#code-Lang1">Lang1</a>"</code> ~ <code class="code">"<a href="#code-Lang5">Lang5</a>"</code> 是可选的，实现可以用这个值支持特殊键盘。更多信息请查阅维基百科 <a href="https://en.wikipedia.org/wiki/Word_processor_(electronic_device)"> word processor</a> 。 </div>
+   <h3 class="heading settled" data-level="3.2" id="key-controlpad-section"><span class="secno">3.2. </span><span class="content">控制板区域</span><a class="self-link" href="#key-controlpad-section"></a></h3>
+   <p>键盘的 <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="control-pad">控制板</dfn> (control pad)区域是一组(通常有
+		6 个键)用于执行导航和编辑操作的按键，例如 <code class="keycap">Home</code> ， <code class="keycap">PageUp</code> 和 <code class="keycap">Insert</code> 。</p>
+   <div class="figure-change" data-content="images/control-pad">
+    <div class="custom-tabs-nav-wrap">
+     <div class="custom-tabs-nav-list">
+      <div class="custom-tabs-tab custom-tabs-tab-active" data-node-key="1">
+       <div class="custom-tabs-tab-btn" tabindex="0">汉化图</div>
+      </div>
+      <div class="custom-tabs-tab" data-node-key="2">
+       <div class="custom-tabs-tab-btn" tabindex="0">原图</div>
+      </div>
+     </div>
+    </div>
+    <figure id="figure-control-pad-zh">
+      <img alt="标准控制板布局" height="135" src="images/control-pad-zh.svg" width="495"> 
+     <figcaption>标准 <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad⑧">控制板</a> 布局</figcaption>
+    </figure>
+    <figure class="figure-hidden" id="figure-control-pad">
+      <img alt="标准控制板布局" height="135" src="images/control-pad.svg" width="495"> 
+     <figcaption>标准 <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad⑨">控制板</a> 布局</figcaption>
+    </figure>
+   </div>
    <table class="data-table full-width" id="table-key-code-controlpad">
-    <caption>List of code values for keys in the ControlPad section.</caption>
+    <caption>在控制板区域的按键的 code 值表。</caption>
     <thead>
      <tr>
       <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#interface-keyboardevent" id="ref-for-interface-keyboardevent②③">KeyboardEvent</a></code>.<code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑨③">code</a></code>
@@ -1805,8 +1835,7 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
      <tr>
       <td class="code-table-code"><code class="code" id="code-Delete">"Delete"</code>
       <td class="code-table-required">是
-      <td><code class="keycap">⌦</code> 。 The forward delete key.							Note that on Apple keyboards，the key labelled <code class="keycap">Delete</code> on the main part of
-							the keyboard should be encoded as <code class="code">"<a href="#code-Backspace">Backspace</a>"</code> 。 
+      <td><code class="keycap">⌦</code> 。 前向删除键。请注意，在苹果键盘上，							键盘的字母数字区域按键标签为 <code class="keycap">Delete</code> 的键应编码为 <code class="code">"<a href="#code-Backspace">Backspace</a>"</code> 。 
      <tr>
       <td class="code-table-code"><code class="code" id="code-End">"End"</code>
       <td class="code-table-required">是
@@ -1814,7 +1843,7 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
      <tr>
       <td class="code-table-code"><code class="code" id="code-Help">"Help"</code>
       <td class="code-table-required">是
-      <td><code class="keycap">Help</code> 。 Not present on standard PC keyboards.
+      <td><code class="keycap">Help</code> 。 标准 PC 键盘上不存在。
      <tr>
       <td class="code-table-code"><code class="code" id="code-Home">"Home"</code>
       <td class="code-table-required">是
@@ -1832,17 +1861,16 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
       <td class="code-table-required">是
       <td><code class="keycap">Page Up</code>，<code class="keycap">PgUp</code> 或 <code class="keycap">⇞</code>
    </table>
-   <p class="note" role="note"> The <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①①">code</a></code> for the <code class="keycap">Fn</code> key (found on some
-		Apple keyboards) is defined below in the <a data-link-type="dfn" href="#function-section" id="ref-for-function-section⑧">功能区域</a>. </p>
-   <h3 class="heading settled" data-level="3.3" id="key-arrowpad-section"><span class="secno">3.3. </span><span class="content">Arrow Pad Section</span><a class="self-link" href="#key-arrowpad-section"></a></h3>
-   <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="arrow-pad">箭头板</dfn> (arrow pad) contains the 4 arrow keys. The keys are commonly
-		arranged in an "upside-down T" configuration.</p>
+   <p class="note" role="note"> <code class="keycap">Fn</code> (常见于苹果标准键盘)键的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①①">code</a></code> 定义在下面的 <a data-link-type="dfn" href="#function-section" id="ref-for-function-section⑧">功能区域</a> 。 </p>
+   <h3 class="heading settled" data-level="3.3" id="key-arrowpad-section"><span class="secno">3.3. </span><span class="content">箭头板区域</span><a class="self-link" href="#key-arrowpad-section"></a></h3>
+   <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="arrow-pad">箭头板</dfn> (arrow pad)区域包含4个箭头键。
+		按键通常以"倒置 T"的配置进行排列。</p>
    <figure id="figure-arrow-pad">
-     <img alt="Standard Arrow Pad layout" height="115" src="images/arrow-pad.svg" width="160"> 
-    <figcaption>Standard <a data-link-type="dfn" href="#arrow-pad" id="ref-for-arrow-pad⑧">箭头板</a> layout</figcaption>
+     <img alt="标准箭头板布局" height="115" src="images/arrow-pad.svg" width="160"> 
+    <figcaption>标准 <a data-link-type="dfn" href="#arrow-pad" id="ref-for-arrow-pad⑧">箭头板</a> 布局</figcaption>
    </figure>
    <table class="data-table full-width" id="table-key-code-arrowpad">
-    <caption>List of code values for keys in the ArrowPad section.</caption>
+    <caption>在箭头板区域的按键的 code 值表。</caption>
     <thead>
      <tr>
       <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#interface-keyboardevent" id="ref-for-interface-keyboardevent②④">KeyboardEvent</a></code>.<code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑨④">code</a></code>
@@ -1866,31 +1894,43 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
       <td class="code-table-required">是
       <td><code class="keycap">↑</code>
    </table>
-   <h3 class="heading settled" data-level="3.4" id="key-numpad-section"><span class="secno">3.4. </span><span class="content">Numpad Section</span><a class="self-link" href="#key-numpad-section"></a></h3>
-   <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="numpad">数字板</dfn> (numpad) section is the set of keys on the keyboard arranged in
-		a grid like a calculator 或 mobile phone. This section contains numeric and
-		mathematical operator keys. Often this section will contain a <code class="keycap">NumLock</code> key which causes the keys to switch between the standard numeric functions
-		and mimicking the keys of the <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad⑨">控制板</a> and <a data-link-type="dfn" href="#arrow-pad" id="ref-for-arrow-pad⑨">箭头板</a>.
-		Laptop computers and compact keyboards will commonly omit these
-		keys to save space.</p>
-   <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="keypad">小键盘</dfn> is an alternate term for <a data-link-type="dfn" href="#numpad" id="ref-for-numpad①①">数字板</a>.</p>
-   <figure id="figure-numpad">
-     <img alt="Standard Numpad layouts" height="247" src="images/numpad.svg" width="606"> 
-    <figcaption>Standard <a data-link-type="dfn" href="#numpad" id="ref-for-numpad①②">数字板</a> Layouts</figcaption>
-   </figure>
-   <p>The <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①②">code</a></code> values in this section should also be
-		used for phone keypads and remote control devices that
-		arrange number keys in a grid.</p>
+   <h3 class="heading settled" data-level="3.4" id="key-numpad-section"><span class="secno">3.4. </span><span class="content">数字板区域</span><a class="self-link" href="#key-numpad-section"></a></h3>
+   <p>在键盘上的 <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="numpad">数字板</dfn> (numpad) 区域是一组按键，
+		排列成网格状，就像计算器或手机那样。本节包含数字和数学运算符键。通常，
+		数字板区域会包含 <code class="keycap">NumLock</code> 键，该键可使数字板中的按键的功能，
+		在标准数字功能和模拟 <a data-link-type="dfn" href="#control-pad" id="ref-for-control-pad①⓪">控制板</a> 与 <a data-link-type="dfn" href="#arrow-pad" id="ref-for-arrow-pad⑨">箭头板</a> 中按键的功能之间进行切换。
+		笔记本电脑和紧凑型键盘通常会省略这些键以节省空间。</p>
+   <div class="note custom-note" role="note"> 关于 <code class="keycap">NumLock</code> 的功能可以参阅 <a href="#wiki-lock-keys">§ 2.5.6 锁定按键</a> 中的数字锁定键。 </div>
+   <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="keypad">小键盘</dfn> (keypad)是 <a data-link-type="dfn" href="#numpad" id="ref-for-numpad①①">数字板</a> 的备用术语。</p>
+   <div class="figure-change" data-content="images/numpad">
+    <div class="custom-tabs-nav-wrap">
+     <div class="custom-tabs-nav-list">
+      <div class="custom-tabs-tab custom-tabs-tab-active" data-node-key="1">
+       <div class="custom-tabs-tab-btn" tabindex="0">汉化图</div>
+      </div>
+      <div class="custom-tabs-tab" data-node-key="2">
+       <div class="custom-tabs-tab-btn" tabindex="0">原图</div>
+      </div>
+     </div>
+    </div>
+    <figure id="figure-numpad-zh">
+      <img alt="标准数字板布局" height="247" src="images/numpad-zh.svg" width="606"> 
+     <figcaption>标准 <a data-link-type="dfn" href="#numpad" id="ref-for-numpad①②">数字板</a> 布局</figcaption>
+    </figure>
+    <figure class="figure-hidden" id="figure-numpad">
+      <img alt="标准数字板布局" height="247" src="images/numpad.svg" width="606"> 
+     <figcaption>标准 <a data-link-type="dfn" href="#numpad" id="ref-for-numpad①③">数字板</a> 布局</figcaption>
+    </figure>
+   </div>
+   <p>本节中的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①②">code</a></code> 值也应用于手机小键盘和遥控设备中在网格上排列的数字键。</p>
    <figure id="figure-numpad-mobile">
-     <img alt="Standard mobile keypad layout" height="180" src="images/numpad-mobile.svg" width="135"> 
-    <figcaption>Standard Mobile Keypad Layout</figcaption>
+     <img alt="标准移动设备小键盘布局" height="180" src="images/numpad-mobile.svg" width="135"> 
+    <figcaption>标准移动设备小键盘布局</figcaption>
    </figure>
-   <p>The standard <a data-link-type="dfn" href="#numpad" id="ref-for-numpad①③">数字板</a> is sometimes extended with additional keys for
-		parentheses，operators，hexadecimal symbols，or calculator functions
-		(like <code class="keycap">Backspace</code>). Some of the commonly added keys are listed
-		in the table below.</p>
+   <p>标准 <a data-link-type="dfn" href="#numpad" id="ref-for-numpad①④">数字板</a> 有时包含括号(parentheses)、运算符(operators)、
+		十六进制符号(hexadecimal symbols)或计算器函数键(calculator functions，如 <code class="keycap">Backspace</code> )这些附加键以扩展。下表列出了一些常用的附加键。</p>
    <table class="data-table full-width" id="table-key-code-numpad">
-    <caption>List of code values for keys in the Numpad section.</caption>
+    <caption>在数字板区域的按键的 code 值表。</caption>
     <thead>
      <tr>
       <th style="width:20%"><code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#interface-keyboardevent" id="ref-for-interface-keyboardevent②⑤">KeyboardEvent</a></code>.<code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑨⑤">code</a></code>
@@ -1900,47 +1940,47 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
      <tr>
       <td class="code-table-code"><code class="code" id="code-NumLock">"NumLock"</code>
       <td class="code-table-required">是
-      <td>On the Mac，the <code class="code">"<a href="#code-NumLock">NumLock</a>"</code> code should be used for the <a data-link-type="dfn" href="#numpad" id="ref-for-numpad①④">数字板</a> <code class="keycap">Clear</code> key. 
+      <td>在 Mac 中，<code class="code">"<a href="#code-NumLock">NumLock</a>"</code> 码应当用于数字板中的 <code class="keycap">Clear</code> 键。 
      <tr>
       <td class="code-table-code"><code class="code" id="code-Numpad0">"Numpad0"</code>
       <td class="code-table-required">是
-      <td><code class="keycap">0 Ins</code> on a keyboard<br><code class="keycap">0</code> on a phone 或 remote control
+      <td>在标准键盘上的按键键帽标签是 <code class="keycap">0 Ins</code> <br> 在移动设备或遥控器上的按键键帽标签是 <code class="keycap">0</code> 
      <tr>
       <td class="code-table-code"><code class="code" id="code-Numpad1">"Numpad1"</code>
       <td class="code-table-required">是
-      <td><code class="keycap">1 End</code> on a keyboard<br><code class="keycap">1</code> 或 <code class="keycap">1 QZ</code> on a phone or										remote control 
+      <td>在标准键盘上的按键键帽标签是 <code class="keycap">1 End</code> <br> 在移动设备或遥控器上的按键键帽标签是 <code class="keycap">1</code> 或 <code class="keycap">1 QZ</code> 
      <tr>
       <td class="code-table-code"><code class="code" id="code-Numpad2">"Numpad2"</code>
       <td class="code-table-required">是
-      <td><code class="keycap">2 ↓</code> on a keyboard<br><code class="keycap">2 ABC</code> on a phone 或 remote control
+      <td>在标准键盘上的按键键帽标签是 <code class="keycap">2 ↓</code> <br> 在移动设备或遥控器上的按键键帽标签是 <code class="keycap">2 ABC</code> 
      <tr>
       <td class="code-table-code"><code class="code" id="code-Numpad3">"Numpad3"</code>
       <td class="code-table-required">是
-      <td><code class="keycap">3 PgDn</code> on a keyboard<br><code class="keycap">3 DEF</code> on a phone 或 remote control
+      <td>在标准键盘上的按键键帽标签是 <code class="keycap">3 PgDn</code> <br> 在移动设备或遥控器上的按键键帽标签是 <code class="keycap">3 DEF</code> 
      <tr>
       <td class="code-table-code"><code class="code" id="code-Numpad4">"Numpad4"</code>
       <td class="code-table-required">是
-      <td><code class="keycap">4 ←</code> on a keyboard<br><code class="keycap">4 GHI</code> on a phone 或 remote control
+      <td>在标准键盘上的按键键帽标签是 <code class="keycap">4 ←</code> <br> 在移动设备或遥控器上的按键键帽标签是 <code class="keycap">4 GHI</code> 
      <tr>
       <td class="code-table-code"><code class="code" id="code-Numpad5">"Numpad5"</code>
       <td class="code-table-required">是
-      <td><code class="keycap">5</code> on a keyboard<br><code class="keycap">5 JKL</code> on a phone 或 remote control
+      <td>在标准键盘上的按键键帽标签是 <code class="keycap">5</code> <br> 在移动设备或遥控器上的按键键帽标签是 <code class="keycap">5 JKL</code> 
      <tr>
       <td class="code-table-code"><code class="code" id="code-Numpad6">"Numpad6"</code>
       <td class="code-table-required">是
-      <td><code class="keycap">6 →</code> on a keyboard<br><code class="keycap">6 MNO</code> on a phone 或 remote control
+      <td>在标准键盘上的按键键帽标签是 <code class="keycap">6 →</code> <br> 在移动设备或遥控器上的按键键帽标签是 <code class="keycap">6 MNO</code> 
      <tr>
       <td class="code-table-code"><code class="code" id="code-Numpad7">"Numpad7"</code>
       <td class="code-table-required">是
-      <td><code class="keycap">7 Home</code> on a keyboard<br><code class="keycap">7 PQRS</code> 或 <code class="keycap">7 PRS</code> on a phone										or remote control 
+      <td>在标准键盘上的按键键帽标签是 <code class="keycap">7 Home</code> <br> 在移动设备或遥控器上的按键键帽标签是 <code class="keycap">7 PQRS</code> 或 <code class="keycap">7 PRS</code> 
      <tr>
       <td class="code-table-code"><code class="code" id="code-Numpad8">"Numpad8"</code>
       <td class="code-table-required">是
-      <td><code class="keycap">8 ↑</code> on a keyboard<br><code class="keycap">8 TUV</code> on a phone 或 remote control
+      <td>在标准键盘上的按键键帽标签是 <code class="keycap">8 ↑</code> <br> 在移动设备或遥控器上的按键键帽标签是 <code class="keycap">8 TUV</code> 
      <tr>
       <td class="code-table-code"><code class="code" id="code-Numpad9">"Numpad9"</code>
       <td class="code-table-required">是
-      <td><code class="keycap">9 PgUp</code> on a keyboard<br><code class="keycap">9 WXYZ</code> 或 <code class="keycap">9 WXY</code> on a phone										or remote control 
+      <td>在标准键盘上的按键键帽标签是 <code class="keycap">9 PgUp</code> <br> 在移动设备或遥控器上的按键键帽标签是 <code class="keycap">9 WXYZ</code> 或 <code class="keycap">9 WXY</code> 
      <tr>
       <td class="code-table-code"><code class="code" id="code-NumpadAdd">"NumpadAdd"</code>
       <td class="code-table-required">是
@@ -1948,24 +1988,28 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
      <tr>
       <td class="code-table-code"><code class="code" id="code-NumpadBackspace">"NumpadBackspace"</code>
       <td class="code-table-required">否
-      <td>Found on the Microsoft Natural Keyboard.
+      <td>出现在微软自然键盘(Microsoft Natural 										Keyboard)中。 
      <tr>
       <td class="code-table-code"><code class="code" id="code-NumpadClear">"NumpadClear"</code>
       <td class="code-table-required">否
-      <td><code class="keycap">C</code> 或 <code class="keycap">AC</code> (All Clear). Also for use with <a data-link-type="dfn" href="#numpad" id="ref-for-numpad①⑤">数字板</a> that have a <code class="keycap">Clear</code> key that is separate from the <code class="keycap">NumLock</code> key. On the Mac，the <a data-link-type="dfn" href="#numpad" id="ref-for-numpad①⑥">数字板</a> <code class="keycap">Clear</code> key should always
-										be encoded as <code class="code">"<a href="#code-NumLock">NumLock</a>"</code> 。 
+      <td><code class="keycap">C</code> 或 <code class="keycap">AC</code> (All Clear，全部清除)。										用于在 <a data-link-type="dfn" href="#numpad" id="ref-for-numpad①⑤">数字板</a> 中已有一个 <code class="keycap">NumLock</code> 键的情况下，
+										还需要有一个 <code class="keycap">Clear</code> 时，使用 <code class="code">"<a href="#code-NumpadClear">NumpadClear</a>"</code> 进行区分。因为在 Mac 中，<code class="code">"<a href="#code-NumLock">NumLock</a>"</code> 码总是用于 <a data-link-type="dfn" href="#numpad" id="ref-for-numpad①⑥">数字板</a> 中的 <code class="keycap">Clear</code> 键。 
      <tr>
       <td class="code-table-code"><code class="code" id="code-NumpadClearEntry">"NumpadClearEntry"</code>
       <td class="code-table-required">否
-      <td><code class="keycap">CE</code> (Clear Entry)
+      <td><code class="keycap">CE</code> (Clear Entry，清除输入)
      <tr>
       <td class="code-table-code"><code class="code" id="code-NumpadComma">"NumpadComma"</code>
       <td class="code-table-required">否
-      <td><code class="keycap">,</code> (thousands separator). For locales where the thousands separator										is a "." (e.g.，Brazil)，this key may generate a <code class="keycap">.</code> 。 
+      <td><code class="keycap">,</code> (千位分隔符). 对于千位分隔符是 "."的地区										(例如，巴西)，这个按键键帽标签是 <code class="keycap">.</code> 。(非规范补充: 
+										与键入字符对应，见 <a href="#keyboard-104-note">巴西 "104" 
+										键盘的非规范注释</a> ) 
      <tr>
       <td class="code-table-code"><code class="code" id="code-NumpadDecimal">"NumpadDecimal"</code>
       <td class="code-table-required">是
-      <td><code class="keycap">. Del</code> 。 For locales where the decimal separator is "," (e.g.,										Brazil)，this key may generate a <code class="keycap">,</code> 。 
+      <td><code class="keycap">. Del</code> 。 对于小数点分隔符是 "."的地区										(例如，巴西)，这个按键键帽标签是 <code class="keycap">,</code> 。(非规范补充: 
+										与键入字符对应，见 <a href="#keyboard-104-note">巴西 "104" 
+										键盘的非规范注释</a> ) 
      <tr>
       <td class="code-table-code"><code class="code" id="code-NumpadDivide">"NumpadDivide"</code>
       <td class="code-table-required">是
@@ -1981,60 +2025,60 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
      <tr>
       <td class="code-table-code"><code class="code" id="code-NumpadHash">"NumpadHash"</code>
       <td class="code-table-required">否
-      <td><code class="keycap">#</code> on a phone 或 remote control device. This key is typically found										below the <code class="keycap">9</code> key and to the right of the <code class="keycap">0</code> key. 
+      <td>在标准键盘上的按键键帽标签是 <code class="keycap">#</code> 。 										此按键通常位于 <code class="keycap">9</code> 键的下方和 <code class="keycap">0</code> 键右侧。
+										(非规范补充: 见 <a href="#figure-numeric-keypad">通用移动键盘的图形描述</a> ) 
      <tr>
       <td class="code-table-code"><code class="code" id="code-NumpadMemoryAdd">"NumpadMemoryAdd"</code>
       <td class="code-table-required">否
-      <td><code class="keycap">M+</code> Add current entry to the value stored in memory.
+      <td><code class="keycap">M+</code> 将当前计算结果(current entry										)添加到存储在内存的一个值中。 
      <tr>
       <td class="code-table-code"><code class="code" id="code-NumpadMemoryClear">"NumpadMemoryClear"</code>
       <td class="code-table-required">否
-      <td><code class="keycap">MC</code> Clear the value stored in memory.
+      <td><code class="keycap">MC</code> 清除存储在内存中的										(那个保存计算结果的)值。 
      <tr>
       <td class="code-table-code"><code class="code" id="code-NumpadMemoryRecall">"NumpadMemoryRecall"</code>
       <td class="code-table-required">否
-      <td><code class="keycap">MR</code> Replace the current entry with the value stored in memory.
+      <td><code class="keycap">MR</code> 将当前计算结果(current entry										)替换成存储在内存中的那个值(存储好的上一次计算结果)。 
      <tr>
       <td class="code-table-code"><code class="code" id="code-NumpadMemoryStore">"NumpadMemoryStore"</code>
       <td class="code-table-required">否
-      <td><code class="keycap">MS</code> Replace the value stored in memory with the current entry.
+      <td><code class="keycap">MS</code> 将存储在内存中的那个值替换成当前计算结果(current entry)。 
      <tr>
       <td class="code-table-code"><code class="code" id="code-NumpadMemorySubtract">"NumpadMemorySubtract"</code>
       <td class="code-table-required">否
-      <td><code class="keycap">M-</code> Subtract current entry from the value stored in memory.
+      <td><code class="keycap">M-</code> 让存储在内存中的那个值										(存储好的上一次计算结果)中减去当前计算结果(current entry)。 
      <tr>
       <td class="code-table-code"><code class="code" id="code-NumpadMultiply">"NumpadMultiply"</code>
       <td class="code-table-required">是
-      <td><code class="keycap">*</code> on a keyboard. For use with <a data-link-type="dfn" href="#numpad" id="ref-for-numpad①⑦">数字板</a> that provide mathematical										operations (<code class="keycap">+</code>，<code class="keycap">-</code>，<code class="keycap">*</code> and <code class="keycap">/</code>).<br>Use <code class="code">"<a href="#code-NumpadStar">NumpadStar</a>"</code> for the <code class="keycap">*</code> key on phones and remote controls. 
+      <td>在标准键盘上的按键键帽标签是 <code class="keycap">*</code> 。										包含数学运算功能( <code class="keycap">+</code> ， <code class="keycap">-</code> ， <code class="keycap">*</code> 和 <code class="keycap">/</code>)的 <a data-link-type="dfn" href="#numpad" id="ref-for-numpad①⑦">数字板</a> 拥有此按键。 <br> 在移动设备或遥控器上，拥有相同键帽标签( <code class="keycap">*</code> )的按键的 <code>code</code> 值是 <code class="code">"<a href="#code-NumpadStar">NumpadStar</a>"</code> 。 
      <tr>
       <td class="code-table-code"><code class="code" id="code-NumpadParenLeft">"NumpadParenLeft"</code>
       <td class="code-table-required">否
-      <td><code class="keycap">(</code> Found on the Microsoft Natural Keyboard.
+      <td><code class="keycap">(</code> 出现在微软自然键盘(Microsoft Natural 										Keyboard)中。 
      <tr>
       <td class="code-table-code"><code class="code" id="code-NumpadParenRight">"NumpadParenRight"</code>
       <td class="code-table-required">否
-      <td><code class="keycap">)</code> Found on the Microsoft Natural Keyboard.
+      <td><code class="keycap">)</code> 出现在微软自然键盘(Microsoft Natural 										Keyboard)中。 
      <tr>
       <td class="code-table-code"><code class="code" id="code-NumpadStar">"NumpadStar"</code>
       <td class="code-table-required">否
-      <td><code class="keycap">*</code> on a phone 或 remote control device.										This key is typically found below the <code class="keycap">7</code> key and to the left of
-										the <code class="keycap">0</code> key.<br>Use <code class="code">"<a href="#code-NumpadMultiply">NumpadMultiply</a>"</code> for the <code class="keycap">*</code> key on
-										numeric keypads. 
+      <td>在移动设备或遥控器上的按键键帽标签是 <code class="keycap">*</code> 。										此按键通常位于 <code class="keycap">7</code> 键的下方和 <code class="keycap">0</code> 键左侧。
+										(非规范补充: 见 <a href="#figure-numeric-keypad">通用移动键盘的图形描述</a> ) <br> 在标准键盘的数字键盘上，拥有相同键帽标签( <code class="keycap">*</code> )的按键的 <code>code</code> 值是 <code class="code">"<a href="#code-NumpadMultiply">NumpadMultiply</a>"</code> 。 
      <tr>
       <td class="code-table-code"><code class="code" id="code-NumpadSubtract">"NumpadSubtract"</code>
       <td class="code-table-required">是
       <td><code class="keycap">-</code>
    </table>
-   <p>For <a data-link-type="dfn" href="#numpad" id="ref-for-numpad①⑧">数字板</a> that provide keys not listed here，a <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①③">code</a></code> value string should be created by starting
-		with "Numpad" and appending an appropriate description of the key.</p>
+   <p>对于 <a data-link-type="dfn" href="#numpad" id="ref-for-numpad①⑧">数字板</a> 提供的，没有列在此处的按键，应通过以"Numpad"
+		开头并附加按键的适当描述来创建 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①③">code</a></code> 值字符串。</p>
    <h3 class="heading settled" data-level="3.5" id="key-function-section"><span class="secno">3.5. </span><span class="content">Function Section</span><a class="self-link" href="#key-function-section"></a></h3>
-   <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="function-section">功能区域</dfn> (function section) runs along the top of the keyboard (above
-		the <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section①③">字母数字区域</a> ) and
-		contains the <a data-link-type="dfn" href="#function-key" id="ref-for-function-key②">功能键③</a> and a few additional special keys
-		(for example，<code class="keycap">Esc</code> and <code class="keycap">Print Screen</code>).</p>
-   <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="function-key">功能键③</dfn> is any of the keys labelled <code class="keycap">F1</code> ... <code class="keycap">F12</code> that an application 或 operating system can associate with a custom function
-		or action.</p>
-   <p>On some keyboards (especially those found on laptops 或 other
+    <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="function-section">功能区域</dfn> (function section)靠着键盘顶部(在 <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section①③">字母数字区域</a> 之上) 并包含有 <a data-link-type="dfn" href="#function-key" id="ref-for-function-key②">功能键③</a> 以及一些附加的特殊键(例如 <code class="keycap">Esc</code> 和 <code class="keycap">Print Screen</code> )。 
+   <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="function-key">功能键③</dfn> 是键帽标签为 <code class="keycap">F1</code> ... <code class="keycap">F12</code> 的键，应用程序或操作系统可以利用这些按键关联自定义功能或操作。</p>
+   <p>在一些键盘上（尤其是笔记本电脑上的键盘或 其他便携式计算机）功能键③
+		（F1…F12）被定义为具有其他主要功能（例如控制显示亮度或 音频音量），
+		并且要求按下单独的Fn键以使它们充当功能键。不幸的是，分配给这些钥匙的主要功能因制造商而异。
+		因此，代码总是设置为功能键③ 名称
+		On some keyboards (especially those found on laptops 或 other
 		portable computers)，the <a data-link-type="dfn" href="#function-key" id="ref-for-function-key③">功能键③</a> (<code class="keycap">F1</code> ... <code class="keycap">F12</code>) are defined to have other primary functions (like
 		controlling display brightness 或 audio volume) and require that a
 		separate <code class="keycap">Fn</code> key be pressed to make them act as function
@@ -2341,11 +2385,11 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
      <tr>
       <td class="code-table-code"><code class="code" id="code-Hiragana">"Hiragana"</code>
       <td class="code-table-required">否
-      <td>Use for dedicated <code class="keycap">ひらがな</code> key found on some Japanese word processing keyboards.
+      <td>Use for dedicated <code class="keycap">ひらがな</code> key found on some 日语 word processing keyboards.
      <tr>
       <td class="code-table-code"><code class="code" id="code-Katakana">"Katakana"</code>
       <td class="code-table-required">否
-      <td>Use for dedicated <code class="keycap">カタカナ</code> key found on some Japanese word processing keyboards.
+      <td>Use for dedicated <code class="keycap">カタカナ</code> key found on some 日语 word processing keyboards.
    </table>
    <p>And finally，the following <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⑨">code</a></code> value should only
 		be used when the corresponding key does not correspond to any of the <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②⓪">code</a></code> values given elsewhere in this specification.
@@ -2514,8 +2558,8 @@ something specific to the values defined in this document</p>
     <li><a href="#ref-for-dom-keyboardevent-code⑤">3. 键盘事件 code 值表格</a> <a href="#ref-for-dom-keyboardevent-code⑥">(2)</a>
     <li><a href="#ref-for-dom-keyboardevent-code⑦">3.1.1. 书写系统键</a> <a href="#ref-for-dom-keyboardevent-code⑧">(2)</a>
     <li><a href="#ref-for-dom-keyboardevent-code①⓪">3.1.2. 功能键</a>
-    <li><a href="#ref-for-dom-keyboardevent-code①①">3.2. Control Pad Section</a>
-    <li><a href="#ref-for-dom-keyboardevent-code①②">3.4. Numpad Section</a> <a href="#ref-for-dom-keyboardevent-code①③">(2)</a>
+    <li><a href="#ref-for-dom-keyboardevent-code①①">3.2. 控制板区域</a>
+    <li><a href="#ref-for-dom-keyboardevent-code①②">3.4. 数字板区域</a> <a href="#ref-for-dom-keyboardevent-code①③">(2)</a>
     <li><a href="#ref-for-dom-keyboardevent-code①④">3.5. Function Section</a> <a href="#ref-for-dom-keyboardevent-code①⑤">(2)</a> <a href="#ref-for-dom-keyboardevent-code①⑥">(3)</a>
     <li><a href="#ref-for-dom-keyboardevent-code①⑦">3.6. Media Keys</a> <a href="#ref-for-dom-keyboardevent-code①⑧">(2)</a>
     <li><a href="#ref-for-dom-keyboardevent-code①⑨">3.7. Legacy，Non-Standard and Special Keys</a> <a href="#ref-for-dom-keyboardevent-code②⓪">(2)</a>
@@ -2587,7 +2631,7 @@ something specific to the values defined in this document</p>
    <ul>
     <li><a href="#ref-for-fun-keys">2.5.4. 系统和 GUI 键</a>
     <li><a href="#ref-for-fun-keys①">2.5.6. 锁定按键</a>
-    <li><a href="#ref-for-fun-keys②">3.1.2. 功能键</a> <a href="#ref-for-fun-keys③">(2)</a>
+    <li><a href="#ref-for-fun-keys②">3.1.2. 功能键</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-alnum-keys" class="dfn-panel" data-for="alnum-keys" id="infopanel-for-alnum-keys">
@@ -2680,7 +2724,7 @@ something specific to the values defined in this document</p>
    <span id="infopaneltitle-for-functional-keys" style="display:none">Info about the '功能键②' definition.</span><b><a href="#functional-keys">#functional-keys</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-functional-keys">3.1. 字母数字区域</a>
-    <li><a href="#ref-for-functional-keys①">3.1.2. 功能键</a> <a href="#ref-for-functional-keys②">(2)</a>
+    <li><a href="#ref-for-functional-keys①">3.1.2. 功能键</a> <a href="#ref-for-functional-keys②">(2)</a> <a href="#ref-for-functional-keys③">(3)</a> <a href="#ref-for-functional-keys④">(4)</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-control-pad" class="dfn-panel" data-for="control-pad" id="infopanel-for-control-pad">
@@ -2694,8 +2738,8 @@ something specific to the values defined in this document</p>
     <li><a href="#ref-for-control-pad⑤">2.1.6. 巴西 "104" 键盘布局</a>
     <li><a href="#ref-for-control-pad⑥">2.1.7. 日式 "106" 键盘布局</a>
     <li><a href="#ref-for-control-pad⑦">2.1.9. 笔记本电脑键盘布局</a>
-    <li><a href="#ref-for-control-pad⑧">3.2. Control Pad Section</a>
-    <li><a href="#ref-for-control-pad⑨">3.4. Numpad Section</a>
+    <li><a href="#ref-for-control-pad⑧">3.2. 控制板区域</a> <a href="#ref-for-control-pad⑨">(2)</a>
+    <li><a href="#ref-for-control-pad①⓪">3.4. 数字板区域</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-arrow-pad" class="dfn-panel" data-for="arrow-pad" id="infopanel-for-arrow-pad">
@@ -2709,8 +2753,8 @@ something specific to the values defined in this document</p>
     <li><a href="#ref-for-arrow-pad⑤">2.1.6. 巴西 "104" 键盘布局</a>
     <li><a href="#ref-for-arrow-pad⑥">2.1.7. 日式 "106" 键盘布局</a>
     <li><a href="#ref-for-arrow-pad⑦">2.1.9. 笔记本电脑键盘布局</a>
-    <li><a href="#ref-for-arrow-pad⑧">3.3. Arrow Pad Section</a>
-    <li><a href="#ref-for-arrow-pad⑨">3.4. Numpad Section</a>
+    <li><a href="#ref-for-arrow-pad⑧">3.3. 箭头板区域</a>
+    <li><a href="#ref-for-arrow-pad⑨">3.4. 数字板区域</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-numpad" class="dfn-panel" data-for="numpad" id="infopanel-for-numpad">
@@ -2723,7 +2767,7 @@ something specific to the values defined in this document</p>
     <li><a href="#ref-for-numpad④">2.1.5. 韩式 "103" 键盘布局</a>
     <li><a href="#ref-for-numpad⑤">2.1.6. 巴西 "104" 键盘布局</a> <a href="#ref-for-numpad⑥">(2)</a> <a href="#ref-for-numpad⑦">(3)</a> <a href="#ref-for-numpad⑧">(4)</a> <a href="#ref-for-numpad⑨">(5)</a>
     <li><a href="#ref-for-numpad①⓪">2.1.7. 日式 "106" 键盘布局</a>
-    <li><a href="#ref-for-numpad①①">3.4. Numpad Section</a> <a href="#ref-for-numpad①②">(2)</a> <a href="#ref-for-numpad①③">(3)</a> <a href="#ref-for-numpad①④">(4)</a> <a href="#ref-for-numpad①⑤">(5)</a> <a href="#ref-for-numpad①⑥">(6)</a> <a href="#ref-for-numpad①⑦">(7)</a> <a href="#ref-for-numpad①⑧">(8)</a>
+    <li><a href="#ref-for-numpad①①">3.4. 数字板区域</a> <a href="#ref-for-numpad①②">(2)</a> <a href="#ref-for-numpad①③">(3)</a> <a href="#ref-for-numpad①④">(4)</a> <a href="#ref-for-numpad①⑤">(5)</a> <a href="#ref-for-numpad①⑥">(6)</a> <a href="#ref-for-numpad①⑦">(7)</a> <a href="#ref-for-numpad①⑧">(8)</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-keypad" class="dfn-panel" data-for="keypad" id="infopanel-for-keypad">
@@ -2743,7 +2787,7 @@ something specific to the values defined in this document</p>
     <li><a href="#ref-for-function-section⑤">2.1.5. 韩式 "103" 键盘布局</a>
     <li><a href="#ref-for-function-section⑥">2.1.6. 巴西 "104" 键盘布局</a>
     <li><a href="#ref-for-function-section⑦">2.1.7. 日式 "106" 键盘布局</a>
-    <li><a href="#ref-for-function-section⑧">3.2. Control Pad Section</a>
+    <li><a href="#ref-for-function-section⑧">3.2. 控制板区域</a>
     <li><a href="#ref-for-function-section⑨">3.5. Function Section</a> <a href="#ref-for-function-section①⓪">(2)</a>
     <li><a href="#ref-for-function-section①①">3.6. Media Keys</a> <a href="#ref-for-function-section①②">(2)</a>
    </ul>

@@ -21,7 +21,7 @@ Text Macro: LONGSTATUS 翻译草案
 !历史记录: <a href="https://www.w3.org/standards/history/uievents-code">https://www.w3.org/standards/history/uievents-code</a>
 !规范反馈: <a href="https://github.com/w3c/uievents-code/issues/">GitHub-w3c-uievents-code-issues</a>
 !翻译反馈: <a href="https://github.com/mangwu/uievents-code-cn/issues/">GitHub-mangwu-uievents-code-cn-issues</a>
-!实现报告: <a href="https://mangwu.github.io/uievents-code/impl-report.html">https://mangwu.github.io/uievents-code-cn/impl-report.html</a>
+!实现报告: <a href="https://mangwu.github.io/uievents-code-cn/impl-report.html">https://mangwu.github.io/uievents-code-cn/impl-report.html</a>
 !编辑者: 
 	<a class="p-name fn u-email email" href="mailto:garykac@google.com">Gary Kacmarcik</a>(Google)
 	<a class="p-name fn u-email email" href="mailto:travisleithead@hotmail.com">Travis Leithead</a>(Invited Expert)
@@ -358,8 +358,8 @@ path: stylesheet-extra.include
 
 			韩语 "103" 键盘基于备用 "101" 键盘布局，并添加了两个额外的键
 			(空格键两侧各一个)来处理韩语特定的输入模式。这两个按键是 CODE{Lang2} 
-			("Hanja"，键帽为 KEYCAP{한자} ，发音为 PHONETIC{hanja})和CODE{Lang2}
-			("HangulMode"，键帽为 KEYCAP{한/영} ，发音为 PHONETIC{han/yeong}) 。
+			("Hanja"，键帽为 KEYCAP{한자} ，发音为 PHONETIC{hanja} )和 CODE{Lang1}
+			("HangulMode"，键帽为 KEYCAP{한/영} ，发音为 PHONETIC{han/yeong} ) 。
 
 			<p class="note custom-note">
 			实际上 KEYCAP{한자} (Hanja) 也就是汉字的意思，这里表示朝鲜汉字，而
@@ -394,7 +394,7 @@ path: stylesheet-extra.include
 			[=数字板=] 、 [=控制板=] 、 [=箭头板=] 和 [=功能区域=] 有 44 个键。
 			一些巴西键盘的 [=小键盘=] 上( [=数字板=] )没有额外的按键，只有106个键。
 
-			<p class="note custom-note">
+			<p class="note custom-note" id="keyboard-104-note">
 			巴西的键盘以 "102" 键盘布局为基础，从 <code>code</code> 值上看，和 "102"
 			键盘布局相同 <code>code</code> 值的两个按键(位于大 KEYCAP{Enter} 下方的
 			CODE{Backslash} 和在 KEYCAP{ShiftLeft} 和 KEYCAP{Z} 之间的 
@@ -1383,45 +1383,91 @@ path: stylesheet-extra.include
 			尽管这些日语和韩语键中的一些键在键盘上占据相同的物理位置，但它们使用不同的 
 			{{KeyboardEvent/code}} 值。
 
-			<figure id="figure-function-row-a">
+			<div class="figure-change"  data-content="images/figure-function-row-a">
+			<div class="custom-tabs-nav-wrap">
+					<div class="custom-tabs-nav-list">
+							<div data-node-key="1" class="custom-tabs-tab custom-tabs-tab-active">
+									<div class="custom-tabs-tab-btn" tabindex="0">汉化图</div>
+							</div>
+							<div data-node-key="2" class="custom-tabs-tab">
+									<div class="custom-tabs-tab-btn" tabindex="0">原图</div>
+							</div>
+					</div>
+			</div>
+			<figure id="figure-function-row-a-zh">
+				<img src="images/functional-row-a-zh.svg" width="700" height="160" 
+				alt="在不同的键盘上底部一行的 [=功能键②=] 对比" />
+				<figcaption>在不同的键盘上底部一行的 [=功能键②=] 对比</figcaption>
+			</figure>
+			<figure id="figure-function-row-a" class="figure-hidden">
 				<img src="images/functional-row-a.svg" width="700" height="160" 
 				alt="在不同的键盘上底部一行的 [=功能键②=] 对比" />
 				<figcaption>在不同的键盘上底部一行的 [=功能键②=] 对比</figcaption>
 			</figure>
+			</div>
+			
 
 			BEGIN_CODE_TABLE alphanumeric-functional-2 "在日式和韩式键盘的额外功能键的 code 值表。"
-				CODE Convert		Japanese: KEYCAP{変換} (PHONETIC{henkan})
-				CODE KanaMode		Japanese: KEYCAP{カタカナ/ひらがな/ローマ字} (PHONETIC{katakana/hiragana/romaji})
-				CODE_OPT Lang1		Korean: HangulMode KEYCAP{한/영} (PHONETIC{han/yeong})<br/>Japanese (Mac keyboard):
-									KEYCAP{かな} (PHONETIC{kana})
-				CODE_OPT Lang2		Korean: Hanja KEYCAP{한자} (PHONETIC{hanja})<br/>Japanese (Mac keyboard):
-									KEYCAP{英数} (PHONETIC{eisu})
-				CODE_OPT Lang3		Japanese (word-processing keyboard): Katakana
-				CODE_OPT Lang4		Japanese (word-processing keyboard): Hiragana
-				CODE_OPT Lang5		Japanese (word-processing keyboard): Zenkaku/Hankaku
-				CODE NonConvert 	Japanese: KEYCAP{無変換} (PHONETIC{muhenkan})
+				CODE NonConvert 	日语: KEYCAP{無変換} ( PHONETIC{muhenkan} )
+				CODE Convert		日语: KEYCAP{変換} ( PHONETIC{henkan} )
+				CODE KanaMode		日语: KEYCAP{カタカナ/ひらがな/ローマ字} ( 
+									PHONETIC{katakana/hiragana/romaji} )
+				CODE_OPT Lang1		韩语: HangulMode KEYCAP{한/영} ( PHONETIC{han/yeong} )
+									<br/>日语 (Mac 键盘): KEYCAP{かな} ( PHONETIC{kana} )
+				CODE_OPT Lang2		韩语: Hanja KEYCAP{한자} ( PHONETIC{hanja} )<br/>
+									日语(Mac keyboard): KEYCAP{英数} ( PHONETIC{eisu} )
+				CODE_OPT Lang3		日语(文字处理器键盘): Katakana
+				CODE_OPT Lang4		日语(文字处理器键盘): Hiragana
+				CODE_OPT Lang5		日语(文字处理器键盘): Zenkaku/Hankaku
 			END_CODE_TABLE
 
-			On Apple keyboards，some keys on the bottom row are omitted and
-			others are arranged in a different order.
+			在苹果键盘上，底部一行的一些键被省略，
+			未被省略的键则按(和上图)不同的顺序排列。
 
-	<h3 id="key-controlpad-section">Control Pad Section</h3>
+			<div class="note custom-note">
+			这些按键主要用于切换输入模式，查阅 [[#keyboard-106]] 获取更多信息。其中，
+			CODE{Lang3} ~ CODE{Lang5} 属于文字处理器的键盘上的按键，CODE{Lang1} ~ 
+			CODE{Lang5} 是可选的，实现可以用这个值支持特殊键盘。更多信息请查阅维基百科 
+			<a href="https://en.wikipedia.org/wiki/Word_processor_(electronic_device)">
+			word processor</a> 。
+			</div>
+			
+	<h3 id="key-controlpad-section">控制板区域</h3>
 
-		The <dfn id="control-pad">控制板</dfn> (control pad) section of the keyboard is the set of (usually 6) keys
-		that perform navigating and editing operations，for example，KEYCAP{Home},
-		KEYCAP{PageUp} and KEYCAP{Insert} 。
+		键盘的 <dfn id="control-pad">控制板</dfn> (control pad)区域是一组(通常有 
+		6 个键)用于执行导航和编辑操作的按键，例如 KEYCAP{Home} ， KEYCAP{PageUp} 和
+		KEYCAP{Insert} 。
 
-		<figure id="figure-control-pad">
-			<img src="images/control-pad.svg" width="495" height="135" alt="Standard Control Pad layouts" />
-			<figcaption>Standard [=控制板=] layouts</figcaption>
+		<div class="figure-change"  data-content="images/control-pad">
+		<div class="custom-tabs-nav-wrap">
+				<div class="custom-tabs-nav-list">
+						<div data-node-key="1" class="custom-tabs-tab custom-tabs-tab-active">
+								<div class="custom-tabs-tab-btn" tabindex="0">汉化图</div>
+						</div>
+						<div data-node-key="2" class="custom-tabs-tab">
+								<div class="custom-tabs-tab-btn" tabindex="0">原图</div>
+						</div>
+				</div>
+		</div>
+		<figure id="figure-control-pad-zh">
+			<img src="images/control-pad-zh.svg" width="495" height="135" 
+			alt="标准控制板布局" />
+			<figcaption>标准 [=控制板=] 布局</figcaption>
 		</figure>
+		<figure id="figure-control-pad" class="figure-hidden">
+			<img src="images/control-pad.svg" width="495" height="135" 
+			alt="标准控制板布局" />
+			<figcaption>标准 [=控制板=] 布局</figcaption>
+		</figure>
+		</div>
+		
 
-		BEGIN_CODE_TABLE controlpad "List of code values for keys in the ControlPad section."
-			CODE Delete		KEYCAP{&#8998;} 。 The forward delete key.
-							Note that on Apple keyboards，the key labelled KEYCAP{Delete} on the main part of
-							the keyboard should be encoded as CODE{Backspace} 。
+		BEGIN_CODE_TABLE controlpad "在控制板区域的按键的 code 值表。"
+			CODE Delete		KEYCAP{&#8998;} 。 前向删除键。请注意，在苹果键盘上，
+							键盘的字母数字区域按键标签为 KEYCAP{Delete} 的键应编码为 
+							CODE{Backspace} 。
 			CODE End		KEYCAP{End} 或 KEYCAP{&#8600;}
-			CODE Help		KEYCAP{Help} 。 Not present on standard PC keyboards.
+			CODE Help		KEYCAP{Help} 。 标准 PC 键盘上不存在。
 			CODE Home		KEYCAP{Home} 或 KEYCAP{&#8598;}
 			CODE Insert		KEYCAP{Insert} 或 KEYCAP{Ins} 。 Not present on Apple keyboards.
 			CODE PageDown	KEYCAP{Page Down}，KEYCAP{PgDn} 或 KEYCAP{&#8671;}
@@ -1429,123 +1475,175 @@ path: stylesheet-extra.include
 		END_CODE_TABLE
 
 		<p class="note">
-		The {{KeyboardEvent/code}} for the KEYCAP{Fn} key (found on some
-		Apple keyboards) is defined below in the [=功能区域=].
+		KEYCAP{Fn} (常见于苹果标准键盘)键的 {{KeyboardEvent/code}} 定义在下面的 
+		[=功能区域=] 。
 		</p>
 
-	<h3 id="key-arrowpad-section">Arrow Pad Section</h3>
+	<h3 id="key-arrowpad-section">箭头板区域</h3>
 
-		The <dfn id="arrow-pad">箭头板</dfn> (arrow pad) contains the 4 arrow keys. The keys are commonly
-		arranged in an "upside-down T" configuration.
+		<dfn id="arrow-pad">箭头板</dfn> (arrow pad)区域包含4个箭头键。
+		按键通常以"倒置 T"的配置进行排列。
 
 
 		<figure id="figure-arrow-pad">
-			<img src="images/arrow-pad.svg" width="160" height="115" alt="Standard Arrow Pad layout" />
-			<figcaption>Standard [=箭头板=] layout</figcaption>
+			<img src="images/arrow-pad.svg" width="160" height="115" 
+			alt="标准箭头板布局" />
+			<figcaption>标准 [=箭头板=] 布局</figcaption>
 		</figure>
 
-		BEGIN_CODE_TABLE arrowpad "List of code values for keys in the ArrowPad section."
+		BEGIN_CODE_TABLE arrowpad "在箭头板区域的按键的 code 值表。"
 			CODE ArrowDown	KEYCAP{&darr;}
 			CODE ArrowLeft	KEYCAP{&larr;}
 			CODE ArrowRight KEYCAP{&rarr;}
 			CODE ArrowUp	KEYCAP{&uarr;}
 		END_CODE_TABLE
 
-	<h3 id="key-numpad-section">Numpad Section</h3>
+	<h3 id="key-numpad-section">数字板区域</h3>
 
-		The <dfn id="numpad">数字板</dfn> (numpad) section is the set of keys on the keyboard arranged in
-		a grid like a calculator 或 mobile phone. This section contains numeric and
-		mathematical operator keys. Often this section will contain a KEYCAP{NumLock}
-		key which causes the keys to switch between the standard numeric functions
-		and mimicking the keys of the [=控制板=] and [=箭头板=].
-		Laptop computers and compact keyboards will commonly omit these
-		keys to save space.
+		在键盘上的 <dfn id="numpad">数字板</dfn> (numpad) 区域是一组按键，
+		排列成网格状，就像计算器或手机那样。本节包含数字和数学运算符键。通常，
+		数字板区域会包含 KEYCAP{NumLock} 键，该键可使数字板中的按键的功能，
+		在标准数字功能和模拟 [=控制板=] 与 [=箭头板=] 中按键的功能之间进行切换。
+		笔记本电脑和紧凑型键盘通常会省略这些键以节省空间。
 
-		A <dfn id="keypad">小键盘</dfn> is an alternate term for [=数字板=].
+		<div class="note custom-note">
+		关于 KEYCAP{NumLock} 的功能可以参阅 [[#wiki-lock-keys]] 中的数字锁定键。
+		</div>
+		
 
-		<figure id="figure-numpad">
-			<img src="images/numpad.svg" width="606" height="247" alt="Standard Numpad layouts" />
-			<figcaption>Standard [=数字板=] Layouts</figcaption>
+		<dfn id="keypad">小键盘</dfn> (keypad)是 [=数字板=] 的备用术语。
+
+		<div class="figure-change"  data-content="images/numpad">
+		<div class="custom-tabs-nav-wrap">
+				<div class="custom-tabs-nav-list">
+						<div data-node-key="1" class="custom-tabs-tab custom-tabs-tab-active">
+								<div class="custom-tabs-tab-btn" tabindex="0">汉化图</div>
+						</div>
+						<div data-node-key="2" class="custom-tabs-tab">
+								<div class="custom-tabs-tab-btn" tabindex="0">原图</div>
+						</div>
+				</div>
+		</div>
+		<figure id="figure-numpad-zh">
+			<img src="images/numpad-zh.svg" width="606" height="247" 
+			alt="标准数字板布局" />
+			<figcaption>标准 [=数字板=] 布局</figcaption>
 		</figure>
+		<figure id="figure-numpad" class="figure-hidden">
+			<img src="images/numpad.svg" width="606" height="247" 
+			alt="标准数字板布局" />
+			<figcaption>标准 [=数字板=] 布局</figcaption>
+		</figure>
+		</div>
 
-		The {{KeyboardEvent/code}} values in this section should also be
-		used for phone keypads and remote control devices that
-		arrange number keys in a grid.
+		本节中的 {{KeyboardEvent/code}} 
+		值也应用于手机小键盘和遥控设备中在网格上排列的数字键。
 
 		<figure id="figure-numpad-mobile">
-			<img src="images/numpad-mobile.svg" width="135" height="180" alt="Standard mobile keypad layout" />
-			<figcaption>Standard Mobile Keypad Layout</figcaption>
+			<img src="images/numpad-mobile.svg" width="135" height="180" 
+			alt="标准移动设备小键盘布局" />
+			<figcaption>标准移动设备小键盘布局</figcaption>
 		</figure>
 
-		The standard [=数字板=] is sometimes extended with additional keys for
-		parentheses，operators，hexadecimal symbols，or calculator functions
-		(like KEYCAP{Backspace}). Some of the commonly added keys are listed
-		in the table below.
+		标准 [=数字板=] 有时包含括号(parentheses)、运算符(operators)、
+		十六进制符号(hexadecimal symbols)或计算器函数键(calculator functions，如 
+		KEYCAP{Backspace} )这些附加键以扩展。下表列出了一些常用的附加键。
 
-		BEGIN_CODE_TABLE numpad "List of code values for keys in the Numpad section."
-			CODE NumLock				On the Mac，the CODE{NumLock} code should be used for the [=数字板=]
-										KEYCAP{Clear} key.
-			CODE Numpad0				KEYCAP{0 Ins} on a keyboard<br/>KEYCAP{0} on a phone 或 remote control
-			CODE Numpad1				KEYCAP{1 End} on a keyboard<br/>KEYCAP{1} 或 KEYCAP{1 QZ} on a phone or
-										remote control
-			CODE Numpad2				KEYCAP{2 &darr;} on a keyboard<br/>KEYCAP{2 ABC} on a phone 或 remote control
-			CODE Numpad3				KEYCAP{3 PgDn} on a keyboard<br/>KEYCAP{3 DEF} on a phone 或 remote control
-			CODE Numpad4				KEYCAP{4 &larr;} on a keyboard<br/>KEYCAP{4 GHI} on a phone 或 remote control
-			CODE Numpad5				KEYCAP{5} on a keyboard<br/>KEYCAP{5 JKL} on a phone 或 remote control
-			CODE Numpad6				KEYCAP{6 &rarr;} on a keyboard<br/>KEYCAP{6 MNO} on a phone 或 remote control
-			CODE Numpad7				KEYCAP{7 Home} on a keyboard<br/>KEYCAP{7 PQRS} 或 KEYCAP{7 PRS} on a phone
-										or remote control
-			CODE Numpad8				KEYCAP{8 &uarr;} on a keyboard<br/>KEYCAP{8 TUV} on a phone 或 remote control
-			CODE Numpad9				KEYCAP{9 PgUp} on a keyboard<br/>KEYCAP{9 WXYZ} 或 KEYCAP{9 WXY} on a phone
-										or remote control
+		BEGIN_CODE_TABLE numpad "在数字板区域的按键的 code 值表。"
+			CODE NumLock				在 Mac 中，CODE{NumLock} 码应当用于数字板中的 
+										KEYCAP{Clear} 键。
+			CODE Numpad0				在标准键盘上的按键键帽标签是 KEYCAP{0 Ins} <br/>
+										在移动设备或遥控器上的按键键帽标签是 KEYCAP{0}
+			CODE Numpad1				在标准键盘上的按键键帽标签是 KEYCAP{1 End} <br/>
+										在移动设备或遥控器上的按键键帽标签是 KEYCAP{1} 或 
+										KEYCAP{1 QZ}
+			CODE Numpad2				在标准键盘上的按键键帽标签是 KEYCAP{2 &darr;} <br/>
+										在移动设备或遥控器上的按键键帽标签是 KEYCAP{2 ABC}
+			CODE Numpad3				在标准键盘上的按键键帽标签是 KEYCAP{3 PgDn} <br/>
+										在移动设备或遥控器上的按键键帽标签是 KEYCAP{3 DEF}
+			CODE Numpad4				在标准键盘上的按键键帽标签是 KEYCAP{4 &larr;} <br/>
+										在移动设备或遥控器上的按键键帽标签是 KEYCAP{4 GHI}
+			CODE Numpad5				在标准键盘上的按键键帽标签是 KEYCAP{5} <br/>
+										在移动设备或遥控器上的按键键帽标签是 KEYCAP{5 JKL}
+			CODE Numpad6				在标准键盘上的按键键帽标签是 KEYCAP{6 &rarr;} <br/>
+										在移动设备或遥控器上的按键键帽标签是 KEYCAP{6 MNO}
+			CODE Numpad7				在标准键盘上的按键键帽标签是 KEYCAP{7 Home} <br/>
+										在移动设备或遥控器上的按键键帽标签是 KEYCAP{7 PQRS} 或 
+										KEYCAP{7 PRS}
+			CODE Numpad8				在标准键盘上的按键键帽标签是 KEYCAP{8 &uarr;} <br/>
+										在移动设备或遥控器上的按键键帽标签是 KEYCAP{8 TUV}
+			CODE Numpad9				在标准键盘上的按键键帽标签是 KEYCAP{9 PgUp} <br/>
+										在移动设备或遥控器上的按键键帽标签是 KEYCAP{9 WXYZ} 或 
+										KEYCAP{9 WXY}
 			CODE NumpadAdd				KEYCAP{+}
-			CODE_OPT NumpadBackspace	Found on the Microsoft Natural Keyboard.
-			CODE_OPT NumpadClear		KEYCAP{C} 或 KEYCAP{AC} (All Clear). Also for use with [=数字板=] that have a
-										KEYCAP{Clear} key that is separate from the
-										KEYCAP{NumLock} key. On the Mac，the [=数字板=] KEYCAP{Clear} key should always
-										be encoded as CODE{NumLock} 。
-			CODE_OPT NumpadClearEntry	KEYCAP{CE} (Clear Entry)
-			CODE_OPT NumpadComma		KEYCAP{,} (thousands separator). For locales where the thousands separator
-										is a "." (e.g.，Brazil)，this key may generate a KEYCAP{.} 。
-			CODE NumpadDecimal			KEYCAP{. Del} 。 For locales where the decimal separator is "," (e.g.,
-										Brazil)，this key may generate a KEYCAP{,} 。
+			CODE_OPT NumpadBackspace	出现在微软自然键盘(Microsoft Natural 
+										Keyboard)中。
+			CODE_OPT NumpadClear		KEYCAP{C} 或 KEYCAP{AC} (All Clear，全部清除)。
+										用于在 [=数字板=] 中已有一个 KEYCAP{NumLock} 键的情况下，
+										还需要有一个 KEYCAP{Clear} 时，使用 CODE{NumpadClear} 
+										进行区分。因为在 Mac 中，CODE{NumLock} 码总是用于 [=数字板=]
+										中的 KEYCAP{Clear} 键。
+			CODE_OPT NumpadClearEntry	KEYCAP{CE} (Clear Entry，清除输入)
+			CODE_OPT NumpadComma		KEYCAP{,} (千位分隔符). 对于千位分隔符是 "."的地区
+										(例如，巴西)，这个按键键帽标签是 KEYCAP{.} 。(非规范补充: 
+										与键入字符对应，见 <a href="#keyboard-104-note">巴西 "104" 
+										键盘的非规范注释</a> )
+			CODE NumpadDecimal			KEYCAP{. Del} 。 对于小数点分隔符是 "."的地区
+										(例如，巴西)，这个按键键帽标签是 KEYCAP{,} 。(非规范补充: 
+										与键入字符对应，见 <a href="#keyboard-104-note">巴西 "104" 
+										键盘的非规范注释</a> )
 			CODE NumpadDivide			KEYCAP{/}
 			CODE NumpadEnter
 			CODE_OPT NumpadEqual		KEYCAP{=}
-			CODE_OPT NumpadHash			KEYCAP{#} on a phone 或 remote control device. This key is typically found
-										below the KEYCAP{9} key and to the right of the KEYCAP{0} key.
-			CODE_OPT NumpadMemoryAdd	KEYCAP{M+} Add current entry to the value stored in memory.
-			CODE_OPT NumpadMemoryClear	KEYCAP{MC} Clear the value stored in memory.
-			CODE_OPT NumpadMemoryRecall	KEYCAP{MR} Replace the current entry with the value stored in memory.
-			CODE_OPT NumpadMemoryStore	KEYCAP{MS} Replace the value stored in memory with the current entry.
-			CODE_OPT NumpadMemorySubtract	KEYCAP{M-} Subtract current entry from the value stored in memory.
-			CODE NumpadMultiply			KEYCAP{*} on a keyboard. For use with [=数字板=] that provide mathematical
-										operations (KEYCAP{+}，KEYCAP{-}，KEYCAP{*} and KEYCAP{/}).<br/>Use
-										CODE{NumpadStar} for the KEYCAP{*} key on phones and remote controls.
-			CODE_OPT NumpadParenLeft	KEYCAP{(} Found on the Microsoft Natural Keyboard.
-			CODE_OPT NumpadParenRight	KEYCAP{)} Found on the Microsoft Natural Keyboard.
-			CODE_OPT NumpadStar			KEYCAP{*} on a phone 或 remote control device.
-										This key is typically found below the KEYCAP{7} key and to the left of
-										the KEYCAP{0} key.<br/>Use CODE{NumpadMultiply} for the KEYCAP{*} key on
-										numeric keypads.
+			CODE_OPT NumpadHash			在标准键盘上的按键键帽标签是 KEYCAP{#} 。 
+										此按键通常位于 KEYCAP{9} 键的下方和 KEYCAP{0} 键右侧。
+										(非规范补充: 见 
+										<a href="#figure-numeric-keypad">通用移动键盘的图形描述</a> 
+										)
+			CODE_OPT NumpadMemoryAdd	KEYCAP{M+} 将当前计算结果(current entry
+										)添加到存储在内存的一个值中。
+			CODE_OPT NumpadMemoryClear	KEYCAP{MC} 清除存储在内存中的
+										(那个保存计算结果的)值。
+			CODE_OPT NumpadMemoryRecall	KEYCAP{MR} 将当前计算结果(current entry
+										)替换成存储在内存中的那个值(存储好的上一次计算结果)。
+			CODE_OPT NumpadMemoryStore	KEYCAP{MS} 
+										将存储在内存中的那个值替换成当前计算结果(current entry)。
+			CODE_OPT NumpadMemorySubtract	KEYCAP{M-} 让存储在内存中的那个值
+										(存储好的上一次计算结果)中减去当前计算结果(current entry)。
+			CODE NumpadMultiply			在标准键盘上的按键键帽标签是 KEYCAP{*} 。
+										包含数学运算功能( KEYCAP{+} ， KEYCAP{-} ， KEYCAP{*} 和 
+										KEYCAP{/})的 [=数字板=] 拥有此按键。 <br/>
+										在移动设备或遥控器上，拥有相同键帽标签( KEYCAP{*} 
+										)的按键的 <code>code</code> 值是 CODE{NumpadStar} 。
+			CODE_OPT NumpadParenLeft	KEYCAP{(} 出现在微软自然键盘(Microsoft Natural 
+										Keyboard)中。
+			CODE_OPT NumpadParenRight	KEYCAP{)} 出现在微软自然键盘(Microsoft Natural 
+										Keyboard)中。
+			CODE_OPT NumpadStar			在移动设备或遥控器上的按键键帽标签是 KEYCAP{*} 。
+										此按键通常位于 KEYCAP{7} 键的下方和 KEYCAP{0} 键左侧。
+										(非规范补充: 见 
+										<a href="#figure-numeric-keypad">通用移动键盘的图形描述</a> 
+										) <br/>
+										在标准键盘的数字键盘上，拥有相同键帽标签( KEYCAP{*} 
+										)的按键的 <code>code</code> 值是 CODE{NumpadMultiply} 。
 			CODE NumpadSubtract			KEYCAP{-}
 		END_CODE_TABLE
 
-		For [=数字板=] that provide keys not listed here，a
-		{{KeyboardEvent/code}} value string should be created by starting
-		with "Numpad" and appending an appropriate description of the key.
+		对于 [=数字板=] 提供的，没有列在此处的按键，应通过以"Numpad"
+		开头并附加按键的适当描述来创建 {{KeyboardEvent/code}} 值字符串。
 
 	<h3 id="key-function-section">Function Section</h3>
+		<dfn id="function-section">功能区域</dfn> (function section)靠着键盘顶部(在 
+		[=字母数字区域=] 之上) 并包含有 [=功能键③=] 以及一些附加的特殊键(例如 
+		KEYCAP{Esc} 和 KEYCAP{Print Screen} )。
 
-		The <dfn id="function-section">功能区域</dfn> (function section) runs along the top of the keyboard (above
-		the [=字母数字区域=] ) and
-		contains the [=功能键③=] and a few additional special keys
-		(for example，KEYCAP{Esc} and KEYCAP{Print Screen}).
+		<dfn id="function-key">功能键③</dfn> 是键帽标签为 KEYCAP{F1} ... KEYCAP{F12} 
+		的键，应用程序或操作系统可以利用这些按键关联自定义功能或操作。
 
-		A <dfn id="function-key">功能键③</dfn> is any of the keys labelled KEYCAP{F1} ... KEYCAP{F12}
-		that an application 或 operating system can associate with a custom function
-		or action.
-
+		在一些键盘上（尤其是笔记本电脑上的键盘或 其他便携式计算机）功能键③ 
+		（F1…F12）被定义为具有其他主要功能（例如控制显示亮度或 音频音量），
+		并且要求按下单独的Fn键以使它们充当功能键。不幸的是，分配给这些钥匙的主要功能因制造商而异。
+		因此，代码总是设置为功能键③ 名称
 		On some keyboards (especially those found on laptops 或 other
 		portable computers)，the [=功能键③=] (KEYCAP{F1} ...
 		KEYCAP{F12}) are defined to have other primary functions (like
@@ -1676,8 +1774,8 @@ path: stylesheet-extra.include
 		The following keys may be found on non-standard international keyboards.
 
 		BEGIN_CODE_TABLE international "List of code values for keys found on international keyboards."
-			CODE_OPT Hiragana	Use for dedicated KEYCAP{ひらがな} key found on some Japanese word processing keyboards.
-			CODE_OPT Katakana	Use for dedicated KEYCAP{カタカナ} key found on some Japanese word processing keyboards.
+			CODE_OPT Hiragana	Use for dedicated KEYCAP{ひらがな} key found on some 日语 word processing keyboards.
+			CODE_OPT Katakana	Use for dedicated KEYCAP{カタカナ} key found on some 日语 word processing keyboards.
 		END_CODE_TABLE
 
 		And finally，the following {{KeyboardEvent/code}} value should only
