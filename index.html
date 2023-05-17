@@ -7,7 +7,7 @@
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-UD" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
   <meta content="Bikeshed version d9bd89757, updated Thu Mar 23 10:06:53 2023 -0700" name="generator">
-  <meta content="23e5f6d80756ebf58d42d98a5f604c0f62d6a93d" name="document-revision">
+  <meta content="eae216b4cc2ae998e60f9c335f54cd627f7c6b77" name="document-revision">
   <link href="./override.css" rel="stylesheet">
 <style>
 
@@ -586,7 +586,7 @@ dfn > a.self-link::before      { content: "#"; }
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">用户界面事件键盘事件 code 属性值(UI Events KeyboardEvent code Values)</h1>
-   <p id="w3c-state"><a href="https://www.w3.org/standards/types#UD">翻译草案</a>, <time class="dt-updated" datetime="2023-05-17">2023年5月12日</time></p>
+   <p id="w3c-state"><a href="https://www.w3.org/standards/types#UD">翻译草案</a>, <time class="dt-updated" datetime="2023-05-18">2023年5月12日</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -701,8 +701,8 @@ dfn > a.self-link::before      { content: "#"; }
       <li><a href="#key-controlpad-section"><span class="secno">3.2</span> <span class="content">控制板区域</span></a>
       <li><a href="#key-arrowpad-section"><span class="secno">3.3</span> <span class="content">箭头板区域</span></a>
       <li><a href="#key-numpad-section"><span class="secno">3.4</span> <span class="content">数字板区域</span></a>
-      <li><a href="#key-function-section"><span class="secno">3.5</span> <span class="content">Function Section</span></a>
-      <li><a href="#key-media"><span class="secno">3.6</span> <span class="content">Media Keys</span></a>
+      <li><a href="#key-function-section"><span class="secno">3.5</span> <span class="content">功能区域</span></a>
+      <li><a href="#key-media"><span class="secno">3.6</span> <span class="content">多媒体按键</span></a>
       <li><a href="#key-legacy"><span class="secno">3.7</span> <span class="content">Legacy，Non-Standard and Special Keys</span></a>
      </ol>
     <li><a href="#accessibility"><span class="secno">4</span> <span class="content">Accessibility</span></a>
@@ -805,7 +805,7 @@ dfn > a.self-link::before      { content: "#"; }
 			到最上面一排的 "E" 。 <a data-link-type="dfn" href="#function-section" id="ref-for-function-section①">功能区域</a> 中的键行被认为在 
 			"K" 行中。这些行名称与 <a data-link-type="biblio" href="#biblio-iso9995-1" title="ISO/IEC 9995-1:2009 Information technology -- Keyboard layouts for text and office systems -- Part 1: General principles governing keyboard layouts">[ISO9995-1]</a> 规范中给出的行名称一致。</p>
    <p>请注意，许多键盘(包括现代键盘和传统键盘)都有多余的键，
-			这些键没有整齐地放入上面的区域。其中一些键包含在<a href="#key-media">§ 3.6 Media Keys</a>。</p>
+			这些键没有整齐地放入上面的区域。其中一些键包含在<a href="#key-media">§ 3.6 多媒体按键</a>。</p>
    <h4 class="heading settled" data-level="2.1.2" id="keyboard-101"><span class="secno">2.1.2. </span><span class="content">标准 "101" 键盘布局</span><a class="self-link" href="#keyboard-101"></a></h4>
    <p>标准的 "101" 键盘(通常称为"US 布局")是唯一一种在单行 <code class="keycap">Enter</code> (字面数字区域上的 <code class="keycap">Enter</code> )键上方有 <code class="code">"<a href="#code-Backslash">Backslash</a>"</code> 键(键帽标签为 <code class="keycap">\|</code>)的布局。所有其他布局都省略了此键，并展开 <code class="keycap">Enter</code> 键以占据两行。</p>
    <figure id="figure-keyboard-101-us">
@@ -2071,20 +2071,14 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
    </table>
    <p>对于 <a data-link-type="dfn" href="#numpad" id="ref-for-numpad①⑧">数字板</a> 提供的，没有列在此处的按键，应通过以"Numpad"
 		开头并附加按键的适当描述来创建 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①③">code</a></code> 值字符串。</p>
-   <h3 class="heading settled" data-level="3.5" id="key-function-section"><span class="secno">3.5. </span><span class="content">Function Section</span><a class="self-link" href="#key-function-section"></a></h3>
+   <h3 class="heading settled" data-level="3.5" id="key-function-section"><span class="secno">3.5. </span><span class="content">功能区域</span><a class="self-link" href="#key-function-section"></a></h3>
     <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="function-section">功能区域</dfn> (function section)靠着键盘顶部(在 <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section①③">字母数字区域</a> 之上) 并包含有 <a data-link-type="dfn" href="#function-key" id="ref-for-function-key②">功能键③</a> 以及一些附加的特殊键(例如 <code class="keycap">Esc</code> 和 <code class="keycap">Print Screen</code> )。 
    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="function-key">功能键③</dfn> 是键帽标签为 <code class="keycap">F1</code> ... <code class="keycap">F12</code> 的键，应用程序或操作系统可以利用这些按键关联自定义功能或操作。</p>
-   <p>在一些键盘上（尤其是笔记本电脑上的键盘或 其他便携式计算机）功能键③
-		（F1…F12）被定义为具有其他主要功能（例如控制显示亮度或 音频音量），
-		并且要求按下单独的Fn键以使它们充当功能键。不幸的是，分配给这些钥匙的主要功能因制造商而异。
-		因此，代码总是设置为功能键③ 名称
-		On some keyboards (especially those found on laptops 或 other
-		portable computers)，the <a data-link-type="dfn" href="#function-key" id="ref-for-function-key③">功能键③</a> (<code class="keycap">F1</code> ... <code class="keycap">F12</code>) are defined to have other primary functions (like
-		controlling display brightness 或 audio volume) and require that a
-		separate <code class="keycap">Fn</code> key be pressed to make them act as function
-		keys. Unfortunately，the primary functions assigned to these keys
-		varies widely from one manufacturer to the next. Because of this,
-		the <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①④">code</a></code> is always set to the <a data-link-type="dfn" href="#function-key" id="ref-for-function-key④">功能键③</a> name.</p>
+   <p>在一些键盘上(尤其是笔记本电脑或其他便携式计算机上的键盘)，功能键③
+		( <code class="keycap">F1</code> ... <code class="keycap">F12</code> )会被定义为具有其他调节功能
+		(primary functions ，例如控制显示亮度或音频音量)，并且在使用这些主要功能
+		(primary functions)时需要组合按下 <code class="keycap">Fn</code> 键。不幸的是，
+		这些按键的主要功能因制造商而异。因此， <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①④">code</a></code> 值总是设置为 <a data-link-type="dfn" href="#function-key" id="ref-for-function-key③">功能键③</a> 名称(即键帽标签名称和 <code>code</code> 值对应)。</p>
    <table class="data-table full-width" id="table-key-code-function">
     <caption>List of code values for keys in the Function section.</caption>
     <thead>
@@ -2096,7 +2090,7 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
      <tr>
       <td class="code-table-code"><code class="code" id="code-Escape">"Escape"</code>
       <td class="code-table-required">是
-      <td><code class="keycap">Esc</code> 或 <code class="keycap">⎋</code>
+      <td><code class="keycap">Esc</code> 或 <code class="keycap">⎋</code> (非规范补充: 详见 <a data-link-type="dfn" href="#system-and-gui-keys" id="ref-for-system-and-gui-keys⑤">系统和 GUI 键</a> 中的退出键) 
      <tr>
       <td class="code-table-code"><code class="code" id="code-F1">"F1"</code>
       <td class="code-table-required">是
@@ -2148,42 +2142,50 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
      <tr>
       <td class="code-table-code"><code class="code" id="code-Fn">"Fn"</code>
       <td class="code-table-required">否
-      <td><code class="keycap">Fn</code> This is typically a hardware key that does not generate a separate								code. Most keyboards do not place this key in the <a data-link-type="dfn" href="#function-section" id="ref-for-function-section⑨">功能区域</a>，but it is
-								included here to keep it with related keys. 
+      <td><code class="keycap">Fn</code> 这通常是一个硬件按键(hardware key)，								它不会生成单独的码值。大多数键盘不会将此键放置在 <a data-link-type="dfn" href="#function-section" id="ref-for-function-section⑨">功能区域</a> ，
+								但它在此表中展示是为了将其与其关联的按键一起归类。(非规范补充: 
+								见本节下面的 <a href="#fn-key-note">非规范注释</a> ) 
      <tr>
       <td class="code-table-code"><code class="code" id="code-FnLock">"FnLock"</code>
       <td class="code-table-required">否
-      <td><code class="keycap">FLock</code> 或 <code class="keycap">FnLock</code> 。 Function Lock key. Found on the Microsoft								Natural Keyboard. 
+      <td><code class="keycap">FLock</code> 或 <code class="keycap">FnLock</code> 。功能锁定键								(Function Lock key)。出现在微软自然键盘(Microsoft Natural 
+								Keyboard)中。 
      <tr>
       <td class="code-table-code"><code class="code" id="code-PrintScreen">"PrintScreen"</code>
       <td class="code-table-required">是
-      <td><code class="keycap">PrtScr SysRq</code> 或 <code class="keycap">Print Screen</code>
+      <td><code class="keycap">PrtScr SysRq</code> 或 <code class="keycap">Print Screen</code> (非规范补充: 详见 <a data-link-type="dfn" href="#system-and-gui-keys" id="ref-for-system-and-gui-keys⑥">系统和 GUI 键</a> 中的截屏键) 
      <tr>
       <td class="code-table-code"><code class="code" id="code-ScrollLock">"ScrollLock"</code>
       <td class="code-table-required">是
-      <td><code class="keycap">Scroll Lock</code>
+      <td><code class="keycap">Scroll Lock</code> (非规范补充: 详见 <a data-link-type="dfn" href="#lock-keys" id="ref-for-lock-keys③">锁定按键</a> 中的滚动锁定按键) 
      <tr>
       <td class="code-table-code"><code class="code" id="code-Pause">"Pause"</code>
       <td class="code-table-required">是
-      <td><code class="keycap">Pause Break</code>
+      <td><code class="keycap">Pause Break</code> (非规范补充: 详见 <a data-link-type="dfn" href="#system-and-gui-keys" id="ref-for-system-and-gui-keys⑦">系统和 GUI 键</a> 中的暂停键) 
    </table>
-   <p>For keyboards that provide more than 12 <a data-link-type="dfn" href="#function-key" id="ref-for-function-key⑤">功能键③</a>，the <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⑤">code</a></code> value follows the pattern shown above with
-		"F" followed by the <a data-link-type="dfn" href="#function-key" id="ref-for-function-key⑥">功能键③</a> number - <code class="code">"F13"</code>, <code class="code">"F14"</code>，<code class="code">"F15"</code>，and so on.</p>
-   <p class="note" role="note"> Apple keyboards may have <code class="keycap">Eject</code> 或 <code class="keycap">Power</code> keys in the <a data-link-type="dfn" href="#function-section" id="ref-for-function-section①⓪">功能区域</a>. The <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⑥">code</a></code> values for these
-		keys are defined in <a href="#key-media">§ 3.6 Media Keys</a>. </p>
-   <h3 class="heading settled" data-level="3.6" id="key-media"><span class="secno">3.6. </span><span class="content">Media Keys</span><a class="self-link" href="#key-media"></a></h3>
-   <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="media-keys">Media keys</dfn> are extra keys added to a keyboard that provide <em>media</em> related functionality like play，pause 或 volume control. These keys do not
-		have a standard location on the keyboard so keyboards from different
-		manufacturers are likely to have a different arrangement of keys 或 a
-		completely different sets of keys.</p>
-   <p><a data-link-type="dfn" href="#media-keys" id="ref-for-media-keys">Media keys</a> are often distinct from
-		normal typing keys in appearance and may be recessed in the
-		keyboard.</p>
-   <p>On laptop keyboards，these keys are often merged with the <a data-link-type="dfn" href="#function-key" id="ref-for-function-key⑦">功能键③</a>，with the <a data-link-type="dfn" href="#media-keys" id="ref-for-media-keys①">media key</a> interpretation being
-		the primary function of the key and the <a data-link-type="dfn" href="#function-key" id="ref-for-function-key⑧">功能键③</a> interpretation requiring the <code class="keycap">Fn</code> key to be pressed at the
+   <p>对于提供12个以上的 <a data-link-type="dfn" href="#function-key" id="ref-for-function-key④">功能键③</a> 的键盘， <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⑤">code</a></code> 值遵循表中显示的模式，"F"后面跟着 <a data-link-type="dfn" href="#function-key" id="ref-for-function-key⑤">功能键③</a> 数字 —— <code class="code">"F13"</code> 、 <code class="code">"F14"</code> 、 <code class="code">"F15"</code>，依此类推。</p>
+   <p class="note" role="note"> 苹果键盘的 <a data-link-type="dfn" href="#function-section" id="ref-for-function-section①⓪">功能区域</a> 可能有 <code class="keycap">Eject</code> (弹出)键或 <code class="keycap">Power</code> (电源)键. 这些键的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⑥">code</a></code> 值在 <a href="#key-media">§ 3.6 多媒体按键</a> 中有定义。 </p>
+   <div class="note custom-note" data-content="非规范注释，关于 Fn 按键的解释: " id="fn-key-note" role="note"><a class="self-link" href="#fn-key-note"></a> <br> <q><code class="keycap">Fn</code> 键是 <em>功能(function)</em> 的缩写，是许多键盘上
+		(尤其是笔记本电脑上)的一个修饰键，它经常用在紧凑的布局组合其他独立的键( <a data-link-type="dfn" href="#function-key" id="ref-for-function-key⑥">功能键③</a> )一起使用。由于键盘尺寸的限制，它通常出现在笔记本电脑上。
+		它也出现在许多全尺寸的"多媒体"键盘上，作为 <code class="keycap">FLock</code> 键。
+		它主要用于快速更改显示设置或音频设置，如亮度、对比度或音量，
+		使用时需要与相应的键( <a data-link-type="dfn" href="#function-key" id="ref-for-function-key⑦">功能键③</a> )一起按下以更改设置。</q> —— 维基百科 <a href="https://en.wikipedia.org/wiki/Fn_key">Fn key</a> 。<br> 中国大陆地区的沿用的美式键盘上的 <code class="keycap">Fn</code> 按键通常会覆盖替换在一个 <code class="keycap">⊞</code> ( <code class="keycap">Meta</code> ) 上，即键盘上只包含一个系统命令按键，
+		而另一个位置使用 <code class="code">"<a href="#code-Fn">Fn</a>"</code> 代替。 </div>
+   <h3 class="heading settled" data-level="3.6" id="key-media"><span class="secno">3.6. </span><span class="content">多媒体按键</span><a class="self-link" href="#key-media"></a></h3>
+   <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="media-keys">多媒体按键</dfn> 是添加到键盘上的额外按键键，
+		可提供播放、暂停或音量控制等与 <em>媒体</em> 相关的功能。
+		这些键在键盘上没有标准位置，因此不同制造商的键盘可能有不同的按键排列
+		(arrangement)或一套完全不同的按键集合。</p>
+   <p><a data-link-type="dfn" href="#media-keys" id="ref-for-media-keys">多媒体按键</a> 在外观上通常与普通的键入按键不同，
+		它可能嵌入(recessed)到键盘中。</p>
+   <p>在笔记本电脑键盘上，这些键通常与 <a data-link-type="dfn" href="#function-key" id="ref-for-function-key⑧">功能键③</a> 结合(merged)，
+		也就是说 <a data-link-type="dfn" href="#media-keys" id="ref-for-media-keys①">多媒体按键</a> 可被理解成按键的主要功能(primary function)，
+		并且 <a data-link-type="dfn" href="#function-key" id="ref-for-function-key⑨">功能键③</a> 可被理解成需要同时按下Fn键的解释。在此配置中，应将代码设置为与功能键③ （“F1”…“F12”）。当键以这种方式合并时，代码值取自功能键③ 值，因为媒体键值在键盘之间不一致。
+		On laptop keyboards，these keys are often merged with the <a data-link-type="dfn" href="#function-key" id="ref-for-function-key①⓪">功能键③</a>，with the <a data-link-type="dfn" href="#media-keys" id="ref-for-media-keys②">多媒体按键</a> interpretation being
+		the primary function of the key and the <a data-link-type="dfn" href="#function-key" id="ref-for-function-key①①">功能键③</a> interpretation requiring the <code class="keycap">Fn</code> key to be pressed at the
 		same time. In this configuration the <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⑦">code</a></code> should
-		be set to match the <a data-link-type="dfn" href="#function-key" id="ref-for-function-key⑨">功能键③</a> (<code class="code">"<a href="#code-F1">F1</a>"</code> ... <code class="code">"<a href="#code-F12">F12</a>"</code>).
-		When the keys are merged in this fashion，the <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⑧">code</a></code> values are taken from the <a data-link-type="dfn" href="#function-key" id="ref-for-function-key①⓪">功能键③</a> value because the <a data-link-type="dfn" href="#media-keys" id="ref-for-media-keys②">media key</a> value is not consistent across keyboards.</p>
+		be set to match the <a data-link-type="dfn" href="#function-key" id="ref-for-function-key①②">功能键③</a> (<code class="code">"<a href="#code-F1">F1</a>"</code> ... <code class="code">"<a href="#code-F12">F12</a>"</code>).
+		When the keys are merged in this fashion，the <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⑧">code</a></code> values are taken from the <a data-link-type="dfn" href="#function-key" id="ref-for-function-key①③">功能键③</a> value because the <a data-link-type="dfn" href="#media-keys" id="ref-for-media-keys③">多媒体按键</a> value is not consistent across keyboards.</p>
    <table class="data-table full-width" id="table-key-code-media">
     <caption>List of code values for media keys.</caption>
     <thead>
@@ -2523,6 +2525,7 @@ something specific to the values defined in this document</p>
    <li><a href="#functional-keys">功能键②</a><span>, in § 3.1.2</span>
    <li><a href="#function-key">功能键③</a><span>, in § 3.5</span>
    <li><a href="#enter-edit-keys">回车键和编辑键</a><span>, in § 2.5.3</span>
+   <li><a href="#media-keys">多媒体按键</a><span>, in § 3.6</span>
    <li><a href="#alphanumeric-section">字母数字区域</a><span>, in § 3.1</span>
    <li><a href="#alnum-keys">字母数字键或字符键</a><span>, in § 2.5.2</span>
    <li><a href="#nav-keys">导航按键</a><span>, in § 2.5.7</span>
@@ -2535,7 +2538,6 @@ something specific to the values defined in this document</p>
    <li><a href="#arrow-pad">箭头板</a><span>, in § 3.3</span>
    <li><a href="#lock-keys">锁定按键</a><span>, in § 2.5.6</span>
    <li><a href="#system-and-gui-keys">系统和 GUI 键</a><span>, in § 2.5.4</span>
-   <li><a href="#media-keys">Media keys</a><span>, in § 3.6</span>
   </ul>
   <aside aria-labelledby="infopaneltitle-for-4103741029595e9e13c67dab91d1e3bd" class="dfn-panel" data-for="4103741029595e9e13c67dab91d1e3bd" id="infopanel-for-4103741029595e9e13c67dab91d1e3bd">
    <span id="infopaneltitle-for-4103741029595e9e13c67dab91d1e3bd" style="display:none">Info about the 'code point' external reference.</span><a href="https://infra.spec.whatwg.org/#code-point">https://infra.spec.whatwg.org/#code-point</a><b>Referenced in:</b>
@@ -2560,8 +2562,8 @@ something specific to the values defined in this document</p>
     <li><a href="#ref-for-dom-keyboardevent-code①⓪">3.1.2. 功能键</a>
     <li><a href="#ref-for-dom-keyboardevent-code①①">3.2. 控制板区域</a>
     <li><a href="#ref-for-dom-keyboardevent-code①②">3.4. 数字板区域</a> <a href="#ref-for-dom-keyboardevent-code①③">(2)</a>
-    <li><a href="#ref-for-dom-keyboardevent-code①④">3.5. Function Section</a> <a href="#ref-for-dom-keyboardevent-code①⑤">(2)</a> <a href="#ref-for-dom-keyboardevent-code①⑥">(3)</a>
-    <li><a href="#ref-for-dom-keyboardevent-code①⑦">3.6. Media Keys</a> <a href="#ref-for-dom-keyboardevent-code①⑧">(2)</a>
+    <li><a href="#ref-for-dom-keyboardevent-code①④">3.5. 功能区域</a> <a href="#ref-for-dom-keyboardevent-code①⑤">(2)</a> <a href="#ref-for-dom-keyboardevent-code①⑥">(3)</a>
+    <li><a href="#ref-for-dom-keyboardevent-code①⑦">3.6. 多媒体按键</a> <a href="#ref-for-dom-keyboardevent-code①⑧">(2)</a>
     <li><a href="#ref-for-dom-keyboardevent-code①⑨">3.7. Legacy，Non-Standard and Special Keys</a> <a href="#ref-for-dom-keyboardevent-code②⓪">(2)</a>
     <li><a href="#ref-for-dom-keyboardevent-code②①">4. Accessibility</a> <a href="#ref-for-dom-keyboardevent-code②②">(2)</a>
     <li><a href="#ref-for-dom-keyboardevent-code②③">6. Security Considerations</a> <a href="#ref-for-dom-keyboardevent-code②④">(2)</a>
@@ -2653,6 +2655,7 @@ something specific to the values defined in this document</p>
     <li><a href="#ref-for-system-and-gui-keys①">2.5.8. 修饰符按键</a>
     <li><a href="#ref-for-system-and-gui-keys②">2.5.10. 其它补充</a>
     <li><a href="#ref-for-system-and-gui-keys③">3.1.2. 功能键</a> <a href="#ref-for-system-and-gui-keys④">(2)</a>
+    <li><a href="#ref-for-system-and-gui-keys⑤">3.5. 功能区域</a> <a href="#ref-for-system-and-gui-keys⑥">(2)</a> <a href="#ref-for-system-and-gui-keys⑦">(3)</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-num-keypad-keys" class="dfn-panel" data-for="num-keypad-keys" id="infopanel-for-num-keypad-keys">
@@ -2667,6 +2670,7 @@ something specific to the values defined in this document</p>
    <ul>
     <li><a href="#ref-for-lock-keys">2.5.5. 小键盘数字按键</a>
     <li><a href="#ref-for-lock-keys①">2.5.7. 导航按键</a> <a href="#ref-for-lock-keys②">(2)</a>
+    <li><a href="#ref-for-lock-keys③">3.5. 功能区域</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-nav-keys" class="dfn-panel" data-for="nav-keys" id="infopanel-for-nav-keys">
@@ -2709,7 +2713,7 @@ something specific to the values defined in this document</p>
     <li><a href="#ref-for-alphanumeric-section⑨">2.1.9. 笔记本电脑键盘布局</a>
     <li><a href="#ref-for-alphanumeric-section①⓪">3.1.1. 书写系统键</a>
     <li><a href="#ref-for-alphanumeric-section①①">3.1.2. 功能键</a> <a href="#ref-for-alphanumeric-section①②">(2)</a>
-    <li><a href="#ref-for-alphanumeric-section①③">3.5. Function Section</a>
+    <li><a href="#ref-for-alphanumeric-section①③">3.5. 功能区域</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-writing-system-keys" class="dfn-panel" data-for="writing-system-keys" id="infopanel-for-writing-system-keys">
@@ -2788,8 +2792,8 @@ something specific to the values defined in this document</p>
     <li><a href="#ref-for-function-section⑥">2.1.6. 巴西 "104" 键盘布局</a>
     <li><a href="#ref-for-function-section⑦">2.1.7. 日式 "106" 键盘布局</a>
     <li><a href="#ref-for-function-section⑧">3.2. 控制板区域</a>
-    <li><a href="#ref-for-function-section⑨">3.5. Function Section</a> <a href="#ref-for-function-section①⓪">(2)</a>
-    <li><a href="#ref-for-function-section①①">3.6. Media Keys</a> <a href="#ref-for-function-section①②">(2)</a>
+    <li><a href="#ref-for-function-section⑨">3.5. 功能区域</a> <a href="#ref-for-function-section①⓪">(2)</a>
+    <li><a href="#ref-for-function-section①①">3.6. 多媒体按键</a> <a href="#ref-for-function-section①②">(2)</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-function-key" class="dfn-panel" data-for="function-key" id="infopanel-for-function-key">
@@ -2797,14 +2801,14 @@ something specific to the values defined in this document</p>
    <ul>
     <li><a href="#ref-for-function-key">2.1.1. 键盘分区</a>
     <li><a href="#ref-for-function-key①">3.1.2. 功能键</a>
-    <li><a href="#ref-for-function-key②">3.5. Function Section</a> <a href="#ref-for-function-key③">(2)</a> <a href="#ref-for-function-key④">(3)</a> <a href="#ref-for-function-key⑤">(4)</a> <a href="#ref-for-function-key⑥">(5)</a>
-    <li><a href="#ref-for-function-key⑦">3.6. Media Keys</a> <a href="#ref-for-function-key⑧">(2)</a> <a href="#ref-for-function-key⑨">(3)</a> <a href="#ref-for-function-key①⓪">(4)</a>
+    <li><a href="#ref-for-function-key②">3.5. 功能区域</a> <a href="#ref-for-function-key③">(2)</a> <a href="#ref-for-function-key④">(3)</a> <a href="#ref-for-function-key⑤">(4)</a> <a href="#ref-for-function-key⑥">(5)</a> <a href="#ref-for-function-key⑦">(6)</a>
+    <li><a href="#ref-for-function-key⑧">3.6. 多媒体按键</a> <a href="#ref-for-function-key⑨">(2)</a> <a href="#ref-for-function-key①⓪">(3)</a> <a href="#ref-for-function-key①①">(4)</a> <a href="#ref-for-function-key①②">(5)</a> <a href="#ref-for-function-key①③">(6)</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-media-keys" class="dfn-panel" data-for="media-keys" id="infopanel-for-media-keys">
-   <span id="infopaneltitle-for-media-keys" style="display:none">Info about the 'Media keys' definition.</span><b><a href="#media-keys">#media-keys</a></b><b>Referenced in:</b>
+   <span id="infopaneltitle-for-media-keys" style="display:none">Info about the '多媒体按键' definition.</span><b><a href="#media-keys">#media-keys</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-media-keys">3.6. Media Keys</a> <a href="#ref-for-media-keys①">(2)</a> <a href="#ref-for-media-keys②">(3)</a>
+    <li><a href="#ref-for-media-keys">3.6. 多媒体按键</a> <a href="#ref-for-media-keys①">(2)</a> <a href="#ref-for-media-keys②">(3)</a> <a href="#ref-for-media-keys③">(4)</a>
    </ul>
   </aside>
 <script>/* script-dfn-panel */

@@ -1632,7 +1632,7 @@ path: stylesheet-extra.include
 		对于 [=数字板=] 提供的，没有列在此处的按键，应通过以"Numpad"
 		开头并附加按键的适当描述来创建 {{KeyboardEvent/code}} 值字符串。
 
-	<h3 id="key-function-section">Function Section</h3>
+	<h3 id="key-function-section">功能区域</h3>
 		<dfn id="function-section">功能区域</dfn> (function section)靠着键盘顶部(在 
 		[=字母数字区域=] 之上) 并包含有 [=功能键③=] 以及一些附加的特殊键(例如 
 		KEYCAP{Esc} 和 KEYCAP{Print Screen} )。
@@ -1640,22 +1640,16 @@ path: stylesheet-extra.include
 		<dfn id="function-key">功能键③</dfn> 是键帽标签为 KEYCAP{F1} ... KEYCAP{F12} 
 		的键，应用程序或操作系统可以利用这些按键关联自定义功能或操作。
 
-		在一些键盘上（尤其是笔记本电脑上的键盘或 其他便携式计算机）功能键③ 
-		（F1…F12）被定义为具有其他主要功能（例如控制显示亮度或 音频音量），
-		并且要求按下单独的Fn键以使它们充当功能键。不幸的是，分配给这些钥匙的主要功能因制造商而异。
-		因此，代码总是设置为功能键③ 名称
-		On some keyboards (especially those found on laptops 或 other
-		portable computers)，the [=功能键③=] (KEYCAP{F1} ...
-		KEYCAP{F12}) are defined to have other primary functions (like
-		controlling display brightness 或 audio volume) and require that a
-		separate KEYCAP{Fn} key be pressed to make them act as function
-		keys. Unfortunately，the primary functions assigned to these keys
-		varies widely from one manufacturer to the next. Because of this,
-		the {{KeyboardEvent/code}} is always set to the [=功能键③=]
-		name.
+		在一些键盘上(尤其是笔记本电脑或其他便携式计算机上的键盘)，功能键③ 
+		( KEYCAP{F1} ... KEYCAP{F12} )会被定义为具有其他调节功能
+		(primary functions ，例如控制显示亮度或音频音量)，并且在使用这些主要功能
+		(primary functions)时需要组合按下 KEYCAP{Fn} 键。不幸的是，
+		这些按键的主要功能因制造商而异。因此， {{KeyboardEvent/code}} 值总是设置为
+		[=功能键③=] 名称(即键帽标签名称和 <code>code</code> 值对应)。
 
 		BEGIN_CODE_TABLE function "List of code values for keys in the Function section."
-			CODE Escape			KEYCAP{Esc} 或 KEYCAP{⎋}
+			CODE Escape			KEYCAP{Esc} 或 KEYCAP{⎋} 
+								(非规范补充: 详见 [=系统和 GUI 键=] 中的退出键)
 			CODE F1				KEYCAP{F1}
 			CODE F2				KEYCAP{F2}
 			CODE F3				KEYCAP{F3}
@@ -1668,48 +1662,68 @@ path: stylesheet-extra.include
 			CODE F10			KEYCAP{F10}
 			CODE F11			KEYCAP{F11}
 			CODE F12			KEYCAP{F12}
-			CODE_OPT Fn			KEYCAP{Fn} This is typically a hardware key that does not generate a separate
-								code. Most keyboards do not place this key in the [=功能区域=]，but it is
-								included here to keep it with related keys.
-			CODE_OPT FnLock		KEYCAP{FLock} 或 KEYCAP{FnLock} 。 Function Lock key. Found on the Microsoft
-								Natural Keyboard.
+			CODE_OPT Fn			KEYCAP{Fn} 这通常是一个硬件按键(hardware key)，
+								它不会生成单独的码值。大多数键盘不会将此键放置在 [=功能区域=] ，
+								但它在此表中展示是为了将其与其关联的按键一起归类。(非规范补充: 
+								见本节下面的 <a href="#fn-key-note">非规范注释</a> )
+			CODE_OPT FnLock		KEYCAP{FLock} 或 KEYCAP{FnLock} 。功能锁定键
+								(Function Lock key)。出现在微软自然键盘(Microsoft Natural 
+								Keyboard)中。
 			CODE PrintScreen	KEYCAP{PrtScr SysRq} 或 KEYCAP{Print Screen}
+								(非规范补充: 详见 [=系统和 GUI 键=] 中的截屏键)
 			CODE ScrollLock		KEYCAP{Scroll Lock}
+								(非规范补充: 详见 [=锁定按键=] 中的滚动锁定按键)
 			CODE Pause			KEYCAP{Pause Break}
+								(非规范补充: 详见 [=系统和 GUI 键=] 中的暂停键)
 		END_CODE_TABLE
 
-		For keyboards that provide more than 12 [=功能键③=]，the
-		{{KeyboardEvent/code}} value follows the pattern shown above with
-		"F" followed by the [=功能键③=] number - CODE_NOLINK{F13},
-		CODE_NOLINK{F14}，CODE_NOLINK{F15}，and so on.
+		对于提供12个以上的 [=功能键③=] 的键盘， {{KeyboardEvent/code}} 
+		值遵循表中显示的模式，"F"后面跟着 [=功能键③=] 数字 —— CODE_NOLINK{F13} 、
+		CODE_NOLINK{F14} 、 CODE_NOLINK{F15}，依此类推。
 
 		<p class="note">
-		Apple keyboards may have KEYCAP{Eject} 或 KEYCAP{Power} keys in the
-		[=功能区域=]. The {{KeyboardEvent/code}} values for these
-		keys are defined in [[#key-media]].
+		苹果键盘的 [=功能区域=] 可能有 KEYCAP{Eject} (弹出)键或 KEYCAP{Power} 
+		(电源)键. 这些键的 {{KeyboardEvent/code}} 值在 [[#key-media]] 中有定义。
 		</p>
 
-	<h3 id="key-media">Media Keys</h3>
+		<div class="note custom-note" id="fn-key-note" 
+		data-content="非规范注释，关于 Fn 按键的解释: ">
+		<br/>
+		<q>KEYCAP{Fn} 键是 <em>功能(function)</em> 的缩写，是许多键盘上
+		(尤其是笔记本电脑上)的一个修饰键，它经常用在紧凑的布局组合其他独立的键( 
+		[=功能键③=] )一起使用。由于键盘尺寸的限制，它通常出现在笔记本电脑上。
+		它也出现在许多全尺寸的"多媒体"键盘上，作为 KEYCAP{FLock} 键。
+		它主要用于快速更改显示设置或音频设置，如亮度、对比度或音量，
+		使用时需要与相应的键( [=功能键③=] )一起按下以更改设置。</q> —— 维基百科
+		<a href="https://en.wikipedia.org/wiki/Fn_key">Fn key</a> 。<br/>
+		中国大陆地区的沿用的美式键盘上的 KEYCAP{Fn} 按键通常会覆盖替换在一个 
+		KEYCAP{⊞} ( KEYCAP{Meta} ) 上，即键盘上只包含一个系统命令按键，
+		而另一个位置使用 CODE{Fn} 代替。
+		</div>
+		
 
-		<dfn>Media keys</dfn> are extra keys added to a keyboard that provide <em>media</em>
-		related functionality like play，pause 或 volume control. These keys do not
-		have a standard location on the keyboard so keyboards from different
-		manufacturers are likely to have a different arrangement of keys 或 a
-		completely different sets of keys.
+	<h3 id="key-media">多媒体按键</h3>
 
-		[=Media keys=] are often distinct from
-		normal typing keys in appearance and may be recessed in the
-		keyboard.
+		<dfn id="media-keys">多媒体按键</dfn> 是添加到键盘上的额外按键键，
+		可提供播放、暂停或音量控制等与 <em>媒体</em> 相关的功能。
+		这些键在键盘上没有标准位置，因此不同制造商的键盘可能有不同的按键排列
+		(arrangement)或一套完全不同的按键集合。
 
+		[=多媒体按键=] 在外观上通常与普通的键入按键不同，
+		它可能嵌入(recessed)到键盘中。
+
+		在笔记本电脑键盘上，这些键通常与 [=功能键③=] 结合(merged)，
+		也就是说 [=多媒体按键=] 可被理解成按键的主要功能(primary function)，
+		并且 [=功能键③=] 可被理解成需要同时按下Fn键的解释。在此配置中，应将代码设置为与功能键③ （“F1”…“F12”）。当键以这种方式合并时，代码值取自功能键③ 值，因为媒体键值在键盘之间不一致。
 		On laptop keyboards，these keys are often merged with the
-		[=功能键③=]，with the [=media key=] interpretation being
+		[=功能键③=]，with the [=多媒体按键=] interpretation being
 		the primary function of the key and the [=功能键③=]
 		interpretation requiring the KEYCAP{Fn} key to be pressed at the
 		same time. In this configuration the {{KeyboardEvent/code}} should
 		be set to match the [=功能键③=] (CODE{F1} ... CODE{F12}).
 		When the keys are merged in this fashion，the {{KeyboardEvent/code}}
 		values are taken from the [=功能键③=] value because the
-		[=media key=] value is not consistent across keyboards.
+		[=多媒体按键=] value is not consistent across keyboards.
 
 		BEGIN_CODE_TABLE media "List of code values for media keys."
 			CODE_OPT BrowserBack		Some laptops place this key to the left of the KEYCAP{&uarr;} key.
