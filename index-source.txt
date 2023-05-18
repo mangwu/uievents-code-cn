@@ -169,7 +169,7 @@ path: stylesheet-extra.include
 
 		* 代表字符的字形(Glyphs)显示为: GLYPH{&#x239C2;}。
 
-		* Unicode 代码点( [=code points=] ) 显示为: UNI{U+003D} 。
+		* Unicode 码点( [=code points=] ) 显示为: UNI{U+003D} 。
 
 		* 有效的键属性值( [=key attribute values=] )，即 {{KeyboardEvent/key}} 
 			属性值显示为: KEY{ArrowDown}，KEY_NOLINK{=}，KEY_NOLINK{q} 或 
@@ -1647,7 +1647,7 @@ path: stylesheet-extra.include
 		这些按键的主要功能因制造商而异。因此， {{KeyboardEvent/code}} 值总是设置为
 		[=功能键③=] 名称(即键帽标签名称和 <code>code</code> 值对应)。
 
-		BEGIN_CODE_TABLE function "List of code values for keys in the Function section."
+		BEGIN_CODE_TABLE function "在功能区域的按键的 code 值表。"
 			CODE Escape			KEYCAP{Esc} 或 KEYCAP{⎋} 
 								(非规范补充: 详见 [=系统和 GUI 键=] 中的退出键)
 			CODE F1				KEYCAP{F1}
@@ -1692,7 +1692,7 @@ path: stylesheet-extra.include
 		<q>KEYCAP{Fn} 键是 <em>功能(function)</em> 的缩写，是许多键盘上
 		(尤其是笔记本电脑上)的一个修饰键，它经常用在紧凑的布局组合其他独立的键( 
 		[=功能键③=] )一起使用。由于键盘尺寸的限制，它通常出现在笔记本电脑上。
-		它也出现在许多全尺寸的"多媒体"键盘上，作为 KEYCAP{FLock} 键。
+		作为 KEYCAP{FLock} 键，它也出现在许多全尺寸的"多媒体"键盘上。
 		它主要用于快速更改显示设置或音频设置，如亮度、对比度或音量，
 		使用时需要与相应的键( [=功能键③=] )一起按下以更改设置。</q> —— 维基百科
 		<a href="https://en.wikipedia.org/wiki/Fn_key">Fn key</a> 。<br/>
@@ -1713,38 +1713,32 @@ path: stylesheet-extra.include
 		它可能嵌入(recessed)到键盘中。
 
 		在笔记本电脑键盘上，这些键通常与 [=功能键③=] 结合(merged)，
-		也就是说 [=多媒体按键=] 可被理解成按键的主要功能(primary function)，
-		并且 [=功能键③=] 可被理解成需要同时按下Fn键的解释。在此配置中，应将代码设置为与功能键③ （“F1”…“F12”）。当键以这种方式合并时，代码值取自功能键③ 值，因为媒体键值在键盘之间不一致。
-		On laptop keyboards，these keys are often merged with the
-		[=功能键③=]，with the [=多媒体按键=] interpretation being
-		the primary function of the key and the [=功能键③=]
-		interpretation requiring the KEYCAP{Fn} key to be pressed at the
-		same time. In this configuration the {{KeyboardEvent/code}} should
-		be set to match the [=功能键③=] (CODE{F1} ... CODE{F12}).
-		When the keys are merged in this fashion，the {{KeyboardEvent/code}}
-		values are taken from the [=功能键③=] value because the
-		[=多媒体按键=] value is not consistent across keyboards.
+		也就是说 [=多媒体按键=] 可被理解成这些键的主要功能(primary function)，
+		并且 [=功能键③=] 可被理解成需要同时按下Fn键。在此配置下，
+		{{KeyboardEvent/code}} 应该设置地与 [=功能键③=] ( CODE{F1} ... CODE{F12} 
+		)匹配。当键以这种方式合并时， {{KeyboardEvent/code}} 值取自 [=功能键③=] 值，
+		因为 [=多媒体按键=] 值在键盘之间不一致。
 
-		BEGIN_CODE_TABLE media "List of code values for media keys."
-			CODE_OPT BrowserBack		Some laptops place this key to the left of the KEYCAP{&uarr;} key.
+		BEGIN_CODE_TABLE media "多媒体按键的 code 值表。"
+			CODE_OPT BrowserBack		一些笔记本电脑将此键放在 KEYCAP{&uarr;} 键左边。
 			CODE_OPT BrowserFavorites
-			CODE_OPT BrowserForward		Some laptops place this key to the right of the KEYCAP{&uarr;} key.
+			CODE_OPT BrowserForward		一些笔记本电脑将此键放在 KEYCAP{&uarr;} 键右边。
 			CODE_OPT BrowserHome
 			CODE_OPT BrowserRefresh
 			CODE_OPT BrowserSearch
 			CODE_OPT BrowserStop
-			CODE_OPT Eject				KEYCAP{Eject} 或 KEYCAP{&#9167;} 。 This key is placed in the [=功能区域=]
-										on some Apple keyboards.
-			CODE_OPT LaunchApp1			Sometimes labelled KEYCAP{My Computer} on the keyboard
-			CODE_OPT LaunchApp2			Sometimes labelled KEYCAP{Calculator} on the keyboard
+			CODE_OPT Eject				KEYCAP{Eject} 或 KEYCAP{&#9167;} 。 
+										在一些苹果键盘上，此按键位于 [=功能区域=] 。
+			CODE_OPT LaunchApp1			有时候在键盘上的键帽标签为 KEYCAP{My Computer} 
+			CODE_OPT LaunchApp2			有时候在键盘上的键帽标签为 KEYCAP{Calculator} 
 			CODE_OPT LaunchMail
 			CODE_OPT MediaPlayPause
 			CODE_OPT MediaSelect
 			CODE_OPT MediaStop
 			CODE_OPT MediaTrackNext
 			CODE_OPT MediaTrackPrevious
-			CODE_OPT Power				This key is placed in the [=功能区域=] on some Apple keyboards,
-										replacing the KEYCAP{Eject} key.
+			CODE_OPT Power				在一些苹果键盘上，此按键位于 [=功能区域=] 
+										并代替 KEYCAP{Eject} 键。
 			CODE_OPT Sleep
 			CODE_OPT AudioVolumeDown
 			CODE_OPT AudioVolumeMute
@@ -1752,12 +1746,11 @@ path: stylesheet-extra.include
 			CODE_OPT WakeUp
 		END_CODE_TABLE
 
-	<h3 id="key-legacy">Legacy，Non-Standard and Special Keys</h3>
+	<h3 id="key-legacy">遗留的、非标准的和特殊的按键</h3>
 
-		These keys are not found on modern standard keyboards. They are
-		listed here for reference purposes.
+		这些键在现代标准键盘上找不到。此处列出的内容仅供参考。
 
-		BEGIN_CODE_TABLE legacy-modifier "List of code values for legacy modifier keys."
+		BEGIN_CODE_TABLE legacy-modifier "遗留的修饰符按键的 code 值表。"
 			CODE_OPT Hyper
 			CODE_OPT Super
 			CODE_OPT Turbo
@@ -1765,7 +1758,7 @@ path: stylesheet-extra.include
 
 		&nbsp;
 
-		BEGIN_CODE_TABLE legacy-process "List of code values for legacy process control keys."
+		BEGIN_CODE_TABLE legacy-process "遗留的程序控制按键的 code 值表。"
 			CODE_OPT Abort
 			CODE_OPT Resume
 			CODE_OPT Suspend
@@ -1773,113 +1766,165 @@ path: stylesheet-extra.include
 
 		&nbsp;
 
-		BEGIN_CODE_TABLE legacy-editing "List of code values for legacy editing keys."
-			CODE_OPT Again	Found on Sun's USB keyboard.
-			CODE_OPT Copy	Found on Sun's USB keyboard.
-			CODE_OPT Cut	Found on Sun's USB keyboard.
-			CODE_OPT Find	Found on Sun's USB keyboard.
-			CODE_OPT Open	Found on Sun's USB keyboard.
-			CODE_OPT Paste	Found on Sun's USB keyboard.
-			CODE_OPT Props	Found on Sun's USB keyboard.
-			CODE_OPT Select Found on Sun's USB keyboard.
-			CODE_OPT Undo	Found on Sun's USB keyboard.
+		BEGIN_CODE_TABLE legacy-editing "遗留的编辑按键的 code 值表。"
+			CODE_OPT Again	出现在 Sun 公司的 USB 键盘上。
+			CODE_OPT Copy	出现在 Sun 公司的 USB 键盘上。
+			CODE_OPT Cut	出现在 Sun 公司的 USB 键盘上。
+			CODE_OPT Find	出现在 Sun 公司的 USB 键盘上。
+			CODE_OPT Open	出现在 Sun 公司的 USB 键盘上。
+			CODE_OPT Paste	出现在 Sun 公司的 USB 键盘上。
+			CODE_OPT Props	出现在 Sun 公司的 USB 键盘上。
+			CODE_OPT Select 出现在 Sun 公司的 USB 键盘上。
+			CODE_OPT Undo	出现在 Sun 公司的 USB 键盘上。
 		END_CODE_TABLE
 
-		The following keys may be found on non-standard international keyboards.
+		以下按键出现在非标准国际键盘上。
 
-		BEGIN_CODE_TABLE international "List of code values for keys found on international keyboards."
-			CODE_OPT Hiragana	Use for dedicated KEYCAP{ひらがな} key found on some 日语 word processing keyboards.
-			CODE_OPT Katakana	Use for dedicated KEYCAP{カタカナ} key found on some 日语 word processing keyboards.
+		BEGIN_CODE_TABLE international "出现在非标准国际键盘上的按键的 code 值表。"
+			CODE_OPT Hiragana	出现在日语文字处理器键盘上，专用 KEYCAP{ひらがな} 按键
+			CODE_OPT Katakana	出现在日语文字处理器键盘上，专用 KEYCAP{カタカナ} 按键。
 		END_CODE_TABLE
 
-		And finally，the following {{KeyboardEvent/code}} value should only
-		be used when the corresponding key does not correspond to any of the
-		{{KeyboardEvent/code}} values given elsewhere in this specification.
-		This value is appropriate for use with virtual keyboards that do not
-		have their keys arranged in a way that corresponds to those on a
-		physical keyboard.
+		<div class="note custom-note">
+		KEYCAP{ひらがな} 和 KEYCAP{カタカナ} 中的日文的意思: 前者表示平假名，
+		后者表示片假名。这两个按键 <em>可能</em> 用于切换输入模式，它们是从 
+		KEYCAP{カタカナ/ひらがな/ローマ字} ( CODE{KanaMode} )键中分离出来的专用按键。
+		</div>
+		
 
-		BEGIN_CODE_TABLE special "List of special code values."
-		CODE Unidentified	This value code should be used when no other
-							value given in this specification is appropriate.
+		最后，只有当相应的键与本规范其他地方给出的任何代 {{KeyboardEvent/code}} 
+		值都不对应时，才应使用以下 {{KeyboardEvent/code}} 值。
+		这个值适合虚拟键盘使用，
+		因为多数虚拟键盘没有以与物理键盘上的键相对应的方式排列按键。
+
+		BEGIN_CODE_TABLE special "特殊按键的 code 值表。"
+		CODE Unidentified		当本规范中没有给出合适的其他码值时，应使用此码值。
 		END_CODE_TABLE
 
 		<p class="warning">
-		Conforming implementations MUST only use CODE{Unidentified} as a key code
-		when there is no way for the implementation to determine the key code.
-		Exposing only this value MUST NOT indicate a conforming implementation.
+		当实现无法确定按键码值时，符合本规范的实现 
+		<span class="zh-upper">必须</span> 只能使用 CODE{Unidentified} 作为按键码值。
+		但仅使用(Exposing)该值 <span class="zh-upper">不得</span> 
+		表明实现符合本规范。
 		</p>
 
-<h2 id="accessibility">Accessibility</h2>
+<h2 id="accessibility">无障碍</h2>
 
-	This specification simply defines a set of values that are valid for use in the
-	{{KeyboardEvent/code}} attribute. Thus，it does not introduce any features that have
-	accessibility concerns.
+	这个规范简单地定义了一组可在 {{KeyboardEvent/code}} 属性中使用的有效值。
+	因此，它没有引入任何具有无障碍问题的特性(feature)。
 	
-	The <a href="https://w3c.github.io/apa/fast/checklist.html">FAST checklist</a> has been completed and nothing is applicable to this specification.
+	<a href="https://w3c.github.io/apa/fast/checklist.html">FAST 清单</a> 已完成，
+	本规范不适用其中任何内容。
+
+	<div class="note custom-note">
+	FAST: Framework for Accessibility in the Specification of Technologies，
+	技术文档的无障碍框架。<q>FAST的目标是描述网络技术应提供的特性，
+	以确保能够创建残疾用户可以访问的内容。完整的框架引入了对用户需求的分析，
+	描述了技术、内容创作和用户代理如何协同工作以满足这些需求，
+	并为技术开发人员提供了全面的指导。本清单(checklist)从高层次上提取这些信息，
+	以帮助技术进行自我审查。
+	规范开发人员可以利用本清单(checklist)
+	来帮助自己: 确保技术能够解决无障碍倡导者在横向审查期间可能提出的特性。</q>
+	—— <abbr 
+	title="Framework for Accessibility in the Specification of Technologies">
+	FAST</abbr> Checklist。
+	</div>
 	
-	A note related to the FAST checklist item: "If technology provides internationalization support".
-	This specification inherently defines {{KeyboardEvent/code}} values for keyboards and provides
-	human-readable names (like "ShiftLeft"，"ControlRight"，"AltGr" 或 "KeyQ").
+	FAST清单的一个条目是: "如果技术提供国际化支持"。此条目与本规范相关: 
+	本规范本质上为键盘定义了 {{KeyboardEvent/code}} 值，并提供了人类可读
+	(human-readable)的名称(如"ShiftLeft"、"ControlRight"、"AltGr"或"KeyQ")。
 	
-	These special key values are defined as human-readable strings so that code to detect special keys
-	can be easier to understand. While these values are not intended to be exposed directly to users,
-	there is nothing preventing that. Apps that choose to expose these values would need to determine
-	whether 或 not it is appropriate to translate these strings for presentation (e.g.: presenting
-	"Backspace" as "Suppr. arrière" for French users).
+	一些特殊按键的值被定义为人类可读(human-readable)的字符串，
+	以便检测特殊键的代码更容易理解。虽然这些值并不打算直接暴露给用户
+	(没有在键帽上显示)，但想要公开这些值无可厚非。
+	选择公开这些值的应用程序需要确定: 为了显示而翻译这些字符串是否合适
+	(例如: 为法国用户将"Backspace"显示为"Suppr.arrière")。
 
-<h2 id="i18n">I18n</h2>
+<h2 id="i18n">国际化(i18n)</h2>
 
-	The <a href="https://www.w3.org/International/i18n-drafts/techniques/shortchecklist">short I18n checklist</a>
-	has been completed and the following item requires a comment:
+	<a 
+	href="https://www.w3.org/International/i18n-drafts/techniques/shortchecklist">
+	简版的 I18n 清单</a> 已完成，清单中有一个条目需要进行说明:
 	
-	* <em>"describes a format 或 data that is likely to need localisation"</em>:
-		This specification defines values that are not intended for display to the user，although there
-		is nothing preventing sites from exposing these values. 
+	* <em>"描述一种格式或可能需要本地化的数据"</em>:
+		本规范定义了不打算向用户显示的值，尽管没有什么可以阻止网站公开这些值。
 
-<h2 id="security">Security Considerations</h2>
+	<div class="note custom-note">
+	<q>在计算中，国际化和本地化( internationalization and localization，美国英语)
+	或国际化和本地化(internationalisation and localisation，英国英语)，通常缩写为
+	<strong>i18n</strong> 和 <strong>L10n</strong>，是使计算机软件适应不同语言、
+	区域特性和目标地区的技术要求的方法。</q> —— 
+	<a href="https://en.wikipedia.org/wiki/Internationalization_and_localization">
+	I18n</a> <br/>
+	</div>
 
-	The <a href="https://www.w3.org/TR/security-privacy-questionnaire/">Security and Privacy Self-Review Questionairre</a>
-	has been completed with the following notes:
+	<div class="note custom-note" data-content="按键值的可读性和公开性: ">
+	无论是上面的无障碍还是本节的国际化，在说明时都包含对一个角度的解释: 
+	{{KeyboardEvent/code}} 值的可读性与公开性。
+	本规范定义的按键值都是人类可读的英文，在应用程序不公开这些按键值时，
+	不需要进行额外的国际化或无障碍适配，如果将这些按键值暴露给用户，
+	则需要对此进行翻译(国际化)和无障碍适配了。
+	</div>
+
+<h2 id="security">安全注意事项</h2>
+
+	<a href="https://www.w3.org/TR/security-privacy-questionnaire/">
+	安全和隐私的自我审查问卷</a> 已完成，以下是对其中一些有关本规范条目的备注:
 	
-	* <em>2.1 What information might this feature expose to Web sites 或 other parties，and for what purposes is that exposure necessary?</em>:
-		This spec defines a set of valid values for the {{KeyboardEvent/code}} attribute of the various
-		key events. This is necessary to provides a platform-independent way of identifying which physical
-		key (by location) has been pressed (for example，WASD keys in games).
+	* <em><a href="https://www.w3.org/TR/security-privacy-questionnaire/#purpose">
+		2.1 此特性可能会向网站或其他方公开哪些信息，出于什么目的需要公开?</a></em> :
+		本规范为各种按键事件的 {{KeyboardEvent/code}} 属性定义了一组有效值。
+		这提供一种平台独立的(platform-independent)方式来识别(通过位置)
+		按下了哪个物理键(例如，游戏中的 WASD 键)，非常有必要。
 
-	* <em>2.17 How does your feature handle non-"fully active" documents?</em>:
-		This attribute is only associated with key events，and events are not sent if the document is
-		not fully active.
+	* <em>
+		<a 
+		href=
+		"https://www.w3.org/TR/security-privacy-questionnaire/#non-fully-active">
+		2.17 您的功能是如何处理非"完全活动(fully active)"文档的?</a></em>:
+		此属性仅与按键事件关联，如果文档未完全激活，则不会派发事件。
 
-	Security concerns associated with the {{KeyboardEvent/code}} attribute are addressed in the [[UIEvents]]
-	specification.
+	[[UIEvents]] 规范中解决了与 {{KeyboardEvent/code}} 属性相关的安全问题。
 	
-<h2 id="privacy">Privacy Considerations</h2>
+<h2 id="privacy">隐私注意事项</h2>
 
-	The <a href="https://www.w3.org/TR/security-privacy-questionnaire/">Security and Privacy Self-Review Questionairre</a>
-	has been completed with the following notes:
+	安全和隐私的自我审查问卷 已完成，以下是对其中一些有关本规范条目的备注:
 	
-	* <em>2.6 Do the features in your specification expose information about the underlying platform to origins?</em>:
-		The {{KeyboardEvent/code}} attribute contains a platform-independent "scancode" value for the key pressed by the user.
-		There are a few special `code` values that can be used to identify particular keyboards.
-		For example，`IntlBackslash`，`IntlRo` and `IntlYen`. The user would have to type these keys for
-		the information to be exposed.
+	* <em><a href="https://www.w3.org/TR/security-privacy-questionnaire/#underlying-platform-data">
+		2.6 规范中的特性是否向源(origins)公开了有关底层平台的信息?</a></em>:
+		{{KeyboardEvent/code}} 属性包含用户按下的键的平台独立的"扫描码(scancode)"值。
+		有一些特殊的 `码(code)` 值可以用来识别特定的键盘。例如， `IntlBackslash` 、
+		`IntlRo` 和 `IntlYen` 。用户必须键入这些特性按键才能获取键信息。
 
-	* <em>3.5 Legitimate Misuse</em>:
-		A site could capture all keypresses and build a map of the values generated by the keyboard. If the
-		user types enough values (and doesn't change keyboard)，then the site could try to match those values
-		against a database of known keyboard layouts to guess the user's current keyboard layout. However,
-		that's a concern for the {{KeyboardEvent/key}} attribute itself (defined in the [[UIEvents]] specification) rather than
-		something specific to the values defined in this document
+	* <em><a href=
+		"https://www.w3.org/TR/security-privacy-questionnaire/#legitimate-misuse">
+		3.5 合法滥用(Legitimate Misuse)</a></em>: 一个站点可以捕获所有按键响应，
+		并构建键盘生成的按键值的映射。如果用户键入了足够的按键值(并且没有更改键盘)，
+		那么网站可以尝试将这些值与已知键盘布局的数据库进行匹配，
+		以猜测用户当前的键盘布局。然而，这是对 {{KeyboardEvent/key}} 属性本身
+		(在[[UIEvents]]规范中定义)的关注，而不是对本文档中定义的值( 
+			{{KeyboardEvent/code}} )的关注。
 
-	Privacy concerns associated with the {{KeyboardEvent/code}} attribute are addressed in the [[UIEvents]]
-	specification.
+	[[UIEvents]] 规范中解决了与 {{KeyboardEvent/code}} 属性相关的隐私问题。
 	
-<h2 id="acknowledgements-contributors">Acknowledgements</h2>
+<h2 id="acknowledgements-contributors">致谢</h2>
 
-	Considerable thanks are due to the following participants of the WebApps
-	Working Group for providing substantial material contributions in the
-	process of developing this specification.
+	非常感谢 WebApps 工作组的以下参与者在制定本规范的过程中提供了大量实质性贡献。
 
 	Gary Kacmarcik (Google),
 	Masayuki Nakano (Mozilla)
+
+<h2 id="w3c-conformance-zh">一致性</h2>
+
+	<h3 id="w3c-conventions-zh">文档规约</h3>
+
+		一致性要求通过描述性断言和 RFC 2119术语的组合来表达。
+		本文件规范性部分中的关键词 <q>MUST</q> ， <q>MUST NOT</q> ， 
+		<q>REQUIRED</q> ， <q>SHALL</q> ， <q>SHALL NOT</q> ， <q>SHOULD</q> ， 
+		<q>SHOULD NOT</q> ， <q>RECOMMENDED</q> ， <q>MAY</q> 和 <q>OPTIONAL</q> 
+		应按照 RFC 2119 中的描述进行解释。但是，为了便于阅读，
+		这些单词在本规范中并不是全部以大写字母出现。
+
+		本规范的所有文本都是规范性的，但明确标记为非规范性的部分、示例和注释除外。
+		[[!RFC2119]]
+
