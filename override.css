@@ -457,3 +457,21 @@ details > summary {
 .custom-dfn {
   display: none;
 }
+
+/* 隐藏非引用的固定一致性 */
+div[data-fill-with="conformance"] {
+  display: none;
+}
+#toc ol li:nth-child(10) {
+  display: none;
+}
+
+/* 覆盖索引的li样式 */
+ul.index {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 16px;
+}
+ul.index > li {
+  width: 33%;
+}
