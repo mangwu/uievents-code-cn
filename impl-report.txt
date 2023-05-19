@@ -85,7 +85,7 @@ path: stylesheet-extra.include
 	候选推荐标准的校验准则因此完全满足
 	(The Candidate Recommendation exit criteria are therefore fulfilled)。
 	
-	此外，本文档描述了60个可选值，这些可选值在支持多媒体或遗留键盘上使用。
+	此外，本文档描述了60个可选值，这些可选值在支持多媒体或遗留键盘上被使用。
 	其中，手动测试证实其中9个在至少2个独立的实现中通过。
 
 <h3 id="raw-results">原始结果</h3>
