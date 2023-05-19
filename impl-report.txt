@@ -28,86 +28,91 @@ Abstract:
 </pre>
 
 <pre class="anchors">
-url: http://www.w3.org/TR/uievents-code/#; type: dfn; spec: uievents-code;
-	text: code attribute value
+url: https://mangwu.github.io/uievents-code-cn/#; type: dfn; spec: uievents-code;
+	text: code 属性值
 </pre>
 
 <pre class="include">
 path: stylesheet-extra.include
 </pre>
 
-<h2 id="introduction">Introduction</h2>
+<h2 id="introduction">简介</h2>
 
-	The [[!UIEvents-Code]] specification defines the set of values that are valid for use
-	in the {{KeyboardEvent/code}} attribute.
+	[[!UIEvents-Code]] 规范定义了一组可在 {{KeyboardEvent/code}} 
+	属性中使用的有效值集合。
 
-	This document summarizes the current implementation status of the
-	{{KeyboardEvent/code}} attribute and its values.
+	本文档总结了 {{KeyboardEvent/code}} 属性及其值的当前实现状态。
 
-	The following versions of each user agents were tested:
+	测试了每个用户代理的以下版本: 
 	* Google Chrome 60.0.3112.113 (Windows 10, OS X 10.12.2, Ubuntu)
 	* Mozilla Firefox 55.0 (Windows 10, OS X 10.12.2, Ubuntu)
 	* Microsoft Edge 83.0.478.58 (Windows 10)
 	* Apple Safari 13.1.1 (OS X 10.14.6)
+
+	<div class="note custom-note">
+	从左到右的格式是"厂商 浏览器名称 浏览器版本 
+	(用于测试的一个或多个操作系统及其版本)"。
+	</div>
 	
-<h2 id="methodology">Methodology</h2>
+<h2 id="methodology">测试方法</h2>
 
-	Because there is no automated way to test these key press events (expecially
-	considering that international keyboard are often required), these tests were all
-	performed manually.
+	由于没有自动的方法来测试这些按键事件(特别是考虑到通常需要国际键盘)，
+	这些测试都是手动进行的。
 	
-	Manual tests were performed by visiting the
-	<a href="https://domeventviewer.com/key-event-viewer.html">domeeventviewer.com/key-event-viewer.html</a>
-	test page and examining the "code" column after pressing the key being tested. To test
-	keys (like "IntlBackslash") that are only present on keyboards for certain locales,
-	this requires using a keyboard that contains the key being tested.
+	手动测试是通过访问
+	<a href="https://domeventviewer.com/key-event-viewer.html">
+	domeeventviewer.com/key-event-viewer.html</a> 
+	测试页面并在按下测试键后检查"code"列来执行的。
+	要测试仅存在于特定地区键盘上的键(如"IntlBackslash")，
+	需要使用包含被测试键的键盘。
 
-	For purposes of this report, Chrome, Firefox and Safari are considered independent
-	implementations.
+	就本报告而言，Chrome、Firefox和Safari被视为独立的实现。
 
-<h2 id="results">Results</h2>
+<h2 id="results">结果</h2>
 	
-<h3 id="summary">Summary</h3>
+<h3 id="summary">总结</h3>
 
-	Manual tests for all 112 required values of the {{KeyboardEvent/code}} attribute
-	<b>Pass</b> in at least 2 independent implementations.
+	在至少2个独立的实现中对 {{KeyboardEvent/code}} 属性 <b>通过(Pass)</b> 
+	的所有112个必需值进行手动测试。
 	
-	The Candidate Recommendation exit criteria are therefore fulfilled.  
+	候选推荐标准的校验准则因此完全满足
+	(The Candidate Recommendation exit criteria are therefore fulfilled)。
 	
-	In addition, the specification describes 60 optional values that may be used to
-	support multimedia or legacy keyboards. Of these, manual tests confirm that 9 of these
-	Pass in at least 2 independent implementations.
+	此外，本文档描述了60个可选值，这些可选值在支持多媒体或遗留键盘上使用。
+	其中，手动测试证实其中9个在至少2个独立的实现中通过。
 
-<h3 id="raw-results">Raw Results</h3>
+<h3 id="raw-results">原始结果</h3>
 
-	The following tables present the result of the manual tests.
+	下表显示了手动测试的结果。
 	
-	Entries marked "Pass" generate the expected value when the corresponding key is
-	pressed.
+	当按下相应的键时，标记为"通过(Pass)"的条目将生成预期值。
 
-	Entries marked "Fail" generate some value other than the expected value when the
-	corresponding key is pressed. Wherever possible, a Note is included that provides more
-	information about the failure.
+	当按下相应的键时，标记为"失败(Fail)"的条目会生成一些预期值以外的值。
+	在可能的情况下，表格项会给出一个注释，提供有关失败的更多信息。
 
-	Entries marked with a "?" have not been tested, typically because devices
-	with that key were not available (for example, because keyboards with those keys are
-	not supported on that platform).
+	标有"?"的条目尚未经过测试，通常是因为带有该键的设备不可用
+	(例如，因为带有这些键的键盘在该平台上不受支持)。
 
-	Entries marked with "N/A" are not currently testable, typically because the devices
-	with that key do not generate separate keyboard events. E.g., FnLock.
+	标记为"N/A"的条目当前不可测试(testable)，
+	通常是因为带有该键的设备不会生成单独的键盘事件。例如， FnLock 。
 
-	<h4 id="code-attribute">{{KeyboardEvent/code}} Attribute</h4>
+	<div class="note custom-note">
+	下面表格中会将所有 "Pass" 翻译成 "通过" ，"Fail" 翻译成 "失败" ， 
+	"N/A" 和 "?" 不变。
+	</div>
+	
+
+	<h4 id="code-attribute">{{KeyboardEvent/code}} 属性</h4>
 		
-		The {{KeyboardEvent/code}} attribute (defined in [[!UIEvents]]) is present in all
-		browsers tested.
+		{{KeyboardEvent/code}} (在[[!UIEvents]]中定义) 存在于所有测试的浏览器中。
 
 		<table id="key-attribute-impl" class="data-table full-width">
 		<thead><tr>
-			<th rowspan=2>{{KeyboardEvent}} attribute</th>
+			<th rowspan=2>{{KeyboardEvent}} 属性</th>
 			<th class="code-impl-data" colspan=3>Windows</th>
 			<th class="code-impl-data" colspan=3>macOS</th>
 			<th class="code-impl-data" colspan=2>Linux</th>
-			<th rowspan=2>Notes</th>
+			<th rowspan=2>注释</th>
 		</tr><tr>
 			<th class="code-impl-data">Chrome</th>
 			<th class="code-impl-data">Firefox</th>
@@ -121,29 +126,44 @@ path: stylesheet-extra.include
 		<tbody>
 		<tr>
 			<td>{{KeyboardEvent/code}}</td>
-			<td class="code-impl-data"><span class="code-impl-yes">Pass</span></td>
-			<td class="code-impl-data"><span class="code-impl-yes">Pass</span></td>
-			<td class="code-impl-data"><span class="code-impl-yes">Pass</span></td>
-			<td class="code-impl-data"><span class="code-impl-yes">Pass</span></td>
-			<td class="code-impl-data"><span class="code-impl-yes">Pass</span></td>
-			<td class="code-impl-data"><span class="code-impl-yes">Pass</span></td>
-			<td class="code-impl-data"><span class="code-impl-yes">Pass</span></td>
-			<td class="code-impl-data"><span class="code-impl-yes">Pass</span></td>
+			<td class="code-impl-data"><span class="code-impl-yes">通过</span></td>
+			<td class="code-impl-data"><span class="code-impl-yes">通过</span></td>
+			<td class="code-impl-data"><span class="code-impl-yes">通过</span></td>
+			<td class="code-impl-data"><span class="code-impl-yes">通过</span></td>
+			<td class="code-impl-data"><span class="code-impl-yes">通过</span></td>
+			<td class="code-impl-data"><span class="code-impl-yes">通过</span></td>
+			<td class="code-impl-data"><span class="code-impl-yes">通过</span></td>
+			<td class="code-impl-data"><span class="code-impl-yes">通过</span></td>
 			<td></td>
 		</tr>
 		</tbody></table>
 
+		<div class="note custom-note">
+		本文档中的所有表格中的操作系统和浏览器都没有进行翻译，
+		这些单词都是品牌名称，现在对此进行统一说明:
+		++------------------------------+-----------------+-----------------+----------------------------------+
+		=| 操作系统                     | 测试浏览器      | 测试浏览器      | 测试浏览器                       |
+		 +------------------------------+-----------------+-----------------+----------------------------------+
+		+| Windows ，                   | Chrome ，       | Firefox ，      | Edge                             |
+		 | 微软公司发布的操作系统       | 称为谷歌浏览器  | 称为火狐浏览器  | 微软发布的浏览，暂无官方中文名称 |
+		+| macOS ，                     | Chrome ，       | Firefox ，      | Safari                           |
+		 | 苹果公司发布的操作系统       | 称为谷歌浏览器  | 称为火狐浏览器  | 苹果发布的浏览，暂无官方中文名称 |
+		+| Linux ，                     | Chrome ，       | Firefox ，      | -                                |
+		 | 社区开源的操作系统           | 称为谷歌浏览器  | 称为火狐浏览器  |                                  |
+		+++-----------------------------+-----------------+-----------------+----------------------------------+
+		</div>
+		
 
-	<h4 id="required-values">Required {{KeyboardEvent/code}} Values</h4>
+	<h4 id="required-values">必需的 {{KeyboardEvent/code}} 指</h4>
 
-		This section lists the test results for the basic set of {{KeyboardEvent/code}}
-		attribute values that a conforming implementation must support.
+		本节列出了符合规范的实现必须支持的基本 {{KeyboardEvent/code}} 
+		属性值集的测试结果。
 
 		BEGIN_CODE_IMPL_TABLE standard keys
 			<!--     Key-name					Windows                     Mac                         Linux                       -->
-			<!--								Chrome  Firefox Edge	    Chrome Firefox  Safari      Chrome Firefox     Notes    -->
+			<!--								Chrome  Firefox Edge	    Chrome Firefox  Safari      Chrome Firefox     注释    -->
 
-			CODE_IMPL_SECTION Alphanumeric Section - Writing System Keys
+			CODE_IMPL_SECTION 字母数字区域 - 书写系统键
 			CODE_IMPL Backquote					Y		Y		Y			Y		Y		Y			Y		Y
 			CODE_IMPL Backslash					Y		Y		Y			Y		Y		Y			Y		Y
 			CODE_IMPL BracketLeft				Y		Y		Y			Y		Y		Y			Y		Y
@@ -162,7 +182,7 @@ path: stylesheet-extra.include
 			CODE_IMPL Digit9					Y		Y		Y			Y		Y		Y			Y		Y
 
 			CODE_IMPL Equal						Y		Y		Y			Y		Y		Y			Y		Y
-			CODE_IMPL IntlBackslash				Y		Y		Y			Y		Y		F			Y		Y		Safari swaps IntlBackslash with Backquote on keyboards that support IntlBackslash
+			CODE_IMPL IntlBackslash				Y		Y		Y			Y		Y		F			Y		Y		Safari 在支持 IntlBackslash 的键盘上用 Backquote 替换 IntlBacklash
 			CODE_IMPL IntlRo					Y		Y		Y			?		?		?			?		?
 			CODE_IMPL IntlYen					Y		Y		Y			?		?		?			?		?
 
@@ -200,17 +220,17 @@ path: stylesheet-extra.include
 			CODE_IMPL Slash						Y		Y		Y			Y		Y		Y			Y		Y
 
 
-			CODE_IMPL_SECTION Alphanumeric Section - Functional Keys
+			CODE_IMPL_SECTION 字母数字区域 - 功能按键(Functional Keys)
 			CODE_IMPL AltLeft					Y		Y		Y			Y		Y		Y			Y		Y
 			CODE_IMPL AltRight					Y		Y		Y			Y		Y		Y			Y		Y
 			CODE_IMPL Backspace					Y		Y		Y			Y		Y		Y			Y		Y
 			CODE_IMPL CapsLock					Y		Y		Y			Y		Y		Y			Y		Y
-			CODE_IMPL ContextMenu				Y		Y		Y			Y		Y		F			Y		Y		Safari returns "Unidentified"
+			CODE_IMPL ContextMenu				Y		Y		Y			Y		Y		F			Y		Y		Safari 返回 "Unidentified"
 			CODE_IMPL ControlLeft				Y		Y		Y			Y		Y		Y			Y		Y
 			CODE_IMPL ControlRight				Y		Y		Y			Y		Y		Y			Y		Y
 			CODE_IMPL Enter						Y		Y		Y			Y		Y		Y			Y		Y
-			CODE_IMPL MetaLeft					Y		F		Y			Y		F		Y			Y		F		Firefox returns "OSLeft"
-			CODE_IMPL MetaRight					Y		F		Y			Y		F		Y			Y		F		Firefox returns "OSRight"
+			CODE_IMPL MetaLeft					Y		F		Y			Y		F		Y			Y		F		Firefox 返回 "OSLeft" 
+			CODE_IMPL MetaRight					Y		F		Y			Y		F		Y			Y		F		Firefox 返回 "OSRight"
 			CODE_IMPL ShiftLeft					Y		Y		Y			Y		Y		Y			Y		Y
 			CODE_IMPL ShiftRight				Y		Y		Y			Y		Y		Y			Y		Y
 			CODE_IMPL Space						Y		Y		Y			Y		Y		Y			Y		Y
@@ -221,23 +241,23 @@ path: stylesheet-extra.include
 			CODE_IMPL NonConvert				Y		Y		Y			?		?		?			?		?
 
 
-			CODE_IMPL_SECTION Control Pad Section
+			CODE_IMPL_SECTION 控制板区域
 			CODE_IMPL Delete					Y		Y		Y			Y		Y		Y			Y		Y
 			CODE_IMPL End						Y		Y		Y			Y		Y		Y			Y		Y
 			CODE_IMPL Home						Y		Y		Y			Y		Y		Y			Y		Y
-			CODE_IMPL Insert					Y		Y		Y			Y		Y		F			Y		Y		Safari returns "Help"
+			CODE_IMPL Insert					Y		Y		Y			Y		Y		F			Y		Y		Safari 返回 "Help"
 			CODE_IMPL PageDown					Y		Y		Y			Y		Y		Y			Y		Y
 			CODE_IMPL PageUp					Y		Y		Y			Y		Y		Y			Y		Y
 
 
-			CODE_IMPL_SECTION Arrow Pad Section
+			CODE_IMPL_SECTION 箭头板区域
 			CODE_IMPL ArrowDown					Y		Y		Y			Y		Y		Y			Y		Y
 			CODE_IMPL ArrowLeft					Y		Y		Y			Y		Y		Y			Y		Y
 			CODE_IMPL ArrowRight				Y		Y		Y			Y		Y		Y			Y		Y
 			CODE_IMPL ArrowUp					Y		Y		Y			Y		Y		Y			Y		Y
 
 
-			CODE_IMPL_SECTION Numpad Section
+			CODE_IMPL_SECTION 数字板区域
 			CODE_IMPL NumLock					Y		?		Y			Y		Y		Y			Y		Y
 			CODE_IMPL Numpad0					Y		?		Y			Y		Y		Y			Y		Y
 			CODE_IMPL Numpad1					Y		?		Y			Y		Y		Y			Y		Y
@@ -257,7 +277,7 @@ path: stylesheet-extra.include
 			CODE_IMPL NumpadSubtract			Y		?		Y			Y		Y		Y			Y		Y
 
 
-			CODE_IMPL_SECTION Function Section
+			CODE_IMPL_SECTION 功能区域
 			CODE_IMPL Escape					Y		Y		Y			Y		Y		Y			Y		Y
 			CODE_IMPL F1						Y		Y		Y			Y		Y		Y			Y		Y
 			CODE_IMPL F2						Y		Y		Y			Y		Y		Y			Y		Y
@@ -269,66 +289,65 @@ path: stylesheet-extra.include
 			CODE_IMPL F8						Y		Y		Y			Y		Y		Y			Y		Y
 			CODE_IMPL F9						Y		Y		Y			Y		Y		Y			Y		Y
 			CODE_IMPL F10						Y		Y		Y			Y		Y		Y			Y		Y
-			CODE_IMPL F11						Y		Y		Y			Y		?		?			Y		?		macOS & Ubuntu enter fullscreen; Chrome requires KeyboardLock
+			CODE_IMPL F11						Y		Y		Y			Y		?		?			Y		?		macOS & Ubuntu 进入全屏; Chrome 需要 KeyboardLock
 			CODE_IMPL F12						Y		Y		Y			Y		Y		Y			?		?
-			CODE_IMPL PrintScreen				Y		Y		Y			F		F		F			?		?		macOS returns "F13"; Ubuntu takes screenshot
-			CODE_IMPL ScrollLock				Y		Y		Y			?		?		?			Y		Y		macOS decreases brightness
-			CODE_IMPL Pause						Y		Y		Y			?		?		?			Y		Y		macOS increases brightness
+			CODE_IMPL PrintScreen				Y		Y		Y			F		F		F			?		?		macOS 返回 "F13"; Ubuntu 会截屏
+			CODE_IMPL ScrollLock				Y		Y		Y			?		?		?			Y		Y		macOS 降低(屏幕)亮度
+			CODE_IMPL Pause						Y		Y		Y			?		?		?			Y		Y		macOS 增加(屏幕)亮度
 
 
-			CODE_IMPL_SECTION Special Values
+			CODE_IMPL_SECTION 特殊值
 			CODE_IMPL Unidentified				Y		Y		Y			Y		Y		Y			Y		Y
 
 		END_CODE_IMPL_TABLE
 
-	<h4 id="optional-values">Optional {{KeyboardEvent/code}} Values</h4>
+	<h4 id="optional-values">可选的 {{KeyboardEvent/code}} 值</h4>
 
-		This section lists the test results for the set of {{KeyboardEvent/code}}
-		attribute values that a conforming implementation may use to support special
-		keyboards (such as multimedia or legacy keyboards).
+		本节列出了符合规范的实现通过使用支持特殊按键的键盘(如多媒体或传统键盘)的 
+		{{KeyboardEvent/code}} 属性值集的测试结果。
 
 		BEGIN_CODE_IMPL_TABLE optional keys
 			<!--     Key-name					Windows                     Mac                         Linux                       -->
-			<!--								Chrome  Firefox Edge	    Chrome Firefox  Safari      Chrome Firefox     Notes    -->
+			<!--								Chrome  Firefox Edge	    Chrome Firefox  Safari      Chrome Firefox     注释    -->
 
-			CODE_IMPL_SECTION Media Keys
-			CODE_IMPL BrowserBack				Y		Y		Y			F		F		F			Y		?		Handled by OS (Chrome requires KeyboardLock)
-			CODE_IMPL BrowserFavorites			Y		Y		Y			F		F		F			Y		?		Handled by OS (Chrome requires KeyboardLock)
-			CODE_IMPL BrowserForward			Y		Y		Y			F		F		F			Y		?		Handled by OS (Chrome requires KeyboardLock)
-			CODE_IMPL BrowserHome				Y		?		Y			F		F		F			Y		?		Handled by OS (Chrome requires KeyboardLock)
+			CODE_IMPL_SECTION 多媒体按键
+			CODE_IMPL BrowserBack				Y		Y		Y			F		F		F			Y		?		由操作系统处理 (Chrome 需要 KeyboardLock)
+			CODE_IMPL BrowserFavorites			Y		Y		Y			F		F		F			Y		?		由操作系统处理 (Chrome 需要 KeyboardLock)
+			CODE_IMPL BrowserForward			Y		Y		Y			F		F		F			Y		?		由操作系统处理 (Chrome 需要 KeyboardLock)
+			CODE_IMPL BrowserHome				Y		?		Y			F		F		F			Y		?		由操作系统处理 (Chrome 需要 KeyboardLock)
 			CODE_IMPL BrowserRefresh			?		?		F			?		?		?			?		?
 			CODE_IMPL BrowserSearch				F		?		F			F		F		F			F		F
 			CODE_IMPL BrowserStop				?		?		?			?		?		?			?		?
 			CODE_IMPL Eject						?		?		?			?		?		?			?		?
 			CODE_IMPL LaunchApp1				?		?		?			F		F		F			?		?
 			CODE_IMPL LaunchApp2				?		?		?			F		F		F			?		?
-			CODE_IMPL LaunchMail				-		-		-			-		-		-			-		-		Handled by OS
-			CODE_IMPL MediaPlayPause			-		-		-			-		-		-			-		-		Handled by OS
+			CODE_IMPL LaunchMail				-		-		-			-		-		-			-		-		由操作系统处理
+			CODE_IMPL MediaPlayPause			-		-		-			-		-		-			-		-		由操作系统处理
 			CODE_IMPL MediaSelect				?		?		?			?		?		?			?		?
 			CODE_IMPL MediaStop					?		?		?			?		?		?			?		?
 			CODE_IMPL MediaTrackNext			?		?		?			?		?		?			?		?
 			CODE_IMPL MediaTrackPrevious		?		?		?			?		?		?			?		?
 			CODE_IMPL Power						?		?		?			F		?		?			?		?
 			CODE_IMPL Sleep						?		?		?			F		?		?			?		?
-			CODE_IMPL AudioVolumeDown			-		-		-			-		-		-			-		-		Handled by OS
-			CODE_IMPL AudioVolumeMute			-		-		-			-		-		-			-		-		Handled by OS
-			CODE_IMPL AudioVolumeUp				-		-		-			-		-		-			-		-		Handled by OS
+			CODE_IMPL AudioVolumeDown			-		-		-			-		-		-			-		-		由操作系统处理
+			CODE_IMPL AudioVolumeMute			-		-		-			-		-		-			-		-		由操作系统处理
+			CODE_IMPL AudioVolumeUp				-		-		-			-		-		-			-		-		由操作系统处理
 			CODE_IMPL WakeUp					?		?		?			F		?		?			?		?
 
 
-			CODE_IMPL_SECTION Alphanumeric Section - Functional Keys
-			CODE_IMPL Lang1						?		?		?			F		Y		F			Y		Y		Safari returns KanaMode
+			CODE_IMPL_SECTION 字母数字区域 - 功能键(Functional Keys)
+			CODE_IMPL Lang1						?		?		?			F		Y		F			Y		Y		Safari 返回 KanaMode
 			CODE_IMPL Lang2						?		?		?			F		Y		Y			Y		Y
 			CODE_IMPL Lang3						?		?		?			?		?		?			?		?
 			CODE_IMPL Lang4						?		?		?			?		?		?			?		?
 			CODE_IMPL Lang5						?		?		?			?		?		?			?		?
 
 
-			CODE_IMPL_SECTION Numpad Section
-			CODE_IMPL NumpadBackspace			F		F		F			F		?		?			F		F		Chrome/Firefox/Safari return "Backspace"
+			CODE_IMPL_SECTION 数字板区域
+			CODE_IMPL NumpadBackspace			F		F		F			F		?		?			F		F		Chrome/Firefox/Safari 返回 "Backspace"
 			CODE_IMPL NumpadClear				?		?		?			?		?		?			?		?
 			CODE_IMPL NumpadClearEntry			?		?		?			?		?		?			?		?
-			CODE_IMPL NumpadComma				?		?		?			?		?		?			?		?		Need to test with Brazilian keyboard.
+			CODE_IMPL NumpadComma				?		?		?			?		?		?			?		?		需要使用巴西键盘进行测试。
 			CODE_IMPL NumpadEqual				Y		?		Y			Y		?		?			Y		Y
 			CODE_IMPL NumpadHash				?		?		?			?		?		?			?		?
 			CODE_IMPL NumpadMemoryAdd			?		?		?			?		?		?			?		?
@@ -341,12 +360,12 @@ path: stylesheet-extra.include
 			CODE_IMPL NumpadStar				?		?		?			?		?		?			?		?
 
 
-			CODE_IMPL_SECTION Function Section
+			CODE_IMPL_SECTION 功能区域
 			CODE_IMPL Fn						-		-		-			-		-		-			-		-
 			CODE_IMPL FnLock					-		-		-			-		-		-			-		-
 
 
-			CODE_IMPL_SECTION Legacy, Non-Standard and Special Keys
+			CODE_IMPL_SECTION 遗留的、非标准的和特殊的按键
 			CODE_IMPL Hyper						?		?		?			?		?		?			?		?
 			CODE_IMPL Super						?		?		?			?		?		?			?		?
 			CODE_IMPL Turbo						?		?		?			?		?		?			?		?

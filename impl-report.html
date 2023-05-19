@@ -7,7 +7,7 @@
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-UD" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
   <meta content="Bikeshed version d9bd89757, updated Thu Mar 23 10:06:53 2023 -0700" name="generator">
-  <meta content="cbbbaea6cbf6332cacd062f2ae7b08bbfd91e0d0" name="document-revision">
+  <meta content="e8290d4a87391c5a4d20b53bde1ae682937c0048" name="document-revision">
   <link href="./override.css" rel="stylesheet">
 <style>
 
@@ -622,18 +622,18 @@ dfn > a.self-link::before      { content: "#"; }
   <nav data-fill-with="table-of-contents" id="toc">
    <h2 class="no-num no-toc no-ref" id="contents">Table of Contents</h2>
    <ol class="toc" role="directory">
-    <li><a href="#introduction"><span class="secno">1</span> <span class="content">Introduction</span></a>
-    <li><a href="#methodology"><span class="secno">2</span> <span class="content">Methodology</span></a>
+    <li><a href="#introduction"><span class="secno">1</span> <span class="content">简介</span></a>
+    <li><a href="#methodology"><span class="secno">2</span> <span class="content">测试方法</span></a>
     <li>
-     <a href="#results"><span class="secno">3</span> <span class="content">Results</span></a>
+     <a href="#results"><span class="secno">3</span> <span class="content">结果</span></a>
      <ol class="toc">
-      <li><a href="#summary"><span class="secno">3.1</span> <span class="content">Summary</span></a>
+      <li><a href="#summary"><span class="secno">3.1</span> <span class="content">总结</span></a>
       <li>
-       <a href="#raw-results"><span class="secno">3.2</span> <span class="content">Raw Results</span></a>
+       <a href="#raw-results"><span class="secno">3.2</span> <span class="content">原始结果</span></a>
        <ol class="toc">
-        <li><a href="#code-attribute"><span class="secno">3.2.1</span> <span class="content"><code class="idl"><span>code</span></code> Attribute</span></a>
-        <li><a href="#required-values"><span class="secno">3.2.2</span> <span class="content">Required <code class="idl"><span>code</span></code> Values</span></a>
-        <li><a href="#optional-values"><span class="secno">3.2.3</span> <span class="content">Optional <code class="idl"><span>code</span></code> Values</span></a>
+        <li><a href="#code-attribute"><span class="secno">3.2.1</span> <span class="content"><code class="idl"><span>code</span></code> 属性</span></a>
+        <li><a href="#required-values"><span class="secno">3.2.2</span> <span class="content">必需的 <code class="idl"><span>code</span></code> 指</span></a>
+        <li><a href="#optional-values"><span class="secno">3.2.3</span> <span class="content">可选的 <code class="idl"><span>code</span></code> 值</span></a>
        </ol>
      </ol>
     <li>
@@ -657,11 +657,10 @@ dfn > a.self-link::before      { content: "#"; }
   <main>
 <script defer src="./custom-script.js"></script>
 <script src="./backup-script.js"></script>
-   <h2 class="heading settled" data-level="1" id="introduction"><span class="secno">1. </span><span class="content">Introduction</span><a class="self-link" href="#introduction"></a></h2>
-   <p>The <a data-link-type="biblio" href="#biblio-uievents-code" title="UI Events KeyboardEvent code Values">[UIEvents-Code]</a> specification defines the set of values that are valid for use
-	in the <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code">code</a></code> attribute.</p>
-   <p>This document summarizes the current implementation status of the <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①">code</a></code> attribute and its values.</p>
-   <p>The following versions of each user agents were tested:</p>
+   <h2 class="heading settled" data-level="1" id="introduction"><span class="secno">1. </span><span class="content">简介</span><a class="self-link" href="#introduction"></a></h2>
+   <p><a data-link-type="biblio" href="#biblio-uievents-code" title="UI Events KeyboardEvent code Values">[UIEvents-Code]</a> 规范定义了一组可在 <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code">code</a></code> 属性中使用的有效值集合。</p>
+   <p>本文档总结了 <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①">code</a></code> 属性及其值的当前实现状态。</p>
+   <p>测试了每个用户代理的以下版本:</p>
    <ul>
     <li data-md>
      <p>Google Chrome 60.0.3112.113 (Windows 10, OS X 10.12.2, Ubuntu)</p>
@@ -672,45 +671,43 @@ dfn > a.self-link::before      { content: "#"; }
     <li data-md>
      <p>Apple Safari 13.1.1 (OS X 10.14.6)</p>
    </ul>
-   <h2 class="heading settled" data-level="2" id="methodology"><span class="secno">2. </span><span class="content">Methodology</span><a class="self-link" href="#methodology"></a></h2>
-   <p>Because there is no automated way to test these key press events (expecially
-	considering that international keyboard are often required), these tests were all
-	performed manually.</p>
-   <p>Manual tests were performed by visiting the <a href="https://domeventviewer.com/key-event-viewer.html">domeeventviewer.com/key-event-viewer.html</a> test page and examining the "code" column after pressing the key being tested. To test
-	keys (like "IntlBackslash") that are only present on keyboards for certain locales,
-	this requires using a keyboard that contains the key being tested.</p>
-   <p>For purposes of this report, Chrome, Firefox and Safari are considered independent
-	implementations.</p>
-   <h2 class="heading settled" data-level="3" id="results"><span class="secno">3. </span><span class="content">Results</span><a class="self-link" href="#results"></a></h2>
-   <h3 class="heading settled" data-level="3.1" id="summary"><span class="secno">3.1. </span><span class="content">Summary</span><a class="self-link" href="#summary"></a></h3>
-   <p>Manual tests for all 112 required values of the <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②">code</a></code> attribute <b>Pass</b> in at least 2 independent implementations.</p>
-   <p>The Candidate Recommendation exit criteria are therefore fulfilled.</p>
-   <p>In addition, the specification describes 60 optional values that may be used to
-	support multimedia or legacy keyboards. Of these, manual tests confirm that 9 of these
-	Pass in at least 2 independent implementations.</p>
-   <h3 class="heading settled" data-level="3.2" id="raw-results"><span class="secno">3.2. </span><span class="content">Raw Results</span><a class="self-link" href="#raw-results"></a></h3>
-   <p>The following tables present the result of the manual tests.</p>
-   <p>Entries marked "Pass" generate the expected value when the corresponding key is
-	pressed.</p>
-   <p>Entries marked "Fail" generate some value other than the expected value when the
-	corresponding key is pressed. Wherever possible, a Note is included that provides more
-	information about the failure.</p>
-   <p>Entries marked with a "?" have not been tested, typically because devices
-	with that key were not available (for example, because keyboards with those keys are
-	not supported on that platform).</p>
-   <p>Entries marked with "N/A" are not currently testable, typically because the devices
-	with that key do not generate separate keyboard events. E.g., FnLock.</p>
-   <h4 class="heading settled" data-level="3.2.1" id="code-attribute"><span class="secno">3.2.1. </span><span class="content"><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code③">code</a></code> Attribute</span><a class="self-link" href="#code-attribute"></a></h4>
-   <p>The <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code④">code</a></code> attribute (defined in <a data-link-type="biblio" href="#biblio-uievents" title="UI Events">[UIEvents]</a>) is present in all
-		browsers tested.</p>
+   <div class="note custom-note" role="note"> 从左到右的格式是"厂商 浏览器名称 浏览器版本 
+	(用于测试的一个或多个操作系统及其版本)"。 </div>
+   <h2 class="heading settled" data-level="2" id="methodology"><span class="secno">2. </span><span class="content">测试方法</span><a class="self-link" href="#methodology"></a></h2>
+   <p>由于没有自动的方法来测试这些按键事件(特别是考虑到通常需要国际键盘)，
+	这些测试都是手动进行的。</p>
+   <p>手动测试是通过访问 <a href="https://domeventviewer.com/key-event-viewer.html"> domeeventviewer.com/key-event-viewer.html</a> 测试页面并在按下测试键后检查"code"列来执行的。
+	要测试仅存在于特定地区键盘上的键(如"IntlBackslash")，
+	需要使用包含被测试键的键盘。</p>
+   <p>就本报告而言，Chrome、Firefox和Safari被视为独立的实现。</p>
+   <h2 class="heading settled" data-level="3" id="results"><span class="secno">3. </span><span class="content">结果</span><a class="self-link" href="#results"></a></h2>
+   <h3 class="heading settled" data-level="3.1" id="summary"><span class="secno">3.1. </span><span class="content">总结</span><a class="self-link" href="#summary"></a></h3>
+   <p>在至少2个独立的实现中对 <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②">code</a></code> 属性 <b>通过(Pass)</b> 的所有112个必需值进行手动测试。</p>
+   <p>候选推荐标准的校验准则因此完全满足
+	(The Candidate Recommendation exit criteria are therefore fulfilled)。</p>
+   <p>此外，本文档描述了60个可选值，这些可选值在支持多媒体或遗留键盘上使用。
+	其中，手动测试证实其中9个在至少2个独立的实现中通过。</p>
+   <h3 class="heading settled" data-level="3.2" id="raw-results"><span class="secno">3.2. </span><span class="content">原始结果</span><a class="self-link" href="#raw-results"></a></h3>
+   <p>下表显示了手动测试的结果。</p>
+   <p>当按下相应的键时，标记为"通过(Pass)"的条目将生成预期值。</p>
+   <p>当按下相应的键时，标记为"失败(Fail)"的条目会生成一些预期值以外的值。
+	在可能的情况下，表格项会给出一个注释，提供有关失败的更多信息。</p>
+   <p>标有"?"的条目尚未经过测试，通常是因为带有该键的设备不可用
+	(例如，因为带有这些键的键盘在该平台上不受支持)。</p>
+   <p>标记为"N/A"的条目当前不可测试(testable)，
+	通常是因为带有该键的设备不会生成单独的键盘事件。例如， FnLock 。</p>
+   <div class="note custom-note" role="note"> 下面表格中会将所有 "Pass" 翻译成 "通过" ，"Fail" 翻译成 "失败" ， 
+	"N/A" 和 "?" 不变。 </div>
+   <h4 class="heading settled" data-level="3.2.1" id="code-attribute"><span class="secno">3.2.1. </span><span class="content"><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code③">code</a></code> 属性</span><a class="self-link" href="#code-attribute"></a></h4>
+   <p><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code④">code</a></code> (在<a data-link-type="biblio" href="#biblio-uievents" title="UI Events">[UIEvents]</a>中定义) 存在于所有测试的浏览器中。</p>
    <table class="data-table full-width" id="key-attribute-impl">
     <thead>
      <tr>
-      <th rowspan="2"><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#keyboardevent" id="ref-for-keyboardevent">KeyboardEvent</a></code> attribute
+      <th rowspan="2"><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#keyboardevent" id="ref-for-keyboardevent">KeyboardEvent</a></code> 属性
       <th class="code-impl-data" colspan="3">Windows
       <th class="code-impl-data" colspan="3">macOS
       <th class="code-impl-data" colspan="2">Linux
-      <th rowspan="2">Notes
+      <th rowspan="2">注释
      <tr>
       <th class="code-impl-data">Chrome
       <th class="code-impl-data">Firefox
@@ -723,26 +720,54 @@ dfn > a.self-link::before      { content: "#"; }
     <tbody>
      <tr>
       <td><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑤">code</a></code>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
       <td>
    </table>
-   <h4 class="heading settled" data-level="3.2.2" id="required-values"><span class="secno">3.2.2. </span><span class="content">Required <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑥">code</a></code> Values</span><a class="self-link" href="#required-values"></a></h4>
-   <p>This section lists the test results for the basic set of <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑦">code</a></code> attribute values that a conforming implementation must support.</p>
+   <div class="note custom-note" role="note">
+     本文档中的所有表格中的操作系统和浏览器都没有进行翻译，
+		这些单词都是品牌名称，现在对此进行统一说明: 
+    <table class="event-sequence-table">
+     <thead>
+      <tr>
+       <th>操作系统
+       <th>测试浏览器
+       <th>测试浏览器
+       <th>测试浏览器
+     <tbody>
+      <tr>
+       <td>Windows ， 微软公司发布的操作系统
+       <td>Chrome ， 称为谷歌浏览器
+       <td>Firefox ， 称为火狐浏览器
+       <td>Edge 微软发布的浏览，暂无官方中文名称
+      <tr>
+       <td>macOS ， 苹果公司发布的操作系统
+       <td>Chrome ， 称为谷歌浏览器
+       <td>Firefox ， 称为火狐浏览器
+       <td>Safari 苹果发布的浏览，暂无官方中文名称
+      <tr>
+       <td>Linux ， 社区开源的操作系统
+       <td>Chrome ， 称为谷歌浏览器
+       <td>Firefox ， 称为火狐浏览器
+       <td>-
+    </table>
+   </div>
+   <h4 class="heading settled" data-level="3.2.2" id="required-values"><span class="secno">3.2.2. </span><span class="content">必需的 <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑥">code</a></code> 指</span><a class="self-link" href="#required-values"></a></h4>
+   <p>本节列出了符合规范的实现必须支持的基本 <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑦">code</a></code> 属性值集的测试结果。</p>
    <table class="data-table full-width" id="code-table-standard">
     <thead>
      <tr>
-      <th rowspan="2"><a data-link-type="dfn" href="http://www.w3.org/TR/uievents-code/#" id="ref-for-0714a605480b67372556adc3edff5227">code attribute value</a>
+      <th rowspan="2"><a data-link-type="dfn" href="https://mangwu.github.io/uievents-code-cn/#" id="ref-for-f4579c8739fb123c5b1e6cabe495a75d">code 属性值</a>
       <th class="code-impl-data" colspan="3">Windows
       <th class="code-impl-data" colspan="3">macOS
       <th class="code-impl-data" colspan="2">Linux
-      <th rowspan="2">Notes
+      <th rowspan="2">注释
      <tr>
       <th class="code-impl-data">Chrome
       <th class="code-impl-data">Firefox
@@ -754,199 +779,199 @@ dfn > a.self-link::before      { content: "#"; }
       <th class="code-impl-data">Firefox
     <tbody>
      <tr>
-      <td colspan="10" style="background-color: #B9C9FE">Alphanumeric Section - Writing System Keys
+      <td colspan="10" style="background-color: #B9C9FE">字母数字区域 - 书写系统键
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Backquote"><code class="code">"Backquote"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Backslash"><code class="code">"Backslash"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-BracketLeft"><code class="code">"BracketLeft"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-BracketRight"><code class="code">"BracketRight"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Comma"><code class="code">"Comma"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Digit0"><code class="code">"Digit0"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Digit1"><code class="code">"Digit1"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Digit2"><code class="code">"Digit2"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Digit3"><code class="code">"Digit3"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Digit4"><code class="code">"Digit4"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Digit5"><code class="code">"Digit5"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Digit6"><code class="code">"Digit6"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Digit7"><code class="code">"Digit7"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Digit8"><code class="code">"Digit8"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Digit9"><code class="code">"Digit9"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Equal"><code class="code">"Equal"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-IntlBackslash"><code class="code">"IntlBackslash"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td>Safari swaps IntlBackslash with Backquote on keyboards that support IntlBackslash
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td>Safari 在支持 IntlBackslash 的键盘上用 Backquote 替换 IntlBacklash
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-IntlRo"><code class="code">"IntlRo"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
@@ -955,9 +980,9 @@ dfn > a.self-link::before      { content: "#"; }
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-IntlYen"><code class="code">"IntlYen"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
@@ -966,506 +991,506 @@ dfn > a.self-link::before      { content: "#"; }
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyA"><code class="code">"KeyA"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyB"><code class="code">"KeyB"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyC"><code class="code">"KeyC"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyD"><code class="code">"KeyD"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyE"><code class="code">"KeyE"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyF"><code class="code">"KeyF"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyG"><code class="code">"KeyG"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyH"><code class="code">"KeyH"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyI"><code class="code">"KeyI"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyJ"><code class="code">"KeyJ"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyK"><code class="code">"KeyK"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyL"><code class="code">"KeyL"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyM"><code class="code">"KeyM"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyN"><code class="code">"KeyN"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyO"><code class="code">"KeyO"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyP"><code class="code">"KeyP"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyQ"><code class="code">"KeyQ"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyR"><code class="code">"KeyR"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyS"><code class="code">"KeyS"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyT"><code class="code">"KeyT"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyU"><code class="code">"KeyU"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyV"><code class="code">"KeyV"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyW"><code class="code">"KeyW"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyX"><code class="code">"KeyX"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyY"><code class="code">"KeyY"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KeyZ"><code class="code">"KeyZ"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Minus"><code class="code">"Minus"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Period"><code class="code">"Period"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Quote"><code class="code">"Quote"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Semicolon"><code class="code">"Semicolon"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Slash"><code class="code">"Slash"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
-      <td colspan="10" style="background-color: #B9C9FE">Alphanumeric Section - Functional Keys
+      <td colspan="10" style="background-color: #B9C9FE">字母数字区域 - 功能按键(Functional Keys)
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-AltLeft"><code class="code">"AltLeft"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-AltRight"><code class="code">"AltRight"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Backspace"><code class="code">"Backspace"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-CapsLock"><code class="code">"CapsLock"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-ContextMenu"><code class="code">"ContextMenu"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td>Safari returns "Unidentified"
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td>Safari 返回 "Unidentified"
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-ControlLeft"><code class="code">"ControlLeft"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-ControlRight"><code class="code">"ControlRight"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Enter"><code class="code">"Enter"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-MetaLeft"><code class="code">"MetaLeft"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-no">Fail</span>
-      <td>Firefox returns "OSLeft"
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-no">失败</span>
+      <td>Firefox 返回 "OSLeft" 
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-MetaRight"><code class="code">"MetaRight"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-no">Fail</span>
-      <td>Firefox returns "OSRight"
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-no">失败</span>
+      <td>Firefox 返回 "OSRight"
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-ShiftLeft"><code class="code">"ShiftLeft"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-ShiftRight"><code class="code">"ShiftRight"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Space"><code class="code">"Space"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Tab"><code class="code">"Tab"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Convert"><code class="code">"Convert"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
@@ -1474,9 +1499,9 @@ dfn > a.self-link::before      { content: "#"; }
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-KanaMode"><code class="code">"KanaMode"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
@@ -1485,9 +1510,9 @@ dfn > a.self-link::before      { content: "#"; }
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-NonConvert"><code class="code">"NonConvert"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
@@ -1495,511 +1520,510 @@ dfn > a.self-link::before      { content: "#"; }
       <td class="code-impl-data-dark"><span>?</span>
       <td>
      <tr>
-      <td colspan="10" style="background-color: #B9C9FE">Control Pad Section
+      <td colspan="10" style="background-color: #B9C9FE">控制板区域
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Delete"><code class="code">"Delete"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-End"><code class="code">"End"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Home"><code class="code">"Home"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Insert"><code class="code">"Insert"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td>Safari returns "Help"
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td>Safari 返回 "Help"
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-PageDown"><code class="code">"PageDown"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-PageUp"><code class="code">"PageUp"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
-      <td colspan="10" style="background-color: #B9C9FE">Arrow Pad Section
+      <td colspan="10" style="background-color: #B9C9FE">箭头板区域
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-ArrowDown"><code class="code">"ArrowDown"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-ArrowLeft"><code class="code">"ArrowLeft"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-ArrowRight"><code class="code">"ArrowRight"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-ArrowUp"><code class="code">"ArrowUp"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
-      <td colspan="10" style="background-color: #B9C9FE">Numpad Section
+      <td colspan="10" style="background-color: #B9C9FE">数字板区域
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-NumLock"><code class="code">"NumLock"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Numpad0"><code class="code">"Numpad0"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Numpad1"><code class="code">"Numpad1"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Numpad2"><code class="code">"Numpad2"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Numpad3"><code class="code">"Numpad3"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Numpad4"><code class="code">"Numpad4"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Numpad5"><code class="code">"Numpad5"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Numpad6"><code class="code">"Numpad6"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Numpad7"><code class="code">"Numpad7"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Numpad8"><code class="code">"Numpad8"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Numpad9"><code class="code">"Numpad9"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-NumpadAdd"><code class="code">"NumpadAdd"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-NumpadDecimal"><code class="code">"NumpadDecimal"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-NumpadDivide"><code class="code">"NumpadDivide"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-NumpadEnter"><code class="code">"NumpadEnter"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-NumpadMultiply"><code class="code">"NumpadMultiply"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-NumpadSubtract"><code class="code">"NumpadSubtract"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
-      <td colspan="10" style="background-color: #B9C9FE">Function Section
+      <td colspan="10" style="background-color: #B9C9FE">功能区域
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Escape"><code class="code">"Escape"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-F1"><code class="code">"F1"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-F2"><code class="code">"F2"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-F3"><code class="code">"F3"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-F4"><code class="code">"F4"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-F5"><code class="code">"F5"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-F6"><code class="code">"F6"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-F7"><code class="code">"F7"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-F8"><code class="code">"F8"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-F9"><code class="code">"F9"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-F10"><code class="code">"F10"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-F11"><code class="code">"F11"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td>macOS &amp; Ubuntu enter fullscreen; Chrome requires KeyboardLock
+      <td>macOS &amp; Ubuntu 进入全屏; Chrome 需要 KeyboardLock
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-F12"><code class="code">"F12"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-PrintScreen"><code class="code">"PrintScreen"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
       <td class="code-impl-data-dark"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td>macOS returns "F13"; Ubuntu takes screenshot
+      <td>macOS 返回 "F13"; Ubuntu 会截屏
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-ScrollLock"><code class="code">"ScrollLock"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td>macOS decreases brightness
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td>macOS 降低(屏幕)亮度
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Pause"><code class="code">"Pause"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td>macOS increases brightness
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td>macOS 增加(屏幕)亮度
      <tr>
-      <td colspan="10" style="background-color: #B9C9FE">Special Values
+      <td colspan="10" style="background-color: #B9C9FE">特殊值
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Unidentified"><code class="code">"Unidentified"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
    </table>
-   <h4 class="heading settled" data-level="3.2.3" id="optional-values"><span class="secno">3.2.3. </span><span class="content">Optional <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑧">code</a></code> Values</span><a class="self-link" href="#optional-values"></a></h4>
-   <p>This section lists the test results for the set of <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑨">code</a></code> attribute values that a conforming implementation may use to support special
-		keyboards (such as multimedia or legacy keyboards).</p>
+   <h4 class="heading settled" data-level="3.2.3" id="optional-values"><span class="secno">3.2.3. </span><span class="content">可选的 <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑧">code</a></code> 值</span><a class="self-link" href="#optional-values"></a></h4>
+   <p>本节列出了符合规范的实现通过使用支持特殊按键的键盘(如多媒体或传统键盘)的 <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑨">code</a></code> 属性值集的测试结果。</p>
    <table class="data-table full-width" id="code-table-optional">
     <thead>
      <tr>
-      <th rowspan="2"><a data-link-type="dfn" href="http://www.w3.org/TR/uievents-code/#" id="ref-for-0714a605480b67372556adc3edff5227①">code attribute value</a>
+      <th rowspan="2"><a data-link-type="dfn" href="https://mangwu.github.io/uievents-code-cn/#" id="ref-for-f4579c8739fb123c5b1e6cabe495a75d①">code 属性值</a>
       <th class="code-impl-data" colspan="3">Windows
       <th class="code-impl-data" colspan="3">macOS
       <th class="code-impl-data" colspan="2">Linux
-      <th rowspan="2">Notes
+      <th rowspan="2">注释
      <tr>
       <th class="code-impl-data">Chrome
       <th class="code-impl-data">Firefox
@@ -2011,56 +2035,56 @@ dfn > a.self-link::before      { content: "#"; }
       <th class="code-impl-data">Firefox
     <tbody>
      <tr>
-      <td colspan="10" style="background-color: #B9C9FE">Media Keys
+      <td colspan="10" style="background-color: #B9C9FE">多媒体按键
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-BrowserBack"><code class="code">"BrowserBack"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td>Handled by OS (Chrome requires KeyboardLock)
+      <td>由操作系统处理 (Chrome 需要 KeyboardLock)
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-BrowserFavorites"><code class="code">"BrowserFavorites"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td>Handled by OS (Chrome requires KeyboardLock)
+      <td>由操作系统处理 (Chrome 需要 KeyboardLock)
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-BrowserForward"><code class="code">"BrowserForward"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td>Handled by OS (Chrome requires KeyboardLock)
+      <td>由操作系统处理 (Chrome 需要 KeyboardLock)
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-BrowserHome"><code class="code">"BrowserHome"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td>Handled by OS (Chrome requires KeyboardLock)
+      <td>由操作系统处理 (Chrome 需要 KeyboardLock)
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-BrowserRefresh"><code class="code">"BrowserRefresh"</code></a>
       <td class="code-impl-data-dark"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-no">Fail</span>
+      <td class="code-impl-data-dark"><span class="code-impl-no">失败</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
@@ -2069,14 +2093,14 @@ dfn > a.self-link::before      { content: "#"; }
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-BrowserSearch"><code class="code">"BrowserSearch"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-no">Fail</span>
+      <td class="code-impl-data-dark"><span class="code-impl-no">失败</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data-dark"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data-dark"><span class="code-impl-no">Fail</span>
+      <td class="code-impl-data-dark"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data-dark"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data-dark"><span class="code-impl-no">失败</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-BrowserStop"><code class="code">"BrowserStop"</code></a>
@@ -2105,9 +2129,9 @@ dfn > a.self-link::before      { content: "#"; }
       <td class="code-impl-data-dark"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
       <td class="code-impl-data-dark"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
       <td>
@@ -2116,9 +2140,9 @@ dfn > a.self-link::before      { content: "#"; }
       <td class="code-impl-data-dark"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
       <td class="code-impl-data-dark"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
       <td>
@@ -2132,7 +2156,7 @@ dfn > a.self-link::before      { content: "#"; }
       <td class="code-impl-data"><span>N/A</span>
       <td class="code-impl-data-dark"><span>N/A</span>
       <td class="code-impl-data-dark"><span>N/A</span>
-      <td>Handled by OS
+      <td>由操作系统处理
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-MediaPlayPause"><code class="code">"MediaPlayPause"</code></a>
       <td class="code-impl-data-dark"><span>N/A</span>
@@ -2143,7 +2167,7 @@ dfn > a.self-link::before      { content: "#"; }
       <td class="code-impl-data"><span>N/A</span>
       <td class="code-impl-data-dark"><span>N/A</span>
       <td class="code-impl-data-dark"><span>N/A</span>
-      <td>Handled by OS
+      <td>由操作系统处理
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-MediaSelect"><code class="code">"MediaSelect"</code></a>
       <td class="code-impl-data-dark"><span>?</span>
@@ -2193,7 +2217,7 @@ dfn > a.self-link::before      { content: "#"; }
       <td class="code-impl-data-dark"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
@@ -2204,7 +2228,7 @@ dfn > a.self-link::before      { content: "#"; }
       <td class="code-impl-data-dark"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
@@ -2220,7 +2244,7 @@ dfn > a.self-link::before      { content: "#"; }
       <td class="code-impl-data"><span>N/A</span>
       <td class="code-impl-data-dark"><span>N/A</span>
       <td class="code-impl-data-dark"><span>N/A</span>
-      <td>Handled by OS
+      <td>由操作系统处理
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-AudioVolumeMute"><code class="code">"AudioVolumeMute"</code></a>
       <td class="code-impl-data-dark"><span>N/A</span>
@@ -2231,7 +2255,7 @@ dfn > a.self-link::before      { content: "#"; }
       <td class="code-impl-data"><span>N/A</span>
       <td class="code-impl-data-dark"><span>N/A</span>
       <td class="code-impl-data-dark"><span>N/A</span>
-      <td>Handled by OS
+      <td>由操作系统处理
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-AudioVolumeUp"><code class="code">"AudioVolumeUp"</code></a>
       <td class="code-impl-data-dark"><span>N/A</span>
@@ -2242,41 +2266,41 @@ dfn > a.self-link::before      { content: "#"; }
       <td class="code-impl-data"><span>N/A</span>
       <td class="code-impl-data-dark"><span>N/A</span>
       <td class="code-impl-data-dark"><span>N/A</span>
-      <td>Handled by OS
+      <td>由操作系统处理
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-WakeUp"><code class="code">"WakeUp"</code></a>
       <td class="code-impl-data-dark"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
       <td>
      <tr>
-      <td colspan="10" style="background-color: #B9C9FE">Alphanumeric Section - Functional Keys
+      <td colspan="10" style="background-color: #B9C9FE">字母数字区域 - 功能键(Functional Keys)
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Lang1"><code class="code">"Lang1"</code></a>
       <td class="code-impl-data-dark"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td>Safari returns KanaMode
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td>Safari 返回 KanaMode
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Lang2"><code class="code">"Lang2"</code></a>
       <td class="code-impl-data-dark"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Lang3"><code class="code">"Lang3"</code></a>
@@ -2312,18 +2336,18 @@ dfn > a.self-link::before      { content: "#"; }
       <td class="code-impl-data-dark"><span>?</span>
       <td>
      <tr>
-      <td colspan="10" style="background-color: #B9C9FE">Numpad Section
+      <td colspan="10" style="background-color: #B9C9FE">数字板区域
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-NumpadBackspace"><code class="code">"NumpadBackspace"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data-dark"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data-dark"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
+      <td class="code-impl-data-dark"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data-dark"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data-dark"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-no">Fail</span>
-      <td class="code-impl-data-dark"><span class="code-impl-no">Fail</span>
-      <td>Chrome/Firefox/Safari return "Backspace"
+      <td class="code-impl-data-dark"><span class="code-impl-no">失败</span>
+      <td class="code-impl-data-dark"><span class="code-impl-no">失败</span>
+      <td>Chrome/Firefox/Safari 返回 "Backspace"
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-NumpadClear"><code class="code">"NumpadClear"</code></a>
       <td class="code-impl-data-dark"><span>?</span>
@@ -2356,17 +2380,17 @@ dfn > a.self-link::before      { content: "#"; }
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td>Need to test with Brazilian keyboard.
+      <td>需要使用巴西键盘进行测试。
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-NumpadEqual"><code class="code">"NumpadEqual"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-NumpadHash"><code class="code">"NumpadHash"</code></a>
@@ -2436,25 +2460,25 @@ dfn > a.self-link::before      { content: "#"; }
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-NumpadParenLeft"><code class="code">"NumpadParenLeft"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-NumpadParenRight"><code class="code">"NumpadParenRight"</code></a>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data-dark"><span>?</span>
       <td class="code-impl-data-dark"><span>?</span>
-      <td class="code-impl-data"><span class="code-impl-no">Fail</span>
+      <td class="code-impl-data"><span class="code-impl-no">失败</span>
       <td class="code-impl-data"><span>?</span>
       <td class="code-impl-data"><span>?</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
-      <td class="code-impl-data-dark"><span class="code-impl-yes">Pass</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
+      <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-NumpadStar"><code class="code">"NumpadStar"</code></a>
@@ -2468,7 +2492,7 @@ dfn > a.self-link::before      { content: "#"; }
       <td class="code-impl-data-dark"><span>?</span>
       <td>
      <tr>
-      <td colspan="10" style="background-color: #B9C9FE">Function Section
+      <td colspan="10" style="background-color: #B9C9FE">功能区域
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Fn"><code class="code">"Fn"</code></a>
       <td class="code-impl-data-dark"><span>N/A</span>
@@ -2492,7 +2516,7 @@ dfn > a.self-link::before      { content: "#"; }
       <td class="code-impl-data-dark"><span>N/A</span>
       <td>
      <tr>
-      <td colspan="10" style="background-color: #B9C9FE">Legacy, Non-Standard and Special Keys
+      <td colspan="10" style="background-color: #B9C9FE">遗留的、非标准的和特殊的按键
      <tr>
       <td><a href="https://mangwu.github.io/uievents-code-cn/#code-Hyper"><code class="code">"Hyper"</code></a>
       <td class="code-impl-data-dark"><span>?</span>
@@ -2728,24 +2752,24 @@ dfn > a.self-link::before      { content: "#"; }
   <aside aria-labelledby="infopaneltitle-for-cc098e4aaaed4380e9c039d6ee9f9661" class="dfn-panel" data-for="cc098e4aaaed4380e9c039d6ee9f9661" id="infopanel-for-cc098e4aaaed4380e9c039d6ee9f9661">
    <span id="infopaneltitle-for-cc098e4aaaed4380e9c039d6ee9f9661" style="display:none">Info about the 'KeyboardEvent' external reference.</span><a href="https://w3c.github.io/uievents/#keyboardevent">https://w3c.github.io/uievents/#keyboardevent</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-keyboardevent">3.2.1. code Attribute</a>
+    <li><a href="#ref-for-keyboardevent">3.2.1. code 属性</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-183e3ea7b7ee60042c5418caf468f18a" class="dfn-panel" data-for="183e3ea7b7ee60042c5418caf468f18a" id="infopanel-for-183e3ea7b7ee60042c5418caf468f18a">
    <span id="infopaneltitle-for-183e3ea7b7ee60042c5418caf468f18a" style="display:none">Info about the 'code' external reference.</span><a href="https://w3c.github.io/uievents/#dom-keyboardevent-code">https://w3c.github.io/uievents/#dom-keyboardevent-code</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-keyboardevent-code">1. Introduction</a> <a href="#ref-for-dom-keyboardevent-code①">(2)</a>
-    <li><a href="#ref-for-dom-keyboardevent-code②">3.1. Summary</a>
-    <li><a href="#ref-for-dom-keyboardevent-code③">3.2.1. code Attribute</a> <a href="#ref-for-dom-keyboardevent-code④">(2)</a> <a href="#ref-for-dom-keyboardevent-code⑤">(3)</a>
-    <li><a href="#ref-for-dom-keyboardevent-code⑥">3.2.2. Required code Values</a> <a href="#ref-for-dom-keyboardevent-code⑦">(2)</a>
-    <li><a href="#ref-for-dom-keyboardevent-code⑧">3.2.3. Optional code Values</a> <a href="#ref-for-dom-keyboardevent-code⑨">(2)</a>
+    <li><a href="#ref-for-dom-keyboardevent-code">1. 简介</a> <a href="#ref-for-dom-keyboardevent-code①">(2)</a>
+    <li><a href="#ref-for-dom-keyboardevent-code②">3.1. 总结</a>
+    <li><a href="#ref-for-dom-keyboardevent-code③">3.2.1. code 属性</a> <a href="#ref-for-dom-keyboardevent-code④">(2)</a> <a href="#ref-for-dom-keyboardevent-code⑤">(3)</a>
+    <li><a href="#ref-for-dom-keyboardevent-code⑥">3.2.2. 必需的 code 指</a> <a href="#ref-for-dom-keyboardevent-code⑦">(2)</a>
+    <li><a href="#ref-for-dom-keyboardevent-code⑧">3.2.3. 可选的 code 值</a> <a href="#ref-for-dom-keyboardevent-code⑨">(2)</a>
    </ul>
   </aside>
-  <aside aria-labelledby="infopaneltitle-for-0714a605480b67372556adc3edff5227" class="dfn-panel" data-for="0714a605480b67372556adc3edff5227" id="infopanel-for-0714a605480b67372556adc3edff5227">
-   <span id="infopaneltitle-for-0714a605480b67372556adc3edff5227" style="display:none">Info about the 'code attribute value' external reference.</span><a href="http://www.w3.org/TR/uievents-code/#">http://www.w3.org/TR/uievents-code/#</a><b>Referenced in:</b>
+  <aside aria-labelledby="infopaneltitle-for-f4579c8739fb123c5b1e6cabe495a75d" class="dfn-panel" data-for="f4579c8739fb123c5b1e6cabe495a75d" id="infopanel-for-f4579c8739fb123c5b1e6cabe495a75d">
+   <span id="infopaneltitle-for-f4579c8739fb123c5b1e6cabe495a75d" style="display:none">Info about the 'code 属性值' external reference.</span><a href="https://mangwu.github.io/uievents-code-cn/#">https://mangwu.github.io/uievents-code-cn/#</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-0714a605480b67372556adc3edff5227">3.2.2. Required code Values</a>
-    <li><a href="#ref-for-0714a605480b67372556adc3edff5227">3.2.3. Optional code Values</a>
+    <li><a href="#ref-for-f4579c8739fb123c5b1e6cabe495a75d">3.2.2. 必需的 code 指</a>
+    <li><a href="#ref-for-f4579c8739fb123c5b1e6cabe495a75d">3.2.3. 可选的 code 值</a>
    </ul>
   </aside>
   <h3 class="no-num no-ref heading settled" id="index-defined-elsewhere"><span class="content">Terms defined by reference</span><a class="self-link" href="#index-defined-elsewhere"></a></h3>
@@ -2759,7 +2783,7 @@ dfn > a.self-link::before      { content: "#"; }
    <li>
     <a data-link-type="biblio">[UIEvents-Code]</a> defines the following terms:
     <ul>
-     <li><span class="dfn-paneled" id="0714a605480b67372556adc3edff5227">code attribute value</span>
+     <li><span class="dfn-paneled" id="f4579c8739fb123c5b1e6cabe495a75d">code 属性值</span>
     </ul>
   </ul>
   <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>

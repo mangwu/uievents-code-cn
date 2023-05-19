@@ -89,9 +89,9 @@ class Parser():
             value = self.impl_info[ua_os]
             data = ''
             if value == 'Y':
-                data = '<span class="code-impl-yes">Pass</span>'
+                data = '<span class="code-impl-yes">通过</span>'
             elif value == 'F':
-                data = '<span class="code-impl-no">Fail</span>'
+                data = '<span class="code-impl-no">失败</span>'
             elif value == '?':
                 data = '<span>?</span>'
             elif value == '-':
@@ -441,11 +441,11 @@ class Parser():
             self.code = None
             self.in_impl_table = True
             name = m.group(1)
-            header = '<thead><tr><th rowspan=2>[=code attribute value=]</th>'
+            header = '<thead><tr><th rowspan=2>[=code 属性值=]</th>'
             for os in OS_UAS:
                 header += '<th class="code-impl-data" colspan=%d>%s</th>' % (
                     os[1], os[0])
-            header += '<th rowspan=2>Notes</th></tr>\n'
+            header += '<th rowspan=2>注释</th></tr>\n'
             header += '<tr>'
             for ua in USER_AGENTS:
                 header += '<th class="code-impl-data">%s</th>' % ua[0]
