@@ -462,7 +462,10 @@ details > summary {
 div[data-fill-with="conformance"] {
   display: none;
 }
-#toc ol li:nth-child(10) {
+a[href="#w3c-conformance"] {
+  display: none;
+}
+a[href="#w3c-conformance"] + ol {
   display: none;
 }
 
@@ -475,3 +478,4 @@ ul.index {
 ul.index > li {
   width: 33%;
 }
+
