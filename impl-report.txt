@@ -1,15 +1,30 @@
-<h1>UI Events KeyboardEvent code Implementation Report</h1>
+<link href="./override.css" rel="stylesheet" />
+<script defer src="./custom-script.js"></script>
+<script src="./backup-script.js"></script>
+
 
 <pre class="metadata">
-Shortname: uievents-code-impl
-Level:
+Title: 用户界面事件键盘事件 code 实现报告(UI Events KeyboardEvent code Implementation Report)
+Shortname: uievents-code-cn
+Level: none
 Group: webapps
-Status: ED
-ED: https://w3c.github.io/uievents-code/impl-report.html
-Repository: w3c/uievents-code
-Editor: Gary Kacmarcik, Google, garykac@google.com
+Status: UD
+ED: 
+Repository: mangwu/uievents-code-cn
+Boilerplate: repository-issue-tracking off, copyright off, property-index off
+No Editor: true
+Text Macro: DATE 2023年5月19日
+Text Macro: LONGSTATUS 翻译草案
+!本版本: <a href="https://mangwu.github.io/uievents-code-cn/impl-report.html">https://mangwu.github.io/uievents-code-cn/impl-report.html</a>
+!规范反馈: <a href="https://github.com/w3c/uievents-code/issues/">GitHub-w3c-uievents-code-issues</a>
+!翻译反馈: <a href="https://github.com/mangwu/uievents-code-cn/issues/">GitHub-mangwu-uievents-code-cn-issues</a>
+!编辑者: 
+	<a class="p-name fn u-email email" href="mailto:garykac@google.com">Gary Kacmarcik</a>(Google)
+	<a class="p-name fn u-email email" href="mailto:travisleithead@hotmail.com">Travis Leithead</a>(Invited Expert)
+!翻译者: 
+	<a class="p-name fn u-email email" href="mailto:1185956753@qq.com">mangwu</a>
 Abstract:
-	This document reports on implementations of the [[!UIEvents-Code]] specification.
+	本文档报告了 [[!UIEvents-Code]] 规范的实现情况。
 </pre>
 
 <pre class="anchors">

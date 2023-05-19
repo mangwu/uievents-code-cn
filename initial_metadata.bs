@@ -17,3 +17,18 @@ Abstract:
 	The code value contains information about the key event that can be used to
 	identify the physical key being pressed by the user.
 </pre>
+
+<!-- 从impl-report.txt截取的原始位于<pre class="metadata"></pre>之间的原始文档数据(包括标题) -->
+<h1>UI Events KeyboardEvent code Implementation Report</h1>
+
+<pre class="metadata">
+Shortname: uievents-code-impl
+Level:
+Group: webapps
+Status: ED
+ED: https://w3c.github.io/uievents-code/impl-report.html
+Repository: w3c/uievents-code
+Editor: Gary Kacmarcik, Google, garykac@google.com
+Abstract:
+	This document reports on implementations of the [[!UIEvents-Code]] specification.
+</pre>

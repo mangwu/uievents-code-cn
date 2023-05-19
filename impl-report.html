@@ -2,13 +2,13 @@
  <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-  <title>UI Events KeyboardEvent code Implementation Report</title>
-  <meta content="ED" name="w3c-status">
-  <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED" rel="stylesheet">
+  <title>用户界面事件键盘事件 code 实现报告(UI Events KeyboardEvent code Implementation Report)</title>
+  <meta content="UD" name="w3c-status">
+  <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-UD" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
   <meta content="Bikeshed version d9bd89757, updated Thu Mar 23 10:06:53 2023 -0700" name="generator">
-  <link href="https://w3c.github.io/uievents-code/impl-report.html" rel="canonical">
-  <meta content="3753783c4ea0852dfb5e5396897327b4c5b2ed20" name="document-revision">
+  <meta content="3a64099d79a23609aabbb34702a2f0efe829e42e" name="document-revision">
+  <link href="./override.css" rel="stylesheet">
 <style>
 
 /* Used when spelling out words or symbols phonetically. */
@@ -585,42 +585,38 @@ dfn > a.self-link::before      { content: "#"; }
  <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72"> </a> </p>
-   <h1>UI Events KeyboardEvent code Implementation Report</h1>
-   <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">Editor’s Draft</a>, <time class="dt-updated" datetime="2023-05-18">18 May 2023</time></p>
+   <h1 class="p-name no-ref" id="title">用户界面事件键盘事件 code 实现报告(UI Events KeyboardEvent code Implementation Report)</h1>
+   <p id="w3c-state"><a href="https://www.w3.org/standards/types#UD">翻译草案</a>, <time class="dt-updated" datetime="2023-05-19">2023年5月19日</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
      <dl>
-      <dt>This version:
-      <dd><a class="u-url" href="https://w3c.github.io/uievents-code/impl-report.html">https://w3c.github.io/uievents-code/impl-report.html</a>
-      <dt>Issue Tracking:
-      <dd><a href="https://github.com/w3c/uievents-code/issues/">GitHub</a>
-      <dt class="editor">Editor:
-      <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:garykac@google.com">Gary Kacmarcik</a> (<span class="p-org org">Google</span>)
+      <dt>本版本:
+      <dd><a href="https://mangwu.github.io/uievents-code-cn/impl-report.html">https://mangwu.github.io/uievents-code-cn/impl-report.html</a>
+      <dt>规范反馈:
+      <dd><a href="https://github.com/w3c/uievents-code/issues/">GitHub-w3c-uievents-code-issues</a>
+      <dt>翻译反馈:
+      <dd><a href="https://github.com/mangwu/uievents-code-cn/issues/">GitHub-mangwu-uievents-code-cn-issues</a>
+      <dt>编辑者:
+      <dd>
+      <dd><a class="p-name fn u-email email" href="mailto:garykac@google.com">Gary Kacmarcik</a>(Google)
+      <dd><a class="p-name fn u-email email" href="mailto:travisleithead@hotmail.com">Travis Leithead</a>(Invited Expert)
+      <dt>翻译者:
+      <dd>
+      <dd><a class="p-name fn u-email email" href="mailto:1185956753@qq.com">mangwu</a>
      </dl>
     </div>
    </details>
    <div data-fill-with="warning"></div>
-   <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2023 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document" rel="license">permissive document license</a> rules apply. </p>
    <hr title="Separator for header">
   </div>
   <div class="p-summary" data-fill-with="abstract">
    <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
-   <p>This document reports on implementations of the <a data-link-type="biblio" href="#biblio-uievents-code" title="UI Events KeyboardEvent code Values">[UIEvents-Code]</a> specification.</p>
+   <p>本文档报告了 <a data-link-type="biblio" href="#biblio-uievents-code" title="UI Events KeyboardEvent code Values">[UIEvents-Code]</a> 规范的实现情况。</p>
   </div>
   <h2 class="no-num no-toc no-ref heading settled" id="sotd"><span class="content">Status of this document</span></h2>
   <div data-fill-with="status">
-   <p> <em>This section describes the status of this document at the time of its publication. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em> </p>
-   <p> This document was published by the <a href="https://www.w3.org/groups/wg/webapps">Web Applications Working Group</a> as an Editors Draft. This document is intended to become a W3C Recommendation. </p>
    <p></p>
-   <p> This document was published by the <a href="https://www.w3.org/groups/wg/webapps">Web Applications Working Group</a> as a Working Draft.
-
-    Feedback and comments on this specification are welcome. Please use <a href="https://github.com/w3c/uievents-code/issues">GitHub issues</a> Historical discussions can be found in the <a href="https://lists.w3.org/Archives/Public/public-webapps/">public-webapps@w3.org archives</a>. </p>
-   <p> Publication as an Editors Draft does not imply endorsement by <abbr title="World Wide Web Consortium">W3C</abbr> and its Members. This is a draft document and may
-    be updated, replaced or obsoleted by other documents at any time. It is inappropriate to cite
-    this document as other than work in progress. </p>
-   <p> This document was produced by a group operating under the <a href="https://www.w3.org/Consortium/Patent-Policy-20200915/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>. <abbr title="World Wide Web Consortium">W3C</abbr> maintains a <a href="https://www.w3.org/2004/01/pp-impl/114929/status" rel="disclosure">public list of any patent disclosures</a> made in connection with the deliverables of the group; that page also includes instructions for disclosing a patent. An individual who has actual knowledge of a patent which the individual believes contains <a href="https://www.w3.org/Consortium/Patent-Policy-20200915/#def-essential">Essential Claim(s)</a> must disclose the information in accordance with <a href="https://www.w3.org/Consortium/Patent-Policy-20200915/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>. </p>
-   <p>This document is governed by the <a href="https://www.w3.org/2021/Process-20211102/" id="w3c_process_revision">2 November 2021 W3C Process Document</a>. </p>
   </div>
   <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
@@ -659,6 +655,8 @@ dfn > a.self-link::before      { content: "#"; }
    </ol>
   </nav>
   <main>
+<script defer src="./custom-script.js"></script>
+<script src="./backup-script.js"></script>
    <h2 class="heading settled" data-level="1" id="introduction"><span class="secno">1. </span><span class="content">Introduction</span><a class="self-link" href="#introduction"></a></h2>
    <p>The <a data-link-type="biblio" href="#biblio-uievents-code" title="UI Events KeyboardEvent code Values">[UIEvents-Code]</a> specification defines the set of values that are valid for use
 	in the <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code">code</a></code> attribute.</p>
