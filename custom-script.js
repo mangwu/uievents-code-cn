@@ -2,7 +2,7 @@
  * @Author: mangwu                                                             *
  * @File: custom-script.js                                                     *
  * @Date: 2023-05-01 02:02:19                                                  *
- * @LastModifiedDate: 2023-05-12 16:55:00                                      *
+ * @LastModifiedDate: 2023-05-19 01:27:40                                      *
  * @ModifiedBy: mangwu                                                         *
  * -----------------------                                                     *
  * Copyright (c) 2023 mangwu                                                   *
@@ -184,9 +184,53 @@ function translateDfnType(originDfn) {
   }
 }
 
+function tranlateIndex() {
+  // 目录
+  tranlateIndexBySeletor("a[href='#index'] .content", "索引");
+  tranlateIndexBySeletor(
+    "a[href='#index-defined-here'] .content",
+    "本规范定义的术语"
+  );
+  tranlateIndexBySeletor(
+    "a[href='#index-defined-elsewhere'] .content",
+    "引用其他规范定义的术语"
+  );
+  // 标题
+  tranlateIndexBySeletor("#index .content", "索引");
+  tranlateIndexBySeletor("#index-defined-here .content", "本规范定义的术语");
+  tranlateIndexBySeletor(
+    "#index-defined-elsewhere .content",
+    "引用其他规范定义的术语"
+  );
+
+  // 内容
+  const eles = getElements(".index li a[data-link-type='biblio']");
+  for (const ele of eles) {
+    ele.nextSibling.nodeValue = "定义了以下术语: \n";
+  }
+}
+
+function tranlateIndexBySeletor(seletor, translateZh = "", parent = document) {
+  const element = getElement(seletor, parent);
+  element.textContent = translateZh;
+}
+function tranlateReferences() {
+  // 目录
+  tranlateIndexBySeletor("a[href='#references'] .content", "引用");
+  tranlateIndexBySeletor("a[href='#normative'] .content", "规范性引用");
+  tranlateIndexBySeletor("a[href='#informative'] .content", "资料性引用");
+
+  // 标题
+  tranlateIndexBySeletor("#references .content", "引用");
+  tranlateIndexBySeletor("#normative .content", "规范性引用");
+  tranlateIndexBySeletor("#informative .content", "资料性引用");
+}
+
 window.addEventListener("DOMContentLoaded", () => {
-  tryCatch(figureAllChange,"figureAllChange方法执行错误:")
-  tryCatch(translatePanels,"translatePanels方法执行错误:")
-  tryCatch(tranlateToc,"tranlateToc方法执行错误:")
-  tryCatch(translateDfnTypes,"translateDfnTypes方法执行错误:")
+  tryCatch(figureAllChange, "figureAllChange方法执行错误:");
+  tryCatch(translatePanels, "translatePanels方法执行错误:");
+  tryCatch(tranlateToc, "tranlateToc方法执行错误:");
+  tryCatch(translateDfnTypes, "translateDfnTypes方法执行错误:");
+  tryCatch(tranlateIndex, "tranlateIndex方法执行错误:");
+  tryCatch(tranlateReferences, "tranlateReferences方法执行错误:");
 });

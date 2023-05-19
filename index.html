@@ -711,9 +711,10 @@ dfn > a.self-link::before      { content: "#"; }
     <li><a href="#privacy"><span class="secno">7</span> <span class="content">隐私注意事项</span></a>
     <li><a href="#acknowledgements-contributors"><span class="secno">8</span> <span class="content">致谢</span></a>
     <li>
-     <a href="#w3c-conformance-zh"><span class="secno">9</span> <span class="content">一致性</span></a>
+     <a href="#w3c-conformance-zh"><span class="secno"></span> <span class="content">一致性</span></a>
      <ol class="toc">
-      <li><a href="#w3c-conventions-zh"><span class="secno">9.1</span> <span class="content">文档规约</span></a>
+      <li><a href="#w3c-conventions-zh"><span class="secno"></span> <span class="content">文档规约</span></a>
+      <li><a href="#w3c-conformant-algorithms-zh"><span class="secno"></span> <span class="content">一致性算法</span></a>
      </ol>
     <li>
      <a href="#w3c-conformance"><span class="secno"></span> <span class="content">Conformance</span></a>
@@ -2480,12 +2481,24 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
    <p>非常感谢 WebApps 工作组的以下参与者在制定本规范的过程中提供了大量实质性贡献。</p>
    <p>Gary Kacmarcik (Google),
 	Masayuki Nakano (Mozilla)</p>
-   <h2 class="heading settled" data-level="9" id="w3c-conformance-zh"><span class="secno">9. </span><span class="content">一致性</span><a class="self-link" href="#w3c-conformance-zh"></a></h2>
-   <h3 class="heading settled" data-level="9.1" id="w3c-conventions-zh"><span class="secno">9.1. </span><span class="content">文档规约</span><a class="self-link" href="#w3c-conventions-zh"></a></h3>
+   <h2 class="no-ref no-num heading settled" id="w3c-conformance-zh"><span class="content">一致性</span><a class="self-link" href="#w3c-conformance-zh"></a></h2>
+   <h3 class="no-ref no-num heading settled" id="w3c-conventions-zh"><span class="content">文档规约</span><a class="self-link" href="#w3c-conventions-zh"></a></h3>
    <p>一致性要求通过描述性断言和 RFC 2119术语的组合来表达。
 		本文件规范性部分中的关键词 <q>MUST</q> ， <q>MUST NOT</q> ， <q>REQUIRED</q> ， <q>SHALL</q> ， <q>SHALL NOT</q> ， <q>SHOULD</q> ， <q>SHOULD NOT</q> ， <q>RECOMMENDED</q> ， <q>MAY</q> 和 <q>OPTIONAL</q> 应按照 RFC 2119 中的描述进行解释。但是，为了便于阅读，
 		这些单词在本规范中并不是全部以大写字母出现。</p>
    <p>本规范的所有文本都是规范性的，但明确标记为非规范性的部分、示例和注释除外。 <a data-link-type="biblio" href="#biblio-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">[RFC2119]</a></p>
+   <p>本规范中的示例用"例如(for example)"一词引入，或用 <code>class="example"</code> 与规范性文本分开，如下所示:</p>
+   <div class="custom-example" data-content="例子 X" id="w3c-example-zh"> <a class="self-link" href="#w3c-example-zh"></a> 这是一个信息丰富的例子。 </div>
+   <p>信息性注释以单词"注意(note)"开头，并以 <code>class="Note"</code> 与规范性文本分开，如下所示:</p>
+   <p class="note" role="note"> 注意，这是一个信息性的注释。 </p>
+   <h3 class="no-ref no-num heading settled" id="w3c-conformant-algorithms-zh"><span class="content">一致性算法</span><a class="self-link" href="#w3c-conformant-algorithms-zh"></a></h3>
+   <p>作为算法的一部分，要求(Requirements)被分解(phrased)为命令式(如"去掉任何前导空格字符"或
+	"返回false并中止这些步骤")，在引入算法时，会使用关键字("必须"、"应当"、
+	"可以"等)的含义对要求(Requirements)进行解释。</p>
+   <p>被分解(phrased)的成算法或特定步骤的一致性要求(Conformance
+	requirements)可以以任何方式实现，只要最终结果是等效的。
+	特别地，本规范中定义的算法旨在易于理解，而不是旨在易于(计算机)运行。
+	鼓励实现对算法进行优化。</p>
   </main>
   <div data-fill-with="conformance">
    <h2 class="no-ref no-num heading settled" id="w3c-conformance"><span class="content">Conformance</span><a class="self-link" href="#w3c-conformance"></a></h2>
