@@ -7,7 +7,7 @@
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-UD" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
   <meta content="Bikeshed version d9bd89757, updated Thu Mar 23 10:06:53 2023 -0700" name="generator">
-  <meta content="e8290d4a87391c5a4d20b53bde1ae682937c0048" name="document-revision">
+  <meta content="dd25f690f8b4b3917555fbb47836cc86f744cc63" name="document-revision">
   <link href="./override.css" rel="stylesheet">
 <style>
 
@@ -680,9 +680,11 @@ dfn > a.self-link::before      { content: "#"; }
 	要测试仅存在于特定地区键盘上的键(如"IntlBackslash")，
 	需要使用包含被测试键的键盘。</p>
    <p>就本报告而言，Chrome、Firefox和Safari被视为独立的实现。</p>
+   <div class="note custom-note" role="note"> 本实现报告不具备实时性，想要获取浏览器实时的 <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②">code</a></code> 属性值，
+	访问本规范给出的 <a href="https://domeventviewer.com/key-event-viewer.html"> domeeventviewer.com/key-event-viewer.html</a> 自己尝试测试。 </div>
    <h2 class="heading settled" data-level="3" id="results"><span class="secno">3. </span><span class="content">结果</span><a class="self-link" href="#results"></a></h2>
    <h3 class="heading settled" data-level="3.1" id="summary"><span class="secno">3.1. </span><span class="content">总结</span><a class="self-link" href="#summary"></a></h3>
-   <p>在至少2个独立的实现中对 <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②">code</a></code> 属性 <b>通过(Pass)</b> 的所有112个必需值进行手动测试。</p>
+   <p>在至少2个独立的实现中对 <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code③">code</a></code> 属性 <b>通过(Pass)</b> 的所有112个必需值进行手动测试。</p>
    <p>候选推荐标准的校验准则因此完全满足
 	(The Candidate Recommendation exit criteria are therefore fulfilled)。</p>
    <p>此外，本文档描述了60个可选值，这些可选值在支持多媒体或遗留键盘上使用。
@@ -698,8 +700,8 @@ dfn > a.self-link::before      { content: "#"; }
 	通常是因为带有该键的设备不会生成单独的键盘事件。例如， FnLock 。</p>
    <div class="note custom-note" role="note"> 下面表格中会将所有 "Pass" 翻译成 "通过" ，"Fail" 翻译成 "失败" ， 
 	"N/A" 和 "?" 不变。 </div>
-   <h4 class="heading settled" data-level="3.2.1" id="code-attribute"><span class="secno">3.2.1. </span><span class="content"><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code③">code</a></code> 属性</span><a class="self-link" href="#code-attribute"></a></h4>
-   <p><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code④">code</a></code> (在<a data-link-type="biblio" href="#biblio-uievents" title="UI Events">[UIEvents]</a>中定义) 存在于所有测试的浏览器中。</p>
+   <h4 class="heading settled" data-level="3.2.1" id="code-attribute"><span class="secno">3.2.1. </span><span class="content"><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code④">code</a></code> 属性</span><a class="self-link" href="#code-attribute"></a></h4>
+   <p><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑤">code</a></code> (在<a data-link-type="biblio" href="#biblio-uievents" title="UI Events">[UIEvents]</a>中定义) 存在于所有测试的浏览器中。</p>
    <table class="data-table full-width" id="key-attribute-impl">
     <thead>
      <tr>
@@ -719,7 +721,7 @@ dfn > a.self-link::before      { content: "#"; }
       <th class="code-impl-data">Firefox
     <tbody>
      <tr>
-      <td><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑤">code</a></code>
+      <td><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑥">code</a></code>
       <td class="code-impl-data"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data"><span class="code-impl-yes">通过</span>
       <td class="code-impl-data"><span class="code-impl-yes">通过</span>
@@ -758,8 +760,8 @@ dfn > a.self-link::before      { content: "#"; }
        <td>-
     </table>
    </div>
-   <h4 class="heading settled" data-level="3.2.2" id="required-values"><span class="secno">3.2.2. </span><span class="content">必需的 <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑥">code</a></code> 指</span><a class="self-link" href="#required-values"></a></h4>
-   <p>本节列出了符合规范的实现必须支持的基本 <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑦">code</a></code> 属性值集的测试结果。</p>
+   <h4 class="heading settled" data-level="3.2.2" id="required-values"><span class="secno">3.2.2. </span><span class="content">必需的 <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑦">code</a></code> 指</span><a class="self-link" href="#required-values"></a></h4>
+   <p>本节列出了符合规范的实现必须支持的基本 <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑧">code</a></code> 属性值集的测试结果。</p>
    <table class="data-table full-width" id="code-table-standard">
     <thead>
      <tr>
@@ -2014,8 +2016,8 @@ dfn > a.self-link::before      { content: "#"; }
       <td class="code-impl-data-dark"><span class="code-impl-yes">通过</span>
       <td>
    </table>
-   <h4 class="heading settled" data-level="3.2.3" id="optional-values"><span class="secno">3.2.3. </span><span class="content">可选的 <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑧">code</a></code> 值</span><a class="self-link" href="#optional-values"></a></h4>
-   <p>本节列出了符合规范的实现通过使用支持特殊按键的键盘(如多媒体或传统键盘)的 <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑨">code</a></code> 属性值集的测试结果。</p>
+   <h4 class="heading settled" data-level="3.2.3" id="optional-values"><span class="secno">3.2.3. </span><span class="content">可选的 <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑨">code</a></code> 值</span><a class="self-link" href="#optional-values"></a></h4>
+   <p>本节列出了符合规范的实现通过使用支持特殊按键的键盘(如多媒体或传统键盘)的 <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⓪">code</a></code> 属性值集的测试结果。</p>
    <table class="data-table full-width" id="code-table-optional">
     <thead>
      <tr>
@@ -2759,10 +2761,11 @@ dfn > a.self-link::before      { content: "#"; }
    <span id="infopaneltitle-for-183e3ea7b7ee60042c5418caf468f18a" style="display:none">Info about the 'code' external reference.</span><a href="https://w3c.github.io/uievents/#dom-keyboardevent-code">https://w3c.github.io/uievents/#dom-keyboardevent-code</a><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-dom-keyboardevent-code">1. 简介</a> <a href="#ref-for-dom-keyboardevent-code①">(2)</a>
-    <li><a href="#ref-for-dom-keyboardevent-code②">3.1. 总结</a>
-    <li><a href="#ref-for-dom-keyboardevent-code③">3.2.1. code 属性</a> <a href="#ref-for-dom-keyboardevent-code④">(2)</a> <a href="#ref-for-dom-keyboardevent-code⑤">(3)</a>
-    <li><a href="#ref-for-dom-keyboardevent-code⑥">3.2.2. 必需的 code 指</a> <a href="#ref-for-dom-keyboardevent-code⑦">(2)</a>
-    <li><a href="#ref-for-dom-keyboardevent-code⑧">3.2.3. 可选的 code 值</a> <a href="#ref-for-dom-keyboardevent-code⑨">(2)</a>
+    <li><a href="#ref-for-dom-keyboardevent-code②">2. 测试方法</a>
+    <li><a href="#ref-for-dom-keyboardevent-code③">3.1. 总结</a>
+    <li><a href="#ref-for-dom-keyboardevent-code④">3.2.1. code 属性</a> <a href="#ref-for-dom-keyboardevent-code⑤">(2)</a> <a href="#ref-for-dom-keyboardevent-code⑥">(3)</a>
+    <li><a href="#ref-for-dom-keyboardevent-code⑦">3.2.2. 必需的 code 指</a> <a href="#ref-for-dom-keyboardevent-code⑧">(2)</a>
+    <li><a href="#ref-for-dom-keyboardevent-code⑨">3.2.3. 可选的 code 值</a> <a href="#ref-for-dom-keyboardevent-code①⓪">(2)</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-f4579c8739fb123c5b1e6cabe495a75d" class="dfn-panel" data-for="f4579c8739fb123c5b1e6cabe495a75d" id="infopanel-for-f4579c8739fb123c5b1e6cabe495a75d">

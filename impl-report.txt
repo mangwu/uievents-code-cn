@@ -68,6 +68,13 @@ path: stylesheet-extra.include
 
 	就本报告而言，Chrome、Firefox和Safari被视为独立的实现。
 
+	<div class="note custom-note">
+	本实现报告不具备实时性，想要获取浏览器实时的 {{KeyboardEvent/code}} 属性值，
+	访问本规范给出的 <a href="https://domeventviewer.com/key-event-viewer.html">
+	domeeventviewer.com/key-event-viewer.html</a> 自己尝试测试。
+	</div>
+	
+
 <h2 id="results">结果</h2>
 	
 <h3 id="summary">总结</h3>
