@@ -7,7 +7,7 @@
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-UD" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
   <meta content="Bikeshed version d9bd89757, updated Thu Mar 23 10:06:53 2023 -0700" name="generator">
-  <meta content="d227d87ed37bc04842de3c96e590d80453aa86d5" name="document-revision">
+  <meta content="5228172cdcbeee0249c10619878eb5e7ac3ffb96" name="document-revision">
   <link href="./override.css" rel="stylesheet">
 <style>
 
@@ -734,24 +734,24 @@ dfn > a.self-link::before      { content: "#"; }
 <script defer src="./custom-script.js"></script>
 <script src="./backup-script.js"></script>
    <h2 class="heading settled" data-level="1" id="introduction"><span class="secno">1. </span><span class="content">简介</span><a class="self-link" href="#introduction"></a></h2>
-   <p>本文档概述了各种键盘布局，并指定了每个键应使用的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code">code</a></code> 值。
-	与 [[UIEvents key]] 中描述的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key">key</a></code> 值不同， <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①">code</a></code> 值仅基于键在键盘上的物理位置，
+   <p>本文档概述了各种键盘布局，并指定了每个键应使用的 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code">code</a></code> 值。
+	与 [[UIEvents key]] 中描述的 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key">key</a></code> 值不同， <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①">code</a></code> 值仅基于键在键盘上的物理位置，
 	不会因用户的当前区域设置而变化。</p>
-   <p>此规范以前的规范标题为 <em>DOM Level 3 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②">code</a></code> Values</em> 。</p>
+   <p>此规范以前的规范标题为 <em>DOM Level 3 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②">code</a></code> Values</em> 。</p>
    <h3 class="heading settled" data-level="1.1" id="style-conventions"><span class="secno">1.1. </span><span class="content">格式规约</span><a class="self-link" href="#style-conventions"></a></h3>
    <p>本规范遵循以下规约:</p>
    <ul>
     <li data-md>
      <p>打印在 <a href="https://mangwu.github.io/uievents-cn/#key-legends"> <em>键帽</em></a> 上的键显示为 <code class="keycap">↓</code>， <code class="keycap">=</code> 或 <code class="keycap">Q</code> 。
-这用于从用户的角度引用键，而不考虑生成的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent">KeyboardEvent</a></code> 事件中的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key①">key</a></code> (键) 和 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code③">code</a></code> (键码)。</p>
+这用于从用户的角度引用键，而不考虑生成的 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#interface-keyboardevent" id="ref-for-interface-keyboardevent">KeyboardEvent</a></code> 事件中的 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key①">key</a></code> (键) 和 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code③">code</a></code> (键码)。</p>
     <li data-md>
      <p>代表字符的字形(Glyphs)显示为: <code class="glyph">"𣧂"</code>。</p>
     <li data-md>
      <p>Unicode 码点( <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#code-point" id="ref-for-code-point">code points</a> ) 显示为: <code class="unicode">U+003D</code> 。</p>
     <li data-md>
-     <p>有效的键属性值( <a data-link-type="dfn" href="https://www.w3.org/TR/uievents-key/#key-attr-values" id="ref-for-key-attr-values">key attribute values</a> )，即 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key②">key</a></code> 属性值显示为: <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-ArrowDown">ArrowDown</a>"</code>，<code class="key">"="</code>，<code class="key">"q"</code> 或 <code class="key">"Q"</code>。</p>
+     <p>有效的键属性值( <a data-link-type="dfn" href="https://mangwu.github.io/uievents-key-cn/#key-attr-values" id="ref-for-key-attr-values">key attribute values</a> )，即 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key②">key</a></code> 属性值显示为: <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-ArrowDown">ArrowDown</a>"</code>，<code class="key">"="</code>，<code class="key">"q"</code> 或 <code class="key">"Q"</code>。</p>
     <li data-md>
-     <p>有效的 <a data-link-type="dfn" href="#key-code-attribute-values" id="ref-for-key-code-attribute-values">按键码属性值</a> ，即 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code④">code</a></code> 属性值显示为: <code class="code">"<a href="#code-ArrowDown">ArrowDown</a>"</code>，<code class="code">"<a href="#code-Equal">Equal</a>"</code> 或 <code class="code">"<a href="#code-KeyQ">KeyQ</a>"</code>。</p>
+     <p>有效的 <a data-link-type="dfn" href="#key-code-attribute-values" id="ref-for-key-code-attribute-values">按键码属性值</a> ，即 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code④">code</a></code> 属性值显示为: <code class="code">"<a href="#code-ArrowDown">ArrowDown</a>"</code>，<code class="code">"<a href="#code-Equal">Equal</a>"</code> 或 <code class="code">"<a href="#code-KeyQ">KeyQ</a>"</code>。</p>
    </ul>
    <p class="note custom-note" role="note"> 在 <a href="https://mangwu.github.io/uievents-cn/#style-conventions"> UIEvents</a> 规范本体的格式规约中，也对键帽，字符，代码点和键，
 		键值的属性值进行了说明，但是渲染显示不一样，本规范中的渲染会更显眼。 </p>
@@ -1095,7 +1095,7 @@ dfn > a.self-link::before      { content: "#"; }
 		和弦键盘 <span class="zh-upper">可以</span> 有额外的模式键来在键值之间切换，
 		并且键按下时产生的键值的数量和类型会有所不同，
 		但这种键盘最终产生的键值 <span class="zh-upper">应当</span> 与本规范中描述的键值范围相匹配。</p>
-   <p>对于这些和其他备用模态键盘，在不同模式之间进行切换的并被 <span class="zh-upper">推荐的</span> 的按键的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key③">key</a></code> 值: <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-Alphanumeric">Alphanumeric</a>"</code> ， <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-CapsLock">CapsLock</a>"</code> ， <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-NumLock">NumLock</a>"</code> 和 <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-SymbolLock">SymbolLock</a>"</code> 。</p>
+   <p>对于这些和其他备用模态键盘，在不同模式之间进行切换的并被 <span class="zh-upper">推荐的</span> 的按键的 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key③">key</a></code> 值: <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-Alphanumeric">Alphanumeric</a>"</code> ， <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-CapsLock">CapsLock</a>"</code> ， <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-NumLock">NumLock</a>"</code> 和 <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-SymbolLock">SymbolLock</a>"</code> 。</p>
    <p class="note custom-note" role="note"> 更多关于和弦键盘的内容，参阅英文维基百科的 <a href="https://en.wikipedia.org/wiki/Chorded_keyboard"> Chorded keyboard</a> 。 </p>
    <h3 class="heading settled" data-level="2.5" id="wiki-keyboard-sections"><span class="secno">2.5. </span><span class="content">非标准键盘分区</span><a class="self-link" href="#wiki-keyboard-sections"></a></h3>
    <p><strong>本节不是规范的，并且不属于源英文原档规范。</strong></p>
@@ -1399,8 +1399,8 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
 		按照原文档的通过位置进行分区的方法可能更好理解，
 		但是理解每个按键的功能也很重要，故而提出了按照大致的功能进行划分的方式，
 		但是按键之间可能会有交叉或特殊的功能，所以不要把这种划分看"死"，例如 <a data-link-type="dfn" href="#system-and-gui-keys" id="ref-for-system-and-gui-keys②">系统和 GUI 键</a> 中的 <code class="keycap">Meta</code> 按键实际上也可以是 <a data-link-type="dfn" href="#modifier-keys" id="ref-for-modifier-keys①">修饰符按键</a> 。</p>
-   <h2 class="heading settled" data-level="3" id="code-value-tables"><span class="secno">3. </span><span class="content">键盘事件 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑤">code</a></code> 值表格</span><a class="self-link" href="#code-value-tables"></a></h2>
-   <p>本节定义了一个适用于作 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑥">code</a></code> 值的值列表。</p>
+   <h2 class="heading settled" data-level="3" id="code-value-tables"><span class="secno">3. </span><span class="content">键盘事件 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑤">code</a></code> 值表格</span><a class="self-link" href="#code-value-tables"></a></h2>
+   <p>本节定义了一个适用于作 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑥">code</a></code> 值的值列表。</p>
    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="key-code-attribute-values">按键码属性值</dfn>(key code attribute value)
 	可以是本规范的本节中，所有表的 "<code>KeyboardEvent.code</code>" 
 	列中给定的任何值。</p>
@@ -1410,7 +1410,7 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
    <p class="note" role="note"> 注意: 本规范中列出的某些 "必需(Required)" 值可能不适用于所有平台或设备。例如，
 	Mac 键盘没有 <code class="keycap">Insert</code> 键，而标准 PC 键盘没有 <code class="keycap">Help</code> 键。 </p>
    <p>对于本规范中列为 "必需(Required)" 的每个按键，只要该按键在该平台上可用，
-	符合规范的实现的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#interface-keyboardevent" id="ref-for-interface-keyboardevent①">KeyboardEvent</a></code> 接口就 <span class="zh-upper">必须</span> 返回正确的值。</p>
+	符合规范的实现的 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#interface-keyboardevent" id="ref-for-interface-keyboardevent①">KeyboardEvent</a></code> 接口就 <span class="zh-upper">必须</span> 返回正确的值。</p>
    <p class="note" role="note"> 注意: 虽然已经尽一切努力使按键值列表尽可能完整，但随着新输入设备的引入，
 	需要定期定义新值。与其允许用户代理定义自己的 <a data-link-type="dfn" href="#key-code-attribute-values" id="ref-for-key-code-attribute-values①">按键码属性值</a> (这些属性值很难在多个用户代理机构之间统一)， <span class="zh-upper">应当</span> 提供一种归档方法来更新这个规范，
 	以便可以检测到这些漏洞(bugs)。 </p>
@@ -1419,7 +1419,7 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
 		它包含的键分为两大类: <a data-link-type="dfn" href="#writing-system-keys" id="ref-for-writing-system-keys①">书写系统键</a> (writing system keys) 和 <a data-link-type="dfn" href="#functional-keys" id="ref-for-functional-keys">功能键②</a> (functional keys)，前者的含义根据当前键盘布局而变化，
 		后者(大部分)对所有布局都是相同的。</p>
    <h4 class="heading settled" data-level="3.1.1" id="key-alphanumeric-writing-system"><span class="secno">3.1.1. </span><span class="content">书写系统键</span><a class="self-link" href="#key-alphanumeric-writing-system"></a></h4>
-   <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="writing-system-keys">书写系统键</dfn> 是那些根据当前语言环境和键盘布局改变含义(即，它们产生不同的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key④">key</a></code> )的键。</p>
+   <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="writing-system-keys">书写系统键</dfn> 是那些根据当前语言环境和键盘布局改变含义(即，它们产生不同的 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key④">key</a></code> )的键。</p>
    <figure id="figure-keyboard-codes-alphanum1">
      <img alt="The 书写系统键" height="225" src="images/keyboard-codes-alphanum1.svg" width="653"> 
     <figcaption>在 <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section①⓪">字母数字区域</a> 的 <a data-link-type="dfn" href="#writing-system-keys" id="ref-for-writing-system-keys②">书写系统键</a> </figcaption>
@@ -1429,8 +1429,8 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
    <div class="example" id="example-b85f06f3"><a class="self-link" href="#example-b85f06f3"></a> <code class="code">"<a href="#code-Digit2">Digit2</a>"</code> 和 <code class="code">"<a href="#code-KeyQ">KeyQ</a>"</code> 键为 <a data-link-type="dfn" href="#writing-system-keys" id="ref-for-writing-system-keys④">书写系统键</a> ，当前语言环境为美国时，
 				按下会生成 <code class="key">"2"</code> 和 <code class="key">"q"</code> ，而当语言环境为法国时，
 				则生成 <code class="key">"é"</code> 和 <code class="key">"a"</code> 。 </div>
-   <p>每个按键上显示的名称是分配给该按键的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑦">code</a></code> 。
-			在可能的情况下， <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑧">code</a></code> 名称基于该位置的美国键的名称(即，
+   <p>每个按键上显示的名称是分配给该按键的 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑦">code</a></code> 。
+			在可能的情况下， <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code⑧">code</a></code> 名称基于该位置的美国键的名称(即，
 			它们基于美式 "101" 标准键盘布局)，这遵循 <a data-link-type="biblio" href="#biblio-usb-hid" title="USB HID Usage Tables 1.12">[USB-HID]</a> 中的命名约定。
 			对于美式键盘上不存在的键，则使用英式或日式键盘布局的名称。</p>
    <p>请注意，此图中有两个 <code class="code">"<a href="#code-Backslash">Backslash</a>"</code> 键: 大的那一个键位于标准 "101"
@@ -1666,7 +1666,7 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
      <img alt="标准 [=功能键②=] 集合" height="225" src="images/keyboard-codes-alphanum2.svg" width="653"> 
     <figcaption><a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section①②">字母数字区域</a> 中的标准 <a data-link-type="dfn" href="#functional-keys" id="ref-for-functional-keys①">功能键②</a> 集合</figcaption>
    </figure>
-   <p><code class="code">"<a href="#code-AltRight">AltRight</a>"</code> 键(以绿色突出显示)是唯一不会为每个区域设置生成相同的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key⑤">key</a></code> 值的 <a data-link-type="dfn" href="#functional-keys" id="ref-for-functional-keys②">功能键②</a> 。在某些地区，它会生成 <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-Alt">Alt</a>"</code> ，而在其他地区，它生成 <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-AltGraph">AltGraph</a>"</code> 。</p>
+   <p><code class="code">"<a href="#code-AltRight">AltRight</a>"</code> 键(以绿色突出显示)是唯一不会为每个区域设置生成相同的 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key⑤">key</a></code> 值的 <a data-link-type="dfn" href="#functional-keys" id="ref-for-functional-keys②">功能键②</a> 。在某些地区，它会生成 <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-Alt">Alt</a>"</code> ，而在其他地区，它生成 <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-AltGraph">AltGraph</a>"</code> 。</p>
    <table class="data-table full-width" id="table-key-code-alphanumeric-functional-1">
     <caption>在字母数字区域的功能键的 code 值表。</caption>
     <thead>
@@ -1736,7 +1736,7 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
    </table>
    <p>在一些键盘(尤其是日语和韩语)上，空格键的尺寸减小了，以便为底部一行( A
 			行)的额外按键腾出空间。这些键通常允许用户改变当前的输入模式。请注意，
-			尽管这些日语和韩语键中的一些键在键盘上占据相同的物理位置，但它们使用不同的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⓪">code</a></code> 值。</p>
+			尽管这些日语和韩语键中的一些键在键盘上占据相同的物理位置，但它们使用不同的 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⓪">code</a></code> 值。</p>
    <div class="figure-change" data-content="images/figure-function-row-a">
     <div class="custom-tabs-nav-wrap">
      <div class="custom-tabs-nav-list">
@@ -1861,7 +1861,7 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
       <td class="code-table-required">是
       <td><code class="keycap">Page Up</code>，<code class="keycap">PgUp</code> 或 <code class="keycap">⇞</code>
    </table>
-   <p class="note" role="note"> <code class="keycap">Fn</code> (常见于苹果标准键盘)键的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①①">code</a></code> 定义在下面的 <a data-link-type="dfn" href="#function-section" id="ref-for-function-section⑧">功能区域</a> 。 </p>
+   <p class="note" role="note"> <code class="keycap">Fn</code> (常见于苹果标准键盘)键的 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①①">code</a></code> 定义在下面的 <a data-link-type="dfn" href="#function-section" id="ref-for-function-section⑧">功能区域</a> 。 </p>
    <h3 class="heading settled" data-level="3.3" id="key-arrowpad-section"><span class="secno">3.3. </span><span class="content">箭头板区域</span><a class="self-link" href="#key-arrowpad-section"></a></h3>
    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="arrow-pad">箭头板</dfn> (arrow pad)区域包含4个箭头键。
 		按键通常以"倒置 T"的配置进行排列。</p>
@@ -1922,7 +1922,7 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
      <figcaption>标准 <a data-link-type="dfn" href="#numpad" id="ref-for-numpad①③">数字板</a> 布局</figcaption>
     </figure>
    </div>
-   <p>本节中的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①②">code</a></code> 值也应用于手机小键盘和遥控设备中在网格上排列的数字键。</p>
+   <p>本节中的 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①②">code</a></code> 值也应用于手机小键盘和遥控设备中在网格上排列的数字键。</p>
    <figure id="figure-numpad-mobile">
      <img alt="标准移动设备小键盘布局" height="180" src="images/numpad-mobile.svg" width="135"> 
     <figcaption>标准移动设备小键盘布局</figcaption>
@@ -2070,7 +2070,7 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
       <td><code class="keycap">-</code>
    </table>
    <p>对于 <a data-link-type="dfn" href="#numpad" id="ref-for-numpad①⑧">数字板</a> 提供的，没有列在此处的按键，应通过以"Numpad"
-		开头并附加按键的适当描述来创建 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①③">code</a></code> 值字符串。</p>
+		开头并附加按键的适当描述来创建 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①③">code</a></code> 值字符串。</p>
    <h3 class="heading settled" data-level="3.5" id="key-function-section"><span class="secno">3.5. </span><span class="content">功能区域</span><a class="self-link" href="#key-function-section"></a></h3>
     <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="function-section">功能区域</dfn> (function section)靠着键盘顶部(在 <a data-link-type="dfn" href="#alphanumeric-section" id="ref-for-alphanumeric-section①③">字母数字区域</a> 之上) 并包含有 <a data-link-type="dfn" href="#function-key" id="ref-for-function-key②">功能键③</a> 以及一些附加的特殊键(例如 <code class="keycap">Esc</code> 和 <code class="keycap">Print Screen</code> )。 
    <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="function-key">功能键③</dfn> 是键帽标签为 <code class="keycap">F1</code> ... <code class="keycap">F12</code> 的键，应用程序或操作系统可以利用这些按键关联自定义功能或操作。</p>
@@ -2078,7 +2078,7 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
 		( <code class="keycap">F1</code> ... <code class="keycap">F12</code> )会被定义为具有其他调节功能
 		(primary functions ，例如控制显示亮度或音频音量)，并且在使用这些主要功能
 		(primary functions)时需要组合按下 <code class="keycap">Fn</code> 键。不幸的是，
-		这些按键的主要功能因制造商而异。因此， <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①④">code</a></code> 值总是设置为 <a data-link-type="dfn" href="#function-key" id="ref-for-function-key③">功能键③</a> 名称(即键帽标签名称和 <code>code</code> 值对应)。</p>
+		这些按键的主要功能因制造商而异。因此， <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①④">code</a></code> 值总是设置为 <a data-link-type="dfn" href="#function-key" id="ref-for-function-key③">功能键③</a> 名称(即键帽标签名称和 <code>code</code> 值对应)。</p>
    <table class="data-table full-width" id="table-key-code-function">
     <caption>在功能区域的按键的 code 值表。</caption>
     <thead>
@@ -2163,8 +2163,8 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
       <td class="code-table-required">是
       <td><code class="keycap">Pause Break</code> (非规范补充: 详见 <a data-link-type="dfn" href="#system-and-gui-keys" id="ref-for-system-and-gui-keys⑦">系统和 GUI 键</a> 中的暂停键) 
    </table>
-   <p>对于提供12个以上的 <a data-link-type="dfn" href="#function-key" id="ref-for-function-key④">功能键③</a> 的键盘， <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⑤">code</a></code> 值遵循表中显示的模式，"F"后面跟着 <a data-link-type="dfn" href="#function-key" id="ref-for-function-key⑤">功能键③</a> 数字 —— <code class="code">"F13"</code> 、 <code class="code">"F14"</code> 、 <code class="code">"F15"</code>，依此类推。</p>
-   <p class="note" role="note"> 苹果键盘的 <a data-link-type="dfn" href="#function-section" id="ref-for-function-section①⓪">功能区域</a> 可能有 <code class="keycap">Eject</code> (弹出)键或 <code class="keycap">Power</code> (电源)键. 这些键的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⑥">code</a></code> 值在 <a href="#key-media">§ 3.6 多媒体按键</a> 中有定义。 </p>
+   <p>对于提供12个以上的 <a data-link-type="dfn" href="#function-key" id="ref-for-function-key④">功能键③</a> 的键盘， <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⑤">code</a></code> 值遵循表中显示的模式，"F"后面跟着 <a data-link-type="dfn" href="#function-key" id="ref-for-function-key⑤">功能键③</a> 数字 —— <code class="code">"F13"</code> 、 <code class="code">"F14"</code> 、 <code class="code">"F15"</code>，依此类推。</p>
+   <p class="note" role="note"> 苹果键盘的 <a data-link-type="dfn" href="#function-section" id="ref-for-function-section①⓪">功能区域</a> 可能有 <code class="keycap">Eject</code> (弹出)键或 <code class="keycap">Power</code> (电源)键. 这些键的 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⑥">code</a></code> 值在 <a href="#key-media">§ 3.6 多媒体按键</a> 中有定义。 </p>
    <div class="note custom-note" data-content="非规范注释，关于 Fn 按键的解释: " id="fn-key-note" role="note"><a class="self-link" href="#fn-key-note"></a> <br> <q><code class="keycap">Fn</code> 键是 <em>功能(function)</em> 的缩写，是许多键盘上
 		(尤其是笔记本电脑上)的一个修饰键，它经常用在紧凑的布局组合其他独立的键( <a data-link-type="dfn" href="#function-key" id="ref-for-function-key⑥">功能键③</a> )一起使用。由于键盘尺寸的限制，它通常出现在笔记本电脑上。
 		作为 <code class="keycap">FLock</code> 键，它也出现在许多全尺寸的"多媒体"键盘上。
@@ -2180,7 +2180,7 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
 		它可能嵌入(recessed)到键盘中。</p>
    <p>在笔记本电脑键盘上，这些键通常与 <a data-link-type="dfn" href="#function-key" id="ref-for-function-key⑧">功能键③</a> 结合(merged)，
 		也就是说 <a data-link-type="dfn" href="#media-keys" id="ref-for-media-keys①">多媒体按键</a> 可被理解成这些键的主要功能(primary function)，
-		并且 <a data-link-type="dfn" href="#function-key" id="ref-for-function-key⑨">功能键③</a> 可被理解成需要同时按下Fn键。在此配置下， <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⑦">code</a></code> 应该设置地与 <a data-link-type="dfn" href="#function-key" id="ref-for-function-key①⓪">功能键③</a> ( <code class="code">"<a href="#code-F1">F1</a>"</code> ... <code class="code">"<a href="#code-F12">F12</a>"</code> )匹配。当键以这种方式合并时， <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⑧">code</a></code> 值取自 <a data-link-type="dfn" href="#function-key" id="ref-for-function-key①①">功能键③</a> 值，
+		并且 <a data-link-type="dfn" href="#function-key" id="ref-for-function-key⑨">功能键③</a> 可被理解成需要同时按下Fn键。在此配置下， <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⑦">code</a></code> 应该设置地与 <a data-link-type="dfn" href="#function-key" id="ref-for-function-key①⓪">功能键③</a> ( <code class="code">"<a href="#code-F1">F1</a>"</code> ... <code class="code">"<a href="#code-F12">F12</a>"</code> )匹配。当键以这种方式合并时， <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⑧">code</a></code> 值取自 <a data-link-type="dfn" href="#function-key" id="ref-for-function-key①①">功能键③</a> 值，
 		因为 <a data-link-type="dfn" href="#media-keys" id="ref-for-media-keys②">多媒体按键</a> 值在键盘之间不一致。</p>
    <table class="data-table full-width" id="table-key-code-media">
     <caption>多媒体按键的 code 值表。</caption>
@@ -2390,7 +2390,7 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
    </table>
    <div class="note custom-note" role="note"> <code class="keycap">ひらがな</code> 和 <code class="keycap">カタカナ</code> 中的日文的意思: 前者表示平假名，
 		后者表示片假名。这两个按键 <em>可能</em> 用于切换输入模式，它们是从 <code class="keycap">カタカナ/ひらがな/ローマ字</code> ( <code class="code">"<a href="#code-KanaMode">KanaMode</a>"</code> )键中分离出来的专用按键。 </div>
-   <p>最后，只有当相应的键与本规范其他地方给出的任何代 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⑨">code</a></code> 值都不对应时，才应使用以下 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②⓪">code</a></code> 值。
+   <p>最后，只有当相应的键与本规范其他地方给出的任何代 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code①⑨">code</a></code> 值都不对应时，才应使用以下 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②⓪">code</a></code> 值。
 		这个值适合虚拟键盘使用，
 		因为多数虚拟键盘没有以与物理键盘上的键相对应的方式排列按键。</p>
    <table class="data-table full-width" id="table-key-code-special">
@@ -2409,7 +2409,7 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
    <p class="warning"> 当实现无法确定按键码值时，符合本规范的实现 <span class="zh-upper">必须</span> 只能使用 <code class="code">"<a href="#code-Unidentified">Unidentified</a>"</code> 作为按键码值。
 		但仅使用(Exposing)该值 <span class="zh-upper">不得</span> 表明实现符合本规范。 </p>
    <h2 class="heading settled" data-level="4" id="accessibility"><span class="secno">4. </span><span class="content">无障碍</span><a class="self-link" href="#accessibility"></a></h2>
-   <p>这个规范简单地定义了一组可在 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②①">code</a></code> 属性中使用的有效值。
+   <p>这个规范简单地定义了一组可在 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②①">code</a></code> 属性中使用的有效值。
 	因此，它没有引入任何具有无障碍问题的特性(feature)。</p>
    <p><a href="https://w3c.github.io/apa/fast/checklist.html">FAST 清单</a> 已完成，
 	本规范不适用其中任何内容。</p>
@@ -2422,7 +2422,7 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
 	规范开发人员可以利用本清单(checklist)
 	来帮助自己: 确保技术能够解决无障碍倡导者在横向审查期间可能提出的特性。</q> —— <abbr title="Framework for Accessibility in the Specification of Technologies"> FAST</abbr> Checklist。 </div>
    <p>FAST清单的一个条目是: "如果技术提供国际化支持"。此条目与本规范相关:
-	本规范本质上为键盘定义了 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②②">code</a></code> 值，并提供了人类可读
+	本规范本质上为键盘定义了 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②②">code</a></code> 值，并提供了人类可读
 	(human-readable)的名称(如"ShiftLeft"、"ControlRight"、"AltGr"或"KeyQ")。</p>
    <p>一些特殊按键的值被定义为人类可读(human-readable)的字符串，
 	以便检测特殊键的代码更容易理解。虽然这些值并不打算直接暴露给用户
@@ -2439,7 +2439,7 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
    <div class="note custom-note" role="note"> <q>在计算中，国际化和本地化( internationalization and localization，美国英语)
 	或国际化和本地化(internationalisation and localisation，英国英语)，通常缩写为 <strong>i18n</strong> 和 <strong>L10n</strong>，是使计算机软件适应不同语言、
 	区域特性和目标地区的技术要求的方法。</q> —— <a href="https://en.wikipedia.org/wiki/Internationalization_and_localization"> I18n</a> <br> </div>
-   <div class="note custom-note" data-content="按键值的可读性和公开性: " role="note"> 无论是上面的无障碍还是本节的国际化，在说明时都包含对一个角度的解释: <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②③">code</a></code> 值的可读性与公开性。
+   <div class="note custom-note" data-content="按键值的可读性和公开性: " role="note"> 无论是上面的无障碍还是本节的国际化，在说明时都包含对一个角度的解释: <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②③">code</a></code> 值的可读性与公开性。
 	本规范定义的按键值都是人类可读的英文，在应用程序不公开这些按键值时，
 	不需要进行额外的国际化或无障碍适配，如果将这些按键值暴露给用户，
 	则需要对此进行翻译(国际化)和无障碍适配了。 </div>
@@ -2448,29 +2448,29 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
    <ul>
     <li data-md>
      <p><em><a href="https://www.w3.org/TR/security-privacy-questionnaire/#purpose"> 2.1 此特性可能会向网站或其他方公开哪些信息，出于什么目的需要公开?</a></em> :
-本规范为各种按键事件的 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②④">code</a></code> 属性定义了一组有效值。
+本规范为各种按键事件的 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②④">code</a></code> 属性定义了一组有效值。
 这提供一种平台独立的(platform-independent)方式来识别(通过位置)
 按下了哪个物理键(例如，游戏中的 WASD 键)，非常有必要。</p>
     <li data-md>
      <p><em> <a href="https://www.w3.org/TR/security-privacy-questionnaire/#non-fully-active"> 2.17 您的功能是如何处理非"完全活动(fully active)"文档的?</a></em>:
 此属性仅与按键事件关联，如果文档未完全激活，则不会派发事件。</p>
    </ul>
-   <p><a data-link-type="biblio" href="#biblio-uievents" title="UI Events">[UIEvents]</a> 规范中解决了与 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②⑤">code</a></code> 属性相关的安全问题。</p>
+   <p><a data-link-type="biblio" href="#biblio-uievents" title="UI Events">[UIEvents]</a> 规范中解决了与 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②⑤">code</a></code> 属性相关的安全问题。</p>
    <h2 class="heading settled" data-level="7" id="privacy"><span class="secno">7. </span><span class="content">隐私注意事项</span><a class="self-link" href="#privacy"></a></h2>
    <p>安全和隐私的自我审查问卷 已完成，以下是对其中一些有关本规范条目的备注:</p>
    <ul>
     <li data-md>
-     <p><em><a href="https://www.w3.org/TR/security-privacy-questionnaire/#underlying-platform-data"> 2.6 规范中的特性是否向源(origins)公开了有关底层平台的信息?</a></em>: <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②⑥">code</a></code> 属性包含用户按下的键的平台独立的"扫描码(scancode)"值。
+     <p><em><a href="https://www.w3.org/TR/security-privacy-questionnaire/#underlying-platform-data"> 2.6 规范中的特性是否向源(origins)公开了有关底层平台的信息?</a></em>: <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②⑥">code</a></code> 属性包含用户按下的键的平台独立的"扫描码(scancode)"值。
 有一些特殊的 `码(code)` 值可以用来识别特定的键盘。例如， `IntlBackslash` 、
 `IntlRo` 和 `IntlYen` 。用户必须键入这些特性按键才能获取键信息。</p>
     <li data-md>
      <p><em><a href="https://www.w3.org/TR/security-privacy-questionnaire/#legitimate-misuse"> 3.5 合法滥用(Legitimate Misuse)</a></em>: 一个站点可以捕获所有按键响应，
 并构建键盘生成的按键值的映射。如果用户键入了足够的按键值(并且没有更改键盘)，
 那么网站可以尝试将这些值与已知键盘布局的数据库进行匹配，
-以猜测用户当前的键盘布局。然而，这是对 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key⑥">key</a></code> 属性本身
-(在<a data-link-type="biblio" href="#biblio-uievents" title="UI Events">[UIEvents]</a>规范中定义)的关注，而不是对本文档中定义的值( <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②⑦">code</a></code> )的关注。</p>
+以猜测用户当前的键盘布局。然而，这是对 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key⑥">key</a></code> 属性本身
+(在<a data-link-type="biblio" href="#biblio-uievents" title="UI Events">[UIEvents]</a>规范中定义)的关注，而不是对本文档中定义的值( <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②⑦">code</a></code> )的关注。</p>
    </ul>
-   <p><a data-link-type="biblio" href="#biblio-uievents" title="UI Events">[UIEvents]</a> 规范中解决了与 <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②⑧">code</a></code> 属性相关的隐私问题。</p>
+   <p><a data-link-type="biblio" href="#biblio-uievents" title="UI Events">[UIEvents]</a> 规范中解决了与 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code②⑧">code</a></code> 属性相关的隐私问题。</p>
    <h2 class="heading settled" data-level="8" id="acknowledgements-contributors"><span class="secno">8. </span><span class="content">致谢</span><a class="self-link" href="#acknowledgements-contributors"></a></h2>
    <p>非常感谢 WebApps 工作组的以下参与者在制定本规范的过程中提供了大量实质性贡献。</p>
    <p>Gary Kacmarcik (Google),
@@ -2548,34 +2548,43 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
     <li><a href="#ref-for-code-point">1.1. 格式规约</a>
    </ul>
   </aside>
-  <aside aria-labelledby="infopaneltitle-for-16015a3adb23f6b5bcd1da9550190b1a" class="dfn-panel" data-for="16015a3adb23f6b5bcd1da9550190b1a" id="infopanel-for-16015a3adb23f6b5bcd1da9550190b1a">
-   <span id="infopaneltitle-for-16015a3adb23f6b5bcd1da9550190b1a" style="display:none">Info about the 'KeyboardEvent' external reference.</span><a href="https://www.w3.org/TR/uievents/#interface-keyboardevent">https://www.w3.org/TR/uievents/#interface-keyboardevent</a><b>Referenced in:</b>
+  <aside aria-labelledby="infopaneltitle-for-1246e9558c3d1dd8867cf3e18395cb0f" class="dfn-panel" data-for="1246e9558c3d1dd8867cf3e18395cb0f" id="infopanel-for-1246e9558c3d1dd8867cf3e18395cb0f">
+   <span id="infopaneltitle-for-1246e9558c3d1dd8867cf3e18395cb0f" style="display:none">Info about the 'KeyboardEvent' external reference.</span><a href="https://mangwu.github.io/uievents-cn/#interface-keyboardevent">https://mangwu.github.io/uievents-cn/#interface-keyboardevent</a><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-interface-keyboardevent">1.1. 格式规约</a>
     <li><a href="#ref-for-interface-keyboardevent①">3. 键盘事件 code 值表格</a>
+    <li><a href="#ref-for-interface-keyboardevent②">3.1.1. 书写系统键</a>
+    <li><a href="#ref-for-interface-keyboardevent②①">3.1.2. 功能键</a> <a href="#ref-for-interface-keyboardevent②②">(2)</a>
+    <li><a href="#ref-for-interface-keyboardevent②③">3.2. 控制板区域</a>
+    <li><a href="#ref-for-interface-keyboardevent②④">3.3. 箭头板区域</a>
+    <li><a href="#ref-for-interface-keyboardevent②⑤">3.4. 数字板区域</a>
+    <li><a href="#ref-for-interface-keyboardevent②⑥">3.5. 功能区域</a>
+    <li><a href="#ref-for-interface-keyboardevent②⑦">3.6. 多媒体按键</a>
+    <li><a href="#ref-for-interface-keyboardevent②⑧">3.7. 遗留的、非标准的和特殊的按键</a> <a href="#ref-for-interface-keyboardevent②⑨">(2)</a> <a href="#ref-for-interface-keyboardevent②①⓪">(3)</a> <a href="#ref-for-interface-keyboardevent②①①">(4)</a> <a href="#ref-for-interface-keyboardevent②①②">(5)</a>
    </ul>
   </aside>
-  <aside aria-labelledby="infopaneltitle-for-e604a5849fdf8059e0f5a8fb9b7ba547" class="dfn-panel" data-for="e604a5849fdf8059e0f5a8fb9b7ba547" id="infopanel-for-e604a5849fdf8059e0f5a8fb9b7ba547">
-   <span id="infopaneltitle-for-e604a5849fdf8059e0f5a8fb9b7ba547" style="display:none">Info about the 'code' external reference.</span><a href="https://www.w3.org/TR/uievents/#dom-keyboardevent-code">https://www.w3.org/TR/uievents/#dom-keyboardevent-code</a><b>Referenced in:</b>
+  <aside aria-labelledby="infopaneltitle-for-25c7a6d3bc26c87047f8b36ab22f873e" class="dfn-panel" data-for="25c7a6d3bc26c87047f8b36ab22f873e" id="infopanel-for-25c7a6d3bc26c87047f8b36ab22f873e">
+   <span id="infopaneltitle-for-25c7a6d3bc26c87047f8b36ab22f873e" style="display:none">Info about the 'code' external reference.</span><a href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code">https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code</a><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-dom-keyboardevent-code">1. 简介</a> <a href="#ref-for-dom-keyboardevent-code①">(2)</a> <a href="#ref-for-dom-keyboardevent-code②">(3)</a>
     <li><a href="#ref-for-dom-keyboardevent-code③">1.1. 格式规约</a> <a href="#ref-for-dom-keyboardevent-code④">(2)</a>
     <li><a href="#ref-for-dom-keyboardevent-code⑤">3. 键盘事件 code 值表格</a> <a href="#ref-for-dom-keyboardevent-code⑥">(2)</a>
-    <li><a href="#ref-for-dom-keyboardevent-code⑦">3.1.1. 书写系统键</a> <a href="#ref-for-dom-keyboardevent-code⑧">(2)</a>
-    <li><a href="#ref-for-dom-keyboardevent-code①⓪">3.1.2. 功能键</a>
-    <li><a href="#ref-for-dom-keyboardevent-code①①">3.2. 控制板区域</a>
-    <li><a href="#ref-for-dom-keyboardevent-code①②">3.4. 数字板区域</a> <a href="#ref-for-dom-keyboardevent-code①③">(2)</a>
-    <li><a href="#ref-for-dom-keyboardevent-code①④">3.5. 功能区域</a> <a href="#ref-for-dom-keyboardevent-code①⑤">(2)</a> <a href="#ref-for-dom-keyboardevent-code①⑥">(3)</a>
-    <li><a href="#ref-for-dom-keyboardevent-code①⑦">3.6. 多媒体按键</a> <a href="#ref-for-dom-keyboardevent-code①⑧">(2)</a>
-    <li><a href="#ref-for-dom-keyboardevent-code①⑨">3.7. 遗留的、非标准的和特殊的按键</a> <a href="#ref-for-dom-keyboardevent-code②⓪">(2)</a>
+    <li><a href="#ref-for-dom-keyboardevent-code⑦">3.1.1. 书写系统键</a> <a href="#ref-for-dom-keyboardevent-code⑧">(2)</a> <a href="#ref-for-dom-keyboardevent-code⑨">(3)</a>
+    <li><a href="#ref-for-dom-keyboardevent-code⑨①">3.1.2. 功能键</a> <a href="#ref-for-dom-keyboardevent-code①⓪">(2)</a> <a href="#ref-for-dom-keyboardevent-code⑨②">(3)</a>
+    <li><a href="#ref-for-dom-keyboardevent-code⑨③">3.2. 控制板区域</a> <a href="#ref-for-dom-keyboardevent-code①①">(2)</a>
+    <li><a href="#ref-for-dom-keyboardevent-code⑨④">3.3. 箭头板区域</a>
+    <li><a href="#ref-for-dom-keyboardevent-code①②">3.4. 数字板区域</a> <a href="#ref-for-dom-keyboardevent-code⑨⑤">(2)</a> <a href="#ref-for-dom-keyboardevent-code①③">(3)</a>
+    <li><a href="#ref-for-dom-keyboardevent-code①④">3.5. 功能区域</a> <a href="#ref-for-dom-keyboardevent-code⑨⑥">(2)</a> <a href="#ref-for-dom-keyboardevent-code①⑤">(3)</a> <a href="#ref-for-dom-keyboardevent-code①⑥">(4)</a>
+    <li><a href="#ref-for-dom-keyboardevent-code①⑦">3.6. 多媒体按键</a> <a href="#ref-for-dom-keyboardevent-code①⑧">(2)</a> <a href="#ref-for-dom-keyboardevent-code⑨⑦">(3)</a>
+    <li><a href="#ref-for-dom-keyboardevent-code⑨⑧">3.7. 遗留的、非标准的和特殊的按键</a> <a href="#ref-for-dom-keyboardevent-code⑨⑨">(2)</a> <a href="#ref-for-dom-keyboardevent-code⑨①⓪">(3)</a> <a href="#ref-for-dom-keyboardevent-code⑨①①">(4)</a> <a href="#ref-for-dom-keyboardevent-code①⑨">(5)</a> <a href="#ref-for-dom-keyboardevent-code②⓪">(6)</a> <a href="#ref-for-dom-keyboardevent-code⑨①②">(7)</a>
     <li><a href="#ref-for-dom-keyboardevent-code②①">4. 无障碍</a> <a href="#ref-for-dom-keyboardevent-code②②">(2)</a>
     <li><a href="#ref-for-dom-keyboardevent-code②③">5. 国际化(i18n)</a>
     <li><a href="#ref-for-dom-keyboardevent-code②④">6. 安全注意事项</a> <a href="#ref-for-dom-keyboardevent-code②⑤">(2)</a>
     <li><a href="#ref-for-dom-keyboardevent-code②⑥">7. 隐私注意事项</a> <a href="#ref-for-dom-keyboardevent-code②⑦">(2)</a> <a href="#ref-for-dom-keyboardevent-code②⑧">(3)</a>
    </ul>
   </aside>
-  <aside aria-labelledby="infopaneltitle-for-0e3150549665e2be6e0eb7354b4500e8" class="dfn-panel" data-for="0e3150549665e2be6e0eb7354b4500e8" id="infopanel-for-0e3150549665e2be6e0eb7354b4500e8">
-   <span id="infopaneltitle-for-0e3150549665e2be6e0eb7354b4500e8" style="display:none">Info about the 'key' external reference.</span><a href="https://www.w3.org/TR/uievents/#dom-keyboardevent-key">https://www.w3.org/TR/uievents/#dom-keyboardevent-key</a><b>Referenced in:</b>
+  <aside aria-labelledby="infopaneltitle-for-1a04750240f24bd353e259d0606ef96f" class="dfn-panel" data-for="1a04750240f24bd353e259d0606ef96f" id="infopanel-for-1a04750240f24bd353e259d0606ef96f">
+   <span id="infopaneltitle-for-1a04750240f24bd353e259d0606ef96f" style="display:none">Info about the 'key' external reference.</span><a href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-key">https://mangwu.github.io/uievents-cn/#dom-keyboardevent-key</a><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-dom-keyboardevent-key">1. 简介</a>
     <li><a href="#ref-for-dom-keyboardevent-key①">1.1. 格式规约</a> <a href="#ref-for-dom-keyboardevent-key②">(2)</a>
@@ -2585,8 +2594,8 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
     <li><a href="#ref-for-dom-keyboardevent-key⑥">7. 隐私注意事项</a>
    </ul>
   </aside>
-  <aside aria-labelledby="infopaneltitle-for-c39f8aecd2386c36082f4a5c5d520d18" class="dfn-panel" data-for="c39f8aecd2386c36082f4a5c5d520d18" id="infopanel-for-c39f8aecd2386c36082f4a5c5d520d18">
-   <span id="infopaneltitle-for-c39f8aecd2386c36082f4a5c5d520d18" style="display:none">Info about the 'key attribute value' external reference.</span><a href="https://www.w3.org/TR/uievents-key/#key-attr-values">https://www.w3.org/TR/uievents-key/#key-attr-values</a><b>Referenced in:</b>
+  <aside aria-labelledby="infopaneltitle-for-a8c45dfe96f4395169d63f8bc0beb594" class="dfn-panel" data-for="a8c45dfe96f4395169d63f8bc0beb594" id="infopanel-for-a8c45dfe96f4395169d63f8bc0beb594">
+   <span id="infopaneltitle-for-a8c45dfe96f4395169d63f8bc0beb594" style="display:none">Info about the 'key attribute value' external reference.</span><a href="https://mangwu.github.io/uievents-key-cn/#key-attr-values">https://mangwu.github.io/uievents-key-cn/#key-attr-values</a><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-key-attr-values">1.1. 格式规约</a>
    </ul>
@@ -2601,14 +2610,14 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
    <li>
     <a data-link-type="biblio">[UIEvents]</a> defines the following terms:
     <ul>
-     <li><span class="dfn-paneled" id="16015a3adb23f6b5bcd1da9550190b1a">KeyboardEvent</span>
-     <li><span class="dfn-paneled" id="e604a5849fdf8059e0f5a8fb9b7ba547">code</span>
-     <li><span class="dfn-paneled" id="0e3150549665e2be6e0eb7354b4500e8">key</span>
+     <li><span class="dfn-paneled" id="1246e9558c3d1dd8867cf3e18395cb0f">KeyboardEvent</span>
+     <li><span class="dfn-paneled" id="25c7a6d3bc26c87047f8b36ab22f873e">code</span>
+     <li><span class="dfn-paneled" id="1a04750240f24bd353e259d0606ef96f">key</span>
     </ul>
    <li>
     <a data-link-type="biblio">[UIEVENTS-KEY]</a> defines the following terms:
     <ul>
-     <li><span class="dfn-paneled" id="c39f8aecd2386c36082f4a5c5d520d18">key attribute value</span>
+     <li><span class="dfn-paneled" id="a8c45dfe96f4395169d63f8bc0beb594">key attribute value</span>
     </ul>
   </ul>
   <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>

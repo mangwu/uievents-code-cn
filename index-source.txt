@@ -133,15 +133,15 @@ Abstract:
 </pre>
 
 <pre class="anchors">
-urlPrefix: https://www.w3.org/TR/uievents/#interface-; type: interface; spec: uievents;
+urlPrefix: https://mangwu.github.io/uievents-cn/#interface-; type: interface; spec: uievents;
 	text: KeyboardEvent
-urlPrefix: https://www.w3.org/TR/uievents/#dom-keyboardevent-; type: attribute; for: KeyboardEvent; spec: uievents;
+urlPrefix: https://mangwu.github.io/uievents-cn/#dom-keyboardevent-; type: attribute; for: KeyboardEvent; spec: uievents;
 	text: key
 	text: code
 	text: location
-url: https://www.w3.org/TR/uievents/#key-legends; type: dfn; spec: uievents-key;
+url: https://mangwu.github.io/uievents-cn/#key-legends; type: dfn; spec: uievents-key;
 	text: key cap
-url: https://www.w3.org/TR/uievents-key/#key-attr-values; type: dfn; spec: uievents-key;
+url: https://mangwu.github.io/uievents-key-cn/#key-attr-values; type: dfn; spec: uievents-key;
 	text: key attribute value
 </pre>
 
