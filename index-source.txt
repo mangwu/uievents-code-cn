@@ -140,9 +140,9 @@ urlPrefix: https://mangwu.github.io/uievents-cn/#dom-keyboardevent-; type: attri
 	text: code
 	text: location
 url: https://mangwu.github.io/uievents-cn/#key-legends; type: dfn; spec: uievents-key;
-	text: key cap
+	text: 键帽
 url: https://mangwu.github.io/uievents-key-cn/#key-attr-values; type: dfn; spec: uievents-key;
-	text: key attribute value
+	text: 键属性值
 </pre>
 
 <pre class="include">
@@ -162,18 +162,16 @@ path: stylesheet-extra.include
 
 		本规范遵循以下规约: 
 
-		* 打印在 <a href="https://mangwu.github.io/uievents-cn/#key-legends">
-			<em>键帽</em></a> 上的键显示为 KEYCAP{&darr;}， KEYCAP{=} 或 KEYCAP{Q} 。
-			这用于从用户的角度引用键，而不考虑生成的 {{KeyboardEvent}} 事件中的 
-			{{KeyboardEvent/key}} (键) 和 {{KeyboardEvent/code}} (键码)。
+		* 打印在 <em>[=键帽=]</em> 上的键显示为 KEYCAP{&darr;}， KEYCAP{=} 或 
+			KEYCAP{Q} 。这用于从用户的角度引用键，而不考虑生成的 {{KeyboardEvent}} 
+			事件中的 {{KeyboardEvent/key}} (键) 和 {{KeyboardEvent/code}} (键码)。
 
 		* 代表字符的字形(Glyphs)显示为: GLYPH{&#x239C2;}。
 
 		* Unicode 码点( [=code points=] ) 显示为: UNI{U+003D} 。
 
-		* 有效的键属性值( [=key attribute values=] )，即 {{KeyboardEvent/key}} 
-			属性值显示为: KEY{ArrowDown}，KEY_NOLINK{=}，KEY_NOLINK{q} 或 
-			KEY_NOLINK{Q}。
+		* 有效的 [=键属性值=] ，即 {{KeyboardEvent/key}} 属性值显示为: 
+			KEY{ArrowDown} ， KEY_NOLINK{=} ， KEY_NOLINK{q} 或 KEY_NOLINK{Q} 。
 
 		* 有效的 [=按键码属性值=] ，即 
 			{{KeyboardEvent/code}} 属性值显示为: CODE{ArrowDown}，CODE{Equal} 或 

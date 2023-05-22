@@ -7,7 +7,7 @@
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-UD" rel="stylesheet">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
   <meta content="Bikeshed version d9bd89757, updated Thu Mar 23 10:06:53 2023 -0700" name="generator">
-  <meta content="5228172cdcbeee0249c10619878eb5e7ac3ffb96" name="document-revision">
+  <meta content="88f7dddb01ff5e4bc52913a5d996c33171b3de59" name="document-revision">
   <link href="./override.css" rel="stylesheet">
 <style>
 
@@ -742,14 +742,13 @@ dfn > a.self-link::before      { content: "#"; }
    <p>本规范遵循以下规约:</p>
    <ul>
     <li data-md>
-     <p>打印在 <a href="https://mangwu.github.io/uievents-cn/#key-legends"> <em>键帽</em></a> 上的键显示为 <code class="keycap">↓</code>， <code class="keycap">=</code> 或 <code class="keycap">Q</code> 。
-这用于从用户的角度引用键，而不考虑生成的 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#interface-keyboardevent" id="ref-for-interface-keyboardevent">KeyboardEvent</a></code> 事件中的 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key①">key</a></code> (键) 和 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code③">code</a></code> (键码)。</p>
+     <p>打印在 <em><a data-link-type="dfn" href="https://mangwu.github.io/uievents-cn/#key-legends" id="ref-for-key-legends">键帽</a></em> 上的键显示为 <code class="keycap">↓</code>， <code class="keycap">=</code> 或 <code class="keycap">Q</code> 。这用于从用户的角度引用键，而不考虑生成的 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#interface-keyboardevent" id="ref-for-interface-keyboardevent">KeyboardEvent</a></code> 事件中的 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key①">key</a></code> (键) 和 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code③">code</a></code> (键码)。</p>
     <li data-md>
      <p>代表字符的字形(Glyphs)显示为: <code class="glyph">"𣧂"</code>。</p>
     <li data-md>
      <p>Unicode 码点( <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#code-point" id="ref-for-code-point">code points</a> ) 显示为: <code class="unicode">U+003D</code> 。</p>
     <li data-md>
-     <p>有效的键属性值( <a data-link-type="dfn" href="https://mangwu.github.io/uievents-key-cn/#key-attr-values" id="ref-for-key-attr-values">key attribute values</a> )，即 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key②">key</a></code> 属性值显示为: <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-ArrowDown">ArrowDown</a>"</code>，<code class="key">"="</code>，<code class="key">"q"</code> 或 <code class="key">"Q"</code>。</p>
+     <p>有效的 <a data-link-type="dfn" href="https://mangwu.github.io/uievents-key-cn/#key-attr-values" id="ref-for-key-attr-values">键属性值</a> ，即 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-key" id="ref-for-dom-keyboardevent-key②">key</a></code> 属性值显示为: <code class="key">"<a href="http://www.w3.org/TR/uievents-key/#key-ArrowDown">ArrowDown</a>"</code> ， <code class="key">"="</code> ， <code class="key">"q"</code> 或 <code class="key">"Q"</code> 。</p>
     <li data-md>
      <p>有效的 <a data-link-type="dfn" href="#key-code-attribute-values" id="ref-for-key-code-attribute-values">按键码属性值</a> ，即 <code class="idl"><a data-link-type="idl" href="https://mangwu.github.io/uievents-cn/#dom-keyboardevent-code" id="ref-for-dom-keyboardevent-code④">code</a></code> 属性值显示为: <code class="code">"<a href="#code-ArrowDown">ArrowDown</a>"</code>，<code class="code">"<a href="#code-Equal">Equal</a>"</code> 或 <code class="code">"<a href="#code-KeyQ">KeyQ</a>"</code>。</p>
    </ul>
@@ -2594,10 +2593,16 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
     <li><a href="#ref-for-dom-keyboardevent-key⑥">7. 隐私注意事项</a>
    </ul>
   </aside>
-  <aside aria-labelledby="infopaneltitle-for-a8c45dfe96f4395169d63f8bc0beb594" class="dfn-panel" data-for="a8c45dfe96f4395169d63f8bc0beb594" id="infopanel-for-a8c45dfe96f4395169d63f8bc0beb594">
-   <span id="infopaneltitle-for-a8c45dfe96f4395169d63f8bc0beb594" style="display:none">Info about the 'key attribute value' external reference.</span><a href="https://mangwu.github.io/uievents-key-cn/#key-attr-values">https://mangwu.github.io/uievents-key-cn/#key-attr-values</a><b>Referenced in:</b>
+  <aside aria-labelledby="infopaneltitle-for-a8143ff042d5ce4bdd516d897f1cedbd" class="dfn-panel" data-for="a8143ff042d5ce4bdd516d897f1cedbd" id="infopanel-for-a8143ff042d5ce4bdd516d897f1cedbd">
+   <span id="infopaneltitle-for-a8143ff042d5ce4bdd516d897f1cedbd" style="display:none">Info about the '键属性值' external reference.</span><a href="https://mangwu.github.io/uievents-key-cn/#key-attr-values">https://mangwu.github.io/uievents-key-cn/#key-attr-values</a><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-key-attr-values">1.1. 格式规约</a>
+   </ul>
+  </aside>
+  <aside aria-labelledby="infopaneltitle-for-0d409042d1d90223e9ee78bb851c1d32" class="dfn-panel" data-for="0d409042d1d90223e9ee78bb851c1d32" id="infopanel-for-0d409042d1d90223e9ee78bb851c1d32">
+   <span id="infopaneltitle-for-0d409042d1d90223e9ee78bb851c1d32" style="display:none">Info about the '键帽' external reference.</span><a href="https://mangwu.github.io/uievents-cn/#key-legends">https://mangwu.github.io/uievents-cn/#key-legends</a><b>Referenced in:</b>
+   <ul>
+    <li><a href="#ref-for-key-legends">1.1. 格式规约</a>
    </ul>
   </aside>
   <h3 class="no-num no-ref heading settled" id="index-defined-elsewhere"><span class="content">Terms defined by reference</span><a class="self-link" href="#index-defined-elsewhere"></a></h3>
@@ -2617,7 +2622,8 @@ Windows 操作系统中按下 <code class="keycap">PrtScr SysRq</code> 按键，
    <li>
     <a data-link-type="biblio">[UIEVENTS-KEY]</a> defines the following terms:
     <ul>
-     <li><span class="dfn-paneled" id="a8c45dfe96f4395169d63f8bc0beb594">key attribute value</span>
+     <li><span class="dfn-paneled" id="a8143ff042d5ce4bdd516d897f1cedbd">键属性值</span>
+     <li><span class="dfn-paneled" id="0d409042d1d90223e9ee78bb851c1d32">键帽</span>
     </ul>
   </ul>
   <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
