@@ -152,7 +152,7 @@ path: stylesheet-extra.include
 <h2 id="introduction">简介</h2>
 
 	本文档概述了各种键盘布局，并指定了每个键应使用的 {{KeyboardEvent/code}} 值。
-	与 [[UIEvents key]] 中描述的 {{KeyboardEvent/key}} 值不同， 
+	与 [[UIEvents-key]] 中描述的 {{KeyboardEvent/key}} 值不同， 
 	{{KeyboardEvent/code}} 值仅基于键在键盘上的物理位置，
 	不会因用户的当前区域设置而变化。
 
