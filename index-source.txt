@@ -1909,7 +1909,7 @@ path: stylesheet-extra.include
 
 	非常感谢 WebApps 工作组的以下参与者在制定本规范的过程中提供了大量实质性贡献。
 
-	Gary Kacmarcik (Google),
+	Gary Kacmarcik (Google)，
 	Masayuki Nakano (Mozilla)
 
 	
