@@ -17,7 +17,7 @@ Text Macro: DATE 2023年5月12日
 Text Macro: LONGSTATUS 翻译草案
 !本版本: <a href="https://mangwu.github.io/uievents-code-cn/">https://mangwu.github.io/uievents-code-cn/</a>
 !最新提案: <a href="https://w3c.github.io/uievents-code/">https://w3c.github.io/uievents-code/</a>
-!上个版本: <a href="http://www.w3.org/TR/2015/WD-uievents-code-20151215/">http://www.w3.org/TR/2015/WD-uievents-code-20151215/</a>
+!上个版本: <a href="https://www.w3.org/TR/2016/WD-uievents-code-20161024/">https://www.w3.org/TR/2016/WD-uievents-code-20161024/</a>
 !历史记录: <a href="https://www.w3.org/standards/history/uievents-code">https://www.w3.org/standards/history/uievents-code</a>
 !规范反馈: <a href="https://github.com/w3c/uievents-code/issues/">GitHub-w3c-uievents-code-issues</a>
 !翻译反馈: <a href="https://github.com/mangwu/uievents-code-cn/issues/">GitHub-mangwu-uievents-code-cn-issues</a>
