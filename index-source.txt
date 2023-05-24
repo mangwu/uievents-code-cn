@@ -1886,7 +1886,8 @@ path: stylesheet-extra.include
 	
 <h2 id="privacy">隐私注意事项</h2>
 
-	安全和隐私的自我审查问卷 已完成，以下是对其中一些有关本规范条目的备注:
+	<a href="https://www.w3.org/TR/security-privacy-questionnaire/">
+	安全和隐私的自我审查问卷</a> 已完成，以下是对其中一些有关本规范条目的备注:
 	
 	* <em><a href="https://www.w3.org/TR/security-privacy-questionnaire/#underlying-platform-data">
 		2.6 规范中的特性是否向源(origins)公开了有关底层平台的信息?</a></em>:
