@@ -179,9 +179,20 @@ path: stylesheet-extra.include
 		
 		<p class="note custom-note">
 		在 <a href="https://mangwu.github.io/uievents-cn/#style-conventions">
-		UIEvents</a> 规范本体的格式规约中，也对键帽，字符，代码点和键，
-		键值的属性值进行了说明，但是渲染显示不一样，本规范中的渲染会更显眼。
+		UIEvents</a> 规范本体的格式规约中，也对键帽，字符，码点和键(key)，
+		码(code)的属性值进行了说明，但是渲染显示不一样，本规范中的渲染会更显眼。
 		</p>
+
+		<div class="note custom-note" data-content='"键值"'>
+		关于 <strong>"键值"</strong> 的说明: 
+		键盘事件上包含两个与按下的物理按键有关的属性，一个是 {{KeyboardEvent/key}} 
+		而一个是  {{KeyboardEvent/code}} ，在 [[UIEvents-key]] 中也经常出现 
+		"键值"的说法，也就是按键的值，现在需要明确一点: <strong>"键值"表示的是 
+		{{KeyboardEvent/key}} 的属性值</strong> ，在 [[UIEvents]] 
+		系列规范中都是如此。如果在翻译时要指代 {{KeyboardEvent/code}} ，会说明成 
+		<code>code</code> 值，键码值，按键码属性值等。
+		</div>
+		
 
 <h2 id="keyboard-layout">键盘布局</h2>
 
@@ -1170,7 +1181,7 @@ path: stylesheet-extra.include
 	返回正确的值。
 	
 	<p class="note">
-	注意: 虽然已经尽一切努力使按键值列表尽可能完整，但随着新输入设备的引入，
+	注意: 虽然已经尽一切努力使按键码值列表尽可能完整，但随着新输入设备的引入，
 	需要定期定义新值。与其允许用户代理定义自己的 [=按键码属性值=] 
 	(这些属性值很难在多个用户代理机构之间统一)， 
 	<span class="zh-upper">应当</span> 提供一种归档方法来更新这个规范，
@@ -1856,11 +1867,11 @@ path: stylesheet-extra.include
 	I18n</a> <br/>
 	</div>
 
-	<div class="note custom-note" data-content="按键值的可读性和公开性: ">
+	<div class="note custom-note" data-content="按键码值的可读性和公开性: ">
 	无论是上面的无障碍还是本节的国际化，在说明时都包含对一个角度的解释: 
 	{{KeyboardEvent/code}} 值的可读性与公开性。
-	本规范定义的按键值都是人类可读的英文，在应用程序不公开这些按键值时，
-	不需要进行额外的国际化或无障碍适配，如果将这些按键值暴露给用户，
+	本规范定义的按键码值都是人类可读的英文，在应用程序不公开这些按键码值时，
+	不需要进行额外的国际化或无障碍适配，如果将这些按键码值暴露给用户，
 	则需要对此进行翻译(国际化)和无障碍适配了。
 	</div>
 
@@ -1898,8 +1909,8 @@ path: stylesheet-extra.include
 	* <em><a href=
 		"https://www.w3.org/TR/security-privacy-questionnaire/#legitimate-misuse">
 		3.5 合法滥用(Legitimate Misuse)</a></em>: 一个站点可以捕获所有按键响应，
-		并构建键盘生成的按键值的映射。如果用户键入了足够的按键值(并且没有更改键盘)，
-		那么网站可以尝试将这些值与已知键盘布局的数据库进行匹配，
+		并构建键盘生成的按键码值的映射。如果用户键入了足够的按键码值
+		(并且没有更改键盘)，那么网站可以尝试将这些值与已知键盘布局的数据库进行匹配，
 		以猜测用户当前的键盘布局。然而，这是对 {{KeyboardEvent/key}} 属性本身
 		(在[[UIEvents]]规范中定义)的关注，而不是对本文档中定义的值( 
 			{{KeyboardEvent/code}} )的关注。
