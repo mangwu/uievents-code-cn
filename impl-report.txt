@@ -5,7 +5,7 @@
 
 <pre class="metadata">
 Title: 用户界面事件键盘事件 code 实现报告(UI Events KeyboardEvent code Implementation Report)
-Shortname: uievents-code-cn
+Shortname: uievents-code-impl-cn
 Level: none
 Group: webapps
 Status: UD
@@ -161,7 +161,7 @@ path: stylesheet-extra.include
 		</div>
 		
 
-	<h4 id="required-values">必需的 {{KeyboardEvent/code}} 指</h4>
+	<h4 id="required-values">必需的 {{KeyboardEvent/code}} 值</h4>
 
 		本节列出了符合规范的实现必须支持的基本 {{KeyboardEvent/code}} 
 		属性值集的测试结果。
