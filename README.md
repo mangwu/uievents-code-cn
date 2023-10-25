@@ -42,3 +42,14 @@
 * <b>此规范:</b> [UI Events KeyboardEvent code Values](https://w3c.github.io/uievents-code/)
 * UI Events KeyboardEvent key Values : [Github 项目](https://github.com/w3c/uievents-key/), [规范链接](https://w3c.github.io/uievents-key/)
 * UI Events : [Github project](https://github.com/w3c/uievents/), [规范链接](https://w3c.github.io/uievents/)
+
+# 合并记录
+
+本节内容不属于fork仓库的内容，属于翻译项目基于源fork仓库更新后的异步合并记录。
+
+需要注意的是，本翻译项目是从源仓库的 [Fix](https://github.com/w3c/uievents-code/commit/c89e2a1482efb8960964f75633117b2a79962740) [#33](https://github.com/w3c/uievents-code/issues/33)[: Remove "Page Down" as keycap for "End"](https://github.com/w3c/uievents-code/commit/c89e2a1482efb8960964f75633117b2a79962740)  (c89e2a1482efb8960964f75633117b2a79962740)开始进行的，所以不会有之前(包括这次)的合并记录
+
+| 源项目更新                                                   | 源项目更新的SHA码                         | 本项目更新的SHA码                                            | 更新内容                                                     |
+| :----------------------------------------------------------- | :---------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
+| [Fix](https://github.com/w3c/uievents-code/commit/b201684d1de0af90bc403814bbdee6aa96647130) [#41](https://github.com/w3c/uievents-code/issues/41) [Fix titles in control pad figure.](https://github.com/w3c/uievents-code/commit/b201684d1de0af90bc403814bbdee6aa96647130) | b201684d1de0af90bc40 3814bbdee6aa96647130 | [6f6e9dcfdb79a7235a49 81033bcb2f75c86f21cd](https://github.com/mangwu/uievents-code-cn/commit/6f6e9dcfdb79a7235a4981033bcb2f75c86f21cd) | 键盘区域控制板(control pad)布局图示的 `images/control-pad.svg` 文件显示的描述有错误，修正之 |
+
