@@ -2,7 +2,7 @@
  * @Author: mangwu                                                             *
  * @File: custom-script.js                                                     *
  * @Date: 2023-05-01 02:02:19                                                  *
- * @LastModifiedDate: 2023-05-19 13:52:33                                      *
+ * @LastModifiedDate: 2023-10-25 17:29:22                                      *
  * @ModifiedBy: mangwu                                                         *
  * -----------------------                                                     *
  * Copyright (c) 2023 mangwu                                                   *
@@ -266,6 +266,20 @@ function tranlateReferences() {
 }
 
 /**
+ * @description 添加中文的文档翻译时间
+ */
+function addZhTime() {
+  const timeEle = document.querySelector("time.dt-updated");
+  if (timeEle) {
+    const date = new Date(timeEle.dateTime);
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    timeEle.textContent = `${year}年${month}月${day}日`;
+  }
+}
+
+/**
  * @description 添加一致性翻译
  */
 function addZhComformance() {
@@ -303,4 +317,5 @@ window.addEventListener("DOMContentLoaded", () => {
   tryCatch(tranlateIndex, "tranlateIndex方法执行错误:");
   tryCatch(tranlateReferences, "tranlateReferences方法执行错误:");
   tryCatch(addZhComformance, "addZhComformance方法执行错误:");
+  tryCatch(addZhTime, "addZhTime方法执行错误");
 });
